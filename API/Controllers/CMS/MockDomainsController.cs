@@ -6,11 +6,11 @@ namespace API.Controllers.CMS;
 
 public class MockDomainsController : CmsApiController
 {
-    [HttpPost]
-    public async Task<IActionResult> CreateMockDomain(CreateMockDomainRequestDto mockDomain)
-    {
-        return HandleResult(await Mediator.Send(new Create.Command { MockDomain = mockDomain }));
-    }
+    //[HttpPost]
+    //public async Task<IActionResult> CreateMockDomain(CreateMockDomainRequestDto mockDomain)
+    //{
+    //    return HandleResult(await Mediator.Send(new Create.Command { Lecturer = mockDomain }));
+    //}
 
     [HttpPut("{id}")]
     public async Task<IActionResult> EditMockDomain(Guid id, EditMockDomainRequestDto mockDomain)
