@@ -27,8 +27,10 @@ public class List
             var query = _context.ProjectSemesters
                 .Where(projectSemester => projectSemester.SemesterId == request.SemesterId)
                 .AsQueryable();
+
             var projectSemesters = new SemesterListProjectResponseDto();
             await projectSemesters.GetItemsAsync(query, request.Params.PageNumber, request.Params.PageSize);
+
             return Result<SemesterListProjectResponseDto>.Success(projectSemesters);
         }
     }

@@ -24,8 +24,10 @@ public class List
         public async Task<Result<ListSemesterResponseDto>> Handle(Query request, CancellationToken cancellationToken)
         {
             var query = _context.Semesters.AsQueryable();
+
             var semesters = new ListSemesterResponseDto();
             await semesters.GetItemsAsync(query, request.Params.PageNumber, request.Params.PageSize);
+
             return Result<ListSemesterResponseDto>.Success(semesters);
         }
     }

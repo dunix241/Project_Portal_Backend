@@ -19,8 +19,8 @@ public class SemestersController : PmsApiController
     }
 
     [HttpGet("{id}/Projects")]
-    public async Task<IActionResult> ListProjects([FromQuery] PagingParams pagingParams)
+    public async Task<IActionResult> ListProjects(Guid id, [FromQuery] PagingParams pagingParams)
     {
-        return HandleResult(await Mediator.Send(new Application.Semesters.Projects.List.Query{Params = pagingParams}));
+        return HandleResult(await Mediator.Send(new Application.Semesters.Projects.List.Query{SemesterId = id, Params = pagingParams}));
     }
 }

@@ -27,10 +27,12 @@ public class Edit
 
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
-            var semester = _context.Semesters.FindAsync(request.Id);
+            var semester = await _context.Semesters.FindAsync(request.Id);
             if (semester == null) return null;
-            await _mapper.Map(request.Semester, semester);
+
+            _mapper.Map(request.Semester, semester);
             await _context.SaveChangesAsync();
+
             return Result<Unit>.Success(Unit.Value);
         }
     }

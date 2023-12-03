@@ -29,6 +29,7 @@ public class Create
         {
              var semester = new Semester();
              _mapper.Map(request.Semester, semester);
+
              _context.Semesters.Add(semester);
              await _context.SaveChangesAsync();
 

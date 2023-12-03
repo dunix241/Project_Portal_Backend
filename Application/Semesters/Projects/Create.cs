@@ -38,8 +38,12 @@ public class Create
             }
 
             var projectSemester = new ProjectSemester { SemesterId = request.SemesterId };
+
             _mapper.Map(request.ProjectSemester, projectSemester);
-            await _context.ProjectSemesters.AddAsync(projectSemester);
+
+            _context.ProjectSemesters.Add(projectSemester);
+            await _context.SaveChangesAsync();
+
             return Result<Unit>.Success(Unit.Value);
         }
     }

@@ -23,10 +23,13 @@ public class Delete
 
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
-            var projectSemester = _context.Projects.FindAsync(request.ProjectId, request.SemesterId);
+            var projectSemester = await _context.ProjectSemesters.FindAsync(request.ProjectId, request.SemesterId);
+
             if (projectSemester == null) return null;
+
             _context.Remove(projectSemester);
             await _context.SaveChangesAsync();
+
             return Result<Unit>.Success(Unit.Value);
         }
     }
