@@ -33,7 +33,7 @@ namespace Application.Lecturers
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var lecturer = await _context.Students.FindAsync(request.Id);
+                var lecturer = await _context.Lecturers.FindAsync(request.Id);
                 if (lecturer == null)
                 {
                     return null;
