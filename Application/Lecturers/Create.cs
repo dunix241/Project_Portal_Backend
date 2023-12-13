@@ -1,10 +1,13 @@
 ﻿using Application.Core;
 using Application.Lecturers.DTOs;
+using Application.Lecturers.Validation;
 using Application.MockDomains.DTOs;
+using Application.Students.Validation;
 using AutoMapper;
 using Domain.Lecturer;
 using Domain.MockDomain;
 using Domain.Student;
+using FluentValidation;
 using MediatR;
 using Persistence;
 using System;
@@ -33,8 +36,22 @@ namespace Application.Lecturers
                 _mapper = mapper;
             }
 
+            public class CommandValidator : AbstractValidator<Command>
+            {
+                public CommandValidator()
+                {
+                    RuleFor(x => x.Lecturer).SetValidator(new LecturerCreateValdator());
+                }
+            }
+
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
+                var validationResult = new CommandValidator().Validate(request);
+                if (!validationResult.IsValid)
+                {
+                    return Result<Unit>.Failure("Validation failed, School ID should not be null, Name cannot be empty or contain numbers nor  special characters.");
+                }
+
                 var lecturer = _mapper.Map<Lecturer>(request.Lecturer);
                 var school = await _context.Schools.FindAsync(request.Lecturer.SchoolId);
 
