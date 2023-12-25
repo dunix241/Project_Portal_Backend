@@ -17,24 +17,20 @@ public class MappingProfiles : Profile
         CreateMockDomainMaps();
     }
 
-    private void CreateMockDomainMaps()
+
+    private void CreateStudentMaps()
     {
-        CreateMap<EditMockDomainRequestDto, MockDomain>();
-        CreateMap<CreateMockDomainRequestDto, MockDomain>();
-
-        CreateMap<CreateSchoolRequestDto, School>();
-        CreateMap<EditSchoolRequestDto, School>();
-        CreateMap<GetSchoolResponseDto, School>();
-        CreateMap<ListSchoolResponseDto, School>();
-
         CreateMap<CreateStudentRequestDto, Student>();
         CreateMap<Student, GetStudentResponseDto>()
                 .ForMember(dest => dest.SchoolId, opt => opt.MapFrom(src => src.SchoolId))
                 .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
                 .ForMember(dest => dest.SchoolCurrentMilestoneId, opt => opt.MapFrom(src => src.School.CurrentMilestoneId))
                 .ReverseMap();
-        CreateMap<EditStudentRequestDto, Student>();
 
+        CreateMap<EditStudentRequestDto, Student>();
+    }
+    private void CreateLecturerMaps()
+    {
         CreateMap<CreateLecturerRequedtDto, Lecturer>();
         CreateMap<Lecturer, GetLecturerResponseDto>()
                 .ForMember(dest => dest.SchoolId, opt => opt.MapFrom(src => src.SchoolId))
@@ -43,6 +39,18 @@ public class MappingProfiles : Profile
                 .ReverseMap();
         CreateMap<EditLecturerRequestDto, Lecturer>();
 
+    }
+    private void CreateSchoolMaps()
+    {
+        CreateMap<CreateSchoolRequestDto, School>();
+        CreateMap<EditSchoolRequestDto, School>();
+        CreateMap<GetSchoolResponseDto, School>();
+        CreateMap<ListSchoolResponseDto, School>();
+    }
 
+    private void CreateMockDomainMaps()
+    {
+        CreateMap<EditMockDomainRequestDto, MockDomain>();
+        CreateMap<CreateMockDomainRequestDto, MockDomain>();
     }
 }
