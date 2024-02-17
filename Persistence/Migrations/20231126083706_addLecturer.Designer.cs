@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
@@ -10,9 +11,10 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20231126083706_addLecturer")]
+    partial class addLecturer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.11");
@@ -137,69 +139,6 @@ namespace Persistence.Migrations
                     b.HasIndex("SchoolId");
 
                     b.ToTable("Students");
-                });
-
-            modelBuilder.Entity("Domain.Project.Project", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Projects");
-                });
-
-            modelBuilder.Entity("Domain.Semester.ProjectSemester", b =>
-                {
-                    b.Property<Guid>("ProjectId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("SemesterId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Slots")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("ProjectId", "SemesterId");
-
-                    b.HasIndex("SemesterId");
-
-                    b.ToTable("ProjectSemesters");
-                });
-
-            modelBuilder.Entity("Domain.Semester.Semester", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("EndRegistrationDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("StartRegistrationDate")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Semesters");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -432,25 +371,6 @@ namespace Persistence.Migrations
                     b.Navigation("School");
                 });
 
-            modelBuilder.Entity("Domain.Semester.ProjectSemester", b =>
-                {
-                    b.HasOne("Domain.Project.Project", "Project")
-                        .WithMany("ProjectSemesters")
-                        .HasForeignKey("ProjectId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Semester.Semester", "Semester")
-                        .WithMany("ProjectSemesters")
-                        .HasForeignKey("SemesterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Project");
-
-                    b.Navigation("Semester");
-                });
-
             modelBuilder.Entity("Domain.User", b =>
                 {
                     b.HasOne("Domain.Image", "Avatar")
@@ -516,16 +436,6 @@ namespace Persistence.Migrations
                     b.Navigation("Lecturers");
 
                     b.Navigation("Studens");
-                });
-
-            modelBuilder.Entity("Domain.Project.Project", b =>
-                {
-                    b.Navigation("ProjectSemesters");
-                });
-
-            modelBuilder.Entity("Domain.Semester.Semester", b =>
-                {
-                    b.Navigation("ProjectSemesters");
                 });
 #pragma warning restore 612, 618
         }
