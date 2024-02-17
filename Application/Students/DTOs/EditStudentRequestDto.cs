@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application.Students.DTOs
 {
-    public  class EditStudentRequestDto
+    public class EditStudentRequestDto
     {
         public string Name { get; set; }
         public bool IsActive { get; set; }

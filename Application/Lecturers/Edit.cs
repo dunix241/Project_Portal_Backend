@@ -1,7 +1,10 @@
 ﻿using Application.Core;
 using Application.Lecturers.DTOs;
+using Application.Lecturers.Validation;
 using Application.Students.DTOs;
+using Application.Students.Validation;
 using AutoMapper;
+using FluentValidation;
 using MediatR;
 using Persistence;
 using System;
@@ -31,9 +34,22 @@ namespace Application.Lecturers
                 _mapper = mapper;
             }
 
+            public class CommandValidator : AbstractValidator<Command>
+            {
+                public CommandValidator()
+                {
+                    RuleFor(x => x.Lecturer).SetValidator(new LecturerEditValidator());
+                }
+            }
+
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var lecturer = await _context.Students.FindAsync(request.Id);
+                var validationResult = new CommandValidator().Validate(request);
+                if (!validationResult.IsValid)
+                {
+                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                }
+                var lecturer = await _context.Lecturers.FindAsync(request.Id);
                 if (lecturer == null)
                 {
                     return null;

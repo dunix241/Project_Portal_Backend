@@ -1,7 +1,9 @@
 ﻿using Application.Core;
 using Application.Students.DTOs;
+using Application.Students.Validation;
 using AutoMapper;
 using Domain.Student;
+using FluentValidation;
 using MediatR;
 using Persistence;
 using System;
@@ -16,6 +18,14 @@ namespace Application.Students
         {
             public CreateStudentRequestDto Student { get; set; }
         }
+        public class CommandValidator : AbstractValidator<Command>
+        {
+            public CommandValidator()
+            {
+                RuleFor(x => x.Student).SetValidator(new StudentCreateValidator());
+            }
+        }
+
 
         public class Handler : IRequestHandler<Command, Result<Unit>>
         {
@@ -30,6 +40,12 @@ namespace Application.Students
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
+                var validationResult = new CommandValidator().Validate(request);
+                if (!validationResult.IsValid)
+                {
+                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                }
+
                 var student = _mapper.Map<Student>(request.Student);
                 var school = await _context.Schools.FindAsync(request.Student.SchoolId);
 
