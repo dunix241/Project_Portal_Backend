@@ -26,7 +26,7 @@ namespace Application.Minio
         {
             private readonly IMinioClient _minioClient;
 
-            public Handler(IOptions<MinioSetting> minionConfig, IMinioClient minioClient)
+            public Handler(IMinioClient minioClient)
             {
                 _minioClient = minioClient;
             }

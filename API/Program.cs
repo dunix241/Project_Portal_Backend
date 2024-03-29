@@ -75,6 +75,7 @@ builder.Services
 
 
 builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
 
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);

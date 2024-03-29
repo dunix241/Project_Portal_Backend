@@ -91,5 +91,28 @@ namespace API.Controllers
         }
 
 
+        [HttpGet("GetFile")]
+        public async Task<IActionResult> GetStreamFile(string bucketName, string objectName)
+        {
+            var query = new StreamFile.Query { BucketName = bucketName, ObjectName = objectName };
+            var result = await Mediator.Send(query);
+
+            if (result.IsSuccess)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await result.Value.CopyToAsync(memoryStream);
+                    var fileBytes = memoryStream.ToArray();
+
+                    return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", objectName);
+                }
+            }
+            else
+            {
+                return NotFound(result.Error);
+            }
+        }
+
+
     }
 }
