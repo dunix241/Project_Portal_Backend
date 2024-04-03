@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers.Showcase;
 
 [AllowAnonymous]
-[Route("api/[Controller]/showcase")]
+[Route("api/v{version:apiVersion}/[Controller]/showcase")]
 public class ShowcaseApiController : BaseApiController
 {
 }

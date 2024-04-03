@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers.CMS;
 
 [AllowAnonymous]
-[Route("api/[Controller]/cms")]
+[Route("api/v{version:apiVersion}/[Controller]/cms")]
 public class CmsApiController : BaseApiController
 {
 }

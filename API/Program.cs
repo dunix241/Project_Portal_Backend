@@ -2,9 +2,11 @@ using System.Text;
 using System.Text.Json.Serialization;
 using API.Middleware;
 using API.Services;
+using API.Swagger;
 using Application.Core;
 using Application.Interfaces;
 using Application.Users;
+using Asp.Versioning;
 using Domain;
 using Infrastructure.Security;
 using MediatR;
@@ -13,8 +15,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Persistence;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,9 +35,63 @@ builder.Services.AddControllers(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
     options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
 });
+
+builder.Services
+    .AddApiVersioning(options =>
+    {
+        //indicating whether a default version is assumed when a client does
+        // does not provide an API version.
+        options.ReportApiVersions = true;
+        options.ApiVersionReader = new UrlSegmentApiVersionReader();
+        options.DefaultApiVersion = new ApiVersion(1.0);
+        options.AssumeDefaultVersionWhenUnspecified = true;
+    })
+    .AddApiExplorer(options =>
+    {
+        // Add the versioned API explorer, which also adds IApiVersionDescriptionProvider service
+        // note: the specified format code will format the version as "'v'major[.minor][-status]"
+        options.GroupNameFormat = "'v'VVV";
+
+        // note: this option is only necessary when versioning by url segment. the SubstitutionFormat
+        // can also be used to control the format of the API version in route templates
+        options.SubstituteApiVersionInUrl = true;
+    });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+
+builder.Services.AddSwaggerGen(option =>
+{
+    option.EnableAnnotations();
+    // option.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    option.OperationFilter<SwaggerDefaultValues>();
+    option.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter a valid token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+    
+    option.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] { }
+        }
+    });
+});
+
 builder.Services.AddDbContext<DataContext>(opt =>
 {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -83,7 +142,18 @@ app.UseMiddleware<ExceptionMiddleware>();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        var descriptions = app.DescribeApiVersions();
+
+        // Build a swagger endpoint for each discovered API version
+        foreach (var description in descriptions)
+        {
+            var url = $"/swagger/{description.GroupName}/swagger.json";
+            var name = description.GroupName.ToUpperInvariant();
+            options.SwaggerEndpoint(url, name);
+        }
+    });
 }
 
 app.UseHttpsRedirection();
@@ -103,7 +173,7 @@ try
 {
     var userManager = services.GetRequiredService<UserManager<User>>();
     var context = services.GetRequiredService<DataContext>();
-    await context.Database.MigrateAsync();
+    // await context.Database.MigrateAsync();
     await Seed.SeedData(context, userManager);
 }
 catch (Exception ex)
