@@ -10,5 +10,6 @@ namespace Application.Mail
     public interface IMailService
     {
         bool SendMail(MailData mailData);
+        bool SendHTMLMail(HTMLMailData htmlMailData);
     }
 }

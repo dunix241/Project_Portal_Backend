@@ -1,5 +1,6 @@
 ﻿using Application.Core.AppSetting;
 using Domain.Mail;
+using MailKit.Net.Smtp;
 using Microsoft.Extensions.Options;
 using MimeKit;
 using System;
@@ -17,6 +18,49 @@ namespace Application.Mail
         {
             _mailSettings = mailSettingsOptions.Value;
         }
+
+    public bool SendHTMLMail(HTMLMailData htmlMailData)
+    {
+        try
+        {
+            using (MimeMessage emailMessage = new MimeMessage())
+            {
+                MailboxAddress emailFrom = new MailboxAddress(_mailSettings.SenderName, _mailSettings.SenderEmail);
+                emailMessage.From.Add(emailFrom);
+
+                MailboxAddress emailTo = new MailboxAddress(htmlMailData.EmailToName, htmlMailData.EmailToId);
+                emailMessage.To.Add(emailTo);
+
+                emailMessage.Subject = htmlMailData.EmailSubject;
+
+                string filePath = Directory.GetCurrentDirectory() + "\\Templates\\Template.html";
+                string emailTemplateText = File.ReadAllText(filePath);
+
+                emailTemplateText = string.Format(emailTemplateText, htmlMailData.EmailToName,htmlMailData.EmailSubject,htmlMailData.EmailBody, DateTime.Today.Date.ToShortDateString());
+
+                BodyBuilder emailBodyBuilder = new BodyBuilder();
+                emailBodyBuilder.HtmlBody = emailTemplateText;
+                emailBodyBuilder.TextBody = "Plain Text goes here to avoid marked as spam for some email servers.";
+
+                emailMessage.Body = emailBodyBuilder.ToMessageBody();
+                
+                using (SmtpClient mailClient = new SmtpClient())
+                {
+                    mailClient.Connect(_mailSettings.Server, _mailSettings.Port, MailKit.Security.SecureSocketOptions.SslOnConnect);
+                    mailClient.Authenticate(_mailSettings.SenderEmail, _mailSettings.Password);
+                    mailClient.Send(emailMessage);
+                    mailClient.Disconnect(true);
+                }
+            }
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            // Exception Details
+            return false;
+        }
+    }
 
         public bool SendMail(MailData mailData)
         {
@@ -41,9 +85,9 @@ namespace Application.Mail
                     //this is the SmtpClient from the Mailkit.Net.Smtp namespace, not the System.Net.Mail one
                     using (SmtpClient mailClient = new SmtpClient())
                     {
-                        mailClient.Connect(_mailSettings.Server, _mailSettings.Port, MailKit.Security.SecureSocketOptions.StartTls);
+                        mailClient.Connect(_mailSettings.Server, _mailSettings.Port, MailKit.Security.SecureSocketOptions.SslOnConnect);
                         mailClient.Authenticate(_mailSettings.UserName, _mailSettings.Password);
-                        mailClient.Send(emailMessage);
+                        mailClient.Send(emailMessage);  
                         mailClient.Disconnect(true);
                     }
                 }
@@ -52,7 +96,7 @@ namespace Application.Mail
             }
             catch (Exception ex)
             {
-                // Exception Details
+              Console.WriteLine(ex.Message);
                 return false;
             }
         }
