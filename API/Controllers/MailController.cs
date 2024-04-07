@@ -1,4 +1,6 @@
-﻿using Application.Mail;
+﻿using Application.Core;
+using Application.Mail;
+using Domain.Lecturer;
 using Domain.Mail;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,24 +8,19 @@ namespace API.Controllers
 {
     public class MailController : ApiController
     {
-        private readonly IMailService _mailService;
-        public MailController(IMailService _MailService)
-        {
-            _mailService = _MailService;
-        }
-
-        [HttpPost]
-        [Route("SendMail")]
-        public bool SendMail(MailData mailData)
-        {
-            return _mailService.SendMail(mailData);
-        }
 
         [HttpPost]
         [Route("SendHTMLMail")]
-        public bool SendHTMLMail(HTMLMailData htmlMailData)
+        public async Task<IActionResult> SendHTMLMail(HTMLMailData htmlMailData)
         {
-            return _mailService.SendHTMLMail(htmlMailData);
+            var result = await Mediator.Send(new SendHTMLMail.Command { mailData = htmlMailData });
+
+            if (result.IsSuccess)
+            {
+                return Ok("The email has been sent successfully ");
+            }
+
+            return BadRequest(result.Error);
         }
 
     }
