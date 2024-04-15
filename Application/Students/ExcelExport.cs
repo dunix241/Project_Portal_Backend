@@ -3,6 +3,7 @@ using Application.Students.DTOs;
 using AutoMapper;
 using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
 using Domain.School;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -37,18 +38,13 @@ namespace Application.Students
 
             public async Task<Result<GetExcelExportDto>> Handle(Query request, CancellationToken cancellationToken)
             {
-                var students = _context.Students
-                                .Where(s => s.IsActive)
-                                .Include(s => s.School)
-                                .Where(s => s.School.IsActive)
-                                .AsQueryable();
-
-                var studentList = students.Select(student => _mapper.Map<GetStudentResponseDto>(student)).ToList();
+                var query = await _mediator.Send(new List.Query { QueryParams = request.ExportQueryParams });
+                var studentList = query.Value.Items.ToList();
 
                 var wb = new XLWorkbook();
                 var ws = wb.Worksheets.Add("Danh sách");
 
-                ws.Range("A1", "H1").Merge();
+                ws.Range("A1", "H1").Merge();         
                 ws.Cells("A1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                 ws.Cells("A1").Style.Font.FontSize = 12;
                 ws.Cells("A1").Value = "DANH SÁCH SINH VIÊN";
@@ -56,8 +52,7 @@ namespace Application.Students
                 ws.Range("A2", "H2").Merge();
                 ws.Cells("A2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
                 ws.Cells("A2").Style.Font.FontSize = 12;
-                ws.Cells("A2").Value = "Ngày xuất báo cáo: " + DateTime.UtcNow.AddHours(7).ToString("dd/MM/yyyy HH:mm:ss");
-
+                ws.Cells("A2").Value = "Ngày xuất báo cáo: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
 
                 var listHeader = new List<string>
                     {
@@ -78,20 +73,12 @@ namespace Application.Students
                     ws.Cell(c).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
                 });
 
-                ws.Column(1).Width = 5;
-                ws.Column(2).Width = 15;
-                ws.Column(3).Width = 15;
-                ws.Column(4).Width = 20;
-                ws.Column(5).Width = 25;
-                ws.Column(6).Width = 25;
-
                 int row = 5;
 
                 if (studentList.Any())
                 {
                     for (int i = 0; i < studentList.Count; i++)
                     {
-
                         ws.Cells("A" + row.ToString()).Value = i + 1;
                         ws.Cells("B" + row).Value = studentList[i].Id.ToString();
                         ws.Cells("C" + row).Value = studentList[i].Name.ToString();
@@ -100,6 +87,7 @@ namespace Application.Students
                         ws.Cells("F" + row).Value = studentList[i].PhoneNumber.ToString();
                         row++;
                     }
+                    ws.Columns().AdjustToContents();
                 }
 
                 using (var ms = new MemoryStream())
@@ -107,8 +95,6 @@ namespace Application.Students
                     var stream = new MemoryStream();
                     wb.SaveAs(stream);
                     byte[] content = stream.ToArray();
-
-                    // Return MemoryStream containing the Excel file
                     return Result<GetExcelExportDto>.Success(new GetExcelExportDto { ExcelStream = content });
                 }
             }
