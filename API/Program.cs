@@ -3,7 +3,9 @@ using System.Text.Json.Serialization;
 using API.Middleware;
 using API.Services;
 using Application.Core;
+using Application.Core.AppSetting;
 using Application.Interfaces;
+using Application.Mail;
 using Application.Users;
 using Domain;
 using Infrastructure.Security;
@@ -13,7 +15,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Minio;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -70,13 +74,33 @@ builder.Services
         };
     });
 
+
+builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
+
+builder.Services.AddTransient<IMailService, MailService>();
 
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
+//builder.Services.AddSingleton<IMinioClient, MinioClient>();
+builder.Services.AddSingleton<IMinioClient>(provider =>
+{
+    var config = provider.GetRequiredService<IOptions<MinioSetting>>().Value;
+    var secure = false;
+
+    return new MinioClient().WithEndpoint(config.Endpoint)
+                             .WithCredentials(config.Username, config.Password)
+                             .WithSSL(secure)
+                             .Build();
+});
+
 var app = builder.Build();
+
+
+
 
 // Configure the HTTP request pipeline.
 app.UseMiddleware<ExceptionMiddleware>();

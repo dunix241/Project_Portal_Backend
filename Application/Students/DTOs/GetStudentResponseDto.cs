@@ -1,16 +1,18 @@
-﻿using Domain.Student;
+﻿using DocumentFormat.OpenXml.Bibliography;
+using Domain.Student;
 using System;
 
 namespace Application.Students.DTOs
 {
-    public class GetStudentResponseDto
+    public class GetStudentResponseDto : Domain.Person.Person
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } 
         public Guid SchoolId { get; set; }
-        public string SchoolName { get; set; }
-        public string SchoolCurrentMilestoneId { get; set; }
+        public string? SchoolName { get; set; }
+
+        public string? SchoolCurrentMilestoneId { get; set; }
 
         public static GetStudentResponseDto FromStudent(Student student)
         {
@@ -23,6 +25,8 @@ namespace Application.Students.DTOs
             {
                 Id = student.Id,
                 Name = student.Name,
+                Email = student.Email,
+                PhoneNumber = student.PhoneNumber,
                 IsActive = student.IsActive,
                 SchoolId = student.SchoolId,
                 SchoolName = student.School?.Name,
