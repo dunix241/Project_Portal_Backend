@@ -137,8 +137,6 @@ builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
 
-builder.Services.AddTransient<IMailService, MailService>();
-
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();

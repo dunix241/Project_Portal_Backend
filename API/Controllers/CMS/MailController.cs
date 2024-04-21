@@ -1,6 +1,4 @@
-﻿using Application.Core;
-using Application.Mail;
-using Domain.Lecturer;
+﻿using Application.Mail;
 using Domain.Mail;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +11,7 @@ namespace API.Controllers.CMS
         [Route("SendHTMLMail")]
         public async Task<IActionResult> SendHTMLMail(HTMLMailData htmlMailData)
         {
-            var result = await Mediator.Send(new SendHTMLMail.Command { mailData = htmlMailData });
+            var result = await Mediator.Send(new Send.Command { mailData = htmlMailData });
 
             if (result.IsSuccess)
             {

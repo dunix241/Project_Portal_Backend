@@ -1,24 +1,15 @@
 ﻿using Application.Core;
 using Application.Core.AppSetting;
-using Application.Lecturers.Validation;
-using AutoMapper;
-using Domain.Lecturer;
 using Domain.Mail;
-using FluentValidation;
 using MailKit.Net.Smtp;
+using MailKit.Security;
 using MediatR;
 using Microsoft.Extensions.Options;
 using MimeKit;
-using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Mail
 {
-    public class SendHTMLMail
+    public class Send
     {
         public class Command : IRequest<Result<Unit>>
         {
@@ -44,25 +35,14 @@ namespace Application.Mail
                         MailboxAddress emailFrom = new MailboxAddress(_mailSettings.SenderName, _mailSettings.SenderEmail);
                         emailMessage.From.Add(emailFrom);
 
-                        MailboxAddress emailTo = new MailboxAddress(htmlMailData.EmailToName, htmlMailData.EmailToId);
+                        MailboxAddress emailTo = new MailboxAddress(htmlMailData.ToName, htmlMailData.ToAddress);
                         emailMessage.To.Add(emailTo);
-
-                        emailMessage.Subject = htmlMailData.EmailSubject;
-
-                        string filePath = Directory.GetCurrentDirectory() + "\\Templates\\Template.html";
-                        string emailTemplateText = File.ReadAllText(filePath);
-
-                        emailTemplateText = string.Format(emailTemplateText, htmlMailData.EmailToName, htmlMailData.EmailSubject, htmlMailData.EmailBody, DateTime.Today.Date.ToShortDateString());
-
-                        BodyBuilder emailBodyBuilder = new BodyBuilder();
-                        emailBodyBuilder.HtmlBody = emailTemplateText;
-                        emailBodyBuilder.TextBody = "Plain Text goes here to avoid marked as spam for some email servers.";
-
-                        emailMessage.Body = emailBodyBuilder.ToMessageBody();
+                        emailMessage.Subject = htmlMailData.Subject;
+                        emailMessage.Body = htmlMailData.BodyBuilder.ToMessageBody();
 
                         using (SmtpClient mailClient = new SmtpClient())
                         {
-                            mailClient.Connect(_mailSettings.Server, _mailSettings.Port, MailKit.Security.SecureSocketOptions.SslOnConnect);
+                            mailClient.Connect(_mailSettings.Server, _mailSettings.Port, SecureSocketOptions.SslOnConnect);
                             mailClient.Authenticate(_mailSettings.SenderEmail, _mailSettings.Password);
                             mailClient.Send(emailMessage);
                             mailClient.Disconnect(true);
