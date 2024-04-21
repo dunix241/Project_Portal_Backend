@@ -4,7 +4,9 @@ using API.Middleware;
 using API.Services;
 using API.Swagger;
 using Application.Core;
+using Application.Core.AppSetting;
 using Application.Interfaces;
+using Application.Mail;
 using Application.Users;
 using Asp.Versioning;
 using Domain;
@@ -18,6 +20,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Minio;
 using Persistence;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
@@ -129,11 +132,28 @@ builder.Services
         };
     });
 
+
+builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
+
+builder.Services.AddTransient<IMailService, MailService>();
 
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
+
+//builder.Services.AddSingleton<IMinioClient, MinioClient>();
+builder.Services.AddSingleton<IMinioClient>(provider =>
+{
+    var config = provider.GetRequiredService<IOptions<MinioSetting>>().Value;
+    var secure = false;
+
+    return new MinioClient().WithEndpoint(config.Endpoint)
+                             .WithCredentials(config.Username, config.Password)
+                             .WithSSL(secure)
+                             .Build();
+});
 
 var app = builder.Build();
 
@@ -173,7 +193,7 @@ try
 {
     var userManager = services.GetRequiredService<UserManager<User>>();
     var context = services.GetRequiredService<DataContext>();
-    // await context.Database.MigrateAsync();
+    await context.Database.MigrateAsync();
     await Seed.SeedData(context, userManager);
 }
 catch (Exception ex)

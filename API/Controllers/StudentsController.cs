@@ -23,12 +23,83 @@ namespace API.Controllers
         {
             return HandleResult(await Mediator.Send(new Details.Query { Id = id }));
         }
-        
         // [HttpGet("BySchoolId")]
         // public async Task<IActionResult> GetStudentBySchoolId(Guid id, [FromQuery] PagingParams pagingParams)
         // {
         //     return HandleResult(await Mediator.Send(new ListStudentBySchool.Query { Id = id, QueryParams = pagingParams }));
         // }
+        [HttpPost()]
+        public async Task<IActionResult> CreateAndAssignToSchool(CreateStudentRequestDto student)
+        {
+            try
+            {
+                var result = await Mediator.Send(new Create.Command { Student = student });
+
+                if (result.IsSuccess)
+                {
+                    return Ok("Student created and assigned to school successfully.");
+                }
+
+                return BadRequest(result.Error);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(400, "An error occurred while processing your request." + "\n" + ex.Message);
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> EditStudent(Guid id, EditStudentRequestDto school)
+        {
+            return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = school }));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteStudent(Guid id)
+        {
+            return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
+        }
+
+
+
+        [HttpPost("Import")]
+        public async Task<IActionResult> Import(IFormFile file)
+        {
+            try
+            {
+                var result = await Mediator.Send(new ExcelImport.Command { ExcelStream = file.OpenReadStream() });
+
+                if (result.IsSuccess)
+                {
+                    return Ok("Students created and assigned to school successfully.");
+                }
+
+                return BadRequest(result.Error);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(400, "An error occurred while processing your request." + "\n" + ex.Message);
+            }
+        }
+
+        [HttpGet("export-excel")]
+        public async Task<IActionResult> ExportExcel([FromQuery] PagingParams exportQueryParams)
+        {
+            var query = new ExcelExport.Query { ExportQueryParams = exportQueryParams };
+            var result = await Mediator.Send(query);
+
+            if (result.IsSuccess)
+            {
+                var excelStream = result.Value.ExcelStream;
+                var file = File((byte[])excelStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Student" + ".xlsx");
+                return file;
+            }
+            else
+            {
+                // Handle error
+                return BadRequest(result.Error);
+            }
+        }
     }
 }
 
