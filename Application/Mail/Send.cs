@@ -42,10 +42,10 @@ namespace Application.Mail
 
                         using (SmtpClient mailClient = new SmtpClient())
                         {
-                            mailClient.Connect(_mailSettings.Server, _mailSettings.Port, SecureSocketOptions.SslOnConnect);
-                            mailClient.Authenticate(_mailSettings.SenderEmail, _mailSettings.Password);
-                            mailClient.Send(emailMessage);
-                            mailClient.Disconnect(true);
+                            await mailClient.ConnectAsync(_mailSettings.Server, _mailSettings.Port, SecureSocketOptions.SslOnConnect);
+                            await mailClient.AuthenticateAsync(_mailSettings.SenderEmail, _mailSettings.Password);
+                            await mailClient.SendAsync(emailMessage);
+                            await mailClient.DisconnectAsync(true);
                         }
                     }
 
