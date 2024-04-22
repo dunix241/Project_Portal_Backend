@@ -1,15 +1,9 @@
 ﻿using Application.Core;
 using Application.Lecturers.DTOs;
-using Application.Students.DTOs;
 using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Lecturers
 {

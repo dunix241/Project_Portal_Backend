@@ -1,16 +1,8 @@
 ﻿using Application.Core;
 using MediatR;
-using Minio.DataModel.Args;
 using Minio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Core.AppSetting;
-using Microsoft.Extensions.Options;
 using Minio.DataModel;
-using System.Security.AccessControl;
+using Minio.DataModel.Args;
 
 namespace Application.Minio
 {

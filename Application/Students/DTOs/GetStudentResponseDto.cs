@@ -1,10 +1,9 @@
-﻿using DocumentFormat.OpenXml.Bibliography;
+﻿using Domain.Person;
 using Domain.Student;
-using System;
 
 namespace Application.Students.DTOs
 {
-    public class GetStudentResponseDto : Domain.Person.Person
+    public class GetStudentResponseDto : Person
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
