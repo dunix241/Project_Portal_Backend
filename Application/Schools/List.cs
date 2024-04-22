@@ -1,13 +1,7 @@
 ﻿using Application.Core;
-using Application.MockDomains.DTOs;
 using Application.Schools.DTOs;
 using MediatR;
 using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Schools
 {

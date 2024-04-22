@@ -6,9 +6,6 @@ using Domain.Student;
 using FluentValidation;
 using MediatR;
 using Persistence;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace Application.Students
 {

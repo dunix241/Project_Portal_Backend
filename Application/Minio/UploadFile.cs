@@ -1,23 +1,7 @@
 ﻿using Application.Core;
-using Application.Core.AppSetting;
-using Application.Lecturers.DTOs;
-using Application.Lecturers.Validation;
-using AutoMapper;
-using Domain.Lecturer;
-using FluentValidation;
 using MediatR;
-using Microsoft.Extensions.Options;
 using Minio;
 using Minio.DataModel.Args;
-using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
-using MinioSetting = Application.Core.AppSetting.MinioSetting;
 
 namespace Application.Minio
 {

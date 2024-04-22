@@ -40,7 +40,7 @@ namespace Application.Lecturers
             {
                 public CommandValidator()
                 {
-                    RuleFor(x => x.Lecturer).SetValidator(new LecturerCreateValdator());
+                    RuleFor(x => x.Lecturer).SetValidator(new LecturerCreateValidator());
                 }
             }
 

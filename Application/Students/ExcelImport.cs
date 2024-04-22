@@ -1,20 +1,13 @@
-﻿using Application.Core;
-using Application.Lecturers.DTOs;
+﻿using System.Text;
+using Application.Core;
 using Application.Students.DTOs;
 using Application.Students.Validation;
 using AutoMapper;
 using ClosedXML.Excel;
-using DocumentFormat.OpenXml.Spreadsheet;
 using Domain.Student;
 using FluentValidation;
 using MediatR;
 using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Application.Students
 {

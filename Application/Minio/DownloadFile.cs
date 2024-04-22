@@ -1,14 +1,8 @@
 ﻿using Application.Core;
 using MediatR;
-using Minio.DataModel.Args;
-using Minio.DataModel;
 using Minio;
-using System;
-using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
+using Minio.DataModel.Args;
 using Minio.Exceptions;
-using System.Text;
 
 namespace Application.Minio
 {

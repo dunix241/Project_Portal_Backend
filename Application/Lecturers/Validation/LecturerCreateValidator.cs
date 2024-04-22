@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Application.Lecturers.Validation
 {
-    public class LecturerCreateValdator   : AbstractValidator<CreateLecturerRequedtDto>
+    public class LecturerCreateValidator : AbstractValidator<CreateLecturerRequedtDto>
     {
-        public LecturerCreateValdator()
+        public LecturerCreateValidator()
         {
             RuleFor(x => x.Name)
-             .NotEmpty().WithMessage("Name cannot be empty.")
-             .Must(BeValidName).WithMessage("Name cannot contain numbers or special characters.");
+                .NotEmpty().WithMessage("Name cannot be empty.")
+                .Must(BeValidName).WithMessage("Name cannot contain numbers or special characters.");
             RuleFor(x => x.SchoolId).NotEmpty().WithMessage("School Id cannot be empty.");
         }
 

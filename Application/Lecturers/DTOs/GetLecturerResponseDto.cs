@@ -1,11 +1,4 @@
-﻿using Application.Students.DTOs;
-using Domain.Lecturer;
-using Domain.Student;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Lecturer;
 
 namespace Application.Lecturers.DTOs
 {
