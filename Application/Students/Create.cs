@@ -43,7 +43,7 @@ namespace Application.Students
                 var validationResult = new CommandValidator().Validate(request);
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                    return Result<Unit>.Failure("Validation failed, FirstName cannot be empty or  contain numbers nor  special characters.");
                 }
 
                 var student = _mapper.Map<Student>(request.Student);

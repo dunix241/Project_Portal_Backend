@@ -24,7 +24,7 @@ namespace Application.Students.DTOs
             return new GetStudentResponseDto
             {
                 Id = student.Id,
-                Name = student.Name,
+                Name = student.FirstName,
                 Email = student.Email,
                 PhoneNumber = student.PhoneNumber,
                 IsActive = student.IsActive,

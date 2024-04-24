@@ -7,6 +7,10 @@ using Domain.Project;
 using Domain.Semester;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using File = Domain.File.File;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
+
 
 namespace Persistence;
 
@@ -24,10 +28,30 @@ public class DataContext : IdentityDbContext<User>
     public DbSet<Project> Projects { get; set; }
     public DbSet<Semester> Semesters { get; set; }
     public DbSet<ProjectSemester> ProjectSemesters { get; set; }
+    public DbSet<Image> Images { get; set; }
+    public DbSet<File> Files { get; set; }
+
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
         builder.Entity<ProjectSemester>().HasKey(entity => new { entity.ProjectId, entity.SemesterId });
+        builder.Entity<Image>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.HasOne<Student>()
+                .WithMany(s => s.Images)
+                .HasForeignKey(e => e.EntityId)
+                .IsRequired(false) // Make the relationship optional
+                .OnDelete(DeleteBehavior.Cascade); // Adjust deletion behavior as needed
+
+            entity.HasOne<Lecturer>()
+                .WithMany(l => l.Images)
+                .HasForeignKey(e => e.EntityId)
+                .IsRequired(false) // Make the relationship optional
+                .OnDelete(DeleteBehavior.Cascade); // Adjust deletion behavior as needed
+        });
     }
 }

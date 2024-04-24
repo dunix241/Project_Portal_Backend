@@ -41,6 +41,10 @@ builder.Services.AddDbContext<DataContext>(opt =>
 {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+//builder.Services.AddDbContext<DataContext>(opt =>
+//{
+//    opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("API"));
+//});
 
 builder.Services.AddCors(opt =>
 {

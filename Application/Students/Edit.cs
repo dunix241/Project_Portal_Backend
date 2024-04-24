@@ -46,7 +46,7 @@ namespace Application.Students
 
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                    return Result<Unit>.Failure("Validation failed, FirstName cannot be empty or  contain numbers nor  special characters.");
                 }
 
                 var student = await _context.Students.FindAsync(request.Id);

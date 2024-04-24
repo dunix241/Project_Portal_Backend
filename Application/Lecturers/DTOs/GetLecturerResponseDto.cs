@@ -18,6 +18,7 @@ namespace Application.Lecturers.DTOs
         public string SchoolName { get; set; }
         public string SchoolCurrentMilestoneId { get; set; }
 
+
         public static GetLecturerResponseDto FromLecturer (Lecturer lecturer)
         {
             if (lecturer == null)
@@ -28,7 +29,7 @@ namespace Application.Lecturers.DTOs
             return new GetLecturerResponseDto
             {
                 Id = lecturer.Id,
-                Name = lecturer.Name,
+                Name = lecturer.FirstName,
                 IsActive = lecturer.IsActive,
                 SchoolId = lecturer.SchoolId,
                 SchoolName = lecturer.School?.Name,

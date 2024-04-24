@@ -9,4 +9,5 @@ public class Semester
     public DateTime StartRegistrationDate { get; set; }
     public DateTime EndRegistrationDate { get; set; }
     public IList<ProjectSemester> ProjectSemesters { get; set; }
+
 }

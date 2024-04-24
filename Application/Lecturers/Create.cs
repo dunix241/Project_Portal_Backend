@@ -49,7 +49,7 @@ namespace Application.Lecturers
                 var validationResult = new CommandValidator().Validate(request);
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, School ID should not be null, Name cannot be empty or contain numbers nor  special characters.");
+                    return Result<Unit>.Failure("Validation failed, School ID should not be null, FirstName cannot be empty or contain numbers nor  special characters.");
                 }
 
                 var lecturer = _mapper.Map<Lecturer>(request.Lecturer);

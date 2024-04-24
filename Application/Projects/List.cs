@@ -7,28 +7,28 @@ namespace Application.Projects;
 
 public class List
 {
-   public class Query : IRequest<Result<ListProjectResponseDto>>
-   {
-      public PagingParams QueryParams { get; set; }
-   }
-   
-   public class Handler : IRequestHandler<Query, Result<ListProjectResponseDto>>
-   {
-      private readonly DataContext _context;
+    public class Query : IRequest<Result<ListProjectResponseDto>>
+    {
+        public PagingParams QueryParams { get; set; }
+    }
 
-      public Handler(DataContext context)
-      {
-         _context = context;
-      }
+    public class Handler : IRequestHandler<Query, Result<ListProjectResponseDto>>
+    {
+        private readonly DataContext _context;
 
-      public async Task<Result<ListProjectResponseDto>> Handle(Query request, CancellationToken cancellationToken)
-      {
-         var query = _context.Projects.AsQueryable();
+        public Handler(DataContext context)
+        {
+            _context = context;
+        }
 
-         var projects = new ListProjectResponseDto();
-         await projects.GetItemsAsync(query, request.QueryParams.PageNumber, request.QueryParams.PageSize);
+        public async Task<Result<ListProjectResponseDto>> Handle(Query request, CancellationToken cancellationToken)
+        {
+            var query = _context.Projects.AsQueryable();
 
-        return Result<ListProjectResponseDto>.Success(projects);
-      }
-   }
+            var projects = new ListProjectResponseDto();
+            await projects.GetItemsAsync(query, request.QueryParams.PageNumber, request.QueryParams.PageSize);
+
+            return Result<ListProjectResponseDto>.Success(projects);
+        }
+    }
 }

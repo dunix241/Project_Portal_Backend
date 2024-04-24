@@ -4,6 +4,7 @@ using Minio;
 using Application.Minio;
 using System.IO;
 using System.Reflection;
+using Application.Minio.DTOs;
 
 namespace API.Controllers
 {
@@ -20,6 +21,9 @@ namespace API.Controllers
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile(IFormFile file, string bucketName)
         {
+            string filename = file.Name;
+            string fileExtension = "." + file.ContentType.Split('/')[1];
+
             if (file == null || file.Length == 0)
             {
                 return BadRequest("No file uploaded or file is empty.");
@@ -41,14 +45,17 @@ namespace API.Controllers
                 {
                     await file.CopyToAsync(stream);
                 }
-
-                var result = await Mediator.Send(new UploadFile.Command
+                var request = new AddFileRequestDto
                 {
                     FilePath = tempFilePath,
                     BucketName = bucketName,
                     ObjectName = file.FileName,
                     NewName = randomName,
-                });
+                    Extension = fileExtension,
+                    FileName = file.FileName,
+                };
+
+                var result = await Mediator.Send(new UploadFile.Command { dto = request });
 
                 if (!result.IsSuccess)
                 {
