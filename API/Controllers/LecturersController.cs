@@ -1,7 +1,5 @@
 ﻿using Application.Core;
 using Application.Lecturers;
-using Application.Lecturers.DTOs;
-using Application.Students.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

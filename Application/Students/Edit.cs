@@ -2,8 +2,10 @@
 using Application.Students.DTOs;
 using Application.Students.Validation;
 using AutoMapper;
+using Domain;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Persistence;
 
 namespace Application.Students
@@ -27,11 +29,13 @@ namespace Application.Students
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+            private readonly UserManager<User> _userManager;
 
-            public Handler(DataContext context, IMapper mapper)
+            public Handler(DataContext context, IMapper mapper, UserManager<User> userManager)
             {
                 _context = context;
                 _mapper = mapper;
+                _userManager = userManager;
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -49,11 +53,31 @@ namespace Application.Students
                     return Result<Unit>.Failure($"Student with ID {request.Id} not found.");
                 }
 
-                _mapper.Map(request.Student, student);
+                var success = true;
+                using var transaction = _context.Database.BeginTransaction();
+                try
+                {
+                    if (request.Student.Email != student.Email)
+                    {
+                        var user = await _userManager.FindByEmailAsync(student.Email);
+                        success &= (await _userManager.SetEmailAsync(user, student.Email)).Succeeded;
+                    }
+                    
+                    _mapper.Map(request.Student, student);
+                    success &= await _context.SaveChangesAsync() != 0;
 
-                await _context.SaveChangesAsync();
+                    if (success)
+                    {
+                        transaction.Commit();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw e;
+                }
 
-                return Result<Unit>.Success(Unit.Value);
+                return success ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("Problem editing student");
             }
         }
     }

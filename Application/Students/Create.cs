@@ -1,10 +1,15 @@
-﻿using Application.Core;
+﻿using API.DTOs.Accounts;
+using Application.Auth;
+using Application.Core;
 using Application.Students.DTOs;
 using Application.Students.Validation;
+using Application.Users;
 using AutoMapper;
+using Domain.Mail;
 using Domain.Student;
 using FluentValidation;
 using MediatR;
+using MimeKit;
 using Persistence;
 
 namespace Application.Students
@@ -23,16 +28,17 @@ namespace Application.Students
             }
         }
 
-
         public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+            private readonly IMediator _mediator;
 
-            public Handler(DataContext context, IMapper mapper)
+            public Handler(DataContext context, IMapper mapper, IMediator mediator)
             {
                 _context = context;
                 _mapper = mapper;
+                _mediator = mediator;
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -52,9 +58,54 @@ namespace Application.Students
                 }
                 student.School = school;
 
-                _context.Students.Add(student);
+                using var transaction = _context.Database.BeginTransaction();
+                try
+                {
+                    _context.Students.Add(student);
+                    var success = await _context.SaveChangesAsync() != 0;
 
-                await _context.SaveChangesAsync();
+                    if (success)
+                    {
+                        string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
+                        string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
+
+                        success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
+                        {
+                            MailData = new MailData
+                            {
+                                BodyBuilder = new BodyBuilder
+                                {
+                                    HtmlBody = emailTemplate,
+                                    TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}"
+                                },
+                                Subject = "Project Portal Account's Password",
+                                ToAddress = student.Email,
+                                ToName = student.Name
+                            },
+                            Func =
+                                async password =>
+                                {
+                                    return (await _mediator.Send(new Register.Query
+                                    {
+                                        RegisterRequestDto = new RegisterRequestDTO
+                                        {
+                                            Email = student.Email, Name = student.Name, Password = password,
+                                            Address = ""
+                                        }
+                                    })) != null;
+                                }
+                        })).IsSuccess;
+                    }
+
+                    if (success)
+                    {
+                        transaction.Commit();
+                    }
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
 
                 return Result<Unit>.Success(Unit.Value);
             }

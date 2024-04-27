@@ -67,6 +67,12 @@ public class AuthController : BaseApiController
         return CreateUserDto(user);
     }
 
+    [HttpPatch("[Action]")]
+    public async Task<IActionResult> ResetPassword(ResetPasswordRequestDTO requestDto)
+    {
+        return HandleResult(await Mediator.Send(new ResetPassword.Command { ResetPasswordRequestDto = requestDto }));
+    }
+
     private LoginResponseDTO CreateUserDto(User user)
     {
         var userDto = new LoginResponseDTO
