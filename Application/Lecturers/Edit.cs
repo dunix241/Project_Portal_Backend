@@ -2,8 +2,10 @@
 using Application.Lecturers.DTOs;
 using Application.Lecturers.Validation;
 using AutoMapper;
+using Domain;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Persistence;
 
 namespace Application.Lecturers
@@ -20,11 +22,13 @@ namespace Application.Lecturers
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+            private readonly UserManager<User> _userManager;
 
-            public Handler(DataContext context, IMapper mapper)
+            public Handler(DataContext context, IMapper mapper, UserManager<User> userManager)
             {
                 _context = context;
                 _mapper = mapper;
+                _userManager = userManager;
             }
 
             public class CommandValidator : AbstractValidator<Command>
@@ -48,11 +52,31 @@ namespace Application.Lecturers
                     return null;
                 }
 
-                _mapper.Map(request.Lecturer, lecturer);
+                var success = true;
+                using var transaction = _context.Database.BeginTransaction();
+                try
+                {
+                    if (request.Lecturer.Email != lecturer.Email)
+                    {
+                        var user = await _userManager.FindByEmailAsync(lecturer.Email);
+                        success &= (await _userManager.SetEmailAsync(user, lecturer.Email)).Succeeded;
+                    }
+                    
+                    _mapper.Map(request.Lecturer, lecturer);
+                    success &= await _context.SaveChangesAsync() != 0;
 
-                await _context.SaveChangesAsync();
+                    if (success)
+                    {
+                        transaction.Commit();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw e;
+                }
 
-                return Result<Unit>.Success(Unit.Value);
+                return success ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("Problem editing lecturer");
             }
         }
     }

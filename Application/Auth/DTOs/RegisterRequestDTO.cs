@@ -6,11 +6,6 @@ namespace API.DTOs.Accounts;
 public class RegisterRequestDTO
 {
     [Required]
-    [RegularExpression("^[a-zA-Z0-9]{4,8}$", ErrorMessage = "Username should contain only letters and numbers between 4 and 8 characters in length")]
-    [IsUsernameUnique]
-    public string UserName { get; set; }
-
-    [Required]
     [EmailAddress]
     [IsEmailUnique]
     public string Email { get; set; }

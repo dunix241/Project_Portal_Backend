@@ -13,7 +13,7 @@ namespace Application.Mail
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public HTMLMailData mailData { get; set; }
+            public MailData MailData { get; set; }
         }
         public class Handler : IRequestHandler<Command, Result<Unit>>
         {
@@ -26,7 +26,7 @@ namespace Application.Mail
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var htmlMailData = request.mailData;
+                var htmlMailData = request.MailData;
 
                 try
                 {             

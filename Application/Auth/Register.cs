@@ -35,7 +35,7 @@ public class Register
         {
             var user = new User
             {
-                UserName = request.RegisterRequestDto.UserName,
+                UserName = request.RegisterRequestDto.Email,
                 Email = request.RegisterRequestDto.Email,
                 Name = request.RegisterRequestDto.Name,
                 Address = request.RegisterRequestDto.Address

@@ -9,9 +9,9 @@ namespace API.Controllers.CMS
 
         [HttpPost]
         [Route("SendHTMLMail")]
-        public async Task<IActionResult> SendHTMLMail(HTMLMailData htmlMailData)
+        public async Task<IActionResult> SendHTMLMail(MailData mailData)
         {
-            var result = await Mediator.Send(new Send.Command { mailData = htmlMailData });
+            var result = await Mediator.Send(new Send.Command { MailData = mailData });
 
             if (result.IsSuccess)
             {
