@@ -8,13 +8,13 @@ namespace Application.Schools
 {
     public class Edit
     {
-        public class Command : IRequest<Result<Unit>>
+        public class Command : IRequest<Result<GetSchoolResponseDto>>
         {
             public Guid Id { get; set; }
             public EditSchoolRequestDto School { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Command, Result<GetSchoolResponseDto>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
@@ -25,19 +25,19 @@ namespace Application.Schools
                 _mapper = mapper;
             }
 
-            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<GetSchoolResponseDto>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var school = await _context.Schools.FindAsync(request.Id);
                 if (school == null)
                 {
-                    return null;
+                    return Result<GetSchoolResponseDto>.Failure("Not found");
                 }
 
                 _mapper.Map(request.School, school);
 
                 await _context.SaveChangesAsync();
 
-                return Result<Unit>.Success(Unit.Value);
+                return Result<GetSchoolResponseDto>.Success(new GetSchoolResponseDto { School = school});
             }
         }
     }

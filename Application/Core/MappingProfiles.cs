@@ -12,6 +12,8 @@ using Domain.School;
 using Domain.Student;
 using Domain.Project;
 using Domain.Semester;
+using File = Domain.File;
+using Application.Minio.DTOs;
 
 namespace Application.Core;
 
@@ -24,6 +26,7 @@ public class MappingProfiles : Profile
         CreateAcademicMaps();
         CreateProjectMaps();
         CreateSemesterMaps();
+        CreateFileMaps();
     }
 
     private void CreateMockDomainMaps()
@@ -73,6 +76,14 @@ public class MappingProfiles : Profile
                 .ForMember(dest => dest.SchoolCurrentMilestoneId, opt => opt.MapFrom(src => src.School.CurrentMilestoneId))
                 .ReverseMap();
         CreateMap<EditLecturerRequestDto, Lecturer>();
+    }
+    private void CreateFileMaps()
+    {
+        CreateMap<EditFileRequestDto,File.File >();
+        CreateMap<AddFileResponseDto, File.File>().ReverseMap();
+        CreateMap<File.File, AddFileResponseDto>().ReverseMap();
+        CreateMap<File.File, GetFileResponseDto>();
+        CreateMap<AddFileRequestDto, File.File>();
     }
         
 }

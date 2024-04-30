@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Domain.File;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Application.Minio.DTOs
         public string BucketName { get; set; }
         public Guid SourceOwnerId { get; set; }
         public SourceOwnerType SourceOwnerType { get; set; }
+        public FileType FileType { get; set; }
 
     }
     public enum SourceOwnerType

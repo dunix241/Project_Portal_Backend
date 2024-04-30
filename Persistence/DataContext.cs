@@ -7,7 +7,7 @@ using Domain.Project;
 using Domain.Semester;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using File = Domain.File;
 namespace Persistence;
 
 public class DataContext : IdentityDbContext<User>
@@ -24,10 +24,13 @@ public class DataContext : IdentityDbContext<User>
     public DbSet<Project> Projects { get; set; }
     public DbSet<Semester> Semesters { get; set; }
     public DbSet<ProjectSemester> ProjectSemesters { get; set; }
+    public DbSet<File.File> Files { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
         builder.Entity<ProjectSemester>().HasKey(entity => new { entity.ProjectId, entity.SemesterId });
+        builder.Entity<File.File>().HasIndex(x => x.FileName).IsUnique();
+
     }
 }

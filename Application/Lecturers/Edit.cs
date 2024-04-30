@@ -49,7 +49,7 @@ namespace Application.Lecturers
                 var lecturer = await _context.Lecturers.FindAsync(request.Id);
                 if (lecturer == null)
                 {
-                    return null;
+                    return Result<Unit>.Failure("Not found");
                 }
 
                 var success = true;

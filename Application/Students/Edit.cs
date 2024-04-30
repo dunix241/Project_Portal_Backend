@@ -12,7 +12,7 @@ namespace Application.Students
 {
     public class Edit
     {
-        public class Command : IRequest<Result<Unit>>
+        public class Command : IRequest<Result<GetStudentResponseDto>>
         {
             public Guid Id { get; set; }
             public EditStudentRequestDto Student { get; set; }
@@ -25,7 +25,7 @@ namespace Application.Students
             }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Command, Result<GetStudentResponseDto>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
@@ -38,19 +38,19 @@ namespace Application.Students
                 _userManager = userManager;
             }
 
-            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<GetStudentResponseDto>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var validationResult = new CommandValidator().Validate(request);
 
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                    return Result<GetStudentResponseDto>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
                 }
 
                 var student = await _context.Students.FindAsync(request.Id);
                 if (student == null)
                 {
-                    return Result<Unit>.Failure($"Student with ID {request.Id} not found.");
+                    return Result<GetStudentResponseDto>.Failure($"Student with ID {request.Id} not found.");
                 }
 
                 var success = true;
@@ -77,7 +77,7 @@ namespace Application.Students
                     throw e;
                 }
 
-                return success ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("Problem editing student");
+                return success ? Result<GetStudentResponseDto>.Success(GetStudentResponseDto.FromStudent(student)) : Result<GetStudentResponseDto>.Failure("Problem editing student");
             }
         }
     }

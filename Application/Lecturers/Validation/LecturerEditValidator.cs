@@ -7,9 +7,12 @@ namespace Application.Lecturers.Validation
     {
         public LecturerEditValidator()
         {
-            RuleFor(x => x.Name)
-             .NotEmpty().WithMessage("Name cannot be empty.")
-             .Must(BeValidName).WithMessage("Name cannot contain numbers or special characters.");           
+            RuleFor(x => x.FirstName)
+                .NotEmpty().WithMessage("First Name cannot be empty.")
+                .Must(BeValidName).WithMessage("First Name cannot contain numbers or special characters.");
+            RuleFor(x => x.FirstName)
+                .NotEmpty().WithMessage("Last Name cannot be empty.")
+                .Must(BeValidName).WithMessage("Last Name cannot contain numbers or special characters.");
         }
 
         private bool BeValidName(string name)

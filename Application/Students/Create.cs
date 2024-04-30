@@ -10,7 +10,9 @@ using Domain.Student;
 using FluentValidation;
 using MediatR;
 using MimeKit;
+using Minio.DataModel.Notification;
 using Persistence;
+using System;
 
 namespace Application.Students
 {
@@ -46,7 +48,7 @@ namespace Application.Students
                 var validationResult = new CommandValidator().Validate(request);
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or contain numbers nor special characters.");
                 }
 
                 var student = _mapper.Map<Student>(request.Student);
@@ -61,41 +63,45 @@ namespace Application.Students
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
+                    student.IRN = GenerateIRN();
+
                     _context.Students.Add(student);
                     var success = await _context.SaveChangesAsync() != 0;
 
-                    if (success)
-                    {
-                        string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
-                        string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
+                    //if (success)
+                    //{
+                    //    string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
+                    //    string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
 
-                        success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
-                        {
-                            MailData = new MailData
-                            {
-                                BodyBuilder = new BodyBuilder
-                                {
-                                    HtmlBody = emailTemplate,
-                                    TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}"
-                                },
-                                Subject = "Project Portal Account's Password",
-                                ToAddress = student.Email,
-                                ToName = student.Name
-                            },
-                            Func =
-                                async password =>
-                                {
-                                    return (await _mediator.Send(new Register.Query
-                                    {
-                                        RegisterRequestDto = new RegisterRequestDTO
-                                        {
-                                            Email = student.Email, Name = student.Name, Password = password,
-                                            Address = ""
-                                        }
-                                    })) != null;
-                                }
-                        })).IsSuccess;
-                    }
+                    //    success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
+                    //    {
+                    //        MailData = new MailData
+                    //        {
+                    //            BodyBuilder = new BodyBuilder
+                    //            {
+                    //                HtmlBody = emailTemplate,
+                    //                TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}"
+                    //            },
+                    //            Subject = "Project Portal Account's Password",
+                    //            ToAddress = student.Email,
+                    //            ToName = student.FirstName
+                    //        },
+                    //        Func =
+                    //            async password =>
+                    //            {
+                    //                return (await _mediator.Send(new Register.Query
+                    //                {
+                    //                    RegisterRequestDto = new RegisterRequestDTO
+                    //                    {
+                    //                        Email = student.Email,
+                    //                        Name = student.FirstName,
+                    //                        Password = password,
+                    //                        Address = ""
+                    //                    }
+                    //                })) != null;
+                    //            }
+                    //    })).IsSuccess;
+                    //}
 
                     if (success)
                     {
@@ -104,10 +110,37 @@ namespace Application.Students
                 }
                 catch (Exception e)
                 {
-                    throw e;
+                    Result<Unit>.Failure("Error creating new student: " + e.Message);
                 }
 
                 return Result<Unit>.Success(Unit.Value);
+            }
+
+            private long GenerateIRN()
+            {
+                var latestStudent = _context.Students.OrderByDescending(x => x.IRN).FirstOrDefault();
+                long latestIrnOrder = 0;
+                long latestYearMonth = 0;
+                if (latestStudent != null)
+                {                 
+                    latestYearMonth = latestStudent.IRN / 100000;
+                    latestIrnOrder = latestStudent.IRN % (latestYearMonth * 100000);
+                }
+                var currentMonth = DateTime.Now.Month;
+                var currentYear = DateTime.Now.Year;
+                var currentYearMonth = (currentYear * 100) + currentMonth;
+
+                if (currentYearMonth == latestYearMonth)
+                {
+                    latestIrnOrder++;
+                }
+                else
+                {
+                    latestYearMonth = currentYearMonth;
+                }
+
+                long irn = (latestYearMonth * 100000) + latestIrnOrder;
+                return irn;
             }
         }
     }

@@ -5,7 +5,7 @@ namespace Application.Lecturers.DTOs
     public class GetLecturerResponseDto
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public string FullName { get; set; }
         public bool IsActive { get; set; }
         public Guid SchoolId { get; set; }
         public string SchoolName { get; set; }
@@ -21,7 +21,7 @@ namespace Application.Lecturers.DTOs
             return new GetLecturerResponseDto
             {
                 Id = lecturer.Id,
-                Name = lecturer.Name,
+                FullName = lecturer.FullName,
                 IsActive = lecturer.IsActive,
                 SchoolId = lecturer.SchoolId,
                 SchoolName = lecturer.School?.Name,

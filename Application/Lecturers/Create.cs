@@ -83,7 +83,7 @@ namespace Application.Lecturers
                                 BodyBuilder = new BodyBuilder { HtmlBody = emailTemplate, TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}" },
                                 Subject = "Project Portal Account's Password",
                                 ToAddress = lecturer.Email,
-                                ToName = lecturer.Name
+                                ToName = lecturer.FirstName
                             },
                             Func =
                                 async password =>
@@ -92,7 +92,7 @@ namespace Application.Lecturers
                                     {
                                         RegisterRequestDto = new RegisterRequestDTO
                                         {
-                                            Email = lecturer.Email, Name = lecturer.Name, Password = password,
+                                            Email = lecturer.Email, Name = lecturer.FirstName, Password = password,
                                             Address = ""
                                         }
                                     })) != null;

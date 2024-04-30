@@ -6,7 +6,8 @@ namespace Application.Students.DTOs
     public class GetStudentResponseDto : Person
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public long IRN { get; set; }
+        public string FullName { get; set; }
         public bool IsActive { get; set; } 
         public Guid SchoolId { get; set; }
         public string? SchoolName { get; set; }
@@ -23,7 +24,8 @@ namespace Application.Students.DTOs
             return new GetStudentResponseDto
             {
                 Id = student.Id,
-                Name = student.Name,
+                IRN = student.IRN,
+                FullName = student.FullName,
                 Email = student.Email,
                 PhoneNumber = student.PhoneNumber,
                 IsActive = student.IsActive,

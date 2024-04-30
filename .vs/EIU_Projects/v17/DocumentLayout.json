@@ -3,112 +3,235 @@
   "WorkspaceRootPath": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Migrations\\20240430101110_checkExcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Migrations\\20240430101110_checkExcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\exceldata\\gettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\exceldata\\gettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\exceldatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\exceldatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\mailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\mailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\exceldata\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\exceldata\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\persistence\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\miniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\miniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\uploadfile_v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\uploadfile_v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\streamfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\streamfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\dtos\\addfilerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\addfilerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\uploadfile_v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\uploadfile_v2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\dtos\\getfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\getfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\dtos\\addfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\addfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\getavatar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\getavatar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Migrations\\20240430030249_addFileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:API\\Migrations\\20240430030249_addFileType.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\editfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\editfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\dtos\\editstudentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\editstudentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\schools\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\schools\\dtos\\getschoolresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\dtos\\getschoolresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\dtos\\getmockdomainresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\dtos\\getmockdomainresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\projects\\dtos\\getprojectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\getprojectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\projects\\dtos\\editprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\editprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\projects\\dtos\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\createlecturerrequedtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\createlecturerrequedtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\validation\\lecturercreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\validation\\lecturercreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\dtos\\getstudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getstudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\person\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\person\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\getlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\getlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\dtos\\liststudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\liststudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\validation\\studentcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\validation\\studentcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\validation\\lecturercreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\validation\\lecturercreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\getlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\getlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\core\\appsetting\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -131,32 +254,8 @@
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\appexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\mailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\mailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\downloadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\downloadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\domain\\mail\\maildata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -171,44 +270,12 @@
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\dtos\\editmockdomainrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\dtos\\editmockdomainrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\schools\\dtos\\editschoolrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\dtos\\editschoolrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\code_place\\capstone_resolvemaster\\application\\students\\liststudentbyschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\liststudentbyschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\MailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -233,7 +300,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -249,108 +316,695 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1045252665:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UploadFile_V2.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\UploadFile_V2.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\UploadFile_V2.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\UploadFile_V2.cs",
-              "RelativeToolTip": "Application\\Minio\\UploadFile_V2.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAQwHIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T09:12:00.294Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20240430101110_checkExcel.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Migrations\\20240430101110_checkExcel.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\20240430101110_checkExcel.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Migrations\\20240430101110_checkExcel.cs",
+              "RelativeToolTip": "API\\Migrations\\20240430101110_checkExcel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T10:11:10.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MailController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\MailController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\MailController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\MailController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\MailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T06:47:36.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\ProjectsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\ProjectsController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\ProjectsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetTemplate.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\ExcelData\\GetTemplate.cs",
+              "RelativeDocumentMoniker": "Application\\ExcelData\\GetTemplate.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\ExcelData\\GetTemplate.cs",
+              "RelativeToolTip": "Application\\ExcelData\\GetTemplate.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAvwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T07:07:06.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ExcelExport.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\ExcelExport.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\ExcelExport.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\ExcelExport.cs",
+              "RelativeToolTip": "Application\\Students\\ExcelExport.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAowFsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "School.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\School\\School.cs",
+              "RelativeDocumentMoniker": "Domain\\School\\School.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\School\\School.cs",
+              "RelativeToolTip": "Domain\\School\\School.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExcelDataController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\ExcelDataController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\ExcelDataController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\ExcelDataController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\ExcelDataController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAswAoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T07:30:39.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Import.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\ExcelData\\Import.cs",
+              "RelativeDocumentMoniker": "Application\\ExcelData\\Import.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\ExcelData\\Import.cs",
+              "RelativeToolTip": "Application\\ExcelData\\Import.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T07:06:49.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PagingParams.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\Paging\\PagingParams.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\Paging\\PagingParams.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\Paging\\PagingParams.cs",
+              "RelativeToolTip": "Application\\Core\\Paging\\PagingParams.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetExcelExportDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "RelativeToolTip": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Details.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Details.cs",
+              "RelativeToolTip": "Application\\Students\\Details.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:54:20.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Persistence\\DataContext.cs",
+              "RelativeDocumentMoniker": "Persistence\\DataContext.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Persistence\\DataContext.cs",
+              "RelativeToolTip": "Persistence\\DataContext.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAnwBQAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T04:10:31.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "MinioController.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\MinioController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\MinioController.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\MinioController.cs",
               "RelativeToolTip": "API\\Controllers\\MinioController.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAAAEMAAAAIAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAIwEkAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T09:13:35.628Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StreamFile.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\StreamFile.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\StreamFile.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\StreamFile.cs",
-              "RelativeToolTip": "Application\\Minio\\StreamFile.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAwDEAAAAJAAAA",
+              "DocumentIndex": 13,
+              "Title": "MockDomainsController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\MockDomainsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MockDomainsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\MockDomainsController.cs",
+              "RelativeToolTip": "API\\Controllers\\MockDomainsController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAawBMAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.307Z",
+              "WhenOpened": "2024-04-30T01:10:19.699Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAewGIAAAAAAAAA",
+              "DocumentIndex": 14,
+              "Title": "LecturersController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\LecturersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\LecturersController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\LecturersController.cs",
+              "RelativeToolTip": "API\\Controllers\\LecturersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.248Z",
+              "WhenOpened": "2024-04-27T08:29:31.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Create.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Create.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Create.cs",
-              "RelativeToolTip": "Application\\Students\\Create.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAkwEAAAAAPAAAA",
+              "DocumentIndex": 15,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Edit.cs",
+              "RelativeToolTip": "Application\\Students\\Edit.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAWwCEAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.258Z",
+              "WhenOpened": "2024-04-30T01:53:17.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
+              "Title": "UploadFile_V2.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\UploadFile_V2.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\UploadFile_V2.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\UploadFile_V2.cs",
+              "RelativeToolTip": "Application\\Minio\\UploadFile_V2.cs",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAkwI0AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T11:05:13.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddFileResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "RelativeToolTip": "Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:08:22.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\MappingProfiles.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\MappingProfiles.cs",
+              "RelativeToolTip": "Application\\Core\\MappingProfiles.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAswFUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:09:22.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetFileResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "RelativeToolTip": "Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:08:53.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "File.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\File\\File.cs",
+              "RelativeDocumentMoniker": "Domain\\File\\File.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\File\\File.cs",
+              "RelativeToolTip": "Domain\\File\\File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:02:44.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "GetAvatar.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\GetAvatar.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\GetAvatar.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\GetAvatar.cs",
+              "RelativeToolTip": "Application\\Minio\\GetAvatar.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:15:56.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20240430030249_addFileType.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Migrations\\20240430030249_addFileType.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\20240430030249_addFileType.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Migrations\\20240430030249_addFileType.cs",
+              "RelativeToolTip": "API\\Migrations\\20240430030249_addFileType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:02:50.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UploadFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\UploadFile.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\UploadFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\UploadFile.cs",
+              "RelativeToolTip": "Application\\Minio\\UploadFile.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAADwvzoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:19:00.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EditFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\EditFile.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\EditFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\EditFile.cs",
+              "RelativeToolTip": "Application\\Minio\\EditFile.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAYwC0AAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:04:09.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "StudentsController.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\StudentsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\StudentsController.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\StudentsController.cs",
-              "RelativeToolTip": "API\\Controllers\\StudentsController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAQwBsAAAAMAAAA",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\StudentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\StudentsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\StudentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\StudentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.246Z"
+              "WhenOpened": "2024-04-29T11:06:50.126Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AddFileRequestDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DTOs\\AddFileRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\AddFileRequestDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DTOs\\AddFileRequestDto.cs",
-              "RelativeToolTip": "Application\\Minio\\DTOs\\AddFileRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAuAAAA",
+              "DocumentIndex": 25,
+              "Title": "EditStudentRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "RelativeToolTip": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T09:11:23.546Z"
+              "WhenOpened": "2024-04-30T01:55:40.662Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 30,
+              "Title": "GetSchoolResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "RelativeToolTip": "Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:47:51.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Edit.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Edit.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:49:30.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Schools\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Schools\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Schools\\Edit.cs",
+              "RelativeToolTip": "Application\\Schools\\Edit.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA5wCcAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:49:40.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Details.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Details.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Details.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:10:14.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GetMockDomainResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
+              "RelativeToolTip": "Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:49:33.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DeleteFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DeleteFile.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\DeleteFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DeleteFile.cs",
+              "RelativeToolTip": "Application\\Minio\\DeleteFile.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Create.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Create.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Create.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Delete.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Delete.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Delete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:10:07.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Edit.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Edit.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAqwCcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Delete.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Delete.cs",
+              "RelativeToolTip": "Application\\Students\\Delete.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:31:30.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "GetProjectResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "RelativeToolTip": "Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T09:32:29.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EditProjectRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "RelativeToolTip": "Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T09:32:28.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CreateProjectRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
+              "RelativeToolTip": "Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T09:32:27.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\List.cs",
+              "RelativeToolTip": "Application\\Lecturers\\List.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ListLecturerOfSchool.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "RelativeToolTip": "Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA2wC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ListLecturerResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "EditLecturerRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CreateLecturerRequedtDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Create.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Create.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Create.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAADwvxQAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:43:58.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Lecturer.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Lecturer\\Lecturer.cs",
+              "RelativeDocumentMoniker": "Domain\\Lecturer\\Lecturer.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Lecturer\\Lecturer.cs",
+              "RelativeToolTip": "Domain\\Lecturer\\Lecturer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Project\\Project.cs",
+              "RelativeDocumentMoniker": "Domain\\Project\\Project.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Project\\Project.cs",
+              "RelativeToolTip": "Domain\\Project\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:35:27.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "StudentEditValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Validation\\StudentEditValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Validation\\StudentEditValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Validation\\StudentEditValidator.cs",
+              "RelativeToolTip": "Application\\Students\\Validation\\StudentEditValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "StudentCreateValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Validation\\StudentCreateValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Validation\\StudentCreateValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Validation\\StudentCreateValidator.cs",
+              "RelativeToolTip": "Application\\Students\\Validation\\StudentCreateValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T04:03:37.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "LecturerEditValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "LecturerCreateValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T09:06:19.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "GetLecturerResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAYwAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T09:00:02.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
+              "RelativeDocumentMoniker": "..\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
+              "RelativeToolTip": "..\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T03:56:07.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
               "Title": "API.csproj",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\API.csproj",
               "RelativeDocumentMoniker": "API\\API.csproj",
@@ -362,19 +1016,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LecturersController.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\LecturersController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\LecturersController.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\LecturersController.cs",
-              "RelativeToolTip": "API\\Controllers\\LecturersController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.256Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 55,
               "Title": "BaseApiController.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\BaseApiController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\BaseApiController.cs",
@@ -386,79 +1028,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Edit.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Edit.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Edit.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAIwBEAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EditStudentRequestDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "RelativeToolTip": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Lecturer.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Lecturer\\Lecturer.cs",
-              "RelativeDocumentMoniker": "Domain\\Lecturer\\Lecturer.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Lecturer\\Lecturer.cs",
-              "RelativeToolTip": "Domain\\Lecturer\\Lecturer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.353Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EditLecturerRequestDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateLecturerRequedtDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LecturersController.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\LecturersController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\LecturersController.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\LecturersController.cs",
-              "RelativeToolTip": "API\\Controllers\\CMS\\LecturersController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAADgvyAAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:17:15.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 56,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\Result.cs",
               "RelativeDocumentMoniker": "Application\\Core\\Result.cs",
@@ -470,67 +1040,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Create.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Create.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Create.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Create.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Create.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:43:58.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LecturerCreateValidator.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Validation\\LecturerCreateValidator.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABoAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:06:19.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Student\\Student.cs",
-              "RelativeDocumentMoniker": "Domain\\Student\\Student.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Student\\Student.cs",
-              "RelativeToolTip": "Domain\\Student\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GetStudentResponseDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\GetStudentResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetStudentResponseDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\GetStudentResponseDto.cs",
-              "RelativeToolTip": "Application\\Students\\DTOs\\GetStudentResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAjwA0AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Person\\Person.cs",
-              "RelativeDocumentMoniker": "Domain\\Person\\Person.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Person\\Person.cs",
-              "RelativeToolTip": "Domain\\Person\\Person.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 57,
               "Title": "IsEmailUnique.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
               "RelativeDocumentMoniker": "Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
@@ -542,55 +1052,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GetLecturerResponseDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\GetLecturerResponseDto.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAvwBcAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:00:02.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Project.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Project\\Project.cs",
-              "RelativeDocumentMoniker": "Domain\\Project\\Project.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Project\\Project.cs",
-              "RelativeToolTip": "Domain\\Project\\Project.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:35:27.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ListStudentResponseDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\ListStudentResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\ListStudentResponseDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\ListStudentResponseDto.cs",
-              "RelativeToolTip": "Application\\Students\\DTOs\\ListStudentResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "ExcelExport.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\ExcelExport.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\ExcelExport.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\ExcelExport.cs",
-              "RelativeToolTip": "Application\\Students\\ExcelExport.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAswEQAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.227Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 60,
               "Title": "Pagination.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\Paging\\Pagination.cs",
               "RelativeDocumentMoniker": "Application\\Core\\Paging\\Pagination.cs",
@@ -602,7 +1064,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 59,
               "Title": "MinioSetting.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\AppSetting\\MinioSetting.cs",
               "RelativeDocumentMoniker": "Application\\Core\\AppSetting\\MinioSetting.cs",
@@ -614,7 +1076,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 58,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\AppSetting\\MailSettings.cs",
               "RelativeDocumentMoniker": "Application\\Core\\AppSetting\\MailSettings.cs",
@@ -626,7 +1088,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 61,
               "Title": "EnumsUtils.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\EnumsUtils.cs",
               "RelativeDocumentMoniker": "Application\\Core\\EnumsUtils.cs",
@@ -638,7 +1100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 62,
               "Title": "AppException.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\AppException.cs",
               "RelativeDocumentMoniker": "Application\\Core\\AppException.cs",
@@ -650,43 +1112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "PagingParams.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\Paging\\PagingParams.cs",
-              "RelativeDocumentMoniker": "Application\\Core\\Paging\\PagingParams.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Core\\Paging\\PagingParams.cs",
-              "RelativeToolTip": "Application\\Core\\Paging\\PagingParams.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "GetExcelExportDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "RelativeToolTip": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "School.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\School\\School.cs",
-              "RelativeDocumentMoniker": "Domain\\School\\School.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\School\\School.cs",
-              "RelativeToolTip": "Domain\\School\\School.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 69,
               "Title": "MailService.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\MailService.cs",
               "RelativeDocumentMoniker": "..\\Casptone_2024\\Application\\Mail\\MailService.cs",
@@ -698,19 +1124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "MailController.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\MailController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\MailController.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\MailController.cs",
-              "RelativeToolTip": "API\\Controllers\\CMS\\MailController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.29Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 63,
               "Title": "DownloadFile.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DownloadFile.cs",
               "RelativeDocumentMoniker": "Application\\Minio\\DownloadFile.cs",
@@ -722,7 +1136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 70,
               "Title": "SendHTMLMail.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\SendHTMLMail.cs",
               "RelativeDocumentMoniker": "..\\Casptone_2024\\Application\\Mail\\SendHTMLMail.cs",
@@ -734,7 +1148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 71,
               "Title": "IMailService.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\IMailService.cs",
               "RelativeDocumentMoniker": "..\\Casptone_2024\\Application\\Mail\\IMailService.cs",
@@ -746,31 +1160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "DeleteFile.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DeleteFile.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\DeleteFile.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Minio\\DeleteFile.cs",
-              "RelativeToolTip": "Application\\Minio\\DeleteFile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBZwEIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ProjectsController.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\ProjectsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\ProjectsController.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Controllers\\CMS\\ProjectsController.cs",
-              "RelativeToolTip": "API\\Controllers\\CMS\\ProjectsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 64,
               "Title": "MailData.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Domain\\Mail\\MailData.cs",
               "RelativeDocumentMoniker": "Domain\\Mail\\MailData.cs",
@@ -782,7 +1172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 72,
               "Title": "HTMLMailData.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Domain\\Mail\\HTMLMailData.cs",
               "RelativeDocumentMoniker": "..\\Casptone_2024\\Domain\\Mail\\HTMLMailData.cs",
@@ -794,7 +1184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 65,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
@@ -806,7 +1196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 66,
               "Title": "Details.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Details.cs",
               "RelativeDocumentMoniker": "Application\\Lecturers\\Details.cs",
@@ -818,43 +1208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "List.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\List.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\List.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\List.cs",
-              "RelativeToolTip": "Application\\Lecturers\\List.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAqwCYAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ListLecturerResponseDto.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.322Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ListLecturerOfSchool.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "RelativeToolTip": "Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAcwDMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 67,
               "Title": "EditMockDomainRequestDto.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
               "RelativeDocumentMoniker": "Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
@@ -866,7 +1220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 73,
               "Title": "LecturerCreateValdator.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs",
               "RelativeDocumentMoniker": "..\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs",
@@ -878,31 +1232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "Create.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Create.cs",
-              "RelativeDocumentMoniker": "Application\\MockDomains\\Create.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\MockDomains\\Create.cs",
-              "RelativeToolTip": "Application\\MockDomains\\Create.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAwBsAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.335Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "LecturerEditValidator.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAMBdwBEAAABpAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.338Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 68,
               "Title": "EditSchoolRequestDto.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
               "RelativeDocumentMoniker": "Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
@@ -911,42 +1241,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Edit.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Edit.cs",
-              "RelativeToolTip": "Application\\Students\\Edit.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAwwCwAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "StudentEditValidator.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Validation\\StudentEditValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Validation\\StudentEditValidator.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\Validation\\StudentEditValidator.cs",
-              "RelativeToolTip": "Application\\Students\\Validation\\StudentEditValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "ListStudentBySchool.cs",
-              "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\ListStudentBySchool.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\ListStudentBySchool.cs",
-              "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Capstone_Resolvemaster\\Application\\Students\\ListStudentBySchool.cs",
-              "RelativeToolTip": "Application\\Students\\ListStudentBySchool.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.356Z"
             }
           ]
         }

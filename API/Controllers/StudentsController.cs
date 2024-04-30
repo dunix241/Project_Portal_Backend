@@ -31,58 +31,34 @@ namespace API.Controllers
         [HttpPost()]
         public async Task<IActionResult> CreateAndAssignToSchool(CreateStudentRequestDto student)
         {
-            try
-            {
-                var result = await Mediator.Send(new Create.Command { Student = student });
 
-                if (result.IsSuccess)
-                {
-                    return Ok("Student created and assigned to school successfully.");
-                }
-
-                return BadRequest(result.Error);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(400, "An error occurred while processing your request." + "\n" + ex.Message);
-            }
+            var result = await Mediator.Send(new Create.Command { Student = student });
+            return HandleResult(result);
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Edit a student")]
         public async Task<IActionResult> EditStudent(Guid id, EditStudentRequestDto school)
         {
             return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = school }));
         }
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Felete a student")]
         public async Task<IActionResult> DeleteStudent(Guid id)
         {
             return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
         }
 
-
-
         [HttpPost("Import")]
         public async Task<IActionResult> Import(IFormFile file)
         {
-            try
-            {
-                var result = await Mediator.Send(new ExcelImport.Command { ExcelStream = file.OpenReadStream() });
-
-                if (result.IsSuccess)
-                {
-                    return Ok("Students created and assigned to school successfully.");
-                }
-
-                return BadRequest(result.Error);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(400, "An error occurred while processing your request." + "\n" + ex.Message);
-            }
+            var result = await Mediator.Send(new ExcelImport.Command { ExcelStream = file.OpenReadStream() });
+            return HandleResult(result);
         }
 
-        [HttpGet("export-excel")]
+
+        [HttpGet("Export-excel")]
         public async Task<IActionResult> ExportExcel([FromQuery] PagingParams exportQueryParams)
         {
             var query = new ExcelExport.Query { ExportQueryParams = exportQueryParams };
@@ -95,9 +71,8 @@ namespace API.Controllers
                 return file;
             }
             else
-            {
-                // Handle error
-                return BadRequest(result.Error);
+            {             
+                return HandleResult(result);
             }
         }
     }

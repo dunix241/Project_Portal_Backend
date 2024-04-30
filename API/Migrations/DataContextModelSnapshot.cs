@@ -23,14 +23,16 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Extension")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("FileName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FileOriginalName")
+                        .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("FileType")
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid?>("LecturerId")
                         .HasColumnType("TEXT");
@@ -39,9 +41,6 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<Guid?>("StudentId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Url")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -78,7 +77,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Images");
+                    b.ToTable("Image");
                 });
 
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
@@ -88,6 +87,7 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
@@ -231,6 +231,9 @@ namespace API.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<long>("IRN")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
