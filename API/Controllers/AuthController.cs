@@ -40,22 +40,22 @@ public class AuthController : BaseApiController
 
         if (user == null) return Unauthorized();
 
-        var userDto = CreateUserDto(user);
+        var userDto = await CreateUserDto(user);
         userDto.Avatar = user.Avatar?.Url + '/' + user.Avatar?.Name + '.' + user.Avatar?.Extension;
 
         return userDto;
     }
 
-    [HttpPost]
-    [Route("[Action]")]
-    [SwaggerOperation(Summary = "Register a user")]
-    public async Task<ActionResult<LoginResponseDTO>> Register(RegisterRequestDTO registerRequestDto)
-    {
-        var user = await Mediator.Send(new Register.Query{RegisterRequestDto = registerRequestDto});
-        if (user == null) return BadRequest("Problem registering user");
-        
-        return CreateUserDto(user);
-    }
+    // [HttpPost]
+    // [Route("[Action]")]
+    // [SwaggerOperation(Summary = "Register a user")]
+    // public async Task<ActionResult<LoginResponseDTO>> Register(RegisterRequestDTO registerRequestDto)
+    // {
+    //     var user = await Mediator.Send(new Register.Query{RegisterRequestDto = registerRequestDto});
+    //     if (user == null) return BadRequest("Problem registering user");
+    //     
+    //     return await CreateUserDto(user);
+    // }
 
     [Authorize]
     [HttpGet]
@@ -64,7 +64,7 @@ public class AuthController : BaseApiController
     public async Task<ActionResult<LoginResponseDTO>> GetCurrentUser()
     {
         var user = await _userManager.FindByEmailAsync(User.FindFirstValue(ClaimTypes.Email));
-        return CreateUserDto(user);
+        return await CreateUserDto(user);
     }
 
     [HttpPatch("[Action]")]
@@ -73,7 +73,13 @@ public class AuthController : BaseApiController
         return HandleResult(await Mediator.Send(new ResetPassword.Command { ResetPasswordRequestDto = requestDto }));
     }
 
-    private LoginResponseDTO CreateUserDto(User user)
+    [HttpPatch("[Action]")]
+    public async Task<IActionResult> ChangePassword(ChangePasswordRequestDTO requestDto)
+    {
+        return HandleResult(await Mediator.Send(new ChangePassword.Command { RequestDto = requestDto }));
+    }
+    
+    private async Task<LoginResponseDTO> CreateUserDto(User user)
     {
         var userDto = new LoginResponseDTO
         {
@@ -81,7 +87,8 @@ public class AuthController : BaseApiController
             Address = user.Address,
             UserName = user.UserName,
             Token = _tokenService.CreateToken(user),
-            Email = user.Email
+            Email = user.Email,
+            Roles = await _userManager.GetRolesAsync(user)
         };
         if (user.Avatar != null)
             userDto.Avatar = user.Avatar.Url + '/' + user.Avatar.Name + '.' + user.Avatar.Extension;

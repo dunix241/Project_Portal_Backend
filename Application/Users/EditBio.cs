@@ -27,7 +27,7 @@ public class EditBio
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
             var user = await _context.Users.FirstOrDefaultAsync(
-                entity => entity.UserName == _userAccessor.GetUsername());
+                entity => entity.UserName == _userAccessor.GetUser().Username);
 
             if (user != null) user.Bio = request.Bio;
 

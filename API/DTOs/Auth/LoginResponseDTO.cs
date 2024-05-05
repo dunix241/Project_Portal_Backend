@@ -8,4 +8,5 @@ public class LoginResponseDTO
     public string Avatar { get; set; }
     public string Address { get; set; }
     public string Email { get; set; }
+    public IList<string> Roles { get; set; }
 }

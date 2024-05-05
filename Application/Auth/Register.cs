@@ -45,7 +45,6 @@ public class Register
 
             if (result.Succeeded)
             {
-                _logger.LogError(user.Id);
                 return user;
             }
             

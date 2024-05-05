@@ -13,8 +13,16 @@ public class UserAccessor : IUserAccessor
         _httpContextAccessor = httpContextAccessor;
     }
 
-    public string GetUsername()
+    public UserCredentials GetUser()
     {
-        return _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name);
+        var userCredentials = new UserCredentials
+        {
+            Username = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Name),
+            Id = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier),
+            Email = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email),
+            User = _httpContextAccessor.HttpContext.User
+        };
+        
+        return userCredentials;
     }
 }

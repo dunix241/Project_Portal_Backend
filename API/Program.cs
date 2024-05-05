@@ -3,10 +3,10 @@ using System.Text.Json.Serialization;
 using API.Middleware;
 using API.Services;
 using API.Swagger;
+using Application.Authorization.Users;
 using Application.Core;
 using Application.Core.AppSetting;
 using Application.Interfaces;
-using Application.Mail;
 using Application.Users;
 using Asp.Versioning;
 using Domain;
@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Server.IISIntegration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -114,6 +115,7 @@ builder.Services.AddCors(opt =>
 });
 
 builder.Services.AddIdentityCore<User>(options => { options.Password.RequireNonAlphanumeric = false; })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<DataContext>()
     .AddSignInManager<SignInManager<User>>();
 
@@ -132,7 +134,6 @@ builder.Services
         };
     });
 
-
 builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
@@ -140,6 +141,8 @@ builder.Services.AddScoped<TokenService>();
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
+
+builder.Services.AddSingleton<IAuthorizationHandler, UserAdministratorsAuthorizationHandler>();
 
 //builder.Services.AddSingleton<IMinioClient, MinioClient>();
 builder.Services.AddSingleton<IMinioClient>(provider =>
@@ -191,8 +194,9 @@ try
 {
     var userManager = services.GetRequiredService<UserManager<User>>();
     var context = services.GetRequiredService<DataContext>();
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
     await context.Database.MigrateAsync();
-    await Seed.SeedData(context, userManager);
+    await Seed.SeedData(context, userManager, roleManager);
 }
 catch (Exception ex)
 {

@@ -68,37 +68,48 @@ namespace Application.Lecturers
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    _context.Lecturers.Add(lecturer);
-                    var success = await _context.SaveChangesAsync() != 0;
+                    var success = true;
 
-                    if (success)
+                    string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
+                    string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
+
+                    success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
                     {
-                        string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
-                        string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
-
-                        success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
+                        MailData = new MailData
                         {
-                            MailData = new MailData
+                            BodyBuilder = new BodyBuilder { HtmlBody = emailTemplate, TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}" },
+                            Subject = "Project Portal Account's Password",
+                            ToAddress = lecturer.Email,
+                            ToName = lecturer.Name
+                        },
+                        Func =
+                            async password =>
                             {
-                                BodyBuilder = new BodyBuilder { HtmlBody = emailTemplate, TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}" },
-                                Subject = "Project Portal Account's Password",
-                                ToAddress = lecturer.Email,
-                                ToName = lecturer.Name
-                            },
-                            Func =
-                                async password =>
+                                var success = (await _mediator.Send(new Register.Query
                                 {
-                                    return (await _mediator.Send(new Register.Query
+                                    RegisterRequestDto = new RegisterRequestDTO
                                     {
-                                        RegisterRequestDto = new RegisterRequestDTO
-                                        {
-                                            Email = lecturer.Email, Name = lecturer.Name, Password = password,
-                                            Address = ""
-                                        }
-                                    })) != null;
+                                        Email = lecturer.Email, Name = lecturer.Name, Password = password,
+                                        Address = ""
+                                    }
+                                })) != null;
+
+                                if (success)
+                                {
+                                    success &= (await _mediator.Send(new AddToRole.Command
+                                    {
+                                        Role = Authorization.Constants.LecturersRole,
+                                        UserEmail = request.Lecturer.Email
+                                    })).IsSuccess;
                                 }
-                        })).IsSuccess;
-                    }
+                                
+                                return success;
+                            }
+                    })).IsSuccess;
+
+                    lecturer.UserId = (await _userManager.FindByEmailAsync(lecturer.Email))?.Id;
+                    _context.Lecturers.Add(lecturer);
+                    success &= await _context.SaveChangesAsync() != 0;
 
                     if (success)
                     {
