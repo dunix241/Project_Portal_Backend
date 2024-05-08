@@ -1,9 +1,12 @@
 using API.DTOs.Accounts;
+using Application.Authorization.Users;
 using Application.Core;
+using Application.Interfaces;
 using Application.Users;
 using Domain;
 using Domain.Mail;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using MimeKit;
 using Persistence;
@@ -22,12 +25,16 @@ public class ResetPassword
         private readonly DataContext _context;
         private readonly IMediator _mediator;
         private readonly UserManager<User> _userManager;
+        private readonly IAuthorizationService _authorizationService;
+        private readonly IUserAccessor _userAccessor;
 
-        public Handler(DataContext context, IMediator mediator, UserManager<User> userManager)
+        public Handler(DataContext context, IMediator mediator, UserManager<User> userManager, IAuthorizationService authorizationService, IUserAccessor userAccessor)
         {
             _context = context;
             _mediator = mediator;
             _userManager = userManager;
+            _authorizationService = authorizationService;
+            _userAccessor = userAccessor;
         }
 
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -38,7 +45,13 @@ public class ResetPassword
 
             if (user == null)
             {
-                return Result<Unit>.Failure("User not found");
+                return null;
+            }
+
+            var isAuthorized = (await _authorizationService.AuthorizeAsync(_userAccessor.GetUser().User, user, UserOperations.ResetPassword)).Succeeded;
+            if (!isAuthorized)
+            {
+                return Result<Unit>.Failure(Status.Forbid, "");
             }
 
             using var transaction = _context.Database.BeginTransaction();

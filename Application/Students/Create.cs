@@ -5,10 +5,12 @@ using Application.Students.DTOs;
 using Application.Students.Validation;
 using Application.Users;
 using AutoMapper;
+using Domain;
 using Domain.Mail;
 using Domain.Student;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using MimeKit;
 using Persistence;
 
@@ -33,12 +35,14 @@ namespace Application.Students
             private readonly DataContext _context;
             private readonly IMapper _mapper;
             private readonly IMediator _mediator;
+            private readonly UserManager<User> _userManager;
 
-            public Handler(DataContext context, IMapper mapper, IMediator mediator)
+            public Handler(DataContext context, IMapper mapper, IMediator mediator, UserManager<User> userManager)
             {
                 _context = context;
                 _mapper = mapper;
                 _mediator = mediator;
+                _userManager = userManager;
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -61,41 +65,52 @@ namespace Application.Students
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    _context.Students.Add(student);
-                    var success = await _context.SaveChangesAsync() != 0;
+                    var success = true;
 
-                    if (success)
+                    string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
+                    string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
+
+                    success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
                     {
-                        string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
-                        string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
-
-                        success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
+                        MailData = new MailData
                         {
-                            MailData = new MailData
+                            BodyBuilder = new BodyBuilder
                             {
-                                BodyBuilder = new BodyBuilder
-                                {
-                                    HtmlBody = emailTemplate,
-                                    TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}"
-                                },
-                                Subject = "Project Portal Account's Password",
-                                ToAddress = student.Email,
-                                ToName = student.Name
+                                HtmlBody = emailTemplate,
+                                TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}"
                             },
-                            Func =
-                                async password =>
+                            Subject = "Project Portal Account's Password",
+                            ToAddress = student.Email,
+                            ToName = student.Name
+                        },
+                        Func =
+                            async password =>
+                            {
+                                var success = await _mediator.Send(new Register.Query
                                 {
-                                    return (await _mediator.Send(new Register.Query
+                                    RegisterRequestDto = new RegisterRequestDTO
                                     {
-                                        RegisterRequestDto = new RegisterRequestDTO
-                                        {
-                                            Email = student.Email, Name = student.Name, Password = password,
-                                            Address = ""
-                                        }
-                                    })) != null;
+                                        Email = student.Email, Name = student.Name, Password = password,
+                                        Address = ""
+                                    }
+                                }) != null;
+
+                                if (success)
+                                {
+                                    success &= (await _mediator.Send(new AddToRole.Command
+                                    {
+                                        Role = Authorization.Constants.StudentsRole,
+                                        UserEmail = request.Student.Email
+                                    })).IsSuccess;
                                 }
-                        })).IsSuccess;
-                    }
+                                
+                                return success;
+                            }
+                    })).IsSuccess;
+
+                    student.UserId = (await _userManager.FindByEmailAsync(student.Email)).Id;
+                    _context.Students.Add(student);
+                    success &= await _context.SaveChangesAsync() != 0;
 
                     if (success)
                     {

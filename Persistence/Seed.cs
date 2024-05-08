@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.VisualBasic;
 
 namespace Persistence;
 
@@ -8,18 +9,20 @@ public class Seed
     private static readonly Random _random = new();
     private static DataContext _context;
     private static UserManager<User> _userManager;
+    private static RoleManager<IdentityRole> _roleManager;
 
     private static List<Image> _images;
     private static List<Image> _avatars;
 
     private static List<User> _users;
 
-    public static async Task SeedData(DataContext context, UserManager<User> userManager)
+    public static async Task SeedData(DataContext context, UserManager<User> userManager, RoleManager<IdentityRole> roleManager)
     {
-        if (userManager.Users.Any()) return;
+        // if (userManager.Users.Any()) return;
 
         _context = context;
         _userManager = userManager;
+        _roleManager = roleManager;
 
         _avatars = SeedImages("/assets/images/avatars", "avatar", 24);
 
@@ -52,6 +55,13 @@ public class Seed
     {
         _users = new List<User>
         {
+            new()
+            {
+                Name = "Admin",
+                UserName = "admin@project-portal.com",
+                Email = "admin@project-portal.com",
+                Address = "1 at fake street"
+            },
             new()
             {
                 Name = "Amos Blanda",
@@ -87,6 +97,14 @@ public class Seed
         {
             await _userManager.CreateAsync(user, "Password_123");
         }
+        
+        var admin = await _userManager.FindByEmailAsync("admin@project-portal.com");
+        var superAdminRole = "SuperAdmins";
+        if (!await _roleManager.RoleExistsAsync(superAdminRole))
+        {
+            await _roleManager.CreateAsync(new IdentityRole(superAdminRole));
+        }
+        await _userManager.AddToRoleAsync(admin, superAdminRole);
 
         await _context.SaveChangesAsync();
     }
