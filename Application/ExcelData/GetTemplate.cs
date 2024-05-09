@@ -1,11 +1,9 @@
 ﻿using Application.Core;
 using Application.Students.DTOs;
 using AutoMapper;
-using ClosedXML.Excel;
 using MediatR;
+using OfficeOpenXml;
 using Persistence;
-using System.Linq;
-
 
 namespace Application.ExcelData
 {
@@ -30,62 +28,69 @@ namespace Application.ExcelData
 
             public async Task<Result<GetExcelExportDto>> Handle(Query request, CancellationToken cancellationToken)
             {
-
-                var schoolMap = _context.Schools
-                    .ToDictionary(school => school.Name, school => school.Id.ToString());
-
-                List<string> keyNameList = schoolMap.Keys.ToList();
-
+                var schoolList = _context.Schools.Select(school => school.Name).ToList();
                 var typleList = new List<string> { "Lecturer", "Student" };
+                string defaultType = "Lecturer";
+                string defaultSchool = schoolList.FirstOrDefault();
 
+                using (var excelPackage = new ExcelPackage())
+                {
+                    var worksheet = excelPackage.Workbook.Worksheets.Add("List");
 
-                var wb = new XLWorkbook();
-                var ws = wb.Worksheets.Add("Danh sách");
+                    worksheet.Cells["A1:H1"].Merge = true;
+                    worksheet.Cells["A1"].Value = "INPUT DATA SHEET";
+                    worksheet.Cells["A1"].Style.Font.Bold = true;
+                    worksheet.Cells["A1"].Style.Font.Size = 12;
+                    worksheet.Cells["A1"].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
 
-                var schoolRange = ws.Range("A3", "A3");
-                var userTypeRange = ws.Range("B3", "B3");
+                    worksheet.Cells["A2:H2"].Merge = true;
+                    worksheet.Cells["A2"].Value = "Release date: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+                    worksheet.Cells["A2"].Style.Font.Size = 12;
+                    worksheet.Cells["A2"].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
 
-                schoolRange.SetDataValidation().List(string.Join(",", keyNameList), false);
-                userTypeRange.SetDataValidation().List(string.Join(",", typleList), false);
+                    worksheet.Cells["A3"].Value = "School";
+                    worksheet.Cells["A3"].Style.Font.Bold = true;
+                    var schoolRange = worksheet.Cells["B3"];
+                    schoolRange.DataValidation.AddListDataValidation().Formula.Values.Add(string.Join(",", schoolList));
+                    schoolRange.Value = defaultSchool;
 
+                    worksheet.Cells["C3"].Value = "Data Type";
+                    worksheet.Cells["C3"].Style.Font.Bold = true;
+                    var userTypeRange = worksheet.Cells["D3"];
+                    userTypeRange.DataValidation.AddListDataValidation().Formula.Values.Add(string.Join(",", typleList));
+                    userTypeRange.Value = defaultType;
 
+                    worksheet.Cells["A4"].Value = "Use drop down list to choose School and DataType";
+                    worksheet.Cells["A4:H4"].Merge = true;
+                    worksheet.Cells["A4"].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
 
-                ws.Range("A1", "H1").Merge();
-                ws.Cells("A1").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                ws.Cells("A1").Style.Font.FontSize = 12;
-                ws.Cells("A1").Value = "DANH SÁCH DỮ DỮ LIỆU ĐẦU VÀO";
-                ws.Cells("A1").Style.Font.Bold = true;
-                ws.Range("A2", "H2").Merge();
-                ws.Cells("A2").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                ws.Cells("A2").Style.Font.FontSize = 12;
-                // ws.Cells("A2").Value = "Ngày xuất báo cáo: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
-
-                var listHeader = new List<string>
+                    var listHeader = new List<string>
                     {
-                        "A4", "B4", "C4", "D4", "E4",
+                        "A5", "B5", "C5", "D5", "E5"
                     };
 
-                ws.Cells(listHeader[0]).Value = "STT";
-                ws.Cells(listHeader[1]).Value = "First Name";
-                ws.Cells(listHeader[2]).Value = "LastName";
-                ws.Cells(listHeader[3]).Value = "Email";
-                ws.Cells(listHeader[4]).Value = "Phone";
+                    worksheet.Cells[listHeader[0]].Value = "STT";
+                    worksheet.Cells[listHeader[1]].Value = "First Name";
+                    worksheet.Cells[listHeader[2]].Value = "LastName";
+                    worksheet.Cells[listHeader[3]].Value = "Email";
+                    worksheet.Cells[listHeader[4]].Value = "Phone";
 
-                listHeader.ForEach(c =>
-                {
-                    ws.Cells(c).Style.Font.Bold = true;
-                    ws.Cell(c).Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
-                    ws.Cell(c).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
-                });
+                    foreach (var headerCell in listHeader)
+                    {
+                        var cell = worksheet.Cells[headerCell];
+                        cell.Style.Font.Bold = true;
+                        cell.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                        cell.Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                    }
 
-                int row = 5;
+                    int row = 6;
 
-                using (var ms = new MemoryStream())
-                {
-                    var stream = new MemoryStream();
-                    wb.SaveAs(stream);
-                    byte[] content = stream.ToArray();
-                    return Result<GetExcelExportDto>.Success(new GetExcelExportDto { ExcelStream = content });
+                    using (var ms = new MemoryStream())
+                    {
+                        excelPackage.SaveAs(ms);
+                        byte[] content = ms.ToArray();
+                        return Result<GetExcelExportDto>.Success(new GetExcelExportDto { ExcelStream = content });
+                    }
                 }
             }
         }
