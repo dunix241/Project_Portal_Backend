@@ -44,7 +44,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
-        [SwaggerOperation(Summary = "Felete a student")]
+        [SwaggerOperation(Summary = "Delete a student")]
         public async Task<IActionResult> DeleteStudent(Guid id)
         {
             return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));

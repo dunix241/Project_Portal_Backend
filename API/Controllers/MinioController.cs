@@ -9,6 +9,7 @@ using Domain.Semester;
 using Application.Minio.DTOs;
 using Domain.File;
 using Swashbuckle.AspNetCore.Annotations;
+using Domain.Enum;
 
 namespace API.Controllers
 {

@@ -5,6 +5,8 @@ using API.Services;
 using API.Swagger;
 using Application.Core;
 using Application.Core.AppSetting;
+using Application.Helper;
+using Application.Helper.Interface;
 using Application.Interfaces;
 using Application.Mail;
 using Application.Users;
@@ -139,6 +141,8 @@ builder.Services
 builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
+
+builder.Services.AddScoped<IHelperService, HelperService>();
 
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);

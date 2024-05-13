@@ -1,6 +1,8 @@
 ﻿using Application.Core;
+using Application.Helper.Interface;
 using Application.Lecturers.DTOs;
 using Application.Lecturers.Validation;
+using Application.Students;
 using Application.Students.DTOs;
 using Application.Students.Validation;
 using AutoMapper;
@@ -36,18 +38,20 @@ namespace Application.ExcelData
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+            private readonly IHelperService _helper;
 
-            public Handler(DataContext context, IMapper mapper)
+            public Handler(DataContext context, IMapper mapper, IHelperService helperService)
             {
                 _context = context;
                 _mapper = mapper;
+                _helper = helperService;
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 using (var excelPackage = new ExcelPackage(request.ExcelStream))
                 {
-                    var worksheet = excelPackage.Workbook.Worksheets[1];
+                    var worksheet = excelPackage.Workbook.Worksheets[0];
 
                     var schoolName = worksheet.Cells["B3"].Text;
                     var sourceOwnerType = worksheet.Cells["D3"].Text;
@@ -93,14 +97,14 @@ namespace Application.ExcelData
                             lecturerList.Add(lecturerDto);
                         }
                         var lecturerEntities = _mapper.Map<List<Lecturer>>(lecturerList);
-                        _context.Lecturers.AddRange(lecturerEntities);
+                        _context.Lecturers.AddRange(lecturerEntities.AsEnumerable());
 
                         await _context.SaveChangesAsync();
 
                     }
                     else
                     {
-                        var studentList = new List<CreateStudentRequestDto>();
+                        var studentList = new List<Student>();
                         for (int row = 7; row <= worksheet.Dimension.End.Row; row++)
                         {
                             var timeString = worksheet.Cells[row, 3].Text;
@@ -129,12 +133,13 @@ namespace Application.ExcelData
 
                                 return Result<Unit>.Failure(errorMessage.ToString());
                             }
-
-                            studentList.Add(studentDto);
+                           
+                            var tempStudent = _mapper.Map<Student>(studentDto);
+                            tempStudent.IRN = await _helper.GenerateIRN(_context);
+                            studentList.Add(tempStudent);
                         }
-
-                        var studentEntities = _mapper.Map<List<Student>>(studentList);
-                        _context.Students.AddRange(studentEntities);
+                      
+                        _context.Students.AddRange(studentList.AsEnumerable());
 
                         await _context.SaveChangesAsync();
                     }

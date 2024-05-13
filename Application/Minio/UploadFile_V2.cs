@@ -8,6 +8,7 @@ using File = Domain.File;
 using Microsoft.EntityFrameworkCore;
 using Domain.Student;
 using AutoMapper;
+using Domain.Enum;
 
 namespace Application.Minio
 {

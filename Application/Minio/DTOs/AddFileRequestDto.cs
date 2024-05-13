@@ -1,4 +1,5 @@
-﻿using Domain.File;
+﻿using Domain.Enum;
+using Domain.File;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,6 @@ namespace Application.Minio.DTOs
         public FileType FileType { get; set; }
 
     }
-    public enum SourceOwnerType
-    {
-        Lecturer,
-        Student,
-        Project
-    }
+
 
 }

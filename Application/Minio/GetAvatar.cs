@@ -9,6 +9,7 @@ using Domain.File;
 
 using Application.Minio.DTOs;
 using File = Domain.File.File;
+using Domain.Enum;
 
 namespace Application.Minio
 {

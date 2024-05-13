@@ -5,11 +5,15 @@ namespace Application.Lecturers.DTOs
     public class GetLecturerResponseDto
     {
         public Guid Id { get; set; }
-        public string FullName { get; set; }
+        public string? FullName { get; set; }
         public bool IsActive { get; set; }
+        public string? Email { get; set; }
+        public string? Status { get; set; }
+        public string? PhoneNumber { get; set; }
+
         public Guid SchoolId { get; set; }
-        public string SchoolName { get; set; }
-        public string SchoolCurrentMilestoneId { get; set; }
+        public string? SchoolName { get; set; }
+        public string? SchoolCurrentMilestoneId { get; set; }
 
         public static GetLecturerResponseDto FromLecturer (Lecturer lecturer)
         {
@@ -21,6 +25,8 @@ namespace Application.Lecturers.DTOs
             return new GetLecturerResponseDto
             {
                 Id = lecturer.Id,
+                Email = lecturer.Email,
+                PhoneNumber = lecturer.PhoneNumber,
                 FullName = lecturer.FullName,
                 IsActive = lecturer.IsActive,
                 SchoolId = lecturer.SchoolId,

@@ -1,6 +1,7 @@
 ﻿using API.DTOs.Accounts;
 using Application.Auth;
 using Application.Core;
+using Application.Helper.Interface;
 using Application.Students.DTOs;
 using Application.Students.Validation;
 using Application.Users;
@@ -9,6 +10,7 @@ using Domain.Mail;
 using Domain.Student;
 using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using MimeKit;
 using Minio.DataModel.Notification;
 using Persistence;
@@ -35,12 +37,14 @@ namespace Application.Students
             private readonly DataContext _context;
             private readonly IMapper _mapper;
             private readonly IMediator _mediator;
+            private readonly IHelperService _helper;
 
-            public Handler(DataContext context, IMapper mapper, IMediator mediator)
+            public Handler(DataContext context, IMapper mapper, IMediator mediator, IHelperService helperService)
             {
                 _context = context;
                 _mapper = mapper;
                 _mediator = mediator;
+                _helper = helperService;
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -63,7 +67,7 @@ namespace Application.Students
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    student.IRN = GenerateIRN();
+                    student.IRN = await _helper.GenerateIRN(_context);
 
                     _context.Students.Add(student);
                     var success = await _context.SaveChangesAsync() != 0;
@@ -114,34 +118,8 @@ namespace Application.Students
                 }
 
                 return Result<Unit>.Success(Unit.Value);
-            }
-
-            private long GenerateIRN()
-            {
-                var latestStudent = _context.Students.OrderByDescending(x => x.IRN).FirstOrDefault();
-                long latestIrnOrder = 0;
-                long latestYearMonth = 0;
-                if (latestStudent != null)
-                {                 
-                    latestYearMonth = latestStudent.IRN / 100000;
-                    latestIrnOrder = latestStudent.IRN % (latestYearMonth * 100000);
-                }
-                var currentMonth = DateTime.Now.Month;
-                var currentYear = DateTime.Now.Year;
-                var currentYearMonth = (currentYear * 100) + currentMonth;
-
-                if (currentYearMonth == latestYearMonth)
-                {
-                    latestIrnOrder++;
-                }
-                else
-                {
-                    latestYearMonth = currentYearMonth;
-                }
-
-                long irn = (latestYearMonth * 100000) + latestIrnOrder;
-                return irn;
-            }
+            }      
         }
     }
+
 }
