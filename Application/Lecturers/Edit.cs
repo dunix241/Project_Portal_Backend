@@ -44,7 +44,7 @@ namespace Application.Lecturers
                 var validationResult = new CommandValidator().Validate(request);
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or contain numbers nor special characters.");
                 }
                 var lecturer = await _context.Lecturers.FindAsync(request.Id);
                 if (lecturer == null)

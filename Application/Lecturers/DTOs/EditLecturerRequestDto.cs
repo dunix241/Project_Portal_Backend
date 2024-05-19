@@ -6,10 +6,11 @@ namespace Application.Lecturers.DTOs
     public class EditLecturerRequestDto
     {
         public string Name { get; set; }
-        public string Description { get; set; }
+        public bool IsActive { get; set; }
         [EmailAddress]
         [IsEmailUnique]
-        public string? Email { get; set; }
+        public string Email { get; set; }
         public string? PhoneNumber { get; set; }  
+        public Guid SchoolId { get; set; }
     }
 }
