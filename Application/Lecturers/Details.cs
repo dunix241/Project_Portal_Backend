@@ -1,6 +1,7 @@
 ﻿using Application.Core;
 using Application.Lecturers.DTOs;
 using AutoMapper;
+using Domain.Lecturer;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -29,8 +30,7 @@ namespace Application.Lecturers
             {
                 var lecturer = await _context.Lecturers
                    .Where(s => s.IsActive)
-                   .Include(s => s.School)
-                   .Where(s => s.Id == request.Id && s.School.IsActive)
+                   .Where(s => s.Id == request.Id)
                    .FirstOrDefaultAsync();
 
 
@@ -39,7 +39,7 @@ namespace Application.Lecturers
                     return Result<GetLecturerResponseDto>.Failure("Lecturer not found.");
                 }
 
-                var responseDto = GetLecturerResponseDto.FromLecturer(lecturer);
+                var responseDto = _mapper.Map<GetLecturerResponseDto>(lecturer);
 
                 return Result<GetLecturerResponseDto>.Success(responseDto);
             }

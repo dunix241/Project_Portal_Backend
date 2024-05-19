@@ -60,17 +60,13 @@ public class MappingProfiles : Profile
     {
         CreateMap<CreateStudentRequestDto, Student>();
         CreateMap<Student, GetStudentResponseDto>()
-                .ForMember(dest => dest.SchoolId, opt => opt.MapFrom(src => src.SchoolId))
                 .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
-                .ForMember(dest => dest.SchoolCurrentMilestoneId, opt => opt.MapFrom(src => src.School.CurrentMilestoneId))
                 .ReverseMap();
         CreateMap<EditStudentRequestDto, Student>();
 
         CreateMap<CreateLecturerRequedtDto, Lecturer>();
         CreateMap<Lecturer, GetLecturerResponseDto>()
-                .ForMember(dest => dest.SchoolId, opt => opt.MapFrom(src => src.SchoolId))
                 .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
-                .ForMember(dest => dest.SchoolCurrentMilestoneId, opt => opt.MapFrom(src => src.School.CurrentMilestoneId))
                 .ReverseMap();
         CreateMap<EditLecturerRequestDto, Lecturer>();
     }
