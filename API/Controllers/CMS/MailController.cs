@@ -12,13 +12,7 @@ namespace API.Controllers.CMS
         public async Task<IActionResult> SendHTMLMail(MailData mailData)
         {
             var result = await Mediator.Send(new Send.Command { MailData = mailData });
-
-            if (result.IsSuccess)
-            {
-                return Ok("The email has been sent successfully ");
-            }
-
-            return BadRequest(result.Error);
+            return HandleResult(result);
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using API.DTOs.Accounts;
 using Application.Auth;
 using Application.Core;
+using Application.Helper.Interface;
 using Application.Students.DTOs;
 using Application.Students.Validation;
 using Application.Users;
@@ -36,13 +37,15 @@ namespace Application.Students
             private readonly IMapper _mapper;
             private readonly IMediator _mediator;
             private readonly UserManager<User> _userManager;
+            private readonly IHelperService _helper;
 
-            public Handler(DataContext context, IMapper mapper, IMediator mediator, UserManager<User> userManager)
+            public Handler(DataContext context, IMapper mapper, IMediator mediator, UserManager<User> userManager, IHelperService helperService)
             {
                 _context = context;
                 _mapper = mapper;
                 _mediator = mediator;
                 _userManager = userManager;
+                _helper = helperService;
             }
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -50,7 +53,7 @@ namespace Application.Students
                 var validationResult = new CommandValidator().Validate(request);
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or  contain numbers nor  special characters.");
+                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or contain numbers nor special characters.");
                 }
 
                 var student = _mapper.Map<Student>(request.Student);
@@ -65,6 +68,8 @@ namespace Application.Students
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
+                    student.IRN = await _helper.GenerateIRN(_context);
+                    
                     var success = true;
 
                     string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";

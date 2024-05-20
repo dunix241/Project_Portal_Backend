@@ -26,7 +26,7 @@ namespace Application.Schools
                 var school = await _context.Schools.FindAsync(request.Id);
                 if (school == null)
                 {
-                    return null;
+                    return Result<GetSchoolResponseDto>.Failure("Not found");
                 }
                 return Result<GetSchoolResponseDto>.Success(new GetSchoolResponseDto { School = school });
             }

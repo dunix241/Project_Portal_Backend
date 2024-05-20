@@ -5,7 +5,8 @@ namespace Application.Students.DTOs
 {
     public class CreateStudentRequestDto
     {
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public bool IsActive { get; set; }
         [IsEmailUnique]
         [EmailAddress]

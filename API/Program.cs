@@ -6,6 +6,8 @@ using API.Swagger;
 using Application.Authorization.Users;
 using Application.Core;
 using Application.Core.AppSetting;
+using Application.Helper;
+using Application.Helper.Interface;
 using Application.Interfaces;
 using Application.Users;
 using Asp.Versioning;
@@ -98,7 +100,10 @@ builder.Services.AddSwaggerGen(option =>
 
 builder.Services.AddDbContext<DataContext>(opt =>
 {
-    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+    //opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
+    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
+              b => b.MigrationsAssembly("API"));
+
 });
 
 builder.Services.AddCors(opt =>
@@ -137,6 +142,8 @@ builder.Services
 builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
+
+builder.Services.AddScoped<IHelperService, HelperService>();
 
 builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);

@@ -4,6 +4,12 @@ using Minio;
 using Application.Minio;
 using System.IO;
 using System.Reflection;
+using DocumentFormat.OpenXml.Office2010.Excel;
+using Domain.Semester;
+using Application.Minio.DTOs;
+using Domain.File;
+using Swashbuckle.AspNetCore.Annotations;
+using Domain.Enum;
 
 namespace API.Controllers
 {
@@ -15,83 +21,35 @@ namespace API.Controllers
         {
             this.minioClient = minioClient;
         }
-
-
-        [HttpPost("upload")]
-        public async Task<IActionResult> UploadFile(IFormFile file, string bucketName)
+        [HttpPost("Upload")]
+        [SwaggerOperation(Summary = "Upload file to Minio")]
+        public async Task<IActionResult> UploadFile(IFormFile file, string bucketName, Guid sourceOwnerId, SourceOwnerType sourceOwnerType, FileType fileType)
         {
-            if (file == null || file.Length == 0)
+            var dto = new AddFileRequestDto
             {
-                return BadRequest("No file uploaded or file is empty.");
-            }
+                SourceOwnerType = sourceOwnerType,
+                BucketName = bucketName,
+                FormFile = file,
+                SourceOwnerId = sourceOwnerId,
+                FileType = fileType
+            };
 
-            try
-            {
-                string tempFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "Temp");
-                if (Directory.Exists(tempFolderPath))
-                {
-                    Directory.Delete(tempFolderPath, true);
-                    Directory.CreateDirectory(tempFolderPath);
-                }
-
-                var randomName = Path.GetRandomFileName();
-                string tempFilePath = Path.Combine(tempFolderPath, randomName);
-
-                using (var stream = new FileStream(tempFilePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
-
-                var result = await Mediator.Send(new UploadFile.Command
-                {
-                    FilePath = tempFilePath,
-                    BucketName = bucketName,
-                    ObjectName = file.FileName,
-                    NewName = randomName,
-                });
-
-                if (!result.IsSuccess)
-                {
-                    return BadRequest(result.Error);
-                }
-
-                return Ok("File uploaded successfully.");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error uploading file: {ex.Message}");
-            }
+            return HandleResult(await Mediator.Send(new UploadFile_V2.Command { dto = dto }));
         }
 
-
-        [HttpDelete("delete")]
+        [HttpDelete("Delete")]
+        [SwaggerOperation(Summary = "Delete a file in Minio")]
         public async Task<IActionResult> DeleteFile(string bucketName, string objectName)
         {
-            try
+            var result = await Mediator.Send(new DeleteFile.Command
             {
-                var result = await Mediator.Send(new DeleteFile.Command
-                {
-                    BucketName = bucketName,
-                    ObjectName = objectName
-                });
-
-                if (result.IsSuccess)
-                {
-                    return Ok("File deleted successfully.");
-                }
-                else
-                {
-                    return BadRequest($"Error deleting file: {result.Error}");
-                }
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, $"Error deleting file: {ex.Message}");
-            }
+                BucketName = bucketName,
+                ObjectName = objectName
+            });
+            return HandleResult(result);
         }
-
-
         [HttpGet("GetFile")]
+        [SwaggerOperation(Summary = "Get File")]
         public async Task<IActionResult> GetStreamFile(string bucketName, string objectName)
         {
             var query = new StreamFile.Query { BucketName = bucketName, ObjectName = objectName };
@@ -113,6 +71,12 @@ namespace API.Controllers
             }
         }
 
-
+        [HttpGet("GetAvatarLink")]
+        [SwaggerOperation(Summary = "Get Avatar")]
+        public async Task<IActionResult> GetAvatarLink(string bucketName, Guid ownerId, SourceOwnerType sourceOwnerType)
+        {
+            var query = new GetAvatar.Query { BucketName = bucketName,OwnerId = ownerId,OwnerType= sourceOwnerType };
+            return HandleResult(await Mediator.Send(query));       
+        }
     }
 }
