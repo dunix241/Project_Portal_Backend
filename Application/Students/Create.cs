@@ -86,7 +86,7 @@ namespace Application.Students
                             },
                             Subject = "Project Portal Account's Password",
                             ToAddress = student.Email,
-                            ToName = student.Name
+                            ToName = student.FullName
                         },
                         Func =
                             async password =>
@@ -95,7 +95,7 @@ namespace Application.Students
                                 {
                                     RegisterRequestDto = new RegisterRequestDTO
                                     {
-                                        Email = student.Email, Name = student.Name, Password = password,
+                                        Email = student.Email, Name = student.FullName, Password = password,
                                         Address = ""
                                     }
                                 }) != null;
