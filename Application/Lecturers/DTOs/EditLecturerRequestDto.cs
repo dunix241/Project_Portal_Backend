@@ -5,7 +5,8 @@ namespace Application.Lecturers.DTOs
 {
     public class EditLecturerRequestDto
     {
-        public string Name { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public bool IsActive { get; set; }
         [EmailAddress]
         [IsEmailUnique]

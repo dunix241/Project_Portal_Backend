@@ -51,7 +51,7 @@ namespace Application.Students
                     };
 
                 ws.Cells(listHeader[0]).Value = "STT";
-                ws.Cells(listHeader[1]).Value = "Id";
+                ws.Cells(listHeader[1]).Value = "IRN";
                 ws.Cells(listHeader[2]).Value = "Họ và tên";
                 ws.Cells(listHeader[3]).Value = "School";
                 ws.Cells(listHeader[4]).Value = "Email";
@@ -71,8 +71,8 @@ namespace Application.Students
                     for (int i = 0; i < studentList.Count; i++)
                     {
                         ws.Cells("A" + row.ToString()).Value = i + 1;
-                        ws.Cells("B" + row).Value = studentList[i].Id.ToString();
-                        ws.Cells("C" + row).Value = studentList[i].Name.ToString();
+                        ws.Cells("B" + row).Value = studentList[i].IRN.ToString();
+                        ws.Cells("C" + row).Value = studentList[i].FullName.ToString();
                         ws.Cells("D" + row).Value = studentList[i].SchoolName.ToString();
                         ws.Cells("E" + row).Value = studentList[i].Email.ToString();
                         ws.Cells("F" + row).Value = studentList[i].PhoneNumber.ToString();

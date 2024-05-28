@@ -57,7 +57,7 @@ namespace Application.Students
                         var timeString = worksheet.Cell(row, 3).GetValue<string>();
                         var studentDto = new CreateStudentRequestDto
                         {
-                            Name = worksheet.Cell(row, 2).GetValue<string>(),                          
+                            FirstName = worksheet.Cell(row, 2).GetValue<string>(),                          
                             Email = worksheet.Cell(row, 3).GetValue<string>(),
                             PhoneNumber = worksheet.Cell(row, 4).GetValue<string>(),
                             IsActive = true,
