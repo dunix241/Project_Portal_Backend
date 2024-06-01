@@ -14,6 +14,8 @@ using Domain.Project;
 using Domain.Semester;
 using File = Domain.File;
 using Application.Minio.DTOs;
+using Application.ProjectMilestone.DTOs;
+
 
 namespace Application.Core;
 
@@ -39,6 +41,11 @@ public class MappingProfiles : Profile
     {
         CreateMap<CreateProjectRequestDto, Project>();
         CreateMap<EditProjectRequestDto, Project>();
+
+        CreateMap<CreateProjectMilestoneRequestDto, Domain.Project.ProjectMilestone>();
+        CreateMap<EditProjectMilestoneRequestDto, Domain.Project.ProjectMilestone>();
+
+
     }
 
     private void CreateSemesterMaps()
@@ -81,5 +88,7 @@ public class MappingProfiles : Profile
         CreateMap<File.File, GetFileResponseDto>();
         CreateMap<AddFileRequestDto, File.File>();
     }
+
+
         
 }

@@ -2,6 +2,7 @@
 using Application.Semesters.DTOs;
 using Application.Semesters.DTOs.Projects;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace API.Controllers.CMS;
 
@@ -46,4 +47,10 @@ public class SemestersController : CmsApiController
         return HandleResult(await Mediator.Send((new Application.Semesters.Projects.Delete.Command
             { SemesterId = id, ProjectId = projectId })));
     }
+    //[HttpGet]
+    //[SwaggerOperation(Summary = "List a semester’s enrollments")]
+    //public async Task<IActionResult> List(Guid? id)
+    //{
+    //    return HandleResult(await Mediator.Send(new Application.pro { SemesterId = id }));
+    //}
 }

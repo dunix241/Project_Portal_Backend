@@ -1,252 +1,426 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Personal\\EIU_resolve\\",
+  "WorkspaceRootPath": "C:\\myFolder-CUSTOME\\EIU\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\project\\projectmilestone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\project\\projectmilestone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\exceldata\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\exceldata\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\helper\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\helper\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\helper\\interface\\ihelperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\helper\\interface\\ihelperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\eiu_resolve\\domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\myfolder-custome\\eiu\\persistence\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\comment\\submissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\comment\\submissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\project\\projectmilestonedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\project\\projectmilestonedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\milestonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\milestonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\core\\enumsutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\enumsutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\dtos\\createprojectmilestonerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\dtos\\createprojectmilestonerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\exceldata\\gettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\exceldata\\gettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\core\\paging\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\eiu_resolve\\domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\eiu_resolve\\domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\dtos\\createlecturerrequedtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\createlecturerrequedtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\migrations\\20240430101110_checkexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\migrations\\20240430101110_checkexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\minio\\dtos\\getfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\getfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\minio\\dtos\\addfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\addfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\minio\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\minio\\editfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\editfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\dtos\\editstudentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\editstudentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\controllers\\cms\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\schools\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\mockdomains\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\mockdomains\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\schools\\dtos\\getschoolresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\dtos\\getschoolresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\mockdomains\\dtos\\getmockdomainresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\dtos\\getmockdomainresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\mockdomains\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\projects\\dtos\\getprojectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\getprojectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\projects\\dtos\\editprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\editprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\projects\\dtos\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\eiu_resolve\\domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\students\\validation\\studentcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\dtos\\listprojectmilestonedetailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\dtos\\listprojectmilestonedetailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\dtos\\listprojectmilestoneresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\dtos\\listprojectmilestoneresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\dtos\\listprojectmilestonerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\dtos\\listprojectmilestonerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projects\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\dtos\\listprojectmilestonedetailresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\dtos\\listprojectmilestonedetailresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\cms\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\dtos\\getprojectmilestonedetailresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\dtos\\getprojectmilestonedetailresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\dtos\\getmockdomainresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\dtos\\getmockdomainresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projects\\dtos\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\createprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projects\\dtos\\editprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\editprojectrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projects\\dtos\\getprojectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projects\\dtos\\getprojectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\dtos\\editprojectmilestonedetailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\dtos\\editprojectmilestonedetailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestonedetail\\dtos\\createprojectmilestonedetailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestonedetail\\dtos\\createprojectmilestonedetailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\semesters\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\semesters\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\pms\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\pms\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\project\\projectenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\project\\projectenrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\cms\\exceldatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\exceldatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\validation\\studentcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\validation\\studentcreatevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectenrollment\\dtos\\listprojectenrollmentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectenrollment\\dtos\\listprojectenrollmentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectenrollment\\dtos\\editprojectenrollmentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectenrollment\\dtos\\editprojectenrollmentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectenrollment\\dtos\\createprojectenrollmentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectenrollment\\dtos\\createprojectenrollmentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\validation\\studenteditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\schools\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\projectmilestone\\dtos\\editprojectmilestonerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\projectmilestone\\dtos\\editprojectmilestonerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\d3bb4f55776ce63b257f069c00261bd1a6dfb5ee31fe2a65dcdda1e1831fe27d\\Domain\\Person\\Person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\comment\\commentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\comment\\commentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\person\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\person\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\dtos\\getstudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getstudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\75299dda1b94961a104496592132ae5490f8a10f62949d11b8bb6427916bb264\\Domain\\Project\\Project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\submission\\submission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\submission\\submission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\school\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\thesis\\thesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\thesis\\thesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\exceldata\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\exceldata\\import.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\helper\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\helper\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\helper\\interface\\ihelperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\helper\\interface\\ihelperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\enumsutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\enumsutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\exceldata\\gettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\exceldata\\gettemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\paging\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\excelexport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\dtos\\createlecturerrequedtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\createlecturerrequedtdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getexcelexportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\migrations\\20240430101110_checkexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\migrations\\20240430101110_checkexcel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\minio\\dtos\\getfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\getfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\minio\\dtos\\addfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\dtos\\addfileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\minio\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\uploadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\minio\\editfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\editfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\dtos\\editstudentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\editstudentrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\cms\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\schools\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\schools\\dtos\\getschoolresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\dtos\\getschoolresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\deletefile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\students\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\listlecturerresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\listlecturerofschool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\dtos\\editlecturerrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\validation\\lecturereditvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\baseapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\core\\appsetting\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\appsetting\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\appsetting\\mailsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\core\\appsetting\\miniosetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\core\\appsetting\\miniosetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\appsetting\\miniosetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\minio\\downloadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\minio\\downloadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\minio\\downloadfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\eiu_resolve\\domain\\mail\\maildata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\myfolder-custome\\eiu\\domain\\mail\\maildata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\mail\\maildata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\mockdomains\\dtos\\editmockdomainrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\mockdomains\\dtos\\editmockdomainrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\mockdomains\\dtos\\editmockdomainrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\eiu_resolve\\application\\schools\\dtos\\editschoolrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\eiu\\application\\schools\\dtos\\editschoolrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\schools\\dtos\\editschoolrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -265,7 +439,7 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\eiu_resolve\\api\\migrations\\20240430030249_addfiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\eiu\\api\\migrations\\20240430030249_addfiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\migrations\\20240430030249_addfiletype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -276,478 +450,405 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Create.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Create.cs",
               "RelativeDocumentMoniker": "Application\\Students\\Create.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Create.cs",
               "RelativeToolTip": "Application\\Students\\Create.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAewHsAAAARAAAA",
+              "ViewState": "AQIAAGUAAAAAAAAAAAAtwHMAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T08:24:55.617Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Create.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Create.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Create.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Create.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAewFsAAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T11:11:09.541Z"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "DataContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\DataContextModelSnapshot.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Migrations\\DataContextModelSnapshot.cs",
+              "RelativeToolTip": "API\\Migrations\\DataContextModelSnapshot.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T09:17:40.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Persistence\\DataContext.cs",
+              "RelativeDocumentMoniker": "Persistence\\DataContext.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Persistence\\DataContext.cs",
+              "RelativeToolTip": "Persistence\\DataContext.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAqwCkAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T08:38:54.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\Create.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\Create.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\Create.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA5wCEAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T05:10:30.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Program.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Program.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAAAJEAAAAAAAAA",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAewGoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T08:43:41.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IHelperService.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Helper\\Interface\\IHelperService.cs",
-              "RelativeDocumentMoniker": "Application\\Helper\\Interface\\IHelperService.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Helper\\Interface\\IHelperService.cs",
-              "RelativeToolTip": "Application\\Helper\\Interface\\IHelperService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "DocumentIndex": 0,
+              "Title": "ProjectMilestone.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\ProjectMilestone.cs",
+              "RelativeDocumentMoniker": "Domain\\Project\\ProjectMilestone.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\ProjectMilestone.cs",
+              "RelativeToolTip": "Domain\\Project\\ProjectMilestone.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T08:40:49.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HelperService.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Helper\\HelperService.cs",
-              "RelativeDocumentMoniker": "Application\\Helper\\HelperService.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Helper\\HelperService.cs",
-              "RelativeToolTip": "Application\\Helper\\HelperService.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAcwCUAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T08:40:25.221Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Import.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\ExcelData\\Import.cs",
-              "RelativeDocumentMoniker": "Application\\ExcelData\\Import.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\ExcelData\\Import.cs",
-              "RelativeToolTip": "Application\\ExcelData\\Import.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAMwJIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T00:14:16.136Z",
+              "WhenOpened": "2024-05-31T23:28:41.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Lecturer.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Lecturer\\Lecturer.cs",
+              "RelativeDocumentMoniker": "Domain\\Lecturer\\Lecturer.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Lecturer\\Lecturer.cs",
+              "RelativeToolTip": "Domain\\Lecturer\\Lecturer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MilestoneController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\MilestoneController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MilestoneController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\MilestoneController.cs",
+              "RelativeToolTip": "API\\Controllers\\MilestoneController.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAqwCEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:36:31.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectMilestoneDetails.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\ProjectMilestoneDetails.cs",
+              "RelativeDocumentMoniker": "Domain\\Project\\ProjectMilestoneDetails.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\ProjectMilestoneDetails.cs",
+              "RelativeToolTip": "Domain\\Project\\ProjectMilestoneDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T23:29:18.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubmissionComment.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Comment\\SubmissionComment.cs",
+              "RelativeDocumentMoniker": "Domain\\Comment\\SubmissionComment.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Comment\\SubmissionComment.cs",
+              "RelativeToolTip": "Domain\\Comment\\SubmissionComment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T23:35:53.825Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MappingProfiles.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Core\\MappingProfiles.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\MappingProfiles.cs",
               "RelativeDocumentMoniker": "Application\\Core\\MappingProfiles.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Core\\MappingProfiles.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\MappingProfiles.cs",
               "RelativeToolTip": "Application\\Core\\MappingProfiles.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwFUAAAAyAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAmwC0AAABVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T03:09:22.337Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EnumsUtils.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Core\\EnumsUtils.cs",
-              "RelativeDocumentMoniker": "Application\\Core\\EnumsUtils.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Core\\EnumsUtils.cs",
-              "RelativeToolTip": "Application\\Core\\EnumsUtils.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 13,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\Project.cs",
+              "RelativeDocumentMoniker": "Domain\\Project\\Project.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\Project.cs",
+              "RelativeToolTip": "Domain\\Project\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.239Z"
+              "WhenOpened": "2024-04-27T08:35:27.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Edit.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\Edit.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA7wAEAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:10:48.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\List.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\List.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\List.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAuwAwAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:28:42.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Create.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Create.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\Create.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB8AAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T06:07:00.653Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "GetTemplate.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\ExcelData\\GetTemplate.cs",
-              "RelativeDocumentMoniker": "Application\\ExcelData\\GetTemplate.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\ExcelData\\GetTemplate.cs",
-              "RelativeToolTip": "Application\\ExcelData\\GetTemplate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
+              "Title": "CreateProjectMilestoneRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\CreateProjectMilestoneRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\DTOs\\CreateProjectMilestoneRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\CreateProjectMilestoneRequestDto.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\DTOs\\CreateProjectMilestoneRequestDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T07:07:06.049Z"
+              "WhenOpened": "2024-06-01T04:39:03.805Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "API.csproj",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\API.csproj",
-              "RelativeDocumentMoniker": "API\\API.csproj",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\API.csproj",
-              "RelativeToolTip": "API\\API.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-29T01:38:30.888Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Lecturer.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Domain\\Lecturer\\Lecturer.cs",
-              "RelativeDocumentMoniker": "Domain\\Lecturer\\Lecturer.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Domain\\Lecturer\\Lecturer.cs",
-              "RelativeToolTip": "Domain\\Lecturer\\Lecturer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAWAAAA",
+              "DocumentIndex": 16,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\StudentsController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.353Z"
+              "WhenOpened": "2024-05-31T22:48:46.579Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\Details.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Details.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\Details.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T05:48:11.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "LecturersController.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Controllers\\LecturersController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\LecturersController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\LecturersController.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Controllers\\LecturersController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\LecturersController.cs",
               "RelativeToolTip": "API\\Controllers\\LecturersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABhAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Pagination.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Core\\Paging\\Pagination.cs",
-              "RelativeDocumentMoniker": "Application\\Core\\Paging\\Pagination.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Core\\Paging\\Pagination.cs",
-              "RelativeToolTip": "Application\\Core\\Paging\\Pagination.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Edit.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Edit.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Edit.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAqwCcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Result.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Core\\Result.cs",
-              "RelativeDocumentMoniker": "Application\\Core\\Result.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Core\\Result.cs",
-              "RelativeToolTip": "Application\\Core\\Result.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "List.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\List.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\List.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\List.cs",
-              "RelativeToolTip": "Application\\Lecturers\\List.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAA0AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.317Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Details.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Details.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\Details.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Details.cs",
-              "RelativeToolTip": "Application\\Lecturers\\Details.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAnwBYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.315Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "File.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Domain\\File\\File.cs",
-              "RelativeDocumentMoniker": "Domain\\File\\File.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Domain\\File\\File.cs",
-              "RelativeToolTip": "Domain\\File\\File.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAmwAsAAAAsAAAA",
+              "Title": "ListProjectMilestoneDetailRequest.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailRequest.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailRequest.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailRequest.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:02:44.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ExcelExport.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\ExcelExport.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\ExcelExport.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\ExcelExport.cs",
-              "RelativeToolTip": "Application\\Students\\ExcelExport.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAUwB8AAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.227Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "School.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Domain\\School\\School.cs",
-              "RelativeDocumentMoniker": "Domain\\School\\School.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Domain\\School\\School.cs",
-              "RelativeToolTip": "Domain\\School\\School.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ProjectsController.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Controllers\\CMS\\ProjectsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\ProjectsController.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Controllers\\CMS\\ProjectsController.cs",
-              "RelativeToolTip": "API\\Controllers\\CMS\\ProjectsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.302Z"
+              "WhenOpened": "2024-06-01T05:44:36.792Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "CreateLecturerRequedtDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\List.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\List.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\List.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GetExcelExportDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "RelativeToolTip": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.25Z"
+              "WhenOpened": "2024-06-01T05:58:38.677Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "20240430101110_checkExcel.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Migrations\\20240430101110_checkExcel.cs",
-              "RelativeDocumentMoniker": "API\\Migrations\\20240430101110_checkExcel.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Migrations\\20240430101110_checkExcel.cs",
-              "RelativeToolTip": "API\\Migrations\\20240430101110_checkExcel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\Edit.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\Edit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T10:11:10.35Z"
+              "WhenOpened": "2024-06-01T05:10:54.887Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\Delete.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\Delete.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\Delete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T05:10:45.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ListProjectMilestoneResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneResponseDto.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:56:24.026Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "Details.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\Details.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Details.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\Details.cs",
-              "RelativeToolTip": "Application\\Students\\Details.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAABMAAAA",
+              "Title": "ListProjectMilestoneRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneRequestDto.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\DTOs\\ListProjectMilestoneRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:54:20.099Z"
+              "WhenOpened": "2024-06-01T05:02:56.957Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "MockDomainsController.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Controllers\\MockDomainsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\MockDomainsController.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Controllers\\MockDomainsController.cs",
-              "RelativeToolTip": "API\\Controllers\\MockDomainsController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAawBMAAAA0AAAA",
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Projects\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\List.cs",
+              "RelativeToolTip": "Application\\Projects\\List.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAgwBkAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:10:19.699Z"
+              "WhenOpened": "2024-06-01T05:23:42.606Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Edit.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\Edit.cs",
-              "RelativeToolTip": "Application\\Students\\Edit.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAWwCEAAAA+AAAA",
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\Delete.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\Delete.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\Delete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:53:17.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AddFileResponseDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DTOs\\AddFileResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\AddFileResponseDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DTOs\\AddFileResponseDto.cs",
-              "RelativeToolTip": "Application\\Minio\\DTOs\\AddFileResponseDto.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T03:08:22.858Z"
+              "WhenOpened": "2024-06-01T06:08:41.483Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "GetFileResponseDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DTOs\\GetFileResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\GetFileResponseDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DTOs\\GetFileResponseDto.cs",
-              "RelativeToolTip": "Application\\Minio\\DTOs\\GetFileResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAjAAAA",
+              "Title": "PagingParams.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\Paging\\PagingParams.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\Paging\\PagingParams.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\Paging\\PagingParams.cs",
+              "RelativeToolTip": "Application\\Core\\Paging\\PagingParams.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:08:53.845Z"
+              "WhenOpened": "2024-06-01T05:25:46.648Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "20240430030249_addFileType.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Migrations\\20240430030249_addFileType.cs",
-              "RelativeDocumentMoniker": "API\\Migrations\\20240430030249_addFileType.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Migrations\\20240430030249_addFileType.cs",
-              "RelativeToolTip": "API\\Migrations\\20240430030249_addFileType.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 28,
+              "Title": "ListProjectMilestoneDetailResponse.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailResponse.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailResponse.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailResponse.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\DTOs\\ListProjectMilestoneDetailResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T03:02:50.085Z"
+              "WhenOpened": "2024-06-01T05:44:56.364Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "UploadFile.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Minio\\UploadFile.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\UploadFile.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Minio\\UploadFile.cs",
-              "RelativeToolTip": "Application\\Minio\\UploadFile.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwvzoAAAAAAAAA",
+              "Title": "SemestersController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\SemestersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\SemestersController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\SemestersController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\SemestersController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAA8wDUAAABcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:19:00.771Z"
+              "WhenOpened": "2024-06-01T00:23:31.742Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "EditFile.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Minio\\EditFile.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\EditFile.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Minio\\EditFile.cs",
-              "RelativeToolTip": "Application\\Minio\\EditFile.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAA1wC0AAABfAAAA",
+              "Title": "GetProjectMilestoneDetailResponse.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\GetProjectMilestoneDetailResponse.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\DTOs\\GetProjectMilestoneDetailResponse.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\GetProjectMilestoneDetailResponse.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\DTOs\\GetProjectMilestoneDetailResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:04:09.277Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "StudentsController.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Controllers\\CMS\\StudentsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\StudentsController.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Controllers\\CMS\\StudentsController.cs",
-              "RelativeToolTip": "API\\Controllers\\CMS\\StudentsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T11:06:50.126Z"
+              "WhenOpened": "2024-06-01T05:46:57.973Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "EditStudentRequestDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "RelativeToolTip": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:55:40.662Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "GetSchoolResponseDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
-              "RelativeToolTip": "Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:47:51.837Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\MockDomains\\Edit.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Edit.cs",
-              "RelativeToolTip": "Application\\MockDomains\\Edit.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:49:30.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Schools\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\Schools\\Edit.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Schools\\Edit.cs",
-              "RelativeToolTip": "Application\\Schools\\Edit.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwCcAAABmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:49:40.627Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Details.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Details.cs",
-              "RelativeDocumentMoniker": "Application\\MockDomains\\Details.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Details.cs",
-              "RelativeToolTip": "Application\\MockDomains\\Details.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:10:14.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
               "Title": "GetMockDomainResponseDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
               "RelativeDocumentMoniker": "Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
               "RelativeToolTip": "Application\\MockDomains\\DTOs\\GetMockDomainResponseDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -755,83 +856,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "DeleteFile.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DeleteFile.cs",
-              "RelativeDocumentMoniker": "Application\\Minio\\DeleteFile.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DeleteFile.cs",
-              "RelativeToolTip": "Application\\Minio\\DeleteFile.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAIBJwD4AAAAAAAAA",
+              "DocumentIndex": 32,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\List.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\List.cs",
+              "RelativeToolTip": "Application\\MockDomains\\List.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.3Z"
+              "WhenOpened": "2024-06-01T06:05:04.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Create.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Create.cs",
-              "RelativeDocumentMoniker": "Application\\MockDomains\\Create.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Create.cs",
-              "RelativeToolTip": "Application\\MockDomains\\Create.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
+              "DocumentIndex": 33,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Edit.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Edit.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.335Z"
+              "WhenOpened": "2024-04-30T01:49:30.946Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Delete.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Delete.cs",
-              "RelativeDocumentMoniker": "Application\\MockDomains\\Delete.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\Delete.cs",
-              "RelativeToolTip": "Application\\MockDomains\\Delete.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T01:10:07.247Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Delete.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\Delete.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Delete.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\Delete.cs",
-              "RelativeToolTip": "Application\\Students\\Delete.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T10:31:30.403Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "GetProjectResponseDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
-              "RelativeToolTip": "Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T09:32:29.522Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "EditProjectRequestDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
-              "RelativeToolTip": "Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T09:32:28.368Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 34,
               "Title": "CreateProjectRequestDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
               "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
               "RelativeToolTip": "Application\\Projects\\DTOs\\CreateProjectRequestDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -839,71 +892,107 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "ListLecturerOfSchool.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "RelativeToolTip": "Application\\Lecturers\\ListLecturerOfSchool.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAUwC4AAAAAAAAA",
+              "DocumentIndex": 35,
+              "Title": "EditProjectRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "RelativeToolTip": "Application\\Projects\\DTOs\\EditProjectRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.327Z"
+              "WhenOpened": "2024-04-29T09:32:28.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ListLecturerResponseDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "DocumentIndex": 36,
+              "Title": "GetProjectResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "RelativeToolTip": "Application\\Projects\\DTOs\\GetProjectResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.322Z"
+              "WhenOpened": "2024-04-29T09:32:29.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "EditLecturerRequestDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "RelativeToolTip": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "DocumentIndex": 37,
+              "Title": "EditProjectMilestoneDetailRequest.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\EditProjectMilestoneDetailRequest.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\DTOs\\EditProjectMilestoneDetailRequest.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\EditProjectMilestoneDetailRequest.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\DTOs\\EditProjectMilestoneDetailRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.34Z"
+              "WhenOpened": "2024-06-01T05:44:18.084Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Project.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Domain\\Project\\Project.cs",
-              "RelativeDocumentMoniker": "Domain\\Project\\Project.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Domain\\Project\\Project.cs",
-              "RelativeToolTip": "Domain\\Project\\Project.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "DocumentIndex": 38,
+              "Title": "CreateProjectMilestoneDetailRequest.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\CreateProjectMilestoneDetailRequest.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestoneDetail\\DTOs\\CreateProjectMilestoneDetailRequest.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestoneDetail\\DTOs\\CreateProjectMilestoneDetailRequest.cs",
+              "RelativeToolTip": "Application\\ProjectMilestoneDetail\\DTOs\\CreateProjectMilestoneDetailRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:35:27.974Z"
+              "WhenOpened": "2024-06-01T05:43:31.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "StudentEditValidator.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\Validation\\StudentEditValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Students\\Validation\\StudentEditValidator.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\Validation\\StudentEditValidator.cs",
-              "RelativeToolTip": "Application\\Students\\Validation\\StudentEditValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAABqAAAA",
+              "DocumentIndex": 39,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Semesters\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Semesters\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Semesters\\List.cs",
+              "RelativeToolTip": "Application\\Semesters\\List.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowAsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T08:29:31.348Z"
+              "WhenOpened": "2024-05-31T23:06:46.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 40,
+              "Title": "SemestersController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\PMS\\SemestersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PMS\\SemestersController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\PMS\\SemestersController.cs",
+              "RelativeToolTip": "API\\Controllers\\PMS\\SemestersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T00:21:41.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ProjectEnrollment.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\ProjectEnrollment.cs",
+              "RelativeDocumentMoniker": "Domain\\Project\\ProjectEnrollment.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Project\\ProjectEnrollment.cs",
+              "RelativeToolTip": "Domain\\Project\\ProjectEnrollment.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwvx4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T22:58:34.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ExcelDataController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\ExcelDataController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\ExcelDataController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\ExcelDataController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\ExcelDataController.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAuwBQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T22:48:46.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
               "Title": "StudentCreateValidator.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Students\\Validation\\StudentCreateValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Validation\\StudentCreateValidator.cs",
               "RelativeDocumentMoniker": "Application\\Students\\Validation\\StudentCreateValidator.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Students\\Validation\\StudentCreateValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Validation\\StudentCreateValidator.cs",
               "RelativeToolTip": "Application\\Students\\Validation\\StudentCreateValidator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -911,11 +1000,635 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ListProjectEnrollmentRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectEnrollment\\DTOs\\ListProjectEnrollmentRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectEnrollment\\DTOs\\ListProjectEnrollmentRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectEnrollment\\DTOs\\ListProjectEnrollmentRequestDto.cs",
+              "RelativeToolTip": "Application\\ProjectEnrollment\\DTOs\\ListProjectEnrollmentRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:25:41.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "EditProjectEnrollmentRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectEnrollment\\DTOs\\EditProjectEnrollmentRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectEnrollment\\DTOs\\EditProjectEnrollmentRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectEnrollment\\DTOs\\EditProjectEnrollmentRequestDto.cs",
+              "RelativeToolTip": "Application\\ProjectEnrollment\\DTOs\\EditProjectEnrollmentRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:25:20.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CreateProjectEnrollmentRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectEnrollment\\DTOs\\CreateProjectEnrollmentRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectEnrollment\\DTOs\\CreateProjectEnrollmentRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectEnrollment\\DTOs\\CreateProjectEnrollmentRequestDto.cs",
+              "RelativeToolTip": "Application\\ProjectEnrollment\\DTOs\\CreateProjectEnrollmentRequestDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:25:07.824Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "StudentEditValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Validation\\StudentEditValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Validation\\StudentEditValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Validation\\StudentEditValidator.cs",
+              "RelativeToolTip": "Application\\Students\\Validation\\StudentEditValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Schools\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\List.cs",
+              "RelativeToolTip": "Application\\Schools\\List.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T05:36:26.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "EditProjectMilestoneRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\EditProjectMilestoneRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\ProjectMilestone\\DTOs\\EditProjectMilestoneRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ProjectMilestone\\DTOs\\EditProjectMilestoneRequestDto.cs",
+              "RelativeToolTip": "Application\\ProjectMilestone\\DTOs\\EditProjectMilestoneRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:39:42.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Student\\Student.cs",
+              "RelativeDocumentMoniker": "Domain\\Student\\Student.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Student\\Student.cs",
+              "RelativeToolTip": "Domain\\Student\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T01:18:27.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\d3bb4f55776ce63b257f069c00261bd1a6dfb5ee31fe2a65dcdda1e1831fe27d\\Domain\\Person\\Person.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\d3bb4f55776ce63b257f069c00261bd1a6dfb5ee31fe2a65dcdda1e1831fe27d\\Domain\\Person\\Person.cs",
+              "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\d3bb4f55776ce63b257f069c00261bd1a6dfb5ee31fe2a65dcdda1e1831fe27d\\Domain\\Person\\Person.cs",
+              "RelativeToolTip": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\d3bb4f55776ce63b257f069c00261bd1a6dfb5ee31fe2a65dcdda1e1831fe27d\\Domain\\Person\\Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T00:32:29.545Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 51,
+              "Title": "CommentBase.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Comment\\CommentBase.cs",
+              "RelativeDocumentMoniker": "Domain\\Comment\\CommentBase.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Comment\\CommentBase.cs",
+              "RelativeToolTip": "Domain\\Comment\\CommentBase.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAqwBMAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T23:34:43.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Person\\Person.cs",
+              "RelativeDocumentMoniker": "Domain\\Person\\Person.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Person\\Person.cs",
+              "RelativeToolTip": "Domain\\Person\\Person.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAuwBUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T00:35:14.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "GetStudentResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "RelativeToolTip": "Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T01:18:35.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Submission.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Submission\\Submission.cs",
+              "RelativeDocumentMoniker": "Domain\\Submission\\Submission.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Submission\\Submission.cs",
+              "RelativeToolTip": "Domain\\Submission\\Submission.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAYwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T23:32:01.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\75299dda1b94961a104496592132ae5490f8a10f62949d11b8bb6427916bb264\\Domain\\Project\\Project.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\75299dda1b94961a104496592132ae5490f8a10f62949d11b8bb6427916bb264\\Domain\\Project\\Project.cs",
+              "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\75299dda1b94961a104496592132ae5490f8a10f62949d11b8bb6427916bb264\\Domain\\Project\\Project.cs",
+              "RelativeToolTip": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\75299dda1b94961a104496592132ae5490f8a10f62949d11b8bb6427916bb264\\Domain\\Project\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T00:48:13.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "School.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\School\\School.cs",
+              "RelativeDocumentMoniker": "Domain\\School\\School.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\School\\School.cs",
+              "RelativeToolTip": "Domain\\School\\School.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Thesis.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Thesis\\Thesis.cs",
+              "RelativeDocumentMoniker": "Domain\\Thesis\\Thesis.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Thesis\\Thesis.cs",
+              "RelativeToolTip": "Domain\\Thesis\\Thesis.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T23:38:47.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "HelperService.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Helper\\HelperService.cs",
+              "RelativeDocumentMoniker": "Application\\Helper\\HelperService.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Helper\\HelperService.cs",
+              "RelativeToolTip": "Application\\Helper\\HelperService.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAcwCUAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T08:40:25.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Import.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ExcelData\\Import.cs",
+              "RelativeDocumentMoniker": "Application\\ExcelData\\Import.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ExcelData\\Import.cs",
+              "RelativeToolTip": "Application\\ExcelData\\Import.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAMwJIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T00:14:16.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "EnumsUtils.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\EnumsUtils.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\EnumsUtils.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\EnumsUtils.cs",
+              "RelativeToolTip": "Application\\Core\\EnumsUtils.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "IHelperService.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Helper\\Interface\\IHelperService.cs",
+              "RelativeDocumentMoniker": "Application\\Helper\\Interface\\IHelperService.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Helper\\Interface\\IHelperService.cs",
+              "RelativeToolTip": "Application\\Helper\\Interface\\IHelperService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T08:40:49.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Create.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Create.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Create.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAewFsAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T11:11:09.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "GetTemplate.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\ExcelData\\GetTemplate.cs",
+              "RelativeDocumentMoniker": "Application\\ExcelData\\GetTemplate.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\ExcelData\\GetTemplate.cs",
+              "RelativeToolTip": "Application\\ExcelData\\GetTemplate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T07:07:06.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Pagination.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\Paging\\Pagination.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\Paging\\Pagination.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\Paging\\Pagination.cs",
+              "RelativeToolTip": "Application\\Core\\Paging\\Pagination.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Edit.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Edit.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAqwCcAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Result.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\Result.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\Result.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\Result.cs",
+              "RelativeToolTip": "Application\\Core\\Result.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\List.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\List.cs",
+              "RelativeToolTip": "Application\\Lecturers\\List.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAA0AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Details.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Details.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Details.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAnwBYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "File.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\File\\File.cs",
+              "RelativeDocumentMoniker": "Domain\\File\\File.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\File\\File.cs",
+              "RelativeToolTip": "Domain\\File\\File.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAmwAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:02:44.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ExcelExport.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\ExcelExport.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\ExcelExport.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\ExcelExport.cs",
+              "RelativeToolTip": "Application\\Students\\ExcelExport.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAUwB8AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\ProjectsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\ProjectsController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\ProjectsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "CreateLecturerRequedtDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\CreateLecturerRequedtDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "GetExcelExportDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "RelativeToolTip": "Application\\Students\\DTOs\\GetExcelExportDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "20240430101110_checkExcel.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Migrations\\20240430101110_checkExcel.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\20240430101110_checkExcel.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Migrations\\20240430101110_checkExcel.cs",
+              "RelativeToolTip": "API\\Migrations\\20240430101110_checkExcel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T10:11:10.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Details.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Details.cs",
+              "RelativeToolTip": "Application\\Students\\Details.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:54:20.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "MockDomainsController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\MockDomainsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MockDomainsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\MockDomainsController.cs",
+              "RelativeToolTip": "API\\Controllers\\MockDomainsController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAawBMAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:10:19.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Edit.cs",
+              "RelativeToolTip": "Application\\Students\\Edit.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAWwCEAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:53:17.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "AddFileResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "RelativeToolTip": "Application\\Minio\\DTOs\\AddFileResponseDto.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAgwAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:08:22.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "GetFileResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "RelativeToolTip": "Application\\Minio\\DTOs\\GetFileResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:08:53.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "20240430030249_addFileType.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Migrations\\20240430030249_addFileType.cs",
+              "RelativeDocumentMoniker": "API\\Migrations\\20240430030249_addFileType.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Migrations\\20240430030249_addFileType.cs",
+              "RelativeToolTip": "API\\Migrations\\20240430030249_addFileType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T03:02:50.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "UploadFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\UploadFile.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\UploadFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\UploadFile.cs",
+              "RelativeToolTip": "Application\\Minio\\UploadFile.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAADwvzoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:19:00.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "EditFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\EditFile.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\EditFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\EditFile.cs",
+              "RelativeToolTip": "Application\\Minio\\EditFile.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA1wC0AAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:04:09.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\StudentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\StudentsController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\CMS\\StudentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\StudentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T11:06:50.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "EditStudentRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "RelativeToolTip": "Application\\Students\\DTOs\\EditStudentRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:55:40.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "GetSchoolResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "RelativeToolTip": "Application\\Schools\\DTOs\\GetSchoolResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:47:51.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "Edit.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Schools\\Edit.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\Edit.cs",
+              "RelativeToolTip": "Application\\Schools\\Edit.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAgwCcAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:49:40.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "Details.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Details.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Details.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Details.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:10:14.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "DeleteFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DeleteFile.cs",
+              "RelativeDocumentMoniker": "Application\\Minio\\DeleteFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DeleteFile.cs",
+              "RelativeToolTip": "Application\\Minio\\DeleteFile.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "Create.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Create.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Create.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Create.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Create.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\MockDomains\\Delete.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\Delete.cs",
+              "RelativeToolTip": "Application\\MockDomains\\Delete.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T01:10:07.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\Delete.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Students\\Delete.cs",
+              "RelativeToolTip": "Application\\Students\\Delete.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T10:31:30.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "ListLecturerOfSchool.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "RelativeToolTip": "Application\\Lecturers\\ListLecturerOfSchool.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAUwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "ListLecturerResponseDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\ListLecturerResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "EditLecturerRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "RelativeToolTip": "Application\\Lecturers\\DTOs\\EditLecturerRequestDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T08:29:31.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
               "Title": "LecturerEditValidator.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
               "RelativeDocumentMoniker": "Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
               "RelativeToolTip": "Application\\Lecturers\\Validation\\LecturerEditValidator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -923,21 +1636,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 96,
               "Title": "Edit.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
+              "RelativeDocumentMoniker": "..\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
+              "RelativeToolTip": "..\\code_place\\Casptone_2024\\Application\\Lecturers\\Edit.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T03:56:07.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 97,
               "Title": "BaseApiController.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Controllers\\BaseApiController.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\BaseApiController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\BaseApiController.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Controllers\\BaseApiController.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Controllers\\BaseApiController.cs",
               "RelativeToolTip": "API\\Controllers\\BaseApiController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -945,11 +1660,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 98,
               "Title": "IsEmailUnique.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
               "RelativeDocumentMoniker": "Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
               "RelativeToolTip": "Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAuwAwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -957,11 +1672,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 100,
               "Title": "MinioSetting.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Core\\AppSetting\\MinioSetting.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\AppSetting\\MinioSetting.cs",
               "RelativeDocumentMoniker": "Application\\Core\\AppSetting\\MinioSetting.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Core\\AppSetting\\MinioSetting.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\AppSetting\\MinioSetting.cs",
               "RelativeToolTip": "Application\\Core\\AppSetting\\MinioSetting.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -969,11 +1684,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 99,
               "Title": "MailSettings.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Core\\AppSetting\\MailSettings.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\AppSetting\\MailSettings.cs",
               "RelativeDocumentMoniker": "Application\\Core\\AppSetting\\MailSettings.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Core\\AppSetting\\MailSettings.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Core\\AppSetting\\MailSettings.cs",
               "RelativeToolTip": "Application\\Core\\AppSetting\\MailSettings.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -981,20 +1696,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 106,
               "Title": "MailService.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\MailService.cs",
+              "RelativeDocumentMoniker": "..\\code_place\\Casptone_2024\\Application\\Mail\\MailService.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\MailService.cs",
+              "RelativeToolTip": "..\\code_place\\Casptone_2024\\Application\\Mail\\MailService.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 101,
               "Title": "DownloadFile.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DownloadFile.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DownloadFile.cs",
               "RelativeDocumentMoniker": "Application\\Minio\\DownloadFile.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Minio\\DownloadFile.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Minio\\DownloadFile.cs",
               "RelativeToolTip": "Application\\Minio\\DownloadFile.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAqwBMAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1002,29 +1719,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 107,
               "Title": "SendHTMLMail.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\SendHTMLMail.cs",
+              "RelativeDocumentMoniker": "..\\code_place\\Casptone_2024\\Application\\Mail\\SendHTMLMail.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\SendHTMLMail.cs",
+              "RelativeToolTip": "..\\code_place\\Casptone_2024\\Application\\Mail\\SendHTMLMail.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.295Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 108,
               "Title": "IMailService.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\IMailService.cs",
+              "RelativeDocumentMoniker": "..\\code_place\\Casptone_2024\\Application\\Mail\\IMailService.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Mail\\IMailService.cs",
+              "RelativeToolTip": "..\\code_place\\Casptone_2024\\Application\\Mail\\IMailService.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.298Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 102,
               "Title": "MailData.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Domain\\Mail\\MailData.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Mail\\MailData.cs",
               "RelativeDocumentMoniker": "Domain\\Mail\\MailData.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Domain\\Mail\\MailData.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Domain\\Mail\\MailData.cs",
               "RelativeToolTip": "Domain\\Mail\\MailData.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAAwAgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1032,21 +1753,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 109,
               "Title": "HTMLMailData.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Domain\\Mail\\HTMLMailData.cs",
+              "RelativeDocumentMoniker": "..\\code_place\\Casptone_2024\\Domain\\Mail\\HTMLMailData.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Domain\\Mail\\HTMLMailData.cs",
+              "RelativeToolTip": "..\\code_place\\Casptone_2024\\Domain\\Mail\\HTMLMailData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.31Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 103,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\API\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\API\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\API\\Properties\\launchSettings.json",
               "RelativeToolTip": "API\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -1054,11 +1777,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 104,
               "Title": "EditMockDomainRequestDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
               "RelativeDocumentMoniker": "Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
               "RelativeToolTip": "Application\\MockDomains\\DTOs\\EditMockDomainRequestDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -1066,20 +1789,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 110,
               "Title": "LecturerCreateValdator.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs",
+              "RelativeDocumentMoniker": "..\\code_place\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\code_place\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs",
+              "RelativeToolTip": "..\\code_place\\Casptone_2024\\Application\\Lecturers\\Validation\\LecturerCreateValdator.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T08:29:31.333Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 105,
               "Title": "EditSchoolRequestDto.cs",
-              "DocumentMoniker": "D:\\Personal\\EIU_resolve\\Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
+              "DocumentMoniker": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
               "RelativeDocumentMoniker": "Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
-              "ToolTip": "D:\\Personal\\EIU_resolve\\Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
+              "ToolTip": "C:\\myFolder-CUSTOME\\EIU\\Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
               "RelativeToolTip": "Application\\Schools\\DTOs\\EditSchoolRequestDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
