@@ -8,7 +8,6 @@ namespace Application.ProjectMilestone.DTOs
 {
     public  class ListProjectMilestoneRequestDto
     {
-        public Guid? Id { get; set; }
         public Guid? SchoolId { get; set; }
         public string? Name { get; set; }
 

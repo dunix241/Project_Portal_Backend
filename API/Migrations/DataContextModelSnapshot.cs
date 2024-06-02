@@ -190,7 +190,15 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.HasIndex("SchoolId");
 
                     b.ToTable("Projects");
                 });
@@ -223,10 +231,13 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("OwnerId")
+                    b.Property<Guid>("ProjectSemesterId")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("ProjectSemesterId")
+                    b.Property<Guid>("ProjectSemesterProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProjectSemesterSemesterId")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("PublishDate")
@@ -246,15 +257,46 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Vision")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProjectSemesterId", "OwnerId");
+                    b.HasIndex("ProjectSemesterProjectId", "ProjectSemesterSemesterId");
 
                     b.ToTable("ProjectEnrollments");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollmentMember", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool?>("IsApproved")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("ProjectEnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RejectReason")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectEnrollmentId");
+
+                    b.ToTable("ProjectEnrollmentMembers");
                 });
 
             modelBuilder.Entity("Domain.Project.ProjectMilestone", b =>
@@ -299,7 +341,7 @@ namespace API.Migrations
 
                     b.HasIndex("ProjectMilestoneId");
 
-                    b.ToTable("ProjectMilestoneDetails");
+                    b.ToTable("ProjectMilestoneDetailses");
                 });
 
             modelBuilder.Entity("Domain.School.School", b =>
@@ -334,6 +376,9 @@ namespace API.Migrations
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("Id")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Slots")
                         .HasColumnType("INTEGER");
 
@@ -350,20 +395,17 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("EndRegistrationDate")
+                    b.Property<DateTime>("DueDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<DateTime>("RegisterFrom")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("StartRegistrationDate")
+                    b.Property<DateTime>("RegisterTo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -730,15 +772,37 @@ namespace API.Migrations
                     b.Navigation("School");
                 });
 
+            modelBuilder.Entity("Domain.Project.Project", b =>
+                {
+                    b.HasOne("Domain.School.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
+                });
+
             modelBuilder.Entity("Domain.Project.ProjectEnrollment", b =>
                 {
                     b.HasOne("Domain.Semester.ProjectSemester", "ProjectSemester")
                         .WithMany()
-                        .HasForeignKey("ProjectSemesterId", "OwnerId")
+                        .HasForeignKey("ProjectSemesterProjectId", "ProjectSemesterSemesterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ProjectSemester");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollmentMember", b =>
+                {
+                    b.HasOne("Domain.Project.ProjectEnrollment", "ProjectEnrollment")
+                        .WithMany("ProjectEnrollmentMembers")
+                        .HasForeignKey("ProjectEnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProjectEnrollment");
                 });
 
             modelBuilder.Entity("Domain.Project.ProjectMilestone", b =>
@@ -915,6 +979,11 @@ namespace API.Migrations
                     b.Navigation("Files");
 
                     b.Navigation("ProjectSemesters");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollment", b =>
+                {
+                    b.Navigation("ProjectEnrollmentMembers");
                 });
 
             modelBuilder.Entity("Domain.Project.ProjectMilestone", b =>

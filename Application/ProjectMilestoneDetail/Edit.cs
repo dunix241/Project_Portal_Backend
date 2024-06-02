@@ -27,7 +27,7 @@ namespace Application.ProjectMilestoneDetail
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var project = await _context.ProjectMilestoneDetails.FindAsync(request.Id);
+                var project = await _context.ProjectMilestoneDetailses.FindAsync(request.Id);
                 if (project == null)
                 {
                     return null;

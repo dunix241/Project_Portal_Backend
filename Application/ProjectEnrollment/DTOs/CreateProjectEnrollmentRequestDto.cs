@@ -9,7 +9,7 @@ namespace Application.ProjectEnrollment.DTOs
 {
     public class CreateProjectEnrollmentRequestDto
     {
-        public Guid OwnerId { get; set; }
+        public Guid UserId { get; set; }
         public Guid ProjectSemesterId { get; set; }
         public ProjectSemester ProjectSemester { get; set; }
         public string Title { get; set; }

@@ -6,11 +6,7 @@ namespace API.Controllers.PMS;
 
 public class SemestersController : PmsApiController
 {
-    [HttpGet]
-    public async Task<IActionResult> List(Guid? id)
-    {
-        return HandleResult(await Mediator.Send(new List.Query{SemesterId = id}));
-    }
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(Guid id)

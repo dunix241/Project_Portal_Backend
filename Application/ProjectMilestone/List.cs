@@ -15,7 +15,7 @@ namespace Application.ProjectMilestone
         public class Query : IRequest<Result<ListProjectMilestoneResponseDto>>
         {
             public ListProjectMilestoneRequestDto query { get; set; }
-            public PagingParams Pagination { get; set; }
+            public PagingParams pagination { get; set; }
         }
 
         public class Handler : IRequestHandler<Query, Result<ListProjectMilestoneResponseDto>>
@@ -31,15 +31,13 @@ namespace Application.ProjectMilestone
             {
                 var name = request.query.Name;
                 var schoolId = request.query.SchoolId;
-                var id = request.query.Id;
 
                 var query = _context.ProjectMilestones.AsQueryable()
                     .Where(x => (name == null || x.Name.ToLower().Contains(name.ToLower()))
-                                && (schoolId == null || x.SchoolId == schoolId)
-                                && (id == null || x.Id == id));
+                                && (schoolId == null || x.SchoolId == schoolId));
 
                 var projects = new ListProjectMilestoneResponseDto();
-                await projects.GetItemsAsync(query, request.Pagination.PageNumber, request.Pagination.PageSize);
+                await projects.GetItemsAsync(query, request.pagination.PageNumber, request.pagination.PageSize);
 
                 return Result<ListProjectMilestoneResponseDto>.Success(projects);
             }

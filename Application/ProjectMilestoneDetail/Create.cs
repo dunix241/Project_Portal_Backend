@@ -1,5 +1,6 @@
 ﻿using Application.Core;
 using Application.ProjectMilestone.DTOs;
+using Application.ProjectMilestoneDetail.DTOs;
 using AutoMapper;
 using MediatR;
 using Persistence;
@@ -11,7 +12,7 @@ namespace Application.ProjectMilestoneDetail
     {
         public class Command : IRequest<Result<Project.ProjectMilestoneDetails>>
         {
-            public CreateProjectMilestoneRequestDto dto { get; set; }
+            public CreateProjectMilestoneDetailRequest dto { get; set; }
         }
 
         public class Handler : IRequestHandler<Command, Result<Project.ProjectMilestoneDetails>>
@@ -29,7 +30,7 @@ namespace Application.ProjectMilestoneDetail
             {
                 var projectMilestone = new Domain.Project.ProjectMilestoneDetails();
                 _mapper.Map(request.dto, projectMilestone);
-                _context.ProjectMilestoneDetails.Add(projectMilestone);
+                _context.ProjectMilestoneDetailses.Add(projectMilestone);
                 await _context.SaveChangesAsync();
 
                 return Result<Project.ProjectMilestoneDetails>.Success(projectMilestone);

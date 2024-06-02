@@ -8,5 +8,9 @@ namespace Application.ProjectEnrollment.DTOs
 {
     public class ListProjectEnrollmentRequestDto
     {
+        public Guid? SemesterId { get; set; }
+        public string? Name { get; set; }
+        public Guid? SchoolId { get; set; }
+
     }
 }

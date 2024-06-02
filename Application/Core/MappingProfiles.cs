@@ -15,6 +15,8 @@ using Domain.Semester;
 using File = Domain.File;
 using Application.Minio.DTOs;
 using Application.ProjectMilestone.DTOs;
+using Application.ProjectMilestoneDetail.DTOs;
+using Application.ProjectEnrollment.DTOs;
 
 
 namespace Application.Core;
@@ -44,6 +46,12 @@ public class MappingProfiles : Profile
 
         CreateMap<CreateProjectMilestoneRequestDto, Domain.Project.ProjectMilestone>();
         CreateMap<EditProjectMilestoneRequestDto, Domain.Project.ProjectMilestone>();
+
+        CreateMap<CreateProjectMilestoneDetailRequest, Domain.Project.ProjectMilestoneDetails>();
+        CreateMap<EditProjectMilestoneDetailRequest, Domain.Project.ProjectMilestoneDetails>();
+
+        CreateMap<CreateProjectEnrollmentRequestDto, Domain.Project.ProjectEnrollment>();
+        CreateMap<EditProjectEnrollmentRequestDto, Domain.Project.ProjectEnrollment>();
 
 
     }

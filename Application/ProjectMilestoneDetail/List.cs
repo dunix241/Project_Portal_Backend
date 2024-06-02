@@ -30,7 +30,7 @@ namespace Application.ProjectMilestoneDetail
                 var id = request.query.Id;
                 var projectMilestoneId = request.query.ProjectMilestoneId;
 
-                var query = _context.ProjectMilestoneDetails.AsQueryable()
+                var query = _context.ProjectMilestoneDetailses.AsQueryable()
                     .Where(x => (projectId == null || x.ProjectId == projectId)
                                 && (id == null || x.Id == id)
                                 && (projectMilestoneId == null || x.ProjectMilestoneId == projectMilestoneId));
