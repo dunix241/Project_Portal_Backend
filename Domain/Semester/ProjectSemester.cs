@@ -1,4 +1,6 @@
-﻿namespace Domain.Semester;
+﻿using Domain.Project;
+
+namespace Domain.Semester;
 
 public class ProjectSemester
 {
@@ -9,4 +11,5 @@ public class ProjectSemester
     public Semester Semester { get; set; }
     public int Slots { get; set; }
     public DateTime DueDate { get; set; }
+    IList<ProjectEnrollment> ProjectEnrollments { get; set; }
 }

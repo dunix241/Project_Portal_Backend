@@ -1,20 +1,22 @@
 ﻿using Application.Core;
-using Application.ProjectEnrollment.DTOs;
-using Application.ProjectMilestone.DTOs;
 using MediatR;
 using Persistence;
-using Project = Domain.Project;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Application.ProjectEnrollment
 {
-    public class Detail
+    public class Delete
     {
-        public class Query : IRequest<Result<GetProjectEnrollmentResposneDto>>
+        public class Command : IRequest<Result<Unit>>
         {
             public Guid Id { get; set; }
         }
 
-        public class Handler : IRequestHandler<Query, Result<GetProjectEnrollmentResposneDto>>
+        public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
 
@@ -23,14 +25,18 @@ namespace Application.ProjectEnrollment
                 _context = context;
             }
 
-            public async Task<Result<GetProjectEnrollmentResposneDto>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var project = await _context.ProjectEnrollments.FindAsync(request.Id);
                 if (project == null)
                 {
                     return null;
                 }
-                return Result<GetProjectEnrollmentResposneDto>.Success( new GetProjectEnrollmentResposneDto { ProjectEnrollment = project} );
+
+                _context.Remove(project);
+                await _context.SaveChangesAsync();
+
+                return Result<Unit>.Success(Unit.Value);
             }
         }
     }

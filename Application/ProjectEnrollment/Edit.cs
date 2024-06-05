@@ -32,7 +32,7 @@ namespace Application.ProjectEnrollment
                 var project = await _context.ProjectEnrollments.FindAsync(request.Id);
                 if (project == null)
                 {
-                    return null;
+                    Result<Project.ProjectEnrollment>.Failure("Not found");
                 }
 
                 _mapper.Map(request.dto, project);

@@ -1,9 +1,8 @@
 ﻿using Application.Core;
 using Application.ProjectEnrollment.DTOs;
-using Application.ProjectMilestone.DTOs;
 using AutoMapper;
-using Domain.Project;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Persistence;
 using Project = Domain.Project;
 
@@ -11,7 +10,7 @@ namespace Application.ProjectEnrollment
 {
     public class Create
     {
-        public class Command : IRequest<Result<Project.ProjectEnrollment >>
+        public class Command : IRequest<Result<Project.ProjectEnrollment>>
         {
             public CreateProjectEnrollmentRequestDto dto { get; set; }
         }
@@ -29,6 +28,15 @@ namespace Application.ProjectEnrollment
 
             public async Task<Result<Project.ProjectEnrollment>> Handle(Command request, CancellationToken cancellationToken)
             {
+                var test =  _context.ProjectSemesters.ToList();
+                var projectSemester = await _context.ProjectSemesters
+                .FirstOrDefaultAsync(x => x.Id == request.dto.ProjectSemesterId, cancellationToken);
+
+                if (projectSemester == null)
+                {
+                    return Result<Project.ProjectEnrollment>.Failure("Project Semester not found");
+                }
+
                 var projecEnreollment = new Domain.Project.ProjectEnrollment();
                 _mapper.Map(request.dto, projecEnreollment);
                 _context.ProjectEnrollments.Add(projecEnreollment);

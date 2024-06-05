@@ -17,6 +17,7 @@ using Application.Minio.DTOs;
 using Application.ProjectMilestone.DTOs;
 using Application.ProjectMilestoneDetail.DTOs;
 using Application.ProjectEnrollment.DTOs;
+using Application.ProjectEnrollmentMember.DTOs;
 
 
 namespace Application.Core;
@@ -52,6 +53,9 @@ public class MappingProfiles : Profile
 
         CreateMap<CreateProjectEnrollmentRequestDto, Domain.Project.ProjectEnrollment>();
         CreateMap<EditProjectEnrollmentRequestDto, Domain.Project.ProjectEnrollment>();
+
+        CreateMap<CreateProjectEnrollmentMemberRequest, Domain.Project.ProjectEnrollmentMember>();
+        //CreateMap<EditProjectEnrollmentRequestDto, Domain.Project.ProjectEnrollmentMember>();
 
 
     }

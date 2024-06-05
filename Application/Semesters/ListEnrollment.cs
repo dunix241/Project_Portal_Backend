@@ -39,7 +39,7 @@ namespace Application.Semesters
                         return Result<List<Project.ProjectEnrollment>>.Failure("Semester not found.");
                     }
 
-                    var projectSemesterIds = semester.ProjectSemesters.Select(ps => ps.ProjectId).ToList();
+                    var projectSemesterIds = semester.ProjectSemesters.Select(ps => ps.Id).ToList();
 
                     enrollments = await _context.ProjectEnrollments
                         .Where(pe => projectSemesterIds.Contains(pe.ProjectSemesterId))

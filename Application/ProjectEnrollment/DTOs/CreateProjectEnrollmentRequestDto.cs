@@ -11,7 +11,6 @@ namespace Application.ProjectEnrollment.DTOs
     {
         public Guid UserId { get; set; }
         public Guid ProjectSemesterId { get; set; }
-        public ProjectSemester ProjectSemester { get; set; }
         public string Title { get; set; }
         public string? Description { get; set; }
         public string? Vision { get; set; }

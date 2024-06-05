@@ -27,6 +27,7 @@ public class SemestersController : CmsApiController
     }
 
     [HttpPost("{id}/Projects")]
+    [SwaggerOperation(Summary = "Assign a project semester ?")]
     public async Task<IActionResult> AddProject(Guid id, SemesterCreateProjectRequestDto projectSemester)
     {
         return HandleResult(await Mediator.Send(new Application.Semesters.Projects.Create.Command
@@ -48,7 +49,7 @@ public class SemestersController : CmsApiController
             { SemesterId = id, ProjectId = projectId })));
     }
 
-    [HttpGet]
+    [HttpGet ("Semesters/cms/:id/Enrollments")]
     [SwaggerOperation(Summary = "List a semester’s enrollments")]
     public async Task<IActionResult> List(Guid? id)
     {

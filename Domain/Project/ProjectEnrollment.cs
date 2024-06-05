@@ -17,14 +17,14 @@ namespace Domain.Project
         public string Description { get; set; }
         public string Vision { get; set; }
         public string Mission { get; set; }
-        public string Feedback { get; set; }
+        public string? Feedback { get; set; }
         public bool IsPublished { get; set; }
         public DateTime? PublishDate { get; set; }
         public DateTime RegisterDate { get; set; }
         public int Stars { get; set; }
         public Guid? ForkedFromProjectId { get; set; }
-        public string HeirFortunes { get; set; }
-        public List<string> Tags { get; set; }
+        public string? HeirFortunes { get; set; }
+        public List<string> Tags { get; set; } = new List<string>();
 
         public IList<Domain.Project.ProjectEnrollmentMember> ProjectEnrollmentMembers { get; set; }
 

@@ -50,15 +50,23 @@ public class DataContext : IdentityDbContext<User>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Entity<ProjectSemester>().HasKey(entity => new { entity.ProjectId, entity.SemesterId });
+        //builder.Entity<ProjectSemester>().HasKey(entity => new { entity.ProjectId, entity.SemesterId });
         builder.Entity<File.File>().HasIndex(x => x.FileName).IsUnique();
+
+
         builder.Entity<ProjectEnrollment>()
-             .HasOne(pe => pe.ProjectSemester)
-             .WithMany();
-        //.HasForeignKey(pe => new { pe.ProjectSemesterId, pe.UserId });
-        builder.Entity<Project>()
-          .HasIndex(p => p.Name)
-          .IsUnique();
+          .HasMany(e => e.ProjectEnrollmentMembers)
+          .WithOne(m => m.ProjectEnrollment)
+          .HasForeignKey(m => m.ProjectEnrollmentId)
+          .OnDelete(DeleteBehavior.Cascade);
+
+        builder.Entity<ProjectEnrollmentMember>()
+              .HasKey(m => m.Id);
+        builder.Entity<ProjectEnrollment>()
+             .HasMany(pe => pe.ProjectEnrollmentMembers)
+             .WithOne(pm => pm.ProjectEnrollment)
+             .HasForeignKey(pm => pm.ProjectEnrollmentId)
+             .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<ProjectMilestone>()
             .HasMany(p => p.ProjectMilestoneDetails)
@@ -77,13 +85,6 @@ public class DataContext : IdentityDbContext<User>
                 v => string.Join(',', v),
                 v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList())
             .Metadata.SetValueComparer(valueComparer);
-
-        // Configure foreign key relationship
-        builder.Entity<ProjectEnrollmentMember>()
-            .HasOne(pem => pem.ProjectEnrollment)
-            .WithMany(pe => pe.ProjectEnrollmentMembers)
-            .HasForeignKey(pem => pem.ProjectEnrollmentId)
-            .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<Submission>()
             .HasOne(s => s.Enrollment).WithMany()
