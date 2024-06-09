@@ -1,4 +1,4 @@
-﻿namespace Domain.Person
+namespace Domain.Person
 {
     public class Person
     {

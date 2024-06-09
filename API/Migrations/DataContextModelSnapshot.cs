@@ -17,10 +17,50 @@ namespace API.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
 
+            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("LecturerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("StudentId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LecturerId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("CommentBases");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("CommentBase");
+
+                    b.UseTphMappingStrategy();
+                });
+
             modelBuilder.Entity("Domain.File.File", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FileName")
@@ -55,6 +95,10 @@ namespace API.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("Files");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("File");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Domain.Image", b =>
@@ -77,7 +121,7 @@ namespace API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
@@ -108,6 +152,10 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -142,9 +190,146 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("SchoolId");
+
                     b.ToTable("Projects");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Feedback")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("ForkedFromProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("HeirFortunes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Mission")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProjectSemesterId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("PublishDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("RegisterDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Stars")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Tags")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Vision")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectSemesterId");
+
+                    b.ToTable("ProjectEnrollments");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollmentMember", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool?>("IsApproved")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid>("ProjectEnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RejectReason")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectEnrollmentId");
+
+                    b.ToTable("ProjectEnrollmentMembers");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectMilestone", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SchoolId");
+
+                    b.ToTable("ProjectMilestones");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectMilestoneDetails", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Prerequisite")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProjectMilestoneId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("ProjectMilestoneId");
+
+                    b.ToTable("ProjectMilestoneDetailses");
                 });
 
             modelBuilder.Entity("Domain.School.School", b =>
@@ -154,7 +339,6 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CurrentMilestoneId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
@@ -171,19 +355,25 @@ namespace API.Migrations
 
             modelBuilder.Entity("Domain.Semester.ProjectSemester", b =>
                 {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("TEXT");
+
                     b.Property<Guid>("ProjectId")
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("SemesterId")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("Slots")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("ProjectId", "SemesterId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId");
 
                     b.HasIndex("SemesterId");
 
@@ -196,20 +386,17 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("EndRegistrationDate")
+                    b.Property<DateTime>("DueDate")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("StartDate")
+                    b.Property<DateTime>("RegisterFrom")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("StartRegistrationDate")
+                    b.Property<DateTime>("RegisterTo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -247,11 +434,41 @@ namespace API.Migrations
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.HasIndex("SchoolId");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("SubmittedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EnrollmentId");
+
+                    b.ToTable("Submissions");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -462,6 +679,58 @@ namespace API.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Comment.ProjectSemesterRegistrationComment", b =>
+                {
+                    b.HasBaseType("Domain.Comment.CommentBase");
+
+                    b.Property<Guid>("ProjectSemesterRegistrationId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("ProjectSemesterRegistrationId");
+
+                    b.HasDiscriminator().HasValue("ProjectSemesterRegistrationComment");
+                });
+
+            modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
+                {
+                    b.HasBaseType("Domain.Comment.CommentBase");
+
+                    b.Property<Guid>("SubmissionId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubmissionId");
+
+                    b.HasDiscriminator().HasValue("SubmissionComment");
+                });
+
+            modelBuilder.Entity("Domain.Thesis.Thesis", b =>
+                {
+                    b.HasBaseType("Domain.File.File");
+
+                    b.Property<Guid>("SubmissionId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubmissionId")
+                        .IsUnique();
+
+                    b.HasDiscriminator().HasValue("Thesis");
+                });
+
+            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+                {
+                    b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
+                        .WithMany()
+                        .HasForeignKey("LecturerId");
+
+                    b.HasOne("Domain.Student.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentId");
+
+                    b.Navigation("Lecturer");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("Domain.File.File", b =>
                 {
                     b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
@@ -494,6 +763,69 @@ namespace API.Migrations
                     b.Navigation("School");
                 });
 
+            modelBuilder.Entity("Domain.Project.Project", b =>
+                {
+                    b.HasOne("Domain.School.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollment", b =>
+                {
+                    b.HasOne("Domain.Semester.ProjectSemester", "ProjectSemester")
+                        .WithMany()
+                        .HasForeignKey("ProjectSemesterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProjectSemester");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollmentMember", b =>
+                {
+                    b.HasOne("Domain.Project.ProjectEnrollment", "ProjectEnrollment")
+                        .WithMany("ProjectEnrollmentMembers")
+                        .HasForeignKey("ProjectEnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProjectEnrollment");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectMilestone", b =>
+                {
+                    b.HasOne("Domain.School.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectMilestoneDetails", b =>
+                {
+                    b.HasOne("Domain.Project.Project", "Project")
+                        .WithMany()
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Project.ProjectMilestone", "ProjectMilestone")
+                        .WithMany("ProjectMilestoneDetails")
+                        .HasForeignKey("ProjectMilestoneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+
+                    b.Navigation("ProjectMilestone");
+                });
+
             modelBuilder.Entity("Domain.Semester.ProjectSemester", b =>
                 {
                     b.HasOne("Domain.Project.Project", "Project")
@@ -522,6 +854,17 @@ namespace API.Migrations
                         .IsRequired();
 
                     b.Navigation("School");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.HasOne("Domain.Project.ProjectEnrollment", "Enrollment")
+                        .WithMany()
+                        .HasForeignKey("EnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enrollment");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -584,6 +927,39 @@ namespace API.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Comment.ProjectSemesterRegistrationComment", b =>
+                {
+                    b.HasOne("Domain.Project.ProjectEnrollment", "ProjectSemesterRegistration")
+                        .WithMany()
+                        .HasForeignKey("ProjectSemesterRegistrationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ProjectSemesterRegistration");
+                });
+
+            modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
+                {
+                    b.HasOne("Domain.Submission.Submission", "Submission")
+                        .WithMany("SubmissionComments")
+                        .HasForeignKey("SubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Submission");
+                });
+
+            modelBuilder.Entity("Domain.Thesis.Thesis", b =>
+                {
+                    b.HasOne("Domain.Submission.Submission", "Submission")
+                        .WithOne("Thesis")
+                        .HasForeignKey("Domain.Thesis.Thesis", "SubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Submission");
+                });
+
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
                 {
                     b.Navigation("Files");
@@ -594,6 +970,16 @@ namespace API.Migrations
                     b.Navigation("Files");
 
                     b.Navigation("ProjectSemesters");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectEnrollment", b =>
+                {
+                    b.Navigation("ProjectEnrollmentMembers");
+                });
+
+            modelBuilder.Entity("Domain.Project.ProjectMilestone", b =>
+                {
+                    b.Navigation("ProjectMilestoneDetails");
                 });
 
             modelBuilder.Entity("Domain.School.School", b =>
@@ -611,6 +997,14 @@ namespace API.Migrations
             modelBuilder.Entity("Domain.Student.Student", b =>
                 {
                     b.Navigation("Files");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.Navigation("SubmissionComments");
+
+                    b.Navigation("Thesis")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -20,7 +20,8 @@ using Domain.Project;
 using Domain.School;
 using Domain.Semester;
 using Domain.Student;
-using File = Domain.File.File;
+using File = Domain.File;
+using Application.Minio.DTOs;
 
 namespace Application.Core;
 

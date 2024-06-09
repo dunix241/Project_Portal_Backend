@@ -9,12 +9,12 @@ namespace Application.Semesters;
 
 public class Create
 {
-    public class Command : IRequest<Result<Unit>>
+    public class Command : IRequest<Result<Semester>>
     {
         public CreateSemesterRequestDto Semester { get; set; }
     }
 
-    public class Handler : IRequestHandler<Command, Result<Unit>>
+    public class Handler : IRequestHandler<Command, Result<Semester>>
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;
@@ -25,7 +25,7 @@ public class Create
             _mapper = mapper;
         }
 
-        public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+        public async Task<Result<Semester>> Handle(Command request, CancellationToken cancellationToken)
         {
              var semester = new Semester();
              _mapper.Map(request.Semester, semester);
@@ -33,7 +33,7 @@ public class Create
              _context.Semesters.Add(semester);
              await _context.SaveChangesAsync();
 
-             return Result<Unit>.Success(Unit.Value);
+             return Result<Semester>.Success(semester);
         }
     }
 }
