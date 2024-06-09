@@ -3,7 +3,7 @@ using API.DTOs.Accounts.ValidationAttributes;
 
 namespace Application.Lecturers.DTOs
 {
-    public class CreateLecturerRequedtDto
+    public class CreateLecturerRequestDto
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

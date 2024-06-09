@@ -1,5 +1,8 @@
 using Application.Core;
+using Application.Enrollments;
+using Application.Enrollments.DTOs;
 using Application.Projects;
+using Application.Projects.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers.PMS;
@@ -16,5 +19,17 @@ public class ProjectsController : PmsApiController
     public async Task<IActionResult> Get(Guid id)
     {
         return HandleResult(await Mediator.Send(new Details.Query{Id = id}));
+    }
+
+    [HttpGet("Overview")]
+    public async Task<ActionResult<ListBasedOnEnrollmentPlanResponseDto>> GetProjectOverview()
+    {
+        return HandleResult(await Mediator.Send(new ListBasedOnEnrollmentPlan.Query()));
+    }
+
+    [HttpGet("Joined")]
+    public async Task<ActionResult<ListProjectsJoinedResponseDto>> GetProjectJoined()
+    {
+        return HandleResult(await Mediator.Send(new ListProjectsJoined.Query()));
     }
 }

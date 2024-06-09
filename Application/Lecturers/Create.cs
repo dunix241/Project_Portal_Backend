@@ -22,7 +22,7 @@ namespace Application.Lecturers
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public CreateLecturerRequedtDto Lecturer { get; set; }
+            public CreateLecturerRequestDto Lecturer { get; set; }
         }
 
         public class Handler : IRequestHandler<Command, Result<Unit>>
@@ -57,6 +57,7 @@ namespace Application.Lecturers
                 }
 
                 var lecturer = _mapper.Map<Lecturer>(request.Lecturer);
+                var registerRequestDto = _mapper.Map<RegisterRequestDTO>(request.Lecturer);
                 var school = await _context.Schools.FindAsync(request.Lecturer.SchoolId);
 
                 if (school == null)
@@ -68,30 +69,25 @@ namespace Application.Lecturers
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    var success = true;
-
                     string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
                     string emailTemplate = await File.ReadAllTextAsync(filePath, cancellationToken);
 
-                    success &= (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
+                    var success = (await _mediator.Send(new GeneratePasswordAndSendEmail.Command
                     {
                         MailData = new MailData
                         {
                             BodyBuilder = new BodyBuilder { HtmlBody = emailTemplate, TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}" },
                             Subject = "Project Portal Account's Password",
-                            ToAddress = lecturer.Email,
-                            ToName = lecturer.FullName
+                            ToAddress = request.Lecturer.Email,
+                            ToName = $"{request.Lecturer.FirstName} {request.Lecturer.LastName}"
                         },
                         Func =
                             async password =>
                             {
+                                registerRequestDto.Password = password;
                                 var success = (await _mediator.Send(new Register.Query
                                 {
-                                    RegisterRequestDto = new RegisterRequestDTO
-                                    {
-                                        Email = lecturer.Email, Name = lecturer.FullName, Password = password,
-                                        Address = ""
-                                    }
+                                    RegisterRequestDto = registerRequestDto
                                 })) != null;
 
                                 if (success)
@@ -107,9 +103,13 @@ namespace Application.Lecturers
                             }
                     })).IsSuccess;
 
-                    lecturer.UserId = (await _userManager.FindByEmailAsync(lecturer.Email))?.Id;
-                    _context.Lecturers.Add(lecturer);
-                    success &= await _context.SaveChangesAsync() != 0;
+                    if (success)
+                    {
+                        lecturer.UserId = (await _userManager.FindByEmailAsync(request.Lecturer.Email))?.Id;
+                        
+                        _context.Lecturers.Add(lecturer);
+                        success &= await _context.SaveChangesAsync() != 0;
+                    }
 
                     if (success)
                     {

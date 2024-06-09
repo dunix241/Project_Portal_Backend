@@ -57,6 +57,7 @@ namespace Application.Students
                 }
 
                 var student = _mapper.Map<Student>(request.Student);
+                var registerRequestDto = _mapper.Map<RegisterRequestDTO>(request.Student);
                 var school = await _context.Schools.FindAsync(request.Student.SchoolId);
 
                 if (school == null)
@@ -68,8 +69,6 @@ namespace Application.Students
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    student.IRN = await _helper.GenerateIRN(_context);
-                    
                     var success = true;
 
                     string filePath = Directory.GetCurrentDirectory() + "\\Templates\\initial-password.html";
@@ -85,19 +84,16 @@ namespace Application.Students
                                 TextBody = "Welcome to Project Portal\nYou've been added to Project Portal, your gateway to project registration and submission!\nTo get started, use the provided password below to log in and start using Project Portal:\n{Password}"
                             },
                             Subject = "Project Portal Account's Password",
-                            ToAddress = student.Email,
-                            ToName = student.FullName
+                            ToAddress = request.Student.Email,
+                            ToName = $"{request.Student.FirstName} {request.Student.LastName}"
                         },
                         Func =
                             async password =>
                             {
+                                registerRequestDto.Password = password;
                                 var success = await _mediator.Send(new Register.Query
                                 {
-                                    RegisterRequestDto = new RegisterRequestDTO
-                                    {
-                                        Email = student.Email, Name = student.FullName, Password = password,
-                                        Address = ""
-                                    }
+                                    RegisterRequestDto = registerRequestDto
                                 }) != null;
 
                                 if (success)
@@ -113,9 +109,12 @@ namespace Application.Students
                             }
                     })).IsSuccess;
 
-                    student.UserId = (await _userManager.FindByEmailAsync(student.Email)).Id;
-                    _context.Students.Add(student);
-                    success &= await _context.SaveChangesAsync() != 0;
+                    if (success)
+                    {
+                        student.UserId = (await _userManager.FindByEmailAsync(request.Student.Email)).Id;
+                        _context.Students.Add(student);
+                        success &= await _context.SaveChangesAsync() != 0;
+                    }
 
                     if (success)
                     {

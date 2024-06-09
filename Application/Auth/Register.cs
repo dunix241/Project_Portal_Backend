@@ -36,8 +36,10 @@ public class Register
             var user = new User
             {
                 UserName = request.RegisterRequestDto.Email,
+                FirstName = request.RegisterRequestDto.FirstName,
+                LastName = request.RegisterRequestDto.LastName,
                 Email = request.RegisterRequestDto.Email,
-                Name = request.RegisterRequestDto.Name,
+                PhoneNumber = request.RegisterRequestDto.PhoneNumber,
                 Address = request.RegisterRequestDto.Address
             };
 

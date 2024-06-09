@@ -1,4 +1,6 @@
 using Domain;
+using Domain.Enrollment;
+using Domain.EnrollmentPlan;
 using Domain.Lecturer;
 using Domain.MockDomain;
 using Domain.School;
@@ -25,11 +27,38 @@ public class DataContext : IdentityDbContext<User>
     public DbSet<Semester> Semesters { get; set; }
     public DbSet<ProjectSemester> ProjectSemesters { get; set; }
     public DbSet<File.File> Files { get; set; }
+    public DbSet<Enrollment> Enrollments { get; set; }
+    public DbSet<EnrollmentMember> EnrollmentMembers { get; set; }
+    public DbSet<EnrollmentPlan> EnrollmentPlans { get; set; }
+    public DbSet<EnrollmentPlanDetails> EnrollmentPlanDetailsEnumerable { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
         builder.Entity<ProjectSemester>().HasKey(entity => new { entity.ProjectId, entity.SemesterId });
+
+        builder.Entity<Student>()
+            .HasOne(entity => entity.User)
+            .WithMany()
+            .HasForeignKey(entity => entity.UserId);
+        
+        builder.Entity<Lecturer>()
+            .HasOne(entity => entity.User)
+            .WithMany()
+            .HasForeignKey(entity => entity.UserId);
+        
+        builder.Entity<Enrollment>()
+            .HasOne(entity => entity.ProjectSemester)
+            .WithMany(entity => entity.Enrollments)
+            .HasForeignKey(entity => new { entity.ProjectId, entity.SemesterId });
+        
+        // builder.Entity<EnrollmentPlanDetails>().HasKey(entity =>
+        //     new { entity.EnrollmentPlanId, entity.ProjectId, entity.PrerequisiteProjectId });
+
+        builder.Entity<EnrollmentPlanDetails>()
+            .HasIndex(nameof(EnrollmentPlanDetails.EnrollmentPlanId), nameof(EnrollmentPlanDetails.ProjectId), nameof(EnrollmentPlanDetails.PrerequisiteProjectId))
+            .IsUnique();
+        
         builder.Entity<File.File>().HasIndex(x => x.FileName).IsUnique();
 
     }

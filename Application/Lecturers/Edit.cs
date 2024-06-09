@@ -56,13 +56,16 @@ namespace Application.Lecturers
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    if (request.Lecturer.Email != lecturer.Email)
+                    var user = await _userManager.FindByIdAsync(lecturer.UserId);
+                    if (request.Lecturer.Email != user.Email)
                     {
-                        var user = await _userManager.FindByEmailAsync(lecturer.Email);
-                        success &= (await _userManager.SetEmailAsync(user, lecturer.Email)).Succeeded;
+                        success &= (await _userManager.SetEmailAsync(user, request.Lecturer.Email)).Succeeded;
                     }
                     
                     _mapper.Map(request.Lecturer, lecturer);
+                    _mapper.Map(request.Lecturer, user);
+                    await _userManager.UpdateAsync(user);
+                    
                     success &= await _context.SaveChangesAsync() != 0;
 
                     if (success)

@@ -3,7 +3,7 @@ using Domain.Project;
 
 namespace Application.Projects.DTOs;
 
-public class ListProjectResponseDto : PagedList<Project>
+public class ListProjectsResponseDto : PagedList<Project>
 {
     
 }

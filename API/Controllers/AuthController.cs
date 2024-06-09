@@ -83,7 +83,9 @@ public class AuthController : BaseApiController
     {
         var userDto = new LoginResponseDTO
         {
-            Name = user.Name,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            FullName = user.FullName,
             Address = user.Address,
             UserName = user.UserName,
             Token = _tokenService.CreateToken(user),

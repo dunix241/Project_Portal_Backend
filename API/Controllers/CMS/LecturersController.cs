@@ -9,7 +9,7 @@ public class LecturersController : CmsApiController
 {
     [HttpPost]
     [SwaggerOperation(Summary = "Add a lecturer")]
-    public async Task<IActionResult> CreateLecturer(CreateLecturerRequedtDto lecturer)
+    public async Task<IActionResult> CreateLecturer(CreateLecturerRequestDto lecturer)
     {
         return HandleResult(await Mediator.Send(new Create.Command { Lecturer = lecturer }));
     }

@@ -57,28 +57,28 @@ public class Seed
         {
             new()
             {
-                Name = "Admin",
+                FirstName = "Admin",
                 UserName = "admin@project-portal.com",
                 Email = "admin@project-portal.com",
                 Address = "1 at fake street"
             },
             new()
             {
-                Name = "Amos Blanda",
+                FirstName = "Amos Blanda",
                 UserName = "amos",
                 Email = "amos@test.com",
                 Address = "1 at fake street"
             },
             new()
             {
-                Name = "Brent Goodwin",
+                FirstName = "Brent Goodwin",
                 UserName = "brent",
                 Email = "brent@test.com",
                 Address = "2 at fake street"
             },
             new()
             {
-                Name = "Carol Koss",
+                FirstName = "Carol Koss",
                 UserName = "carol",
                 Email = "carol@test.com",
                 Address = "3 at fake street"

@@ -1,4 +1,5 @@
 ﻿using Application.Core;
+using Application.Lecturers.DTOs;
 using Application.Students.DTOs;
 using AutoMapper;
 using MediatR;
@@ -11,7 +12,7 @@ namespace Application.Students
     {
         public class Query : IRequest<Result<GetStudentResponseDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
 
         public class Handler : IRequestHandler<Query, Result<GetStudentResponseDto>>
@@ -30,15 +31,15 @@ namespace Application.Students
                 var student = await _context.Students
                     .Where(s => s.IsActive)
                     .Include(s => s.School)
-                    .Where(s => s.Id == request.Id && s.School.IsActive)
+                    .Where(s => s.UserId == request.Id)
                     .FirstOrDefaultAsync();
 
                 if (student == null)
                 {
-                    return Result<GetStudentResponseDto>.Failure("Lecturer not found.");
+                    return null;
                 }
 
-                var responseDto = GetStudentResponseDto.FromStudent(student);
+                var responseDto = _mapper.Map<GetStudentResponseDto>(student);
 
                 return Result<GetStudentResponseDto>.Success(responseDto);
             }
