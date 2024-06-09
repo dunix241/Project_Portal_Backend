@@ -1,7 +1,7 @@
 ﻿using Application.Core;
+
 using Application.Lecturers.DTOs;
 using AutoMapper;
-using Domain.Lecturer;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -12,7 +12,7 @@ namespace Application.Lecturers
     {
         public class Query : IRequest<Result<GetLecturerResponseDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
 
         public class Handler : IRequestHandler<Query, Result<GetLecturerResponseDto>>
@@ -30,7 +30,7 @@ namespace Application.Lecturers
             {
                 var lecturer = await _context.Lecturers
                    .Where(s => s.IsActive)
-                   .Where(s => s.Id == request.Id)
+                   .Where(s => s.UserId == request.Id)
                    .FirstOrDefaultAsync();
 
 

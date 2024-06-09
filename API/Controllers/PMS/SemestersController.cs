@@ -6,11 +6,7 @@ namespace API.Controllers.PMS;
 
 public class SemestersController : PmsApiController
 {
-    [HttpGet]
-    public async Task<IActionResult> List([FromQuery] PagingParams pagingParams)
-    {
-        return HandleResult(await Mediator.Send(new List.Query{Params = pagingParams}));
-    }
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> Get(Guid id)
@@ -22,5 +18,10 @@ public class SemestersController : PmsApiController
     public async Task<IActionResult> ListProjects(Guid id, [FromQuery] PagingParams pagingParams)
     {
         return HandleResult(await Mediator.Send(new Application.Semesters.Projects.List.Query{SemesterId = id, Params = pagingParams}));
+    }
+    [HttpGet("ListSemester")]
+    public async Task<IActionResult> ListSemester([FromQuery] PagingParams pagingParams)
+    {
+        return HandleResult(await Mediator.Send(new Application.Semesters.List.Query { QueryParams = pagingParams }));
     }
 }

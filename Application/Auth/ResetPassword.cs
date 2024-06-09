@@ -7,6 +7,7 @@ using Domain;
 using Domain.Mail;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Identity;
 using MimeKit;
 using Persistence;
@@ -48,7 +49,7 @@ public class ResetPassword
                 return null;
             }
 
-            var isAuthorized = (await _authorizationService.AuthorizeAsync(_userAccessor.GetUser().User, user, UserOperations.ResetPassword)).Succeeded;
+            var isAuthorized = (await _authorizationService.AuthorizeAsync(_userAccessor.GetUser().User, user, new OperationAuthorizationRequirement())).Succeeded;
             if (!isAuthorized)
             {
                 return Result<Unit>.Failure(Status.Forbid, "");
@@ -72,7 +73,7 @@ public class ResetPassword
                         },
                         Subject = "Project Portal Account's Password",
                         ToAddress = user.Email,
-                        ToName = user.Name
+                        ToName = user.FullName
                     },
                     Func =
                         async password =>

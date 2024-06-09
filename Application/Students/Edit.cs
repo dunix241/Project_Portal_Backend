@@ -57,13 +57,16 @@ namespace Application.Students
                 using var transaction = _context.Database.BeginTransaction();
                 try
                 {
-                    if (request.Student.Email != student.Email)
+                    var user = await _userManager.FindByIdAsync(student.UserId);
+                    if (request.Student.Email != user.Email)
                     {
-                        var user = await _userManager.FindByEmailAsync(student.Email);
-                        success &= (await _userManager.SetEmailAsync(user, student.Email)).Succeeded;
+                        success &= (await _userManager.SetEmailAsync(user, request.Student.Email)).Succeeded;
                     }
                     
                     _mapper.Map(request.Student, student);
+                    _mapper.Map(request.Student, user);
+                    await _userManager.UpdateAsync(user);
+                    
                     success &= await _context.SaveChangesAsync() != 0;
 
                     if (success)
@@ -77,7 +80,7 @@ namespace Application.Students
                     throw e;
                 }
 
-                return success ? Result<GetStudentResponseDto>.Success(GetStudentResponseDto.FromStudent(student)) : Result<GetStudentResponseDto>.Failure("Problem editing student");
+                return success ? Result<GetStudentResponseDto>.Success(_mapper.Map<GetStudentResponseDto>(student)) : Result<GetStudentResponseDto>.Failure("Problem editing student");
             }
         }
     }

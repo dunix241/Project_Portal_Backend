@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using API.Middleware;
 using API.Services;
 using API.Swagger;
+using Application.Authorization.EnrollmentOwners;
 using Application.Authorization.Users;
 using Application.Core;
 using Application.Core.AppSetting;
@@ -102,7 +103,7 @@ builder.Services.AddDbContext<DataContext>(opt =>
 {
     //opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
-              b => b.MigrationsAssembly("API"));
+              b => b.MigrationsAssembly("Persistence"));
 
 });
 
@@ -149,7 +150,8 @@ builder.Services.AddMediatR(typeof(EditBio.Handler).Assembly);
 builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 
-builder.Services.AddSingleton<IAuthorizationHandler, UserAdministratorsAuthorizationHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, UserAdministratorsAuthorizationHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, EnrollmentOwnerAuthorizationHandler>();
 
 //builder.Services.AddSingleton<IMinioClient, MinioClient>();
 builder.Services.AddSingleton<IMinioClient>(provider =>

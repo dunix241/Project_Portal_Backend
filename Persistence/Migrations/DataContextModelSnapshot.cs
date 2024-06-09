@@ -15,7 +15,240 @@ namespace Persistence.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "7.0.12");
+            modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
+
+            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("LecturerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LecturerUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("StudentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StudentUserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LecturerUserId");
+
+                    b.HasIndex("StudentUserId");
+
+                    b.ToTable("CommentBases");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("CommentBase");
+
+                    b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("ForkFromId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("ForkedFromId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("HeirFortunes")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsPublished")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("OwnerId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("PublishDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("RegisterDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("SemesterId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Vision")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ForkFromId");
+
+                    b.HasIndex("OwnerId");
+
+                    b.HasIndex("ProjectId", "SemesterId");
+
+                    b.ToTable("Enrollments");
+                });
+
+            modelBuilder.Entity("Domain.Enrollment.EnrollmentMember", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool?>("IsAccepted")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("RejectReason")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EnrollmentId");
+
+                    b.ToTable("EnrollmentMembers");
+                });
+
+            modelBuilder.Entity("Domain.EnrollmentPlan.EnrollmentPlan", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SchoolId");
+
+                    b.ToTable("EnrollmentPlans");
+                });
+
+            modelBuilder.Entity("Domain.EnrollmentPlan.EnrollmentPlanDetails", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EnrollmentPlanId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PrerequisiteProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PrerequisiteProjectId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("EnrollmentPlanId", "ProjectId", "PrerequisiteProjectId")
+                        .IsUnique();
+
+                    b.ToTable("EnrollmentPlanDetailsEnumerable");
+                });
+
+            modelBuilder.Entity("Domain.File.File", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FileOriginalName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FileType")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<Guid?>("LecturerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LecturerUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("ProjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("StudentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StudentUserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FileName")
+                        .IsUnique();
+
+                    b.HasIndex("LecturerUserId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.HasIndex("StudentUserId");
+
+                    b.ToTable("Files");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("File");
+
+                    b.UseTphMappingStrategy();
+                });
 
             modelBuilder.Entity("Domain.Image", b =>
                 {
@@ -37,41 +270,24 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<string>("UserId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("TEXT");
-
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
+                    b.HasKey("UserId");
 
                     b.HasIndex("SchoolId");
 
@@ -103,7 +319,12 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("SchoolId");
 
                     b.ToTable("Projects");
                 });
@@ -179,36 +400,49 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Student.Student", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<string>("UserId")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<long>("IRN")
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("TEXT");
-
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
+                    b.HasKey("UserId");
 
                     b.HasIndex("SchoolId");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("SubmittedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EnrollmentId");
+
+                    b.ToTable("Submissions");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -220,7 +454,6 @@ namespace Persistence.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<Guid?>("AvatarId")
@@ -240,14 +473,17 @@ namespace Persistence.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NormalizedEmail")
@@ -419,10 +655,176 @@ namespace Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Comment.EnrollmentComment", b =>
+                {
+                    b.HasBaseType("Domain.Comment.CommentBase");
+
+                    b.Property<Guid>("EnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("EnrollmentId");
+
+                    b.HasDiscriminator().HasValue("EnrollmentComment");
+                });
+
+            modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
+                {
+                    b.HasBaseType("Domain.Comment.CommentBase");
+
+                    b.Property<Guid>("SubmissionId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubmissionId");
+
+                    b.HasDiscriminator().HasValue("SubmissionComment");
+                });
+
+            modelBuilder.Entity("Domain.Thesis.Thesis", b =>
+                {
+                    b.HasBaseType("Domain.File.File");
+
+                    b.Property<Guid>("SubmissionId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubmissionId")
+                        .IsUnique();
+
+                    b.HasDiscriminator().HasValue("Thesis");
+                });
+
+            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+                {
+                    b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
+                        .WithMany()
+                        .HasForeignKey("LecturerUserId");
+
+                    b.HasOne("Domain.Student.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentUserId");
+
+                    b.Navigation("Lecturer");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
+                {
+                    b.HasOne("Domain.Enrollment.Enrollment", "ForkFrom")
+                        .WithMany()
+                        .HasForeignKey("ForkFromId");
+
+                    b.HasOne("Domain.Student.Student", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Semester.ProjectSemester", "ProjectSemester")
+                        .WithMany("Enrollments")
+                        .HasForeignKey("ProjectId", "SemesterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ForkFrom");
+
+                    b.Navigation("Owner");
+
+                    b.Navigation("ProjectSemester");
+                });
+
+            modelBuilder.Entity("Domain.Enrollment.EnrollmentMember", b =>
+                {
+                    b.HasOne("Domain.Enrollment.Enrollment", "Enrollment")
+                        .WithMany("EnrollmentMembers")
+                        .HasForeignKey("EnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enrollment");
+                });
+
+            modelBuilder.Entity("Domain.EnrollmentPlan.EnrollmentPlan", b =>
+                {
+                    b.HasOne("Domain.School.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
+                });
+
+            modelBuilder.Entity("Domain.EnrollmentPlan.EnrollmentPlanDetails", b =>
+                {
+                    b.HasOne("Domain.EnrollmentPlan.EnrollmentPlan", "EnrollmentPlan")
+                        .WithMany("EnrollmentPlanDetailsList")
+                        .HasForeignKey("EnrollmentPlanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Project.Project", "PrerequisiteProject")
+                        .WithMany()
+                        .HasForeignKey("PrerequisiteProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Project.Project", "Project")
+                        .WithMany()
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("EnrollmentPlan");
+
+                    b.Navigation("PrerequisiteProject");
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("Domain.File.File", b =>
+                {
+                    b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
+                        .WithMany("Files")
+                        .HasForeignKey("LecturerUserId");
+
+                    b.HasOne("Domain.Project.Project", "Project")
+                        .WithMany("Files")
+                        .HasForeignKey("ProjectId");
+
+                    b.HasOne("Domain.Student.Student", "Student")
+                        .WithMany("Files")
+                        .HasForeignKey("StudentUserId");
+
+                    b.Navigation("Lecturer");
+
+                    b.Navigation("Project");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
                 {
                     b.HasOne("Domain.School.School", "School")
                         .WithMany("Lecturers")
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Project.Project", b =>
+                {
+                    b.HasOne("Domain.School.School", "School")
+                        .WithMany()
                         .HasForeignKey("SchoolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -457,7 +859,26 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("School");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.HasOne("Domain.Enrollment.Enrollment", "Enrollment")
+                        .WithMany()
+                        .HasForeignKey("EnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enrollment");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -520,8 +941,58 @@ namespace Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Comment.EnrollmentComment", b =>
+                {
+                    b.HasOne("Domain.Enrollment.Enrollment", "Enrollment")
+                        .WithMany()
+                        .HasForeignKey("EnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enrollment");
+                });
+
+            modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
+                {
+                    b.HasOne("Domain.Submission.Submission", "Submission")
+                        .WithMany("SubmissionComments")
+                        .HasForeignKey("SubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Submission");
+                });
+
+            modelBuilder.Entity("Domain.Thesis.Thesis", b =>
+                {
+                    b.HasOne("Domain.Submission.Submission", "Submission")
+                        .WithOne("Thesis")
+                        .HasForeignKey("Domain.Thesis.Thesis", "SubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Submission");
+                });
+
+            modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
+                {
+                    b.Navigation("EnrollmentMembers");
+                });
+
+            modelBuilder.Entity("Domain.EnrollmentPlan.EnrollmentPlan", b =>
+                {
+                    b.Navigation("EnrollmentPlanDetailsList");
+                });
+
+            modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
+                {
+                    b.Navigation("Files");
+                });
+
             modelBuilder.Entity("Domain.Project.Project", b =>
                 {
+                    b.Navigation("Files");
+
                     b.Navigation("ProjectSemesters");
                 });
 
@@ -532,9 +1003,27 @@ namespace Persistence.Migrations
                     b.Navigation("Studens");
                 });
 
+            modelBuilder.Entity("Domain.Semester.ProjectSemester", b =>
+                {
+                    b.Navigation("Enrollments");
+                });
+
             modelBuilder.Entity("Domain.Semester.Semester", b =>
                 {
                     b.Navigation("ProjectSemesters");
+                });
+
+            modelBuilder.Entity("Domain.Student.Student", b =>
+                {
+                    b.Navigation("Files");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.Navigation("SubmissionComments");
+
+                    b.Navigation("Thesis")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -8,4 +8,5 @@ public class ProjectSemester
     public Semester Semester { get; set; }
     public int Slots { get; set; }
     public DateTime DueDate { get; set; }
+    public List<Enrollment.Enrollment> Enrollments { get; set; }
 }

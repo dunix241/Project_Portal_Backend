@@ -1,8 +1,12 @@
-﻿namespace Domain.Lecturer
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Lecturer
 {
-    public class Lecturer: Person.Person
+    public class Lecturer
     {
-        public Guid Id { get; set; }
+        [Key]
+        public string UserId { get; set; }
+        public User User { get; set; }
         public string? Description { get; set; }
         public bool IsActive { get; set; }
         public Guid SchoolId { get; set; }

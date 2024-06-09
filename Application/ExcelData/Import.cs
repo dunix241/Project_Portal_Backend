@@ -64,10 +64,10 @@ namespace Application.ExcelData
                     }
                     if (sourceOwnerType.Equals("Lecturer", StringComparison.OrdinalIgnoreCase))
                     {
-                        var lecturerList = new List<CreateLecturerRequedtDto>();
+                        var lecturerList = new List<CreateLecturerRequestDto>();
                         for (int row = 7; row <= worksheet.Dimension.End.Row; row++)
                         {
-                            var lecturerDto = new CreateLecturerRequedtDto
+                            var lecturerDto = new CreateLecturerRequestDto
                             {
                                 FirstName = worksheet.Cells[row, 2].Text,
                                 LastName = worksheet.Cells[row, 3].Text,

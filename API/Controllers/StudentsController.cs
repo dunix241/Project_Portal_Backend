@@ -19,7 +19,7 @@ namespace API.Controllers
 
         [HttpGet("{id}")]
         [SwaggerOperation(Summary = "Get a student")]
-        public async Task<IActionResult> GetStudent(Guid id)
+        public async Task<IActionResult> GetStudent(string id)
         {
             return HandleResult(await Mediator.Send(new Details.Query { Id = id }));
         }

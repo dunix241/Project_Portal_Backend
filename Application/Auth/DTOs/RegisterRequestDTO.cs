@@ -6,14 +6,19 @@ namespace API.DTOs.Accounts;
 public class RegisterRequestDTO
 {
     [Required]
+    public string FirstName { get; set; }
+    [Required]
+    public string LastName { get; set; }
+    
+    [Required]
     [EmailAddress]
     [IsEmailUnique]
     public string Email { get; set; }
+    public string? PhoneNumber { get; set; }
 
     [Required]
     [RegularExpression("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{4,20}$", ErrorMessage = "Password should be more complex")]
     public string Password { get; set; }
 
-    [Required] public string Name { get; set; }
-    [Required] public string Address { get; set; }
+    public string? Address { get; set; }
 }
