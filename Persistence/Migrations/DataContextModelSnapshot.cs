@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
@@ -11,14 +10,54 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240607081852_ConfigureStudentLecturerUserRelationship")]
-    partial class ConfigureStudentLecturerUserRelationship
+    partial class DataContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
+
+            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("LecturerId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LecturerUserId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("StudentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StudentUserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LecturerUserId");
+
+                    b.HasIndex("StudentUserId");
+
+                    b.ToTable("CommentBases");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("CommentBase");
+
+                    b.UseTphMappingStrategy();
+                });
 
             modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
                 {
@@ -163,6 +202,10 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -201,6 +244,10 @@ namespace Persistence.Migrations
                     b.HasIndex("StudentUserId");
 
                     b.ToTable("Files");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("File");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Domain.Image", b =>
@@ -223,7 +270,7 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Image");
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
@@ -272,7 +319,12 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid>("SchoolId")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("SchoolId");
 
                     b.ToTable("Projects");
                 });
@@ -365,6 +417,32 @@ namespace Persistence.Migrations
                     b.HasIndex("SchoolId");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("SubmittedDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EnrollmentId");
+
+                    b.ToTable("Submissions");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -577,6 +655,58 @@ namespace Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Comment.EnrollmentComment", b =>
+                {
+                    b.HasBaseType("Domain.Comment.CommentBase");
+
+                    b.Property<Guid>("EnrollmentId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("EnrollmentId");
+
+                    b.HasDiscriminator().HasValue("EnrollmentComment");
+                });
+
+            modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
+                {
+                    b.HasBaseType("Domain.Comment.CommentBase");
+
+                    b.Property<Guid>("SubmissionId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubmissionId");
+
+                    b.HasDiscriminator().HasValue("SubmissionComment");
+                });
+
+            modelBuilder.Entity("Domain.Thesis.Thesis", b =>
+                {
+                    b.HasBaseType("Domain.File.File");
+
+                    b.Property<Guid>("SubmissionId")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubmissionId")
+                        .IsUnique();
+
+                    b.HasDiscriminator().HasValue("Thesis");
+                });
+
+            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+                {
+                    b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
+                        .WithMany()
+                        .HasForeignKey("LecturerUserId");
+
+                    b.HasOne("Domain.Student.Student", "Student")
+                        .WithMany()
+                        .HasForeignKey("StudentUserId");
+
+                    b.Navigation("Lecturer");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
                 {
                     b.HasOne("Domain.Enrollment.Enrollment", "ForkFrom")
@@ -691,6 +821,17 @@ namespace Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Domain.Project.Project", b =>
+                {
+                    b.HasOne("Domain.School.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
+                });
+
             modelBuilder.Entity("Domain.Semester.ProjectSemester", b =>
                 {
                     b.HasOne("Domain.Project.Project", "Project")
@@ -727,6 +868,17 @@ namespace Persistence.Migrations
                     b.Navigation("School");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.HasOne("Domain.Enrollment.Enrollment", "Enrollment")
+                        .WithMany()
+                        .HasForeignKey("EnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enrollment");
                 });
 
             modelBuilder.Entity("Domain.User", b =>
@@ -789,6 +941,39 @@ namespace Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Domain.Comment.EnrollmentComment", b =>
+                {
+                    b.HasOne("Domain.Enrollment.Enrollment", "Enrollment")
+                        .WithMany()
+                        .HasForeignKey("EnrollmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Enrollment");
+                });
+
+            modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
+                {
+                    b.HasOne("Domain.Submission.Submission", "Submission")
+                        .WithMany("SubmissionComments")
+                        .HasForeignKey("SubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Submission");
+                });
+
+            modelBuilder.Entity("Domain.Thesis.Thesis", b =>
+                {
+                    b.HasOne("Domain.Submission.Submission", "Submission")
+                        .WithOne("Thesis")
+                        .HasForeignKey("Domain.Thesis.Thesis", "SubmissionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Submission");
+                });
+
             modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
                 {
                     b.Navigation("EnrollmentMembers");
@@ -831,6 +1016,14 @@ namespace Persistence.Migrations
             modelBuilder.Entity("Domain.Student.Student", b =>
                 {
                     b.Navigation("Files");
+                });
+
+            modelBuilder.Entity("Domain.Submission.Submission", b =>
+                {
+                    b.Navigation("SubmissionComments");
+
+                    b.Navigation("Thesis")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

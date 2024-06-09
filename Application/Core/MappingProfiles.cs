@@ -1,6 +1,5 @@
 using Application.EnrollmentPlans.DTOs;
 using Application.EnrollmentPlans.EnrollmentPlanDetails.DTOs;
-using Application.Enrollments;
 using Application.Enrollments.DTOs;
 using Application.Lecturers.DTOs;
 using Application.Minio.DTOs;
@@ -20,8 +19,7 @@ using Domain.Project;
 using Domain.School;
 using Domain.Semester;
 using Domain.Student;
-using File = Domain.File;
-using Application.Minio.DTOs;
+using File = Domain.File.File;
 
 namespace Application.Core;
 
@@ -58,14 +56,13 @@ public class MappingProfiles : Profile
         CreateMap<SemesterCreateProjectRequestDto, ProjectSemester>();
         CreateMap<SemesterEditProjectRequestDto, ProjectSemester>();
     }
-    
+
     private void CreateSchoolMaps()
     {
         CreateMap<CreateSchoolRequestDto, School>();
         CreateMap<EditSchoolRequestDto, School>();
         CreateMap<GetSchoolResponseDto, School>();
         CreateMap<ListSchoolResponseDto, School>();
-
     }
 
     private void CreateAcademicMaps()
@@ -73,22 +70,23 @@ public class MappingProfiles : Profile
         CreateMap<CreateStudentRequestDto, Student>();
         CreateMap<CreateStudentRequestDto, User>();
         CreateMap<Student, GetStudentResponseDto>()
-                .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
-                .ReverseMap();
+            .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
+            .ReverseMap();
         CreateMap<EditStudentRequestDto, Student>();
         CreateMap<EditStudentRequestDto, User>();
 
         CreateMap<CreateLecturerRequestDto, Lecturer>();
         CreateMap<CreateLecturerRequestDto, User>();
         CreateMap<Lecturer, GetLecturerResponseDto>()
-                .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
-                .ReverseMap();
+            .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
+            .ReverseMap();
         CreateMap<EditLecturerRequestDto, Lecturer>();
         CreateMap<EditLecturerRequestDto, User>();
     }
+
     private void CreateFileMaps()
     {
-        CreateMap<EditFileRequestDto,File >();
+        CreateMap<EditFileRequestDto, File>();
         CreateMap<AddFileResponseDto, File>().ReverseMap();
         CreateMap<File, AddFileResponseDto>().ReverseMap();
         CreateMap<File, GetFileResponseDto>();
@@ -105,7 +103,7 @@ public class MappingProfiles : Profile
         CreateMap<EditEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
         CreateMap<EditEnrollmentMemberRequestDto, EnrollmentMember>();
         CreateMap<Domain.Enrollment.Enrollment, GetEnrollmentResponseDto>();
-        
+
         CreateEnrollmentPlanMaps();
     }
 
@@ -117,5 +115,4 @@ public class MappingProfiles : Profile
         CreateMap<CreateEnrollmentPlanDetailsRequestDto, EnrollmentPlanDetails>();
         CreateMap<EnrollmentPlanDetails, EnrollmentPlanDetailsResponseDto>();
     }
-        
 }

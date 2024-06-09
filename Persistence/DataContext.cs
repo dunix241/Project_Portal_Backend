@@ -36,7 +36,7 @@ public class DataContext : IdentityDbContext<User>
     public DbSet<Image> Images { get; set; }
     public DbSet<CommentBase> CommentBases { get; set; }
     public DbSet<SubmissionComment> SubmissionComments { get; set; }
-    public DbSet<ProjectSemesterRegistrationComment> ProjectSemesterRegistrationComments { get; set; }
+    public DbSet<EnrollmentComment> ProjectSemesterRegistrationComments { get; set; }
     public DbSet<File.File> Files { get; set; }
     public DbSet<Enrollment> Enrollments { get; set; }
     public DbSet<EnrollmentMember> EnrollmentMembers { get; set; }
@@ -87,10 +87,10 @@ public class DataContext : IdentityDbContext<User>
             .WithMany(s => s.SubmissionComments)
             .HasForeignKey(sc => sc.SubmissionId);
 
-        builder.Entity<ProjectSemesterRegistrationComment>()
-            .HasOne(psrc => psrc.ProjectSemesterRegistration)
+        builder.Entity<EnrollmentComment>()
+            .HasOne(psrc => psrc.Enrollment)
             .WithMany()
-            .HasForeignKey(psrc => psrc.ProjectSemesterRegistrationId);
+            .HasForeignKey(psrc => psrc.EnrollmentId);
 
 
     }

@@ -1,10 +1,4 @@
 ﻿using Domain.Comment;
-using Domain.Project;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Submission
 {
@@ -16,7 +10,7 @@ namespace Domain.Submission
         public string Status { get; set; }
         public DateTime? SubmittedDate { get; set; }
 
-        public ProjectEnrollment Enrollment { get; set; }
+        public Enrollment.Enrollment Enrollment { get; set; }
         public Thesis.Thesis Thesis { get; set; }
         public ICollection<SubmissionComment> SubmissionComments { get; set; }
     }

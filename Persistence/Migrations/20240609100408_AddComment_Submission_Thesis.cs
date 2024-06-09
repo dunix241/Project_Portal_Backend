@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace API.Migrations
+namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class reIntial : Migration
+    public partial class AddComment_Submission_Thesis : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,9 +71,10 @@ namespace API.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    RegisterFrom = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    RegisterTo = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    DueDate = table.Column<DateTime>(type: "TEXT", nullable: false)
+                    StartDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    StartRegistrationDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    EndRegistrationDate = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -106,8 +107,10 @@ namespace API.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Address = table.Column<string>(type: "TEXT", nullable: false),
+                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
+                    LastName = table.Column<string>(type: "TEXT", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: true),
+                    Address = table.Column<string>(type: "TEXT", nullable: true),
                     Bio = table.Column<string>(type: "TEXT", nullable: true),
                     AvatarId = table.Column<Guid>(type: "TEXT", nullable: true),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -118,7 +121,6 @@ namespace API.Migrations
                     PasswordHash = table.Column<string>(type: "TEXT", nullable: true),
                     SecurityStamp = table.Column<string>(type: "TEXT", nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "TEXT", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: true),
                     PhoneNumberConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
                     TwoFactorEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(type: "TEXT", nullable: true),
@@ -136,43 +138,19 @@ namespace API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Lecturers",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Description = table.Column<string>(type: "TEXT", nullable: true),
-                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
-                    SchoolId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", nullable: false),
-                    UserId = table.Column<string>(type: "TEXT", nullable: false),
-                    Email = table.Column<string>(type: "TEXT", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Lecturers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Lecturers_Schools_SchoolId",
-                        column: x => x.SchoolId,
-                        principalTable: "Schools",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ProjectMilestones",
+                name: "EnrollmentPlans",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    SchoolId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    SchoolId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectMilestones", x => x.Id);
+                    table.PrimaryKey("PK_EnrollmentPlans", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProjectMilestones_Schools_SchoolId",
+                        name: "FK_EnrollmentPlans_Schools_SchoolId",
                         column: x => x.SchoolId,
                         principalTable: "Schools",
                         principalColumn: "Id",
@@ -192,31 +170,6 @@ namespace API.Migrations
                     table.PrimaryKey("PK_Projects", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Projects_Schools_SchoolId",
-                        column: x => x.SchoolId,
-                        principalTable: "Schools",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Students",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    IRN = table.Column<long>(type: "INTEGER", nullable: false),
-                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
-                    SchoolId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", nullable: false),
-                    UserId = table.Column<string>(type: "TEXT", nullable: false),
-                    Email = table.Column<string>(type: "TEXT", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Students", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Students_Schools_SchoolId",
                         column: x => x.SchoolId,
                         principalTable: "Schools",
                         principalColumn: "Id",
@@ -309,25 +262,83 @@ namespace API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectMilestoneDetailses",
+                name: "Lecturers",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ProjectMilestoneId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Prerequisite = table.Column<string>(type: "TEXT", nullable: false)
+                    UserId = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
+                    SchoolId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectMilestoneDetailses", x => x.Id);
+                    table.PrimaryKey("PK_Lecturers", x => x.UserId);
                     table.ForeignKey(
-                        name: "FK_ProjectMilestoneDetailses_ProjectMilestones_ProjectMilestoneId",
-                        column: x => x.ProjectMilestoneId,
-                        principalTable: "ProjectMilestones",
+                        name: "FK_Lecturers_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ProjectMilestoneDetailses_Projects_ProjectId",
+                        name: "FK_Lecturers_Schools_SchoolId",
+                        column: x => x.SchoolId,
+                        principalTable: "Schools",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Students",
+                columns: table => new
+                {
+                    UserId = table.Column<string>(type: "TEXT", nullable: false),
+                    IRN = table.Column<long>(type: "INTEGER", nullable: false),
+                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
+                    SchoolId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Students", x => x.UserId);
+                    table.ForeignKey(
+                        name: "FK_Students_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Students_Schools_SchoolId",
+                        column: x => x.SchoolId,
+                        principalTable: "Schools",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EnrollmentPlanDetailsEnumerable",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    EnrollmentPlanId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    PrerequisiteProjectId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EnrollmentPlanDetailsEnumerable", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EnrollmentPlanDetailsEnumerable_EnrollmentPlans_EnrollmentPlanId",
+                        column: x => x.EnrollmentPlanId,
+                        principalTable: "EnrollmentPlans",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EnrollmentPlanDetailsEnumerable_Projects_PrerequisiteProjectId",
+                        column: x => x.PrerequisiteProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EnrollmentPlanDetailsEnumerable_Projects_ProjectId",
                         column: x => x.ProjectId,
                         principalTable: "Projects",
                         principalColumn: "Id",
@@ -338,7 +349,6 @@ namespace API.Migrations
                 name: "ProjectSemesters",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
                     SemesterId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Slots = table.Column<int>(type: "INTEGER", nullable: false),
@@ -346,7 +356,7 @@ namespace API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectSemesters", x => x.Id);
+                    table.PrimaryKey("PK_ProjectSemesters", x => new { x.ProjectId, x.SemesterId });
                     table.ForeignKey(
                         name: "FK_ProjectSemesters_Projects_ProjectId",
                         column: x => x.ProjectId,
@@ -362,53 +372,64 @@ namespace API.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectEnrollments",
+                name: "Enrollments",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    UserId = table.Column<string>(type: "TEXT", nullable: false),
-                    ProjectSemesterId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    OwnerId = table.Column<string>(type: "TEXT", nullable: false),
+                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    SemesterId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
-                    Description = table.Column<string>(type: "TEXT", nullable: false),
-                    Vision = table.Column<string>(type: "TEXT", nullable: false),
-                    Mission = table.Column<string>(type: "TEXT", nullable: false),
-                    Feedback = table.Column<string>(type: "TEXT", nullable: true),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
+                    Vision = table.Column<string>(type: "TEXT", nullable: true),
+                    HeirFortunes = table.Column<string>(type: "TEXT", nullable: true),
                     IsPublished = table.Column<bool>(type: "INTEGER", nullable: false),
                     PublishDate = table.Column<DateTime>(type: "TEXT", nullable: true),
                     RegisterDate = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Stars = table.Column<int>(type: "INTEGER", nullable: false),
-                    ForkedFromProjectId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    HeirFortunes = table.Column<string>(type: "TEXT", nullable: true),
-                    Tags = table.Column<string>(type: "TEXT", nullable: false)
+                    ForkedFromId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    ForkFromId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectEnrollments", x => x.Id);
+                    table.PrimaryKey("PK_Enrollments", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProjectEnrollments_ProjectSemesters_ProjectSemesterId",
-                        column: x => x.ProjectSemesterId,
+                        name: "FK_Enrollments_Enrollments_ForkFromId",
+                        column: x => x.ForkFromId,
+                        principalTable: "Enrollments",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Enrollments_ProjectSemesters_ProjectId_SemesterId",
+                        columns: x => new { x.ProjectId, x.SemesterId },
                         principalTable: "ProjectSemesters",
-                        principalColumn: "Id",
+                        principalColumns: new[] { "ProjectId", "SemesterId" },
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Enrollments_Students_OwnerId",
+                        column: x => x.OwnerId,
+                        principalTable: "Students",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "ProjectEnrollmentMembers",
+                name: "EnrollmentMembers",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Email = table.Column<string>(type: "TEXT", nullable: false),
-                    IsApproved = table.Column<bool>(type: "INTEGER", nullable: true),
-                    RejectReason = table.Column<string>(type: "TEXT", nullable: false),
-                    ProjectEnrollmentId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    EnrollmentId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    IsAccepted = table.Column<bool>(type: "INTEGER", nullable: true),
+                    RejectReason = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ProjectEnrollmentMembers", x => x.Id);
+                    table.PrimaryKey("PK_EnrollmentMembers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProjectEnrollmentMembers_ProjectEnrollments_ProjectEnrollmentId",
-                        column: x => x.ProjectEnrollmentId,
-                        principalTable: "ProjectEnrollments",
+                        name: "FK_EnrollmentMembers_Enrollments_EnrollmentId",
+                        column: x => x.EnrollmentId,
+                        principalTable: "Enrollments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -427,9 +448,9 @@ namespace API.Migrations
                 {
                     table.PrimaryKey("PK_Submissions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Submissions_ProjectEnrollments_EnrollmentId",
+                        name: "FK_Submissions_Enrollments_EnrollmentId",
                         column: x => x.EnrollmentId,
-                        principalTable: "ProjectEnrollments",
+                        principalTable: "Enrollments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -443,29 +464,31 @@ namespace API.Migrations
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false),
                     StudentId = table.Column<Guid>(type: "TEXT", nullable: true),
                     LecturerId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    StudentUserId = table.Column<string>(type: "TEXT", nullable: true),
+                    LecturerUserId = table.Column<string>(type: "TEXT", nullable: true),
                     Discriminator = table.Column<string>(type: "TEXT", nullable: false),
-                    ProjectSemesterRegistrationId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    EnrollmentId = table.Column<Guid>(type: "TEXT", nullable: true),
                     SubmissionId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CommentBases", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CommentBases_Lecturers_LecturerId",
-                        column: x => x.LecturerId,
-                        principalTable: "Lecturers",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_CommentBases_ProjectEnrollments_ProjectSemesterRegistrationId",
-                        column: x => x.ProjectSemesterRegistrationId,
-                        principalTable: "ProjectEnrollments",
+                        name: "FK_CommentBases_Enrollments_EnrollmentId",
+                        column: x => x.EnrollmentId,
+                        principalTable: "Enrollments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CommentBases_Students_StudentId",
-                        column: x => x.StudentId,
+                        name: "FK_CommentBases_Lecturers_LecturerUserId",
+                        column: x => x.LecturerUserId,
+                        principalTable: "Lecturers",
+                        principalColumn: "UserId");
+                    table.ForeignKey(
+                        name: "FK_CommentBases_Students_StudentUserId",
+                        column: x => x.StudentUserId,
                         principalTable: "Students",
-                        principalColumn: "Id");
+                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_CommentBases_Submissions_SubmissionId",
                         column: x => x.SubmissionId,
@@ -483,7 +506,9 @@ namespace API.Migrations
                     FileOriginalName = table.Column<string>(type: "TEXT", nullable: false),
                     FileType = table.Column<int>(type: "INTEGER", nullable: false),
                     StudentId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    StudentUserId = table.Column<string>(type: "TEXT", nullable: true),
                     LecturerId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    LecturerUserId = table.Column<string>(type: "TEXT", nullable: true),
                     ProjectId = table.Column<Guid>(type: "TEXT", nullable: true),
                     Discriminator = table.Column<string>(type: "TEXT", nullable: false),
                     SubmissionId = table.Column<Guid>(type: "TEXT", nullable: true)
@@ -492,20 +517,20 @@ namespace API.Migrations
                 {
                     table.PrimaryKey("PK_Files", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Files_Lecturers_LecturerId",
-                        column: x => x.LecturerId,
+                        name: "FK_Files_Lecturers_LecturerUserId",
+                        column: x => x.LecturerUserId,
                         principalTable: "Lecturers",
-                        principalColumn: "Id");
+                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_Files_Projects_ProjectId",
                         column: x => x.ProjectId,
                         principalTable: "Projects",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Files_Students_StudentId",
-                        column: x => x.StudentId,
+                        name: "FK_Files_Students_StudentUserId",
+                        column: x => x.StudentUserId,
                         principalTable: "Students",
-                        principalColumn: "Id");
+                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_Files_Submissions_SubmissionId",
                         column: x => x.SubmissionId,
@@ -557,24 +582,65 @@ namespace API.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_CommentBases_LecturerId",
+                name: "IX_CommentBases_EnrollmentId",
                 table: "CommentBases",
-                column: "LecturerId");
+                column: "EnrollmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CommentBases_ProjectSemesterRegistrationId",
+                name: "IX_CommentBases_LecturerUserId",
                 table: "CommentBases",
-                column: "ProjectSemesterRegistrationId");
+                column: "LecturerUserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CommentBases_StudentId",
+                name: "IX_CommentBases_StudentUserId",
                 table: "CommentBases",
-                column: "StudentId");
+                column: "StudentUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CommentBases_SubmissionId",
                 table: "CommentBases",
                 column: "SubmissionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EnrollmentMembers_EnrollmentId",
+                table: "EnrollmentMembers",
+                column: "EnrollmentId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EnrollmentPlanDetailsEnumerable_EnrollmentPlanId_ProjectId_PrerequisiteProjectId",
+                table: "EnrollmentPlanDetailsEnumerable",
+                columns: new[] { "EnrollmentPlanId", "ProjectId", "PrerequisiteProjectId" },
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EnrollmentPlanDetailsEnumerable_PrerequisiteProjectId",
+                table: "EnrollmentPlanDetailsEnumerable",
+                column: "PrerequisiteProjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EnrollmentPlanDetailsEnumerable_ProjectId",
+                table: "EnrollmentPlanDetailsEnumerable",
+                column: "ProjectId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_EnrollmentPlans_SchoolId",
+                table: "EnrollmentPlans",
+                column: "SchoolId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enrollments_ForkFromId",
+                table: "Enrollments",
+                column: "ForkFromId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enrollments_OwnerId",
+                table: "Enrollments",
+                column: "OwnerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enrollments_ProjectId_SemesterId",
+                table: "Enrollments",
+                columns: new[] { "ProjectId", "SemesterId" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Files_FileName",
@@ -583,9 +649,9 @@ namespace API.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Files_LecturerId",
+                name: "IX_Files_LecturerUserId",
                 table: "Files",
-                column: "LecturerId");
+                column: "LecturerUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Files_ProjectId",
@@ -593,9 +659,9 @@ namespace API.Migrations
                 column: "ProjectId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Files_StudentId",
+                name: "IX_Files_StudentUserId",
                 table: "Files",
-                column: "StudentId");
+                column: "StudentUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Files_SubmissionId",
@@ -609,39 +675,9 @@ namespace API.Migrations
                 column: "SchoolId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ProjectEnrollmentMembers_ProjectEnrollmentId",
-                table: "ProjectEnrollmentMembers",
-                column: "ProjectEnrollmentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectEnrollments_ProjectSemesterId",
-                table: "ProjectEnrollments",
-                column: "ProjectSemesterId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectMilestoneDetailses_ProjectId",
-                table: "ProjectMilestoneDetailses",
-                column: "ProjectId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectMilestoneDetailses_ProjectMilestoneId",
-                table: "ProjectMilestoneDetailses",
-                column: "ProjectMilestoneId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectMilestones_SchoolId",
-                table: "ProjectMilestones",
-                column: "SchoolId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Projects_SchoolId",
                 table: "Projects",
                 column: "SchoolId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProjectSemesters_ProjectId",
-                table: "ProjectSemesters",
-                column: "ProjectId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ProjectSemesters_SemesterId",
@@ -681,43 +717,37 @@ namespace API.Migrations
                 name: "CommentBases");
 
             migrationBuilder.DropTable(
+                name: "EnrollmentMembers");
+
+            migrationBuilder.DropTable(
+                name: "EnrollmentPlanDetailsEnumerable");
+
+            migrationBuilder.DropTable(
                 name: "Files");
 
             migrationBuilder.DropTable(
                 name: "MockDomains");
 
             migrationBuilder.DropTable(
-                name: "ProjectEnrollmentMembers");
-
-            migrationBuilder.DropTable(
-                name: "ProjectMilestoneDetailses");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
+                name: "EnrollmentPlans");
 
             migrationBuilder.DropTable(
                 name: "Lecturers");
 
             migrationBuilder.DropTable(
-                name: "Students");
-
-            migrationBuilder.DropTable(
                 name: "Submissions");
 
             migrationBuilder.DropTable(
-                name: "ProjectMilestones");
-
-            migrationBuilder.DropTable(
-                name: "Images");
-
-            migrationBuilder.DropTable(
-                name: "ProjectEnrollments");
+                name: "Enrollments");
 
             migrationBuilder.DropTable(
                 name: "ProjectSemesters");
+
+            migrationBuilder.DropTable(
+                name: "Students");
 
             migrationBuilder.DropTable(
                 name: "Projects");
@@ -726,7 +756,13 @@ namespace API.Migrations
                 name: "Semesters");
 
             migrationBuilder.DropTable(
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
                 name: "Schools");
+
+            migrationBuilder.DropTable(
+                name: "Images");
         }
     }
 }
