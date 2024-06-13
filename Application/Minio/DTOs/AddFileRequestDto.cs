@@ -13,10 +13,6 @@ namespace Application.Minio.DTOs
     {
         public IFormFile FormFile { get; set; }
         public string BucketName { get; set; }
-        public Guid SourceOwnerId { get; set; }
-        public SourceOwnerType SourceOwnerType { get; set; }
-        public FileType FileType { get; set; }
-
     }
 
 

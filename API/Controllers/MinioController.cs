@@ -23,60 +23,48 @@ namespace API.Controllers
         }
         [HttpPost("Upload")]
         [SwaggerOperation(Summary = "Upload file to Minio")]
-        public async Task<IActionResult> UploadFile(IFormFile file, string bucketName, Guid sourceOwnerId, SourceOwnerType sourceOwnerType, FileType fileType)
+        public async Task<IActionResult> UploadFile(IFormFile file, string bucketName, Guid sourceOwnerId, SourceOwnerType sourceOwnerType)
         {
-            var dto = new AddFileRequestDto
+            var payload = new AddFileRequestDto
             {
-                SourceOwnerType = sourceOwnerType,
                 BucketName = bucketName,
                 FormFile = file,
-                SourceOwnerId = sourceOwnerId,
-                FileType = fileType
             };
 
-            return HandleResult(await Mediator.Send(new UploadFile_V2.Command { dto = dto }));
+            return HandleResult(await Mediator.Send(new UploadFile.Command { Payload = payload }));
         }
 
         [HttpDelete("Delete")]
         [SwaggerOperation(Summary = "Delete a file in Minio")]
-        public async Task<IActionResult> DeleteFile(string bucketName, string objectName)
+        public async Task<IActionResult> DeleteFile(Guid id)
         {
             var result = await Mediator.Send(new DeleteFile.Command
             {
-                BucketName = bucketName,
-                ObjectName = objectName
+                Id = id
             });
             return HandleResult(result);
         }
         [HttpGet("GetFile")]
         [SwaggerOperation(Summary = "Get File")]
-        public async Task<IActionResult> GetStreamFile(string bucketName, string objectName)
+        public async Task<IActionResult> GetStreamFile(Guid id)
         {
-            var query = new StreamFile.Query { BucketName = bucketName, ObjectName = objectName };
+            var query = new StreamFile.Query {Id = id};
             var result = await Mediator.Send(query);
 
             if (result.IsSuccess)
             {
                 using (var memoryStream = new MemoryStream())
                 {
-                    await result.Value.CopyToAsync(memoryStream);
+                    await result.Value.Stream.CopyToAsync(memoryStream);
                     var fileBytes = memoryStream.ToArray();
 
-                    return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", objectName);
+                    return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", result.Value.File.FileNameWithExtension);
                 }
             }
             else
             {
                 return NotFound(result.Error);
             }
-        }
-
-        [HttpGet("GetAvatarLink")]
-        [SwaggerOperation(Summary = "Get Avatar")]
-        public async Task<IActionResult> GetAvatarLink(string bucketName, Guid ownerId, SourceOwnerType sourceOwnerType)
-        {
-            var query = new GetAvatar.Query { BucketName = bucketName,OwnerId = ownerId,OwnerType= sourceOwnerType };
-            return HandleResult(await Mediator.Send(query));       
         }
     }
 }

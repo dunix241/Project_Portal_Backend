@@ -29,8 +29,6 @@ public class EditBio
             var user = await _context.Users.FirstOrDefaultAsync(
                 entity => entity.UserName == _userAccessor.GetUser().Username);
 
-            if (user != null) user.Bio = request.Bio;
-
             var result = await _context.SaveChangesAsync() > 0;
 
             if (!result) return Result<Unit>.Failure("Failed to save changes");

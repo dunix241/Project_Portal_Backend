@@ -1,10 +1,11 @@
 ﻿namespace Domain.Comment
 {
-    public class CommentBase
+    public class Comment
     {
         public Guid Id { get; set; }
         public string Content { get; set; }
         public DateTime Date { get; set; }
-        public string Email { get; set; }
+        public string UserId { get; set; }
+        public User User { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using API.DTOs.Accounts;
 using API.Services;
 using Application.Auth;
+using Application.Minio;
 using Asp.Versioning;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
@@ -41,7 +42,6 @@ public class AuthController : BaseApiController
         if (user == null) return Unauthorized();
 
         var userDto = await CreateUserDto(user);
-        userDto.Avatar = user.Avatar?.Url + '/' + user.Avatar?.Name + '.' + user.Avatar?.Extension;
 
         return userDto;
     }
@@ -93,7 +93,13 @@ public class AuthController : BaseApiController
             Roles = await _userManager.GetRolesAsync(user)
         };
         if (user.Avatar != null)
-            userDto.Avatar = user.Avatar.Url + '/' + user.Avatar.Name + '.' + user.Avatar.Extension;
+        {
+            var response = await Mediator.Send(new GetFile.Query { Id = user.Avatar.Id });
+            if (response.IsSuccess)
+            {
+                userDto.Avatar = response.Value;
+            }
+        }
 
         return userDto;
     }

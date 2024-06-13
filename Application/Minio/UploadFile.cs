@@ -1,58 +1,96 @@
 ﻿using Application.Core;
+using Application.Minio.DTOs;
+using AutoMapper;
 using MediatR;
 using Minio;
 using Minio.DataModel.Args;
+using Persistence;
+using File = Domain.File.File;
 
 namespace Application.Minio
 {
     public class UploadFile
     {
-        public class Command : IRequest<Result<Unit>>
+        public class Command : IRequest<Result<AddFileResponseDto>>
         {
-            public string FilePath { get; set; }
-            public string BucketName { get; set; }
-            public string ObjectName { get; set; }
-            public string NewName { get; set; }
+            public AddFileRequestDto Payload;
         }
 
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Command, Result<AddFileResponseDto>>
         {
             private readonly IMinioClient _minioClient;
+            private readonly DataContext _context;
+            private readonly IMapper _mapper;
 
-            public Handler( IMinioClient minioClient)
+            public Handler(IMinioClient minioClient, DataContext context, IMapper mapper)
             {
                 _minioClient = minioClient;
+                _context = context;
+                _mapper = mapper;
             }
 
-            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<AddFileResponseDto>> Handle(Command request, CancellationToken cancellationToken)
             {
                 try
                 {
-                    // Check if the bucket exists
-                    var existArgs = new BucketExistsArgs().WithBucket(request.BucketName);
+                    var file = request.Payload.FormFile;
+                    var bucketName = request.Payload.BucketName;
+
+                    if (file.Length <= 0)
+                    {
+                        return Result<AddFileResponseDto>.Failure("No file uploaded or file is empty.");
+                    }
+
+                    var existArgs = new BucketExistsArgs().WithBucket(request.Payload.BucketName);
                     var found = await _minioClient.BucketExistsAsync(existArgs).ConfigureAwait(false);
                     if (!found)
                     {
-                        return Result<Unit>.Failure($"Bucket {request.BucketName} does not exist.");
+                        return Result<AddFileResponseDto>.Failure($"Bucket {request.Payload.BucketName} does not exist.");
                     }
 
-                    // Upload the file to MinIO
-                    var putArgs = new PutObjectArgs()
-                        .WithBucket(request.BucketName)
-                        .WithObject(request.NewName)
-                        .WithContentType("application/octet-stream")
-                        .WithFileName(request.FilePath);
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        var extension = Path.GetExtension(file.FileName);
+                        var fileName = Path.GetFileNameWithoutExtension(file.FileName);
 
-                    _ = await _minioClient.PutObjectAsync(putArgs).ConfigureAwait(false);
+                        var fileObj = new File
+                        {
+                            Name = new Guid(),
+                            DisplayName = fileName,
+                            Extension = extension,
+                            BucketName = bucketName
+                        };
+                        
+                        await file.CopyToAsync(memoryStream);
+                        memoryStream.Position = 0;
 
-                    return Result<Unit>.Success(Unit.Value);
+                        var putArgs = new PutObjectArgs()
+                            .WithBucket(request.Payload.BucketName)
+                            .WithObject(fileObj.FileNameWithExtension)
+                            .WithStreamData(memoryStream)
+                            .WithObjectSize(memoryStream.Length)
+                            .WithContentType("application/octet-stream")
+                            ;
+                        await _minioClient.PutObjectAsync(putArgs);
+                        
+                        _context.Files.Add(fileObj);
+                        var success = await _context.SaveChangesAsync() != 0;
+                        if (!success)
+                        {
+                            return Result<AddFileResponseDto>.Failure($"Error adding File Object to DB");
+                        }
+                        
+                        var respone = new AddFileResponseDto();
+                        _mapper.Map(fileObj, respone );
+                        return Result<AddFileResponseDto>.Success(respone);
+
+                    }
                 }
                 catch (Exception ex)
                 {
-                    return Result<Unit>.Failure($"Error uploading file: {ex.Message}");
+                    return Result<AddFileResponseDto>.Failure($"Error uploading file: {ex.Message}");
                 }
             }
         }
-
     }
 }

@@ -29,7 +29,7 @@ public class List
         
         public async Task<Result<ListEnrollmentPlanDetailsResponseDto>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var query = _dataContext.EnrollmentPlanDetailsEnumerable
+            var query = _dataContext.EnrollmentPlanDetails
                 .Where(entity => entity.EnrollmentPlanId == request.EnrollmentPlanId)
                 .Select(entity => _mapper.Map<EnrollmentPlanDetailsResponseDto>(entity))
                 .AsQueryable();

@@ -7,10 +7,11 @@ namespace Domain.Lecturer
         [Key]
         public string UserId { get; set; }
         public User User { get; set; }
+        public string? Title { get; set; }
+        public string? Headline { get; set; }
         public string? Description { get; set; }
         public bool IsActive { get; set; }
         public Guid SchoolId { get; set; }
         public School.School School { get; set; }
-        public IList<File.File> Files { get; }
     }
 }

@@ -1,11 +1,9 @@
-﻿using Domain.File;
-using File = Domain.File;
-
+﻿using File = Domain.File.File;
 
 namespace Application.Minio.DTOs
 {
     public class GetFileResponseDto
     {
-        public File.File File { get; set; }
+        public File File { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class AddComment_Submission_Thesis : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -57,7 +57,6 @@ namespace Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Name = table.Column<string>(type: "TEXT", nullable: false),
-                    CurrentMilestoneId = table.Column<string>(type: "TEXT", nullable: true),
                     IsActive = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -103,41 +102,6 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "AspNetUsers",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "TEXT", nullable: false),
-                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
-                    LastName = table.Column<string>(type: "TEXT", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: true),
-                    Address = table.Column<string>(type: "TEXT", nullable: true),
-                    Bio = table.Column<string>(type: "TEXT", nullable: true),
-                    AvatarId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    NormalizedEmail = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
-                    EmailConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
-                    PasswordHash = table.Column<string>(type: "TEXT", nullable: true),
-                    SecurityStamp = table.Column<string>(type: "TEXT", nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "TEXT", nullable: true),
-                    PhoneNumberConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
-                    TwoFactorEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
-                    LockoutEnd = table.Column<DateTimeOffset>(type: "TEXT", nullable: true),
-                    LockoutEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
-                    AccessFailedCount = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AspNetUsers_Images_AvatarId",
-                        column: x => x.AvatarId,
-                        principalTable: "Images",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "EnrollmentPlans",
                 columns: table => new
                 {
@@ -177,6 +141,64 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "EnrollmentPlanDetailsEnumerable",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    EnrollmentPlanId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    PrerequisiteProjectId = table.Column<Guid>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EnrollmentPlanDetailsEnumerable", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_EnrollmentPlanDetailsEnumerable_EnrollmentPlans_EnrollmentPlanId",
+                        column: x => x.EnrollmentPlanId,
+                        principalTable: "EnrollmentPlans",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EnrollmentPlanDetailsEnumerable_Projects_PrerequisiteProjectId",
+                        column: x => x.PrerequisiteProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_EnrollmentPlanDetailsEnumerable_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ProjectSemesters",
+                columns: table => new
+                {
+                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    SemesterId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Slots = table.Column<int>(type: "INTEGER", nullable: false),
+                    DueDate = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProjectSemesters", x => new { x.ProjectId, x.SemesterId });
+                    table.ForeignKey(
+                        name: "FK_ProjectSemesters_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProjectSemesters_Semesters_SemesterId",
+                        column: x => x.SemesterId,
+                        principalTable: "Semesters",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
@@ -189,12 +211,6 @@ namespace Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AspNetUserClaims_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -209,12 +225,6 @@ namespace Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
-                    table.ForeignKey(
-                        name: "FK_AspNetUserLogins_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -233,12 +243,35 @@ namespace Persistence.Migrations
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AspNetUserRoles_AspNetUsers_UserId",
-                        column: x => x.UserId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetUsers",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
+                    LastName = table.Column<string>(type: "TEXT", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: true),
+                    Address = table.Column<string>(type: "TEXT", nullable: true),
+                    AvatarId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    NormalizedEmail = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
+                    EmailConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
+                    PasswordHash = table.Column<string>(type: "TEXT", nullable: true),
+                    SecurityStamp = table.Column<string>(type: "TEXT", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "TEXT", nullable: true),
+                    PhoneNumberConfirmed = table.Column<bool>(type: "INTEGER", nullable: false),
+                    TwoFactorEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
+                    LockoutEnd = table.Column<DateTimeOffset>(type: "TEXT", nullable: true),
+                    LockoutEnabled = table.Column<bool>(type: "INTEGER", nullable: false),
+                    AccessFailedCount = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -309,64 +342,6 @@ namespace Persistence.Migrations
                         name: "FK_Students_Schools_SchoolId",
                         column: x => x.SchoolId,
                         principalTable: "Schools",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "EnrollmentPlanDetailsEnumerable",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    EnrollmentPlanId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    PrerequisiteProjectId = table.Column<Guid>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EnrollmentPlanDetailsEnumerable", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_EnrollmentPlanDetailsEnumerable_EnrollmentPlans_EnrollmentPlanId",
-                        column: x => x.EnrollmentPlanId,
-                        principalTable: "EnrollmentPlans",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_EnrollmentPlanDetailsEnumerable_Projects_PrerequisiteProjectId",
-                        column: x => x.PrerequisiteProjectId,
-                        principalTable: "Projects",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_EnrollmentPlanDetailsEnumerable_Projects_ProjectId",
-                        column: x => x.ProjectId,
-                        principalTable: "Projects",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ProjectSemesters",
-                columns: table => new
-                {
-                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    SemesterId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Slots = table.Column<int>(type: "INTEGER", nullable: false),
-                    DueDate = table.Column<DateTime>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProjectSemesters", x => new { x.ProjectId, x.SemesterId });
-                    table.ForeignKey(
-                        name: "FK_ProjectSemesters_Projects_ProjectId",
-                        column: x => x.ProjectId,
-                        principalTable: "Projects",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ProjectSemesters_Semesters_SemesterId",
-                        column: x => x.SemesterId,
-                        principalTable: "Semesters",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -462,10 +437,7 @@ namespace Persistence.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Content = table.Column<string>(type: "TEXT", nullable: false),
                     Date = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    StudentId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    LecturerId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    StudentUserId = table.Column<string>(type: "TEXT", nullable: true),
-                    LecturerUserId = table.Column<string>(type: "TEXT", nullable: true),
+                    UserId = table.Column<string>(type: "TEXT", nullable: false),
                     Discriminator = table.Column<string>(type: "TEXT", nullable: false),
                     EnrollmentId = table.Column<Guid>(type: "TEXT", nullable: true),
                     SubmissionId = table.Column<Guid>(type: "TEXT", nullable: true)
@@ -474,21 +446,17 @@ namespace Persistence.Migrations
                 {
                     table.PrimaryKey("PK_CommentBases", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_CommentBases_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_CommentBases_Enrollments_EnrollmentId",
                         column: x => x.EnrollmentId,
                         principalTable: "Enrollments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CommentBases_Lecturers_LecturerUserId",
-                        column: x => x.LecturerUserId,
-                        principalTable: "Lecturers",
-                        principalColumn: "UserId");
-                    table.ForeignKey(
-                        name: "FK_CommentBases_Students_StudentUserId",
-                        column: x => x.StudentUserId,
-                        principalTable: "Students",
-                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_CommentBases_Submissions_SubmissionId",
                         column: x => x.SubmissionId,
@@ -502,35 +470,16 @@ namespace Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    FileName = table.Column<string>(type: "TEXT", nullable: false),
-                    FileOriginalName = table.Column<string>(type: "TEXT", nullable: false),
-                    FileType = table.Column<int>(type: "INTEGER", nullable: false),
-                    StudentId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    StudentUserId = table.Column<string>(type: "TEXT", nullable: true),
-                    LecturerId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    LecturerUserId = table.Column<string>(type: "TEXT", nullable: true),
-                    ProjectId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    Name = table.Column<Guid>(type: "TEXT", nullable: false),
+                    DisplayName = table.Column<string>(type: "TEXT", nullable: false),
+                    Extension = table.Column<string>(type: "TEXT", nullable: true),
+                    BucketName = table.Column<string>(type: "TEXT", nullable: false),
                     Discriminator = table.Column<string>(type: "TEXT", nullable: false),
                     SubmissionId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Files", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Files_Lecturers_LecturerUserId",
-                        column: x => x.LecturerUserId,
-                        principalTable: "Lecturers",
-                        principalColumn: "UserId");
-                    table.ForeignKey(
-                        name: "FK_Files_Projects_ProjectId",
-                        column: x => x.ProjectId,
-                        principalTable: "Projects",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Files_Students_StudentUserId",
-                        column: x => x.StudentUserId,
-                        principalTable: "Students",
-                        principalColumn: "UserId");
                     table.ForeignKey(
                         name: "FK_Files_Submissions_SubmissionId",
                         column: x => x.SubmissionId,
@@ -587,19 +536,14 @@ namespace Persistence.Migrations
                 column: "EnrollmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CommentBases_LecturerUserId",
-                table: "CommentBases",
-                column: "LecturerUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_CommentBases_StudentUserId",
-                table: "CommentBases",
-                column: "StudentUserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_CommentBases_SubmissionId",
                 table: "CommentBases",
                 column: "SubmissionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CommentBases_UserId",
+                table: "CommentBases",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EnrollmentMembers_EnrollmentId",
@@ -643,25 +587,10 @@ namespace Persistence.Migrations
                 columns: new[] { "ProjectId", "SemesterId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Files_FileName",
+                name: "IX_Files_Name",
                 table: "Files",
-                column: "FileName",
+                column: "Name",
                 unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Files_LecturerUserId",
-                table: "Files",
-                column: "LecturerUserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Files_ProjectId",
-                table: "Files",
-                column: "ProjectId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Files_StudentUserId",
-                table: "Files",
-                column: "StudentUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Files_SubmissionId",
@@ -693,11 +622,46 @@ namespace Persistence.Migrations
                 name: "IX_Submissions_EnrollmentId",
                 table: "Submissions",
                 column: "EnrollmentId");
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_AspNetUserClaims_AspNetUsers_UserId",
+                table: "AspNetUserClaims",
+                column: "UserId",
+                principalTable: "AspNetUsers",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_AspNetUserLogins_AspNetUsers_UserId",
+                table: "AspNetUserLogins",
+                column: "UserId",
+                principalTable: "AspNetUsers",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_AspNetUserRoles_AspNetUsers_UserId",
+                table: "AspNetUserRoles",
+                column: "UserId",
+                principalTable: "AspNetUsers",
+                principalColumn: "Id",
+                onDelete: ReferentialAction.Cascade);
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_AspNetUsers_Files_AvatarId",
+                table: "AspNetUsers",
+                column: "AvatarId",
+                principalTable: "Files",
+                principalColumn: "Id");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropForeignKey(
+                name: "FK_Students_AspNetUsers_UserId",
+                table: "Students");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -723,7 +687,10 @@ namespace Persistence.Migrations
                 name: "EnrollmentPlanDetailsEnumerable");
 
             migrationBuilder.DropTable(
-                name: "Files");
+                name: "Images");
+
+            migrationBuilder.DropTable(
+                name: "Lecturers");
 
             migrationBuilder.DropTable(
                 name: "MockDomains");
@@ -735,7 +702,10 @@ namespace Persistence.Migrations
                 name: "EnrollmentPlans");
 
             migrationBuilder.DropTable(
-                name: "Lecturers");
+                name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Files");
 
             migrationBuilder.DropTable(
                 name: "Submissions");
@@ -756,13 +726,7 @@ namespace Persistence.Migrations
                 name: "Semesters");
 
             migrationBuilder.DropTable(
-                name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
                 name: "Schools");
-
-            migrationBuilder.DropTable(
-                name: "Images");
         }
     }
 }

@@ -160,9 +160,9 @@ builder.Services.AddSingleton<IMinioClient>(provider =>
     var secure = false;
 
     return new MinioClient().WithEndpoint(config.Endpoint)
-                             .WithCredentials(config.Username, config.Password)
-                             .WithSSL(secure)
-                             .Build();
+        .WithCredentials(config.AccessKey, config.SecretKey)
+        .WithSSL(secure)
+        .Build();
 });
 
 var app = builder.Build();

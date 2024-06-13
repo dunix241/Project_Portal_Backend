@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240609100408_AddComment_Submission_Thesis")]
-    partial class AddComment_Submission_Thesis
+    [Migration("20240613153954_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace Persistence.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
 
-            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+            modelBuilder.Entity("Domain.Comment.Comment", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,27 +37,17 @@ namespace Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("LecturerId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LecturerUserId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("StudentId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("StudentUserId")
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("LecturerUserId");
-
-                    b.HasIndex("StudentUserId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("CommentBases");
 
-                    b.HasDiscriminator<string>("Discriminator").HasValue("CommentBase");
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Comment");
 
                     b.UseTphMappingStrategy();
                 });
@@ -205,46 +195,28 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("BucketName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FileName")
+                    b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FileOriginalName")
-                        .IsRequired()
+                    b.Property<string>("Extension")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("FileType")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<Guid?>("LecturerId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LecturerUserId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("ProjectId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("StudentId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("StudentUserId")
+                    b.Property<Guid>("Name")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FileName")
+                    b.HasIndex("Name")
                         .IsUnique();
-
-                    b.HasIndex("LecturerUserId");
-
-                    b.HasIndex("ProjectId");
-
-                    b.HasIndex("StudentUserId");
 
                     b.ToTable("Files");
 
@@ -336,9 +308,6 @@ namespace Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CurrentMilestoneId")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsActive")
@@ -460,9 +429,6 @@ namespace Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<Guid?>("AvatarId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Bio")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -660,7 +626,7 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Comment.EnrollmentComment", b =>
                 {
-                    b.HasBaseType("Domain.Comment.CommentBase");
+                    b.HasBaseType("Domain.Comment.Comment");
 
                     b.Property<Guid>("EnrollmentId")
                         .HasColumnType("TEXT");
@@ -672,7 +638,7 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Comment.SubmissionComment", b =>
                 {
-                    b.HasBaseType("Domain.Comment.CommentBase");
+                    b.HasBaseType("Domain.Comment.Comment");
 
                     b.Property<Guid>("SubmissionId")
                         .HasColumnType("TEXT");
@@ -695,19 +661,15 @@ namespace Persistence.Migrations
                     b.HasDiscriminator().HasValue("Thesis");
                 });
 
-            modelBuilder.Entity("Domain.Comment.CommentBase", b =>
+            modelBuilder.Entity("Domain.Comment.Comment", b =>
                 {
-                    b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
+                    b.HasOne("Domain.User", "User")
                         .WithMany()
-                        .HasForeignKey("LecturerUserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Domain.Student.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentUserId");
-
-                    b.Navigation("Lecturer");
-
-                    b.Navigation("Student");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
@@ -782,27 +744,6 @@ namespace Persistence.Migrations
                     b.Navigation("PrerequisiteProject");
 
                     b.Navigation("Project");
-                });
-
-            modelBuilder.Entity("Domain.File.File", b =>
-                {
-                    b.HasOne("Domain.Lecturer.Lecturer", "Lecturer")
-                        .WithMany("Files")
-                        .HasForeignKey("LecturerUserId");
-
-                    b.HasOne("Domain.Project.Project", "Project")
-                        .WithMany("Files")
-                        .HasForeignKey("ProjectId");
-
-                    b.HasOne("Domain.Student.Student", "Student")
-                        .WithMany("Files")
-                        .HasForeignKey("StudentUserId");
-
-                    b.Navigation("Lecturer");
-
-                    b.Navigation("Project");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
@@ -886,7 +827,7 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.User", b =>
                 {
-                    b.HasOne("Domain.Image", "Avatar")
+                    b.HasOne("Domain.File.File", "Avatar")
                         .WithMany()
                         .HasForeignKey("AvatarId");
 
@@ -987,15 +928,8 @@ namespace Persistence.Migrations
                     b.Navigation("EnrollmentPlanDetailsList");
                 });
 
-            modelBuilder.Entity("Domain.Lecturer.Lecturer", b =>
-                {
-                    b.Navigation("Files");
-                });
-
             modelBuilder.Entity("Domain.Project.Project", b =>
                 {
-                    b.Navigation("Files");
-
                     b.Navigation("ProjectSemesters");
                 });
 
@@ -1014,11 +948,6 @@ namespace Persistence.Migrations
             modelBuilder.Entity("Domain.Semester.Semester", b =>
                 {
                     b.Navigation("ProjectSemesters");
-                });
-
-            modelBuilder.Entity("Domain.Student.Student", b =>
-                {
-                    b.Navigation("Files");
                 });
 
             modelBuilder.Entity("Domain.Submission.Submission", b =>

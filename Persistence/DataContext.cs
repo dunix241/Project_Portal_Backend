@@ -33,15 +33,14 @@ public class DataContext : IdentityDbContext<User>
     public DbSet<ProjectSemester> ProjectSemesters { get; set; }
     public DbSet<Submission> Submissions { get; set; }
     public DbSet<Thesis> Theses { get; set; }
-    public DbSet<Image> Images { get; set; }
-    public DbSet<CommentBase> CommentBases { get; set; }
+    public DbSet<Comment> Comments { get; set; }
     public DbSet<SubmissionComment> SubmissionComments { get; set; }
-    public DbSet<EnrollmentComment> ProjectSemesterRegistrationComments { get; set; }
+    public DbSet<EnrollmentComment> EnrollmentComments { get; set; }
     public DbSet<File.File> Files { get; set; }
     public DbSet<Enrollment> Enrollments { get; set; }
     public DbSet<EnrollmentMember> EnrollmentMembers { get; set; }
     public DbSet<EnrollmentPlan> EnrollmentPlans { get; set; }
-    public DbSet<EnrollmentPlanDetails> EnrollmentPlanDetailsEnumerable { get; set; }
+    public DbSet<EnrollmentPlanDetails> EnrollmentPlanDetails { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -67,16 +66,20 @@ public class DataContext : IdentityDbContext<User>
         //     new { entity.EnrollmentPlanId, entity.ProjectId, entity.PrerequisiteProjectId });
 
         builder.Entity<EnrollmentPlanDetails>()
-            .HasIndex(nameof(EnrollmentPlanDetails.EnrollmentPlanId), nameof(EnrollmentPlanDetails.ProjectId), nameof(EnrollmentPlanDetails.PrerequisiteProjectId))
+            .HasIndex(nameof(Domain.EnrollmentPlan.EnrollmentPlanDetails.EnrollmentPlanId), nameof(Domain.EnrollmentPlan.EnrollmentPlanDetails.ProjectId), nameof(Domain.EnrollmentPlan.EnrollmentPlanDetails.PrerequisiteProjectId))
             .IsUnique();
         
-        builder.Entity<File.File>().HasIndex(x => x.FileName).IsUnique();
+        builder.Entity<File.File>().HasIndex(x => x.Name).IsUnique();
 
         builder.Entity<Submission>()
             .HasOne(s => s.Enrollment).WithMany()
             .HasForeignKey(s => s.EnrollmentId);
 
-
+        builder.Entity<Comment>()
+            .HasOne(entity => entity.User)
+            .WithMany()
+            .HasForeignKey(entity => entity.UserId);
+        
         builder.Entity<Submission>()
             .HasOne(s => s.Thesis)
             .WithOne(t => t.Submission)

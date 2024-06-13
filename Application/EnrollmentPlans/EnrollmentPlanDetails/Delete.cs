@@ -22,7 +22,7 @@ public class Delete
         
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
-            var enrollmentPlanDetails = await _dataContext.EnrollmentPlanDetailsEnumerable.FindAsync(request.Id);
+            var enrollmentPlanDetails = await _dataContext.EnrollmentPlanDetails.FindAsync(request.Id);
             
             if (enrollmentPlanDetails == null) return null;
 

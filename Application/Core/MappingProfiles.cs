@@ -91,6 +91,7 @@ public class MappingProfiles : Profile
         CreateMap<File, AddFileResponseDto>().ReverseMap();
         CreateMap<File, GetFileResponseDto>();
         CreateMap<AddFileRequestDto, File>();
+        CreateMap<File, FileResponseDto>().ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.FileNameWithExtension));
     }
 
     private void CreateEnrollmentMaps()

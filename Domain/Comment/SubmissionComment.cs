@@ -1,6 +1,6 @@
 ﻿namespace Domain.Comment
 {
-    public class SubmissionComment : CommentBase
+    public class SubmissionComment : Comment
     {
         public Guid SubmissionId { get; set; }
 
