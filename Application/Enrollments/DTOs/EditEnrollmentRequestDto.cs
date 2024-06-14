@@ -6,4 +6,5 @@ public class EditEnrollmentRequestDto
     public string? Description { get; set; }
     public string? Vision { get; set; }
     public string? HeirFortunes { get; set; }
+    public bool CanBeForked { get; set; }
 }

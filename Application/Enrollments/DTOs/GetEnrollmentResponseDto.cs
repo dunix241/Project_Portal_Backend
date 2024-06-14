@@ -18,6 +18,7 @@ public class GetEnrollmentResponseDto
     public Boolean IsPublished { get; set; }
     public DateTime? PublishDate { get; set; }
     public DateTime RegisterDate { get; set; }
+    public bool CanBeForked { get; set; }
     public Guid? ForkedFromId { get; set; }
     public Domain.Enrollment.Enrollment? ForkFrom { get; set; }
     public List<EnrollmentMember> EnrollmentMembers { get; set; }

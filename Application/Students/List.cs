@@ -33,7 +33,10 @@ namespace Application.Students
                     .Where(s => s.School.IsActive)
                     .AsQueryable();
 
-                var responseDtoList = students.Select(student => _mapper.Map<GetStudentResponseDto>(student));
+                var responseDtoList = students.Select(student => _mapper.Map(
+                    student,
+                    _mapper.Map<GetStudentResponseDto>(_context.Users.FirstOrDefault(entity => entity.Id == student.UserId)))
+                );
                 var listStudentResponseDto = new ListStudentResponseDto();
 
                 await listStudentResponseDto.GetItemsAsync(responseDtoList.AsQueryable(), request.QueryParams.PageNumber, request.QueryParams.PageSize);

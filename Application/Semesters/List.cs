@@ -35,10 +35,10 @@ namespace Application.Semesters
                 var semesters = _context.Semesters
                     .AsQueryable();
 
-                var listStudentResponseDto = new ListSemesterResponseDto();
+                var response = new ListSemesterResponseDto();
 
-                await listStudentResponseDto.GetItemsAsync(semesters, request.QueryParams.PageNumber, request.QueryParams.PageSize);
-                return Result<ListSemesterResponseDto>.Success(listStudentResponseDto);
+                await response.GetItemsAsync(semesters, request.QueryParams.PageNumber, request.QueryParams.PageSize);
+                return Result<ListSemesterResponseDto>.Success(response);
             }
         }
     }

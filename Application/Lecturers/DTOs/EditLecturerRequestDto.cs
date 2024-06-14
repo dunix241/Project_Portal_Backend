@@ -7,6 +7,7 @@ namespace Application.Lecturers.DTOs
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string? Title { get; set; }
         public bool IsActive { get; set; }
         [EmailAddress]
         [IsEmailUnique]

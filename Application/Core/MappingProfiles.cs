@@ -1,3 +1,4 @@
+using API.DTOs.Accounts;
 using Application.EnrollmentPlans.DTOs;
 using Application.EnrollmentPlans.EnrollmentPlanDetails.DTOs;
 using Application.Enrollments.DTOs;
@@ -69,17 +70,21 @@ public class MappingProfiles : Profile
     {
         CreateMap<CreateStudentRequestDto, Student>();
         CreateMap<CreateStudentRequestDto, User>();
+        CreateMap<CreateStudentRequestDto, RegisterRequestDTO>();
         CreateMap<Student, GetStudentResponseDto>()
             .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
             .ReverseMap();
+        CreateMap<User, GetStudentResponseDto>();
         CreateMap<EditStudentRequestDto, Student>();
         CreateMap<EditStudentRequestDto, User>();
 
         CreateMap<CreateLecturerRequestDto, Lecturer>();
         CreateMap<CreateLecturerRequestDto, User>();
+        CreateMap<CreateLecturerRequestDto, RegisterRequestDTO>();
         CreateMap<Lecturer, GetLecturerResponseDto>()
             .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
             .ReverseMap();
+        CreateMap<User, GetLecturerResponseDto>();
         CreateMap<EditLecturerRequestDto, Lecturer>();
         CreateMap<EditLecturerRequestDto, User>();
     }

@@ -8,6 +8,8 @@ public class CreateEnrollmentRequestDto
     public string Title { get; set; }
     public string? Description { get; set; }
     public string? Vision { get; set; }
+    public bool CanBeForked { get; set; }
+    public Guid? ForkedFromId { get; set; }
     [EmailAddresses]
     public List<string> Emails { get; set; }
 }
