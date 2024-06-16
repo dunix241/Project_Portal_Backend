@@ -1,0 +1,17 @@
+﻿[
+  {
+    "Id": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "Name": "Project A",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "Id": "f7eecdb0-4202-4a7f-8ddd-12ea02a0de1b",
+    "Name": "Project B",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "Id": "3cf3677a-43ae-4245-9a42-6ab8d72b1cea",
+    "Name": "Internship",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  }
+]

@@ -1,0 +1,38 @@
+﻿[
+  {
+    "ProjectId": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
+    "Slots": 10,
+    "DueDate": "2024-04-06T23:59:59"
+  },
+  {
+    "ProjectId": "f7eecdb0-4202-4a7f-8ddd-12ea02a0de1b",
+    "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
+    "Slots": 10,
+    "DueDate": "2024-04-06T23:59:59"
+  },
+  {
+    "ProjectId": "3cf3677a-43ae-4245-9a42-6ab8d72b1cea",
+    "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
+    "Slots": 10,
+    "DueDate": "2024-04-06T23:59:59"
+  },
+  {
+    "ProjectId": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "SemesterId": "0c65e24c-b864-41db-be26-26e76866432e",
+    "Slots": 10,
+    "DueDate": "2024-06-29T23:59:59"
+  },
+  {
+    "ProjectId": "f7eecdb0-4202-4a7f-8ddd-12ea02a0de1b",
+    "SemesterId": "0c65e24c-b864-41db-be26-26e76866432e",
+    "Slots": 10,
+    "DueDate": "2024-06-29T23:59:59"
+  },
+  {
+    "ProjectId": "3cf3677a-43ae-4245-9a42-6ab8d72b1cea",
+    "SemesterId": "0c65e24c-b864-41db-be26-26e76866432e",
+    "Slots": 10,
+    "DueDate": "2024-06-29T23:59:59"
+  }
+]

@@ -9,5 +9,5 @@ public class EnrollmentMember
     public Boolean? IsAccepted { get; set; }
     public string? RejectReason { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public DateTime UpdatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
 }

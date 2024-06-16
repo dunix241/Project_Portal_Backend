@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
@@ -10,9 +11,11 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240616024839_AddSubmissionForeignKeyToThesis")]
+    partial class AddSubmissionForeignKeyToThesis
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.13");
@@ -129,7 +132,7 @@ namespace Persistence.Migrations
                     b.Property<string>("RejectReason")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("UpdatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -385,7 +388,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime?>("SubmittedDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("ThesisId")
+                    b.Property<Guid>("ThesisId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -792,7 +795,9 @@ namespace Persistence.Migrations
 
                     b.HasOne("Domain.File.File", "Thesis")
                         .WithOne()
-                        .HasForeignKey("Domain.Submission.Submission", "ThesisId");
+                        .HasForeignKey("Domain.Submission.Submission", "ThesisId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Enrollment");
 

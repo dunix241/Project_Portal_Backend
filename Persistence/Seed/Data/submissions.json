@@ -1,0 +1,26 @@
+﻿[
+  {
+    "Id": "5c48b9eb-42f1-41b6-b538-34058a9ec316",
+    "EnrollmentId": "dad19365-9c35-4bd9-b29a-68f85cf2c1e5",
+    "ThesisId": "811acb3b-ff39-4405-9b1d-17fc511936ec",
+    "DueDate": "2024-04-06T23:59:59",
+    "Status": "Accepted",
+    "SubmittedDate": "2024-04-05T15:03:59"
+  },
+  {
+    "Id": "e6ce7c99-a82f-475a-958f-db1b4f4bec99",
+    "EnrollmentId": "1088f096-e98c-4008-9079-b8c3c505a227",
+    "ThesisId": "de241ae5-981e-48c8-8674-1f9b26146c2f",
+    "DueDate": "2024-04-06T23:59:59",
+    "Status": "Accepted",
+    "SubmittedDate": "2024-04-03T09:38:59"
+  },
+  {
+    "Id": "a29154ba-cb18-4b5f-85c3-b5220443fa3c",
+    "EnrollmentId": "2c658d06-165f-46f2-86cc-afef7906242c",
+    "ThesisId": "1e54dffb-383b-4795-ad26-3a878eab4931",
+    "DueDate": "2024-04-06T23:59:59",
+    "Status": "Accepted",
+    "SubmittedDate": "2024-04-02T10:12:59"
+  }
+]

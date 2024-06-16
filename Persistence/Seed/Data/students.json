@@ -1,0 +1,230 @@
+﻿[
+  {
+    "UserId": "dd8726f1-63b3-49d9-9e01-9e20e5c90271",
+    "IRN": "2031200001",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "71fbfbbd-695a-43fa-bdcd-bac0a6dab9b6",
+    "IRN": "2031200002",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "de7af052-fb5f-4989-bbaf-649066304a9d",
+    "IRN": "2031200003",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "ba9c6f3a-381f-4874-89a9-57a14dab0347",
+    "IRN": "2031200004",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "a32fd065-4298-413a-9269-66ab41d06ffc",
+    "IRN": "2031200005",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "3ac3fb92-3630-446b-bb57-b9561341733e",
+    "IRN": "2031200006",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "90577ae4-8198-442b-8fa6-0b9bb9476592",
+    "IRN": "2031200007",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "602a4c6e-a18d-48b8-894b-60dd75f25293",
+    "IRN": "2031200008",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "61c681b9-30bd-4359-9308-bd1f6935000d",
+    "IRN": "2031200009",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "cc059de4-8232-457c-9d42-fdf4caaf0bab",
+    "IRN": "2031200010",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "ca248044-87d6-4e35-a749-619bcd720d17",
+    "IRN": "2031200011",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "5d4286af-6ed7-4ffb-99ea-0e0752e0dd06",
+    "IRN": "2031200012",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "296ecdb9-7325-4179-811a-ad77fa6a6c1f",
+    "IRN": "2031200013",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "2e5f5e9d-5ec8-4537-8780-69601201bd93",
+    "IRN": "2031200014",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "032e3898-6c99-4621-8602-6300ddd8ce73",
+    "IRN": "2031200015",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "bdb63858-06ba-4e6a-a4d7-c999c8648b42",
+    "IRN": "2031200016",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "1aa80cac-2fd2-40b8-ab5c-1d78234d87f3",
+    "IRN": "2031200017",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "a8eaa4b9-2aa8-452b-b050-3a5900474969",
+    "IRN": "2031200018",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "8b809ee9-daf8-41dc-80b0-fe7292a1a160",
+    "IRN": "2031200019",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "091d29a2-5736-4bed-8bac-10f74f49d890",
+    "IRN": "2031200020",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "06de6d04-d74f-4497-903b-e3e7d66646f2",
+    "IRN": "2031200021",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "86dbfb2a-a98d-42f4-a779-d4d52a58986a",
+    "IRN": "2031200022",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "280869cb-4c4d-4704-b431-5f59bcff04a3",
+    "IRN": "2031200023",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "9ef39f03-fa5e-49af-b3c5-371a2b52d59f",
+    "IRN": "2031200024",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "543f77e4-5ad3-4378-bfa7-1bc38e162d17",
+    "IRN": "2031200025",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "067fc97f-2582-4ec8-b430-8df0ea5ba81c",
+    "IRN": "2031200026",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "107522f2-a720-4489-9645-039a03749152",
+    "IRN": "2031200027",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "81f8cfd6-08db-4d70-8480-aa5685b32453",
+    "IRN": "2031200028",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "08075f69-032b-4f7a-af8b-394de3483a13",
+    "IRN": "2031200029",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "0f31e9a3-3d84-4276-8db7-f4df4c710184",
+    "IRN": "2031200030",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "813a7e8a-de3f-4f69-9b59-f54c797506e8",
+    "IRN": "2031200031",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "18852e68-f362-44d3-9a40-a2300a39e351",
+    "IRN": "2031200032",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "51ff501c-6edd-49fe-9d9d-c78324668201",
+    "IRN": "2031200032",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "69238278-5d20-4e7d-9643-c35db6659e40",
+    "IRN": "2031200034",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "0402beb6-4bab-40b1-b06c-cd32c4a1f698",
+    "IRN": "2031200035",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "f490123a-adb6-40fd-b8a6-c4418bead9e1",
+    "IRN": "2031200036",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "f8845ca5-aa83-48a3-8c06-03609a5747d2",
+    "IRN": "2031200037",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "de5f831e-c44c-449e-a0dd-0dca417e68ec",
+    "IRN": "2031200038",
+    "IsActive": true,
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  }
+]

@@ -1,0 +1,499 @@
+﻿[
+  {
+    "Id": "85e11e96-7cb2-4b14-bf32-d36796385855",
+    "FirstName": "Admin",
+    "PhoneNumber": "(746)085-3579x636",
+    "UserName": "admin@project-portal.com",
+    "Email": "admin@project-portal.com",
+    "Password": "Password_123",
+    "Role": "SuperAdmins"
+  },
+  {
+    "Id": "a371c164-b8c4-4dcd-9607-90dea022ba65",
+    "FirstName": "Subordinate Admin",
+    "UserName": "admin2@project-portal",
+    "Email": "admin2@project-portal",
+    "Password": "Password_123",
+    "Role": "Admins"
+  },
+  {
+    "Id": "da0e79af-f215-483c-873e-c7c568667cd7",
+    "FirstName": "Maxwell",
+    "LastName": "Watson",
+    "PhoneNumber": "(126)240-1365",
+    "UserName": "christophershepard@eiu.edu.vn",
+    "Email": "christophershepard@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "ce8e7bb7-732c-4203-93f6-c6cce2fb78e4",
+    "FirstName": "Lance",
+    "LastName": "Brooks",
+    "PhoneNumber": "361.317.9506",
+    "UserName": "anna11@eiu.edu.vn",
+    "Email": "anna11@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "14fd4931-f03c-4809-8085-bb58b37ef506",
+    "FirstName": "Michelle",
+    "LastName": "Costa",
+    "PhoneNumber": "559-167-5376x75232",
+    "UserName": "pamliu@eiu.edu.vn",
+    "Email": "pamliu@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "2a9c5f3a-2819-4714-b8a8-604a5172d186",
+    "FirstName": "Daniel",
+    "LastName": "Guerra",
+    "PhoneNumber": "917-101-4811",
+    "UserName": "qgregory@eiu.edu.vn",
+    "Email": "qgregory@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "a75704b4-52d2-4f2a-a19c-30a5406182b6",
+    "FirstName": "Tracy",
+    "LastName": "Walker",
+    "PhoneNumber": "508.484.6705",
+    "UserName": "kennethmorris@eiu.edu.vn",
+    "Email": "kennethmorris@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "c73ac724-22c1-4429-b415-ab5aaf1227fe",
+    "FirstName": "Kimberly",
+    "LastName": "Lopez",
+    "PhoneNumber": "(187)293-9301x1311",
+    "UserName": "phillip09@eiu.edu.vn",
+    "Email": "phillip09@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "277775e4-5231-49be-899a-b70a21090757",
+    "FirstName": "Samuel",
+    "LastName": "Liu",
+    "PhoneNumber": "407-055-3454",
+    "UserName": "uking@eiu.edu.vn",
+    "Email": "uking@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "a3d521a4-4372-463c-b5c3-349b600e371f",
+    "FirstName": "Joseph",
+    "LastName": "Morris",
+    "PhoneNumber": "779.588.1595x601",
+    "UserName": "pramirez@eiu.edu.vn",
+    "Email": "pramirez@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "4244ff54-37d6-487d-8e8f-4c41bc8df8a1",
+    "FirstName": "Craig",
+    "LastName": "Rice",
+    "PhoneNumber": "686.893.1427x4413",
+    "UserName": "lamchristopher@eiu.edu.vn",
+    "Email": "lamchristopher@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "c1f7f81c-a7da-4676-8b72-f867812ee26d",
+    "FirstName": "Chelsea",
+    "LastName": "Williams",
+    "PhoneNumber": "(783)577-7746x228",
+    "UserName": "kelseyjackson@eiu.edu.vn",
+    "Email": "kelseyjackson@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Lecturers"
+  },
+  {
+    "Id": "dd8726f1-63b3-49d9-9e01-9e20e5c90271",
+    "FirstName": "Bruce",
+    "LastName": "Smith",
+    "PhoneNumber": "571.410.8154",
+    "UserName": "john05@eiu.edu.vn",
+    "Email": "john05@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "71fbfbbd-695a-43fa-bdcd-bac0a6dab9b6",
+    "FirstName": "Heidi",
+    "LastName": "Chan",
+    "PhoneNumber": "+1-517-622-5644x019",
+    "UserName": "chanshannon@eiu.edu.vn",
+    "Email": "chanshannon@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "de7af052-fb5f-4989-bbaf-649066304a9d",
+    "FirstName": "Katherine",
+    "LastName": "Moody",
+    "PhoneNumber": "(920)725-3526",
+    "UserName": "lewiscarolyn@eiu.edu.vn.com",
+    "Email": "lewiscarolyn@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "ba9c6f3a-381f-4874-89a9-57a14dab0347",
+    "FirstName": "Jacob",
+    "LastName": "Rose",
+    "PhoneNumber": "219.332.5592x5339",
+    "UserName": "john63@eiu.edu.vn",
+    "Email": "john63@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "a32fd065-4298-413a-9269-66ab41d06ffc",
+    "FirstName": "Jessica",
+    "LastName": "Massey",
+    "PhoneNumber": "271.854.1170",
+    "UserName": "carlrobertson@eiu.edu.vn",
+    "Email": "carlrobertson@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "3ac3fb92-3630-446b-bb57-b9561341733e",
+    "FirstName": "Margaret",
+    "LastName": "Lowe",
+    "PhoneNumber": "4549142043",
+    "UserName": "steven76@eiu.edu.vn",
+    "Email": "steven76@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "90577ae4-8198-442b-8fa6-0b9bb9476592",
+    "FirstName": "Joshua",
+    "LastName": "Johnson",
+    "PhoneNumber": "0501994320",
+    "UserName": "flemingdavid@eiu.edu.vn",
+    "Email": "flemingdavid@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "602a4c6e-a18d-48b8-894b-60dd75f25293",
+    "FirstName": "Michael",
+    "LastName": "Sanchez",
+    "PhoneNumber": "897-163-8624",
+    "UserName": "bsmith@eiu.edu.vn.net",
+    "Email": "bsmith@eiu.edu.vn.net",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "61c681b9-30bd-4359-9308-bd1f6935000d",
+    "FirstName": "Michael",
+    "LastName": "Marks",
+    "PhoneNumber": "(276)317-1200",
+    "UserName": "nhogan@eiu.edu.vn",
+    "Email": "nhogan@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "cc059de4-8232-457c-9d42-fdf4caaf0bab",
+    "FirstName": "Christopher",
+    "LastName": "Lin",
+    "PhoneNumber": "437-942-1194",
+    "UserName": "vsanchez@eiu.edu.vn.com",
+    "Email": "vsanchez@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "ca248044-87d6-4e35-a749-619bcd720d17",
+    "FirstName": "Jessica",
+    "LastName": "Ho",
+    "PhoneNumber": "548-297-1659x778",
+    "UserName": "rebecca02@eiu.edu.vn",
+    "Email": "rebecca02@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "5d4286af-6ed7-4ffb-99ea-0e0752e0dd06",
+    "FirstName": "Carol",
+    "LastName": "Edwards",
+    "PhoneNumber": "8157849834",
+    "UserName": "ybrown@eiu.edu.vn",
+    "Email": "ybrown@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "296ecdb9-7325-4179-811a-ad77fa6a6c1f",
+    "FirstName": "Jerry",
+    "LastName": "Thompson",
+    "PhoneNumber": "(552)371-8906x5629",
+    "UserName": "andrewfletcher@eiu.edu.vn.com",
+    "Email": "andrewfletcher@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "2e5f5e9d-5ec8-4537-8780-69601201bd93",
+    "FirstName": "Scott",
+    "LastName": "Wells",
+    "PhoneNumber": "+1-385-975-6468x31844",
+    "UserName": "collinsjamie@eiu.edu.vn",
+    "Email": "collinsjamie@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "032e3898-6c99-4621-8602-6300ddd8ce73",
+    "FirstName": "Shawn",
+    "LastName": "Zimmerman",
+    "PhoneNumber": "505.783.1800x07337",
+    "UserName": "nrangel@eiu.edu.vn",
+    "Email": "nrangel@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "bdb63858-06ba-4e6a-a4d7-c999c8648b42",
+    "FirstName": "Anna",
+    "LastName": "Crawford",
+    "PhoneNumber": "7231031976",
+    "UserName": "cphelps@eiu.edu.vn",
+    "Email": "cphelps@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "1aa80cac-2fd2-40b8-ab5c-1d78234d87f3",
+    "FirstName": "Mallory",
+    "LastName": "Castaneda",
+    "PhoneNumber": "+1-632-999-2060",
+    "UserName": "sharonmitchell@eiu.edu.vn.biz",
+    "Email": "sharonmitchell@eiu.edu.vn.biz",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "a8eaa4b9-2aa8-452b-b050-3a5900474969",
+    "FirstName": "Charles",
+    "LastName": "Rice",
+    "PhoneNumber": "248.937.2329x181",
+    "UserName": "thompsonbryan@eiu.edu.vn.com",
+    "Email": "thompsonbryan@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "8b809ee9-daf8-41dc-80b0-fe7292a1a160",
+    "FirstName": "Sarah",
+    "LastName": "Khan",
+    "PhoneNumber": "+1-600-873-7908",
+    "UserName": "bluna@eiu.edu.vn",
+    "Email": "bluna@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "091d29a2-5736-4bed-8bac-10f74f49d890",
+    "FirstName": "Samuel",
+    "LastName": "Rodriguez",
+    "PhoneNumber": "728.025.6043x28443",
+    "UserName": "chelsea99@eiu.edu.vn",
+    "Email": "chelsea99@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "06de6d04-d74f-4497-903b-e3e7d66646f2",
+    "FirstName": "Emily",
+    "LastName": "Andrews",
+    "PhoneNumber": "001-582-965-2348x9565",
+    "UserName": "brian90@eiu.edu.vn",
+    "Email": "brian90@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "86dbfb2a-a98d-42f4-a779-d4d52a58986a",
+    "FirstName": "Shawn",
+    "LastName": "Mann",
+    "PhoneNumber": "754.606.7600x13056",
+    "UserName": "juliamcclain@eiu.edu.vn.com",
+    "Email": "juliamcclain@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "280869cb-4c4d-4704-b431-5f59bcff04a3",
+    "FirstName": "Kevin",
+    "LastName": "Green",
+    "PhoneNumber": "030.524.6111",
+    "UserName": "hward@eiu.edu.vn",
+    "Email": "hward@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "9ef39f03-fa5e-49af-b3c5-371a2b52d59f",
+    "FirstName": "Zachary",
+    "LastName": "Atkins",
+    "PhoneNumber": "484.660.4075x2176",
+    "UserName": "ifox@eiu.edu.vn",
+    "Email": "ifox@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "543f77e4-5ad3-4378-bfa7-1bc38e162d17",
+    "FirstName": "Ryan",
+    "LastName": "Wong",
+    "PhoneNumber": "981-970-4517x4346",
+    "UserName": "durannicole@eiu.edu.vn",
+    "Email": "durannicole@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "067fc97f-2582-4ec8-b430-8df0ea5ba81c",
+    "FirstName": "Mitchell",
+    "LastName": "Fischer",
+    "PhoneNumber": "(796)417-6286",
+    "UserName": "sarasalazar@eiu.edu.vn",
+    "Email": "sarasalazar@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "107522f2-a720-4489-9645-039a03749152",
+    "FirstName": "Jeffrey",
+    "LastName": "Dudley",
+    "PhoneNumber": "001-012-573-7490x912",
+    "UserName": "christophermills@eiu.edu.vn.com",
+    "Email": "christophermills@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "81f8cfd6-08db-4d70-8480-aa5685b32453",
+    "FirstName": "Gregory",
+    "LastName": "Clark",
+    "PhoneNumber": "584-995-3113x361",
+    "UserName": "owensbrian@eiu.edu.vn",
+    "Email": "owensbrian@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "08075f69-032b-4f7a-af8b-394de3483a13",
+    "FirstName": "Wanda",
+    "LastName": "Woodward",
+    "PhoneNumber": "771.694.8426x7284",
+    "UserName": "westkeith@eiu.edu.vn",
+    "Email": "westkeith@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "0f31e9a3-3d84-4276-8db7-f4df4c710184",
+    "FirstName": "April",
+    "LastName": "Wood",
+    "PhoneNumber": "012-456-6928x92608",
+    "UserName": "williamwilliams@eiu.edu.vn",
+    "Email": "williamwilliams@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "813a7e8a-de3f-4f69-9b59-f54c797506e8",
+    "FirstName": "Mark",
+    "LastName": "Navarro",
+    "PhoneNumber": "333.616.7009x39875",
+    "UserName": "fortiz@eiu.edu.vn.com",
+    "Email": "fortiz@eiu.edu.vn.com",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "18852e68-f362-44d3-9a40-a2300a39e351",
+    "FirstName": "Rebecca",
+    "LastName": "Harris",
+    "PhoneNumber": "+1-588-892-9865x7807",
+    "UserName": "danny36@eiu.edu.vn",
+    "Email": "danny36@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "51ff501c-6edd-49fe-9d9d-c78324668201",
+    "FirstName": "Keith",
+    "LastName": "Davis",
+    "PhoneNumber": "+1-137-916-8932x1328",
+    "UserName": "josephbrown@eiu.edu.vn",
+    "Email": "josephbrown@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "69238278-5d20-4e7d-9643-c35db6659e40",
+    "FirstName": "Cristian",
+    "LastName": "Lucas",
+    "PhoneNumber": "001-784-653-2621x78404",
+    "UserName": "kathleenharris@eiu.edu.vn",
+    "Email": "kathleenharris@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "0402beb6-4bab-40b1-b06c-cd32c4a1f698",
+    "FirstName": "Amy",
+    "LastName": "Olson",
+    "PhoneNumber": "513-852-4194x68848",
+    "UserName": "williamsapril@eiu.edu.vn",
+    "Email": "williamsapril@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "f490123a-adb6-40fd-b8a6-c4418bead9e1",
+    "FirstName": "Kenneth",
+    "LastName": "Garcia",
+    "PhoneNumber": "952.569.6311",
+    "UserName": "michaelgallegos@eiu.edu.vn",
+    "Email": "michaelgallegos@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "f8845ca5-aa83-48a3-8c06-03609a5747d2",
+    "FirstName": "Lisa",
+    "LastName": "Austin",
+    "PhoneNumber": "001-548-706-7615",
+    "UserName": "rmccarty@eiu.edu.vn",
+    "Email": "rmccarty@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  },
+  {
+    "Id": "de5f831e-c44c-449e-a0dd-0dca417e68ec",
+    "FirstName": "Kyle",
+    "LastName": "Smith",
+    "PhoneNumber": "418-357-9013",
+    "UserName": "esawyer@eiu.edu.vn",
+    "Email": "esawyer@eiu.edu.vn",
+    "Password": "Password_123",
+    "Role": "Students"
+  }
+]
