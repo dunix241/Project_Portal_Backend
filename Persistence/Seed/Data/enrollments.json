@@ -5,7 +5,7 @@
     "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
     "OwnerId": "dd8726f1-63b3-49d9-9e01-9e20e5c90271",
     "Title": "INTERNAL DEVELOPER PORTALS",
-    "Description": "Internal Developer Portal (IDP) is a work-integrated learning project between RMIT SSET, TymeX, and RMIT students, aiming to develop a self-service portal to reduce the cognitive workload and improve the developer experience in software development by centralizing tools and services.",
+    "Description": "Internal Developer Portal (IDP) is a work-integrated learning project between EIU SSET, TymeX, and EIU students, aiming to develop a self-service portal to reduce the cognitive workload and improve the developer experience in software development by centralizing tools and services.",
     "HeirFortunes": "To whom forking this project,\n\nThis project’s source code is available at Internal Developer Portals. You can also contact the authors at internal-developer-portal@gmail.com for more information.\n\nBest regards,\n\nInternal Developer Portals Team",
     "IsPublished": true,
     "PublishDate": "2024-04-06T23:59:59",
@@ -33,5 +33,18 @@
     "IsPublished": true,
     "PublishDate": "2024-04-06T23:59:59",
     "RegisterDate": "2023-12-18T00:00:00"
+  },
+  {
+    "Id": "528c7f59-2e9a-47e2-b188-9c0b67a07cac",
+    "ProjectId": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "SemesterId": "0c65e24c-b864-41db-be26-26e76866432e",
+    "OwnerId": "90577ae4-8198-442b-8fa6-0b9bb9476592",
+    "Title": "INTERNAL DEVELOPER PORTALS",
+    "Description": "Internal Developer Portal (IDP) is a work-integrated learning project between EIU SSET, TymeX, and EIU students, aiming to develop a self-service portal to reduce the cognitive workload and improve the developer experience in software development by centralizing tools and services.",
+    "HeirFortunes": "To whom forking this project,\n\nThis project’s source code is available at Internal Developer Portals. You can also contact the authors at internal-developer-portal@gmail.com for more information.\n\nBest regards,\n\nInternal Developer Portals Team",
+    "IsPublished": true,
+    "PublishDate": "2024-06-10T12:32:59",
+    "RegisterDate": "2024-03-25T00:00:00",
+    "ForkedFromId": "dad19365-9c35-4bd9-b29a-68f85cf2c1e5"
   }
 ]
