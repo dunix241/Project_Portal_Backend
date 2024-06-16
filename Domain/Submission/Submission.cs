@@ -11,7 +11,8 @@ namespace Domain.Submission
         public DateTime? SubmittedDate { get; set; }
 
         public Enrollment.Enrollment Enrollment { get; set; }
-        public Thesis.Thesis Thesis { get; set; }
+        public Guid? ThesisId { get; set; }
+        public File.File? Thesis { get; set; }
         public ICollection<SubmissionComment> SubmissionComments { get; set; }
     }
 }

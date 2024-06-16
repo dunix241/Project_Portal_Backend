@@ -1,0 +1,37 @@
+﻿[
+  {
+    "Id": "dad19365-9c35-4bd9-b29a-68f85cf2c1e5",
+    "ProjectId": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
+    "OwnerId": "dd8726f1-63b3-49d9-9e01-9e20e5c90271",
+    "Title": "INTERNAL DEVELOPER PORTALS",
+    "Description": "Internal Developer Portal (IDP) is a work-integrated learning project between RMIT SSET, TymeX, and RMIT students, aiming to develop a self-service portal to reduce the cognitive workload and improve the developer experience in software development by centralizing tools and services.",
+    "HeirFortunes": "To whom forking this project,\n\nThis project’s source code is available at Internal Developer Portals. You can also contact the authors at internal-developer-portal@gmail.com for more information.\n\nBest regards,\n\nInternal Developer Portals Team",
+    "IsPublished": true,
+    "PublishDate": "2024-04-06T23:59:59",
+    "RegisterDate": "2023-12-18T00:00:00",
+    "CanBeForked": true
+  },
+  {
+    "Id": "1088f096-e98c-4008-9079-b8c3c505a227",
+    "ProjectId": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
+    "OwnerId": "de7af052-fb5f-4989-bbaf-649066304a9d",
+    "Title": "HEALTH SYSTEM CHECKER",
+    "Description": "In an era of rapidly advancing technology and healthcare challenges, convenient and accessible medical advice can be a lifeline for many. Our platform aims to serve as an initial contact point for individuals to receive insights into potential medical conditions based on their input symptoms. Designed with both technology and healthcare professionals in mind, the platform employs a cloud-deployed deep learning model, the ChatGPT API, and a knowledge symptom-disease database.",
+    "IsPublished": true,
+    "PublishDate": "2024-04-06T23:59:59",
+    "RegisterDate": "2023-12-18T00:00:00"
+  },
+  {
+    "Id": "2c658d06-165f-46f2-86cc-afef7906242c",
+    "ProjectId": "9c2a3aaa-b611-4ffb-9ac5-2d2032d0937a",
+    "SemesterId": "86836354-c0d1-48ef-a4f8-7186362955a6",
+    "OwnerId": "a32fd065-4298-413a-9269-66ab41d06ffc",
+    "Title": "Multiple Game Connector",
+    "Description": "Our project aims to build multiple connectors technology, which allows us to connect various devices to run the same application at the same time, and we can move the targeted objects from one screen to another by our action, so we decided to develop this technology under a cooking game. The main target of this game is to bring out a new gaming experience for children by creating an interactive game that can be displayed on multiple screens at the same time, and each screen will display one part of the game. Therefore, players may be allowed to play that game with partners on different devices to complete their tasks together.",
+    "IsPublished": true,
+    "PublishDate": "2024-04-06T23:59:59",
+    "RegisterDate": "2023-12-18T00:00:00"
+  }
+]

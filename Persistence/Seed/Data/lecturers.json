@@ -1,0 +1,82 @@
+﻿[
+  {
+    "UserId": "da0e79af-f215-483c-873e-c7c568667cd7",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Phd.",
+    "Headline": "AI and Machine Learning Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "ce8e7bb7-732c-4203-93f6-c6cce2fb78e4",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Msc.",
+    "Headline": "Game Development Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "14fd4931-f03c-4809-8085-bb58b37ef506",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Phd.",
+    "Headline": "Data Science Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "2a9c5f3a-2819-4714-b8a8-604a5172d186",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Msc.",
+    "Headline": "Cybersecurity Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "a75704b4-52d2-4f2a-a19c-30a5406182b6",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Phd.",
+    "Headline": "Mobile Development Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "c73ac724-22c1-4429-b415-ab5aaf1227fe",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Msc.",
+    "Headline": "Cloud Computing Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "277775e4-5231-49be-899a-b70a21090757",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Phd.",
+    "Headline": "Software Engineering Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "a3d521a4-4372-463c-b5c3-349b600e371f",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Msc.",
+    "Headline": "AI and Machine Learning Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "4244ff54-37d6-487d-8e8f-4c41bc8df8a1",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Phd.",
+    "Headline": "Game Development Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  },
+  {
+    "UserId": "c1f7f81c-a7da-4676-8b72-f867812ee26d",
+    "IsActive": true,
+    "Description": "",
+    "Title": "Msc.",
+    "Headline": "Mobile Development Specialist",
+    "SchoolId": "09591b5d-bdd4-4877-8619-40c50c5356ff"
+  }
+]

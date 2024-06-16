@@ -1,21 +1,18 @@
 using Domain;
+using Domain.Comment;
 using Domain.Enrollment;
 using Domain.EnrollmentPlan;
 using Domain.Lecturer;
 using Domain.MockDomain;
-using Domain.School;
-using Domain.Student;
 using Domain.Project;
+using Domain.School;
 using Domain.Semester;
+using Domain.Student;
+using Domain.Submission;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using File = Domain.File;
-using Domain.Comment;
-using Domain.Submission;
-using Domain.Thesis;
-using Domain.Person;
-using System.Reflection.Emit;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+using File = Domain.File.File;
+
 namespace Persistence;
 
 public class DataContext : IdentityDbContext<User>
@@ -32,11 +29,10 @@ public class DataContext : IdentityDbContext<User>
     public DbSet<Semester> Semesters { get; set; }
     public DbSet<ProjectSemester> ProjectSemesters { get; set; }
     public DbSet<Submission> Submissions { get; set; }
-    public DbSet<Thesis> Theses { get; set; }
     public DbSet<Comment> Comments { get; set; }
     public DbSet<SubmissionComment> SubmissionComments { get; set; }
     public DbSet<EnrollmentComment> EnrollmentComments { get; set; }
-    public DbSet<File.File> Files { get; set; }
+    public DbSet<File> Files { get; set; }
     public DbSet<Enrollment> Enrollments { get; set; }
     public DbSet<EnrollmentMember> EnrollmentMembers { get; set; }
     public DbSet<EnrollmentPlan> EnrollmentPlans { get; set; }
@@ -69,7 +65,7 @@ public class DataContext : IdentityDbContext<User>
             .HasIndex(nameof(Domain.EnrollmentPlan.EnrollmentPlanDetails.EnrollmentPlanId), nameof(Domain.EnrollmentPlan.EnrollmentPlanDetails.ProjectId), nameof(Domain.EnrollmentPlan.EnrollmentPlanDetails.PrerequisiteProjectId))
             .IsUnique();
         
-        builder.Entity<File.File>().HasIndex(x => x.Name).IsUnique();
+        builder.Entity<File>().HasIndex(x => x.Name).IsUnique();
 
         builder.Entity<Submission>()
             .HasOne(s => s.Enrollment).WithMany()
@@ -79,11 +75,11 @@ public class DataContext : IdentityDbContext<User>
             .HasOne(entity => entity.User)
             .WithMany()
             .HasForeignKey(entity => entity.UserId);
-        
+
         builder.Entity<Submission>()
             .HasOne(s => s.Thesis)
-            .WithOne(t => t.Submission)
-            .HasForeignKey<Thesis>(t => t.SubmissionId);
+            .WithOne()
+            .HasForeignKey<Submission>(entity => entity.ThesisId);
 
         builder.Entity<SubmissionComment>()
             .HasOne(sc => sc.Submission)

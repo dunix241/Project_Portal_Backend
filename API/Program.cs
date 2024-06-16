@@ -25,6 +25,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Minio;
 using Persistence;
+using Persistence.Seed;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -114,7 +115,7 @@ builder.Services.AddCors(opt =>
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials()
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins("http://localhost:3000", "https://localhost:3000", "http://dunix.ddns.net:3000", "https://localhost:5002", "http://localhost:5001")
             ;
     });
 });
@@ -204,7 +205,7 @@ try
     var context = services.GetRequiredService<DataContext>();
     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
     await context.Database.MigrateAsync();
-    await Seed.SeedData(context, userManager, roleManager);
+    await Seeder.SeedData(context, userManager, roleManager);
 }
 catch (Exception ex)
 {

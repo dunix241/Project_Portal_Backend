@@ -1,0 +1,17 @@
+﻿[
+  {
+    "Id": "09591b5d-bdd4-4877-8619-40c50c5356ff",
+    "Name": "School of Computing Information Technology",
+    "IsActive": true
+  },
+  {
+    "Id": "da92e614-f1b6-4be9-83b9-07b9a94ca1e6",
+    "Name": "Becamex Business School",
+    "IsActive": true
+  },
+  {
+    "Id": "2943e6a4-bcfd-46b1-9f19-9788683b763b",
+    "Name": "School of Engineering",
+    "IsActive": true
+  }
+]
