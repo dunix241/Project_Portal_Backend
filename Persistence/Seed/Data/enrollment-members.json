@@ -70,5 +70,29 @@
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
     "UpdatedAt": "2023-12-18T13:11:00"
+  },
+  {
+    "Id": "6d93a93b-12e1-4766-9f8c-5e6e1aff46c8",
+    "EnrollmentId": "528c7f59-2e9a-47e2-b188-9c0b67a07cac",
+    "UserId": "90577ae4-8198-442b-8fa6-0b9bb9476592",
+    "IsAccepted": true,
+    "CreatedAt": "2024-03-25T00:00:00",
+    "UpdatedAt": "2024-03-25T00:00:00"
+  },
+  {
+    "Id": "ac1c970d-26a6-4688-ac65-257b01068732",
+    "EnrollmentId": "528c7f59-2e9a-47e2-b188-9c0b67a07cac",
+    "UserId": "da0e79af-f215-483c-873e-c7c568667cd7",
+    "IsAccepted": true,
+    "CreatedAt": "2024-03-25T00:00:00",
+    "UpdatedAt": "2024-03-25T20:05:00"
+  },
+  {
+    "Id": "f4e51313-fa24-42c4-b9e6-088705b6e524",
+    "EnrollmentId": "528c7f59-2e9a-47e2-b188-9c0b67a07cac",
+    "UserId": "602a4c6e-a18d-48b8-894b-60dd75f25293",
+    "IsAccepted": true,
+    "CreatedAt": "2024-03-25T00:00:00",
+    "UpdatedAt": "2024-03-25T09:12:00"
   }
 ]
