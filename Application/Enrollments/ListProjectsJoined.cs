@@ -35,12 +35,12 @@ public class ListProjectsJoined
         
         public async Task<Result<ListProjectsJoinedResponseDto>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var userEmail = _userAccessor.GetUser().Email;
+            var userId = _userAccessor.GetUser().Id;
 
             var result = await _dataContext.EnrollmentMembers
                 .Include(entity => entity.Enrollment)
                 .ThenInclude(entity => entity.ProjectSemester)
-                .Where(entity => entity.Email == userEmail && entity.IsAccepted == true)
+                .Where(entity => entity.UserId == userId && entity.IsAccepted == true)
                 .OrderByDescending(entity => entity.UpdatedAt)
                 .Select(entity => _mapper.Map<ProjectJoinedResponseDto>(entity.Enrollment))
                 .ToListAsync();

@@ -33,7 +33,7 @@ public class ListBasedOnEnrollmentPlan
         {
             var enrollmentPlan = _dataContext.EnrollmentPlans
                 .Include(entity => entity.EnrollmentPlanDetailsList)
-                .FirstOrDefault(entity => entity.IsActive, null)
+                .FirstOrDefault(entity => entity.IsActive)
                 ;
             if (enrollmentPlan == null)
             {
@@ -59,14 +59,14 @@ public class ListBasedOnEnrollmentPlan
                 {
                     var registrableProject =
                         _mapper.Map<ListBasedOnEnrollmentPlanResponseDto.RegistrableProjectResponseDto>(
-                            _dataContext.Projects.FindAsync(id));
+                            _dataContext.Projects.Find(id));
 
-                    registrableProject.Enrollment = _dataContext.EnrollmentMembers
+                    var enrollmentMember = _dataContext.EnrollmentMembers
                         .Include(entity => entity.Enrollment)
-                        .Where(entity =>
-                            entity.Email == _userAccessor.GetUser().Email && entity.Enrollment.ProjectId == id &&
-                            entity.Enrollment.IsPublished)
-                        .FirstOrDefault()!.Enrollment;
+                        .FirstOrDefault(entity =>
+                            entity.UserId == _userAccessor.GetUser().Id && entity.Enrollment.ProjectId == id
+                        );
+                    registrableProject.Enrollment = enrollmentMember?.Enrollment;
                     
                     registrableProject.Registrable =
                         _dataContext.ProjectSemesters.Include(entity => entity.Semester).Any(entity =>
@@ -79,11 +79,10 @@ public class ListBasedOnEnrollmentPlan
                             .Where(entity => entity.ProjectId == id)
                             .All(entity =>
                                 _dataContext.EnrollmentMembers
-                                    .Include(entity => entity.Enrollment)
-                                    .Where(x =>
-                                        x.Email == _userAccessor.GetUser().Email &&
-                                        x.Enrollment.ProjectId == entity.PrerequisiteProjectId && x.Enrollment.IsPublished)
-                                    .Any()
+                                    .Include(entity =>
+                                        entity.Enrollment)
+                                    .Any(x => x.UserId == _userAccessor.GetUser().Id &&
+                                              x.Enrollment.ProjectId == entity.PrerequisiteProjectId && x.Enrollment.IsPublished)
                             );
                     
                     return registrableProject;
@@ -99,18 +98,18 @@ public class ListBasedOnEnrollmentPlan
             
             foreach (var enrollmentPlanDetails in enrollmentPlanDetailsList)
             {
-                if (nodes[enrollmentPlanDetails.ProjectId] == null)
+                if (nodes.GetValueOrDefault(enrollmentPlanDetails.ProjectId) == null)
                 {
                     var node = new Node();
                     node.Id = enrollmentPlanDetails.ProjectId;
-                    nodes[node.Id] = node;
+                    nodes.Add(node.Id, node);
                 }
 
-                if (nodes[enrollmentPlanDetails.PrerequisiteProjectId] == null)
+                if (nodes.GetValueOrDefault(enrollmentPlanDetails.PrerequisiteProjectId) == null)
                 {
                     var node = new Node();
                     node.Id = enrollmentPlanDetails.PrerequisiteProjectId;
-                    nodes[node.Id] = node;
+                    nodes.Add(node.Id, node);
                 }
 
                 var parent = nodes[enrollmentPlanDetails.PrerequisiteProjectId];

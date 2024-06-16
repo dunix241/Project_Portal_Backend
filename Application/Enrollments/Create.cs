@@ -51,6 +51,10 @@ public class Create
             using var transaction = _dataContext.Database.BeginTransaction();
             
             _dataContext.Enrollments.Add(enrollment);
+            
+            var owner = new EnrollmentMember{EnrollmentId = enrollment.Id, IsAccepted = true, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, UserId = _userAccessor.GetUser().Id};
+            _dataContext.EnrollmentMembers.Add(owner);
+            
             var succeeded = (await _dataContext.SaveChangesAsync()) != 0;
 
             if (!succeeded) return Result<CreateEnrollmentResponseDto>.Failure("A problem occurred while we trying to create your enrollment");

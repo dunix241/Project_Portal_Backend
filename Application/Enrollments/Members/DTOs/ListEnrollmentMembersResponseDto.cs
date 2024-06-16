@@ -11,6 +11,8 @@ public class EnrollmentMemberResponseDto {
     public Guid Id { get; set; }
     public Boolean? IsAccepted { get; set; }
     public string? RejectReason { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string FullName { get; set; }
