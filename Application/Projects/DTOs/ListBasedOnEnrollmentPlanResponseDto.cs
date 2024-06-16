@@ -14,6 +14,6 @@ public class ListBasedOnEnrollmentPlanResponseDto
         public Guid Id { get; set; }
         public string Name { get; set; }
         public bool Registrable { get; set; }
-        public Domain.Enrollment.Enrollment Enrollment { get; set; }
+        public Domain.Enrollment.Enrollment? Enrollment { get; set; }
     }
 }

@@ -1,50 +1,74 @@
 ﻿[
   {
-    "Id": "1dcc220f-1b4d-4f6b-9336-6b7f0cfa510b",
+    "Id": "dabe4dc4-36ac-4093-9590-abb3d8a88b85",
     "EnrollmentId": "dad19365-9c35-4bd9-b29a-68f85cf2c1e5",
-    "Email": "christophershepard@eiu.edu.vn",
+    "UserId": "dd8726f1-63b3-49d9-9e01-9e20e5c90271",
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
-    "UpdatedAt": "2023-12-18T00:10:00"
+    "UpdatedAt": "2023-12-18T00:00:00"
+  },
+  {
+    "Id": "1dcc220f-1b4d-4f6b-9336-6b7f0cfa510b",
+    "EnrollmentId": "dad19365-9c35-4bd9-b29a-68f85cf2c1e5",
+    "UserId": "da0e79af-f215-483c-873e-c7c568667cd7",
+    "IsAccepted": true,
+    "CreatedAt": "2023-12-18T00:00:00",
+    "UpdatedAt": "2023-12-18T10:10:00"
   },
   {
     "Id": "d716de70-63d3-4669-9987-c855bc235fee",
     "EnrollmentId": "dad19365-9c35-4bd9-b29a-68f85cf2c1e5",
-    "Email": "chanshannon@eiu.edu.vn",
+    "UserId": "71fbfbbd-695a-43fa-bdcd-bac0a6dab9b6",
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
-    "UpdatedAt": "2023-12-18T00:11:00"
+    "UpdatedAt": "2023-12-18T06:11:00"
+  },
+  {
+    "Id": "ff89aa01-836d-4736-a943-7ecd4f9a96a1",
+    "EnrollmentId": "1088f096-e98c-4008-9079-b8c3c505a227",
+    "UserId": "de7af052-fb5f-4989-bbaf-649066304a9d",
+    "IsAccepted": true,
+    "CreatedAt": "2023-12-18T00:00:00",
+    "UpdatedAt": "2023-12-18T00:00:00"
   },
   {
     "Id": "57e8280e-3159-4a45-baa3-3a4b1dda6225",
     "EnrollmentId": "1088f096-e98c-4008-9079-b8c3c505a227",
-    "Email": "anna11@eiu.edu.vn",
+    "UserId": "ce8e7bb7-732c-4203-93f6-c6cce2fb78e4",
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
-    "UpdatedAt": "2023-12-18T00:11:00"
+    "UpdatedAt": "2023-12-18T15:26:00"
   },
   {
     "Id": "8a0ce260-7f3f-40c8-b443-3edef968c9d4",
     "EnrollmentId": "1088f096-e98c-4008-9079-b8c3c505a227",
-    "Email": "john63@eiu.edu.vn",
+    "UserId": "ba9c6f3a-381f-4874-89a9-57a14dab0347",
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
-    "UpdatedAt": "2023-12-18T00:11:00"
+    "UpdatedAt": "2023-12-18T16:12:00"
+  },
+  {
+    "Id": "296a8777-ae3e-4a77-9d2f-c354681691ee",
+    "EnrollmentId": "2c658d06-165f-46f2-86cc-afef7906242c",
+    "UserId": "a32fd065-4298-413a-9269-66ab41d06ffc",
+    "IsAccepted": true,
+    "CreatedAt": "2023-12-18T00:00:00",
+    "UpdatedAt": "2023-12-18T00:00:00"
   },
   {
     "Id": "63e0b833-dc31-4275-9d00-2b364c0f54a2",
     "EnrollmentId": "2c658d06-165f-46f2-86cc-afef7906242c",
-    "Email": "pamliu@eiu.edu.vn",
+    "UserId": "14fd4931-f03c-4809-8085-bb58b37ef506",
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
-    "UpdatedAt": "2023-12-18T00:11:00"
+    "UpdatedAt": "2023-12-18T11:25:00"
   },
   {
     "Id": "9e75e18d-9d78-476c-a088-648bc03430a6",
     "EnrollmentId": "2c658d06-165f-46f2-86cc-afef7906242c",
-    "Email": "steven76@eiu.edu.vn",
+    "UserId": "3ac3fb92-3630-446b-bb57-b9561341733e",
     "IsAccepted": true,
     "CreatedAt": "2023-12-18T00:00:00",
-    "UpdatedAt": "2023-12-18T00:11:00"
+    "UpdatedAt": "2023-12-18T13:11:00"
   }
 ]

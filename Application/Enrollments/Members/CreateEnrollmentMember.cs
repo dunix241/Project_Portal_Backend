@@ -48,7 +48,7 @@ public class CreateEnrollmentMember
             if (enrollment == null) return null;
 
             var hasAlreadyEnrolled = await _dataContext.EnrollmentMembers
-                    .Where(entity => entity.Email == request.Payload.Email)
+                    .Where(entity => entity.UserId == user.Id)
                     .Include(entity => entity.Enrollment)
                     .Where(entity =>
                         entity.Enrollment.ProjectId == enrollment.ProjectId &&
@@ -62,7 +62,7 @@ public class CreateEnrollmentMember
 
             var enrollmentMember = new EnrollmentMember
             {
-                Email = request.Payload.Email, EnrollmentId = request.EnrollmentId
+                UserId = user.Id, EnrollmentId = request.EnrollmentId
             };
 
             _dataContext.EnrollmentMembers.Add(enrollmentMember);

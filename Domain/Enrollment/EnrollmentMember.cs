@@ -3,7 +3,8 @@
 public class EnrollmentMember
 {
     public Guid Id { get; set; }
-    public string Email { get; set; }
+    public string UserId { get; set; }
+    public User User { get; set; }
     public Guid EnrollmentId { get; set; }
     public Enrollment Enrollment { get; set; }
     public Boolean? IsAccepted { get; set; }

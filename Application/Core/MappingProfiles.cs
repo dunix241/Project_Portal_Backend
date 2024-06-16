@@ -47,6 +47,10 @@ public class MappingProfiles : Profile
     {
         CreateMap<CreateProjectRequestDto, Project>();
         CreateMap<EditProjectRequestDto, Project>();
+        CreateMap<Project, ListBasedOnEnrollmentPlanResponseDto.RegistrableProjectResponseDto>()
+            .ForMember(dest => dest.Registrable, options => options.MapFrom<bool>(source => false))
+            .ForMember(dest => dest.Enrollment, options => options.MapFrom<Domain.Enrollment.Enrollment>(source => null))
+            ;
     }
 
     private void CreateSemesterMaps()
