@@ -12,9 +12,14 @@ public class PagingParams
         set => _pageSize = Math.Min(MaxPageSize, value);
     }
 
-    //public string? SearchString { get; set; }
-    //public string? Order { get; set; }
-    //public string? OrderBy { get; set; }
-    //public string? Filter { get; set; }
-    //public string? FilterBy { get; set; }
+    public string? SearchString { get; set; }
+    public string? Order { get; set; }
+    public string? OrderBy { get; set; }
+    public ICollection<Filter>? Filters { get; set; }
+}
+
+public class Filter
+{
+    public string Value { get; set; }
+    public string FilterBy { get; set; }
 }

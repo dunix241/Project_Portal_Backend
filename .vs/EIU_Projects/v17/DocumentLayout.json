@@ -1,23 +1,397 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Personal\\EIU\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagingparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\core\\paging\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollmentplans\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollmentplans\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\members\\listenrollmentmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\members\\listenrollmentmembers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\controllers\\pms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\pms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\members\\dtos\\listenrollmentmembersresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\members\\dtos\\listenrollmentmembersresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\users\\amin\\documents\\project_portal_backend\\persistence\\seed\\data\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\users\\amin\\documents\\project_portal_backend\\persistence\\seed\\data\\enrollment-members.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\enrollment-members.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\f97df41fad1fabd77d39bcf4a9c6324211ab303f5d41622c5c1331620bc3c810\\Application\\Core\\MappingProfiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\users\\amin\\documents\\project_portal_backend\\persistence\\seed\\data\\enrollments.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\enrollments.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\controllers\\cms\\enrollmentplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\enrollmentplanscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\users\\amin\\documents\\project_portal_backend\\persistence\\seed\\data\\enrollment-plan-details.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\enrollment-plan-details.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\fc0aeb1e3e203d72311197edd8d47784b9784f61b2f88ec80274809da3320158\\API\\Controllers\\CMS\\EnrollmentPlansController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\controllers\\miniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\miniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\mockdomainscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\9f5de7922438f8a58bd1c73adc86326d8a789ee6fd1420bef0b77b0f1ef23a59\\API\\Controllers\\MinioController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\0ee4dc3523605d4eeccde40ceced1947ae95273b9810a76af35e4e111aaa1364\\API\\Controllers\\PMS\\EnrollmentsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\controllers\\cms\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\semesterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\users\\amin\\documents\\project_portal_backend\\domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 285,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1190912587:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pagination.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Core\\Paging\\Pagination.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\Paging\\Pagination.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Core\\Paging\\Pagination.cs",
+              "RelativeToolTip": "Application\\Core\\Paging\\Pagination.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T14:30:40.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PagingParams.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Core\\Paging\\PagingParams.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\Paging\\PagingParams.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Core\\Paging\\PagingParams.cs",
+              "RelativeToolTip": "Application\\Core\\Paging\\PagingParams.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T14:30:39.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\EnrollmentPlans\\List.cs",
+              "RelativeDocumentMoniker": "Application\\EnrollmentPlans\\List.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\EnrollmentPlans\\List.cs",
+              "RelativeToolTip": "Application\\EnrollmentPlans\\List.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowCUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T14:30:20.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "List.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\List.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\List.cs",
+              "RelativeToolTip": "Application\\Enrollments\\List.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwCgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T14:30:12.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "users.json",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\users.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\users.json",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\users.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\users.json",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T14:13:04.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MinioController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\9f5de7922438f8a58bd1c73adc86326d8a789ee6fd1420bef0b77b0f1ef23a59\\API\\Controllers\\MinioController.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\9f5de7922438f8a58bd1c73adc86326d8a789ee6fd1420bef0b77b0f1ef23a59\\API\\Controllers\\MinioController.cs",
+              "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\9f5de7922438f8a58bd1c73adc86326d8a789ee6fd1420bef0b77b0f1ef23a59\\API\\Controllers\\MinioController.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\9f5de7922438f8a58bd1c73adc86326d8a789ee6fd1420bef0b77b0f1ef23a59\\API\\Controllers\\MinioController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwCsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:11:23.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Core\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Core\\MappingProfiles.cs",
+              "RelativeToolTip": "Application\\Core\\MappingProfiles.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAArwG4AAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:10:58.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EnrollmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAA3wB8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T12:38:58.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ListEnrollmentMembers.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Members\\ListEnrollmentMembers.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Members\\ListEnrollmentMembers.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Members\\ListEnrollmentMembers.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Members\\ListEnrollmentMembers.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAswCUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:19:46.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ListEnrollmentMembersResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Members\\DTOs\\ListEnrollmentMembersResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Members\\DTOs\\ListEnrollmentMembersResponseDto.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Members\\DTOs\\ListEnrollmentMembersResponseDto.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Members\\DTOs\\ListEnrollmentMembersResponseDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T14:11:50.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "enrollment-members.json",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollment-members.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\enrollment-members.json",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollment-members.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\enrollment-members.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T14:01:02.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "enrollments.json",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollments.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\enrollments.json",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollments.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\enrollments.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T13:25:39.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAGkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:47:43.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\f97df41fad1fabd77d39bcf4a9c6324211ab303f5d41622c5c1331620bc3c810\\Application\\Core\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\f97df41fad1fabd77d39bcf4a9c6324211ab303f5d41622c5c1331620bc3c810\\Application\\Core\\MappingProfiles.cs",
+              "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\f97df41fad1fabd77d39bcf4a9c6324211ab303f5d41622c5c1331620bc3c810\\Application\\Core\\MappingProfiles.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\f97df41fad1fabd77d39bcf4a9c6324211ab303f5d41622c5c1331620bc3c810\\Application\\Core\\MappingProfiles.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAG0AAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T12:54:36.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "enrollment-plan-details.json",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollment-plan-details.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\enrollment-plan-details.json",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollment-plan-details.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\enrollment-plan-details.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T13:23:29.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnrollmentPlansController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAADwvyIAAAB3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:20:40.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EnrollmentPlansController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\fc0aeb1e3e203d72311197edd8d47784b9784f61b2f88ec80274809da3320158\\API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\fc0aeb1e3e203d72311197edd8d47784b9784f61b2f88ec80274809da3320158\\API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\fc0aeb1e3e203d72311197edd8d47784b9784f61b2f88ec80274809da3320158\\API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\fc0aeb1e3e203d72311197edd8d47784b9784f61b2f88ec80274809da3320158\\API\\Controllers\\CMS\\EnrollmentPlansController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:20:58.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MockDomainsController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\MockDomainsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MockDomainsController.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\MockDomainsController.cs",
+              "RelativeToolTip": "API\\Controllers\\MockDomainsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:17:19.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MinioController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\MinioController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MinioController.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\MinioController.cs",
+              "RelativeToolTip": "API\\Controllers\\MinioController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCEAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T13:17:21.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EnrollmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\0ee4dc3523605d4eeccde40ceced1947ae95273b9810a76af35e4e111aaa1364\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\0ee4dc3523605d4eeccde40ceced1947ae95273b9810a76af35e4e111aaa1364\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\0ee4dc3523605d4eeccde40ceced1947ae95273b9810a76af35e4e111aaa1364\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\0ee4dc3523605d4eeccde40ceced1947ae95273b9810a76af35e4e111aaa1364\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T12:52:54.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "File.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\File\\File.cs",
+              "RelativeDocumentMoniker": "Domain\\File\\File.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\File\\File.cs",
+              "RelativeToolTip": "Domain\\File\\File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T12:37:34.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "SemestersController.cs",
+              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\CMS\\SemestersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\SemestersController.cs",
+              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\CMS\\SemestersController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\SemestersController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T12:34:31.64Z",
+              "EditorCaption": ""
             }
           ]
         }

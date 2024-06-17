@@ -8,11 +8,11 @@ using Persistence;
 
 #nullable disable
 
-namespace Persistence.Migrations
+namespace API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240616024839_AddSubmissionForeignKeyToThesis")]
-    partial class AddSubmissionForeignKeyToThesis
+    [Migration("20240616125124_rework")]
+    partial class rework
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -119,10 +119,6 @@ namespace Persistence.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.Property<Guid>("EnrollmentId")
                         .HasColumnType("TEXT");
 
@@ -132,12 +128,18 @@ namespace Persistence.Migrations
                     b.Property<string>("RejectReason")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.HasIndex("EnrollmentId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("EnrollmentMembers");
                 });
@@ -388,7 +390,7 @@ namespace Persistence.Migrations
                     b.Property<DateTime?>("SubmittedDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("ThesisId")
+                    b.Property<Guid?>("ThesisId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -676,7 +678,15 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Enrollment");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.EnrollmentPlan.EnrollmentPlan", b =>
@@ -795,9 +805,7 @@ namespace Persistence.Migrations
 
                     b.HasOne("Domain.File.File", "Thesis")
                         .WithOne()
-                        .HasForeignKey("Domain.Submission.Submission", "ThesisId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Domain.Submission.Submission", "ThesisId");
 
                     b.Navigation("Enrollment");
 

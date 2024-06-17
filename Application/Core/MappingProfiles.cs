@@ -107,7 +107,9 @@ public class MappingProfiles : Profile
     {
         CreateMap<Domain.Enrollment.Enrollment, ProjectJoinedResponseDto>();
         CreateMap<User, EnrollmentMemberResponseDto>();
-        CreateMap<Domain.Enrollment.Enrollment, EnrollmentMemberResponseDto>();
+
+        CreateMap<Domain.Enrollment.EnrollmentMember, EnrollmentMemberResponseDto>();
+            ;
         CreateMap<CreateEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
         CreateMap<Project, ListBasedOnEnrollmentPlanResponseDto.RegistrableProjectResponseDto>();
         CreateMap<EditEnrollmentRequestDto, Domain.Enrollment.Enrollment>();

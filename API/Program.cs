@@ -104,6 +104,7 @@ builder.Services.AddDbContext<DataContext>(opt =>
     //opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
               b => b.MigrationsAssembly("Persistence"));
+               // b => b.MigrationsAssembly("API"));
 
 });
 
