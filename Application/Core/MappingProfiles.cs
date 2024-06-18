@@ -12,6 +12,7 @@ using Application.Schools.DTOs;
 using Application.Semesters.DTOs;
 using Application.Semesters.DTOs.Projects;
 using Application.Students.DTOs;
+using Application.Users.DTOs;
 using AutoMapper;
 using Domain;
 using Domain.Comment;
@@ -41,6 +42,7 @@ public class MappingProfiles : Profile
         CreateEnrollmentMaps();
         CreateSubmissionMaps();
         CreateSummsionComment();
+        CreateUserMapper();
     }
 
     private void CreateMockDomainMaps()
@@ -143,5 +145,11 @@ public class MappingProfiles : Profile
     public void CreateSummsionComment()
     {
         CreateMap<SubmissionCommentDto, SubmissionComment>().ForMember(dest => dest.UserId, opt => opt.Ignore());
+        CreateMap<EditSubmissionCommentRequest, SubmissionComment>();
+    }
+
+    public void CreateUserMapper()
+    {
+        CreateMap<EditUserRequest, User>();
     }
 }

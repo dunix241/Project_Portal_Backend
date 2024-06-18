@@ -1,67 +1,195 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\",
+  "WorkspaceRootPath": "D:\\Personal\\Portal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\submissions\\createenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\createenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\pms\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\pms\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\submissions\\dtos\\createsubmissionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\dtos\\createsubmissionrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\users\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\users\\edituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\submissions\\submissionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\submissionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\edit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\cms\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\lecturerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\submissions\\editenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\editenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\users\\amin\\documents\\project_portal_backend\\api\\controllers\\pms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\pms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\pms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|c:\\users\\amin\\documents\\project_portal_backend\\persistence\\seed\\data\\enrollments.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\enrollments.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\users\\dtos\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\users\\dtos\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\users\\amin\\documents\\project_portal_backend\\domain\\submission\\submission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\users\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\users\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\cms\\overviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\overviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\user\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|d:\\personal\\portal\\persistence\\seed\\seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\seeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|d:\\personal\\portal\\persistence\\seed\\dtos\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\dtos\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|d:\\personal\\portal\\persistence\\seed\\data\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\users.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|d:\\personal\\portal\\persistence\\seed\\data\\lecturers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\lecturers.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\lecturer\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\overview\\getoverview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\overview\\getoverview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\overview\\dtos\\overviewresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\overview\\dtos\\overviewresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\enrollment\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\enrollment\\enrollment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\submission\\submission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\submission\\submission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\submissions\\comments\\createsubmissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\project\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\semester\\projectsemester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\semester\\projectsemester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\theses\\unpublishthesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\theses\\unpublishthesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\theses\\publishthesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\theses\\publishthesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\editenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\editenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|d:\\personal\\portal\\persistence\\seed\\data\\submissions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\submissions.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\auth\\dtos\\validationattributes\\isemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\lecturers\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\detailenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\detailenrollmentsubmission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\editenrollmentsubmissionthesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\editenrollmentsubmissionthesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\auth\\dtos\\validationattributes\\isusernameunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\auth\\dtos\\validationattributes\\isusernameunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\students\\dtos\\getstudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\dtos\\getstudentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\students\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\students\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\student\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\lecturers\\list.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\file\\file.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|d:\\personal\\portal\\persistence\\seed\\data\\files.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9CECDDEF-80D4-488D-9DF0-A8212AEEA5B9}|Persistence\\Persistence.csproj|solutionrelative:persistence\\seed\\data\\files.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|d:\\personal\\portal\\api\\controllers\\miniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\miniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\comments\\editsubmissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\comments\\editsubmissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\comments\\dtos\\editsubmissioncommentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\comments\\dtos\\editsubmissioncommentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\submissions\\comments\\createsubmissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\submissions\\comments\\createsubmissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\a4c76b64a5525e607bd5d96e2162a7eaae31b61bdfd2dee6ee30e3870a23f75a\\Domain\\Submission\\Submission.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\users\\amin\\documents\\project_portal_backend\\domain\\comment\\submissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|d:\\personal\\portal\\domain\\comment\\submissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\comment\\submissioncomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|c:\\users\\amin\\documents\\project_portal_backend\\domain\\comment\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{73AECFF9-EA77-4F95-AEC2-38F4E344EDD4}|Domain\\Domain.csproj|solutionrelative:domain\\comment\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\auth\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\auth\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\auth\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\amin\\AppData\\Local\\SourceServer\\c90dc051a137708b5631809a1712cac9ef183cdf46beea6fb7ccc02f8303cac3\\Infrastructure\\Security\\UserAccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\users\\amin\\documents\\project_portal_backend\\application\\enrollments\\members\\deleteenrollmentmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|d:\\personal\\portal\\application\\enrollments\\members\\deleteenrollmentmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\enrollments\\members\\deleteenrollmentmember.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -72,170 +200,608 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\PMS\\ProfileController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PMS\\ProfileController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\PMS\\ProfileController.cs",
+              "RelativeToolTip": "API\\Controllers\\PMS\\ProfileController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwBcAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T00:16:06.153Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1190912587:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Edit.cs",
-              "RelativeDocumentMoniker": "Application\\Enrollments\\Edit.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Edit.cs",
-              "RelativeToolTip": "Application\\Enrollments\\Edit.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowCQAAABsAAAA",
+              "DocumentIndex": 9,
+              "Title": "Seeder.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Persistence\\Seed\\Seeder.cs",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Seeder.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Persistence\\Seed\\Seeder.cs",
+              "RelativeToolTip": "Persistence\\Seed\\Seeder.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAlwDoAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T00:39:26.111Z",
+              "WhenOpened": "2024-06-21T00:00:26.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CreateSubmissionRequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\DTOs\\CreateSubmissionRequestDto.cs",
-              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\DTOs\\CreateSubmissionRequestDto.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\DTOs\\CreateSubmissionRequestDto.cs",
-              "RelativeToolTip": "Application\\Enrollments\\Submissions\\DTOs\\CreateSubmissionRequestDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAABBAAAA",
+              "DocumentIndex": 11,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Core\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Application\\Core\\MappingProfiles.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Core\\MappingProfiles.cs",
+              "RelativeToolTip": "Application\\Core\\MappingProfiles.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAqwCwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T00:32:00.53Z",
+              "WhenOpened": "2024-06-20T23:57:52.342Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "enrollments.json",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollments.json",
-              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\enrollments.json",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Persistence\\Seed\\Data\\enrollments.json",
-              "RelativeToolTip": "Persistence\\Seed\\Data\\enrollments.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-20T00:27:40.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CreateEnrollmentSubmission.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\CreateEnrollmentSubmission.cs",
-              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\CreateEnrollmentSubmission.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\CreateEnrollmentSubmission.cs",
-              "RelativeToolTip": "Application\\Enrollments\\Submissions\\CreateEnrollmentSubmission.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAlwCUAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\User\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\User\\User.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\User\\User.cs",
+              "RelativeToolTip": "Domain\\User\\User.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAowBIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T00:18:51.98Z",
+              "WhenOpened": "2024-06-20T23:42:08.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Create.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Create.cs",
-              "RelativeDocumentMoniker": "Application\\Enrollments\\Create.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Create.cs",
-              "RelativeToolTip": "Application\\Enrollments\\Create.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowAAAAAAAAAAA",
+              "Title": "EditUserRequest.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Users\\DTOs\\EditUserRequest.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\DTOs\\EditUserRequest.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Users\\DTOs\\EditUserRequest.cs",
+              "RelativeToolTip": "Application\\Users\\DTOs\\EditUserRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T00:17:13.988Z",
+              "WhenOpened": "2024-06-20T23:42:50.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditUser.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Users\\EditUser.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\EditUser.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Users\\EditUser.cs",
+              "RelativeToolTip": "Application\\Users\\EditUser.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAwwC4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:41:55.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Details.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Lecturers\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Details.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Lecturers\\Details.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Details.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:37:55.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Users\\Details.cs",
+              "RelativeDocumentMoniker": "Application\\Users\\Details.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Users\\Details.cs",
+              "RelativeToolTip": "Application\\Users\\Details.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAkwCAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:37:51.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "users.json",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\users.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\users.json",
+              "ToolTip": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\users.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\users.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-20T23:30:02.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "lecturers.json",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\lecturers.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\lecturers.json",
+              "ToolTip": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\lecturers.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\lecturers.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-20T23:32:04.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Lecturer.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Lecturer\\Lecturer.cs",
+              "RelativeDocumentMoniker": "Domain\\Lecturer\\Lecturer.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Lecturer\\Lecturer.cs",
+              "RelativeToolTip": "Domain\\Lecturer\\Lecturer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:22:39.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Persistence\\Seed\\DTOs\\UserData.cs",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\DTOs\\UserData.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Persistence\\Seed\\DTOs\\UserData.cs",
+              "RelativeToolTip": "Persistence\\Seed\\DTOs\\UserData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:20:59.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "API\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:20:41.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OverviewController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\CMS\\OverviewController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\OverviewController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\CMS\\OverviewController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\OverviewController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T23:16:10.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GetOverview.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Overview\\GetOverview.cs",
+              "RelativeDocumentMoniker": "Application\\Overview\\GetOverview.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Overview\\GetOverview.cs",
+              "RelativeToolTip": "Application\\Overview\\GetOverview.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T22:36:02.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OverviewResponse.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Overview\\DTOs\\OverviewResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Overview\\DTOs\\OverviewResponse.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Overview\\DTOs\\OverviewResponse.cs",
+              "RelativeToolTip": "Application\\Overview\\DTOs\\OverviewResponse.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAUwBcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T22:27:23.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LecturersController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\CMS\\LecturersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CMS\\LecturersController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\CMS\\LecturersController.cs",
+              "RelativeToolTip": "API\\Controllers\\CMS\\LecturersController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAqwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T20:59:46.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UnPublishThesis.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Theses\\UnPublishThesis.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\Theses\\UnPublishThesis.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Theses\\UnPublishThesis.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Submissions\\Theses\\UnPublishThesis.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAIwCcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T20:52:51.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PublishThesis.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Theses\\PublishThesis.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\Theses\\PublishThesis.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Theses\\PublishThesis.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Submissions\\Theses\\PublishThesis.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAIwCoAAABmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T20:20:29.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Delete.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Lecturers\\Delete.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Delete.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Lecturers\\Delete.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Delete.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBEAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:45:40.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IsEmailUnique.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
+              "RelativeDocumentMoniker": "Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
+              "RelativeToolTip": "Application\\Auth\\DTOs\\ValidationAttributes\\IsEmailUnique.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:34:12.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IsUsernameUnique.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Auth\\DTOs\\ValidationAttributes\\IsUsernameUnique.cs",
+              "RelativeDocumentMoniker": "Application\\Auth\\DTOs\\ValidationAttributes\\IsUsernameUnique.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Auth\\DTOs\\ValidationAttributes\\IsUsernameUnique.cs",
+              "RelativeToolTip": "Application\\Auth\\DTOs\\ValidationAttributes\\IsUsernameUnique.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:34:10.889Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SubmissionStatus.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\SubmissionStatus.cs",
-              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\SubmissionStatus.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\SubmissionStatus.cs",
-              "RelativeToolTip": "Application\\Enrollments\\Submissions\\SubmissionStatus.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA8AAAA",
+              "Title": "Edit.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Lecturers\\Edit.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\Edit.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Lecturers\\Edit.cs",
+              "RelativeToolTip": "Application\\Lecturers\\Edit.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAAFUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T23:46:37.983Z",
+              "WhenOpened": "2024-06-20T12:33:09.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "GetStudentResponseDto.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "RelativeToolTip": "Application\\Students\\DTOs\\GetStudentResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:30:03.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "List.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Students\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Students\\List.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Students\\List.cs",
+              "RelativeToolTip": "Application\\Students\\List.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowCUAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:29:48.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Student\\Student.cs",
+              "RelativeDocumentMoniker": "Domain\\Student\\Student.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Student\\Student.cs",
+              "RelativeToolTip": "Domain\\Student\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:28:24.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "List.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Lecturers\\List.cs",
+              "RelativeDocumentMoniker": "Application\\Lecturers\\List.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Lecturers\\List.cs",
+              "RelativeToolTip": "Application\\Lecturers\\List.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:26:48.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Enrollment.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Enrollment\\Enrollment.cs",
+              "RelativeDocumentMoniker": "Domain\\Enrollment\\Enrollment.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Enrollment\\Enrollment.cs",
+              "RelativeToolTip": "Domain\\Enrollment\\Enrollment.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAuwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:14:55.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProjectSemester.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Semester\\ProjectSemester.cs",
+              "RelativeDocumentMoniker": "Domain\\Semester\\ProjectSemester.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Semester\\ProjectSemester.cs",
+              "RelativeToolTip": "Domain\\Semester\\ProjectSemester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:16:36.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Project\\Project.cs",
+              "RelativeDocumentMoniker": "Domain\\Project\\Project.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Project\\Project.cs",
+              "RelativeToolTip": "Domain\\Project\\Project.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:14:15.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "File.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\File\\File.cs",
+              "RelativeDocumentMoniker": "Domain\\File\\File.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\File\\File.cs",
+              "RelativeToolTip": "Domain\\File\\File.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T12:12:16.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "submissions.json",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\submissions.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\submissions.json",
+              "ToolTip": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\submissions.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\submissions.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-20T11:57:13.975Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "EnrollmentsController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\PMS\\EnrollmentsController.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAUwHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:54:33.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EditEnrollmentSubmissionThesis.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\EditEnrollmentSubmissionThesis.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\EditEnrollmentSubmissionThesis.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\EditEnrollmentSubmissionThesis.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Submissions\\EditEnrollmentSubmissionThesis.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA5wD4AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:25:24.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DetailEnrollmentSubmission.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\DetailEnrollmentSubmission.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\DetailEnrollmentSubmission.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\DetailEnrollmentSubmission.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Submissions\\DetailEnrollmentSubmission.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBAAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:19:24.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "files.json",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\files.json",
+              "RelativeDocumentMoniker": "Persistence\\Seed\\Data\\files.json",
+              "ToolTip": "D:\\Personal\\Portal\\Persistence\\Seed\\Data\\files.json",
+              "RelativeToolTip": "Persistence\\Seed\\Data\\files.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-20T11:17:53.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MinioController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\MinioController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\MinioController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\MinioController.cs",
+              "RelativeToolTip": "API\\Controllers\\MinioController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T11:14:52.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\API\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\StudentsController.cs",
+              "ToolTip": "D:\\Personal\\Portal\\API\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\StudentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T10:49:09.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "EditSubmissionComment.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Comments\\EditSubmissionComment.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\Comments\\EditSubmissionComment.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Comments\\EditSubmissionComment.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Submissions\\Comments\\EditSubmissionComment.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAwwCoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T10:41:58.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "EditSubmissionCommentRequest.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Comments\\DTOs\\EditSubmissionCommentRequest.cs",
+              "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\Comments\\DTOs\\EditSubmissionCommentRequest.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Comments\\DTOs\\EditSubmissionCommentRequest.cs",
+              "RelativeToolTip": "Application\\Enrollments\\Submissions\\Comments\\DTOs\\EditSubmissionCommentRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T10:40:18.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "EditEnrollmentSubmission.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\EditEnrollmentSubmission.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\EditEnrollmentSubmission.cs",
               "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\EditEnrollmentSubmission.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\EditEnrollmentSubmission.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\EditEnrollmentSubmission.cs",
               "RelativeToolTip": "Application\\Enrollments\\Submissions\\EditEnrollmentSubmission.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAvwCcAAAAAAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAcwCwAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T14:48:08.868Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 43,
               "Title": "Submission.cs",
               "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\a4c76b64a5525e607bd5d96e2162a7eaae31b61bdfd2dee6ee30e3870a23f75a\\Domain\\Submission\\Submission.cs",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\a4c76b64a5525e607bd5d96e2162a7eaae31b61bdfd2dee6ee30e3870a23f75a\\Domain\\Submission\\Submission.cs",
               "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\a4c76b64a5525e607bd5d96e2162a7eaae31b61bdfd2dee6ee30e3870a23f75a\\Domain\\Submission\\Submission.cs",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\a4c76b64a5525e607bd5d96e2162a7eaae31b61bdfd2dee6ee30e3870a23f75a\\Domain\\Submission\\Submission.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T14:44:06.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T14:44:06.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 45,
               "Title": "ChangePassword.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Auth\\ChangePassword.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Auth\\ChangePassword.cs",
               "RelativeDocumentMoniker": "Application\\Auth\\ChangePassword.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Auth\\ChangePassword.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Auth\\ChangePassword.cs",
               "RelativeToolTip": "Application\\Auth\\ChangePassword.cs",
               "ViewState": "AQIAABUAAAAAAAAAAIAxwA0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T13:47:12.281Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T13:47:12.281Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 46,
               "Title": "UserAccessor.cs",
               "DocumentMoniker": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\c90dc051a137708b5631809a1712cac9ef183cdf46beea6fb7ccc02f8303cac3\\Infrastructure\\Security\\UserAccessor.cs",
-              "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\c90dc051a137708b5631809a1712cac9ef183cdf46beea6fb7ccc02f8303cac3\\Infrastructure\\Security\\UserAccessor.cs",
               "ToolTip": "C:\\Users\\amin\\AppData\\Local\\SourceServer\\c90dc051a137708b5631809a1712cac9ef183cdf46beea6fb7ccc02f8303cac3\\Infrastructure\\Security\\UserAccessor.cs",
-              "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\c90dc051a137708b5631809a1712cac9ef183cdf46beea6fb7ccc02f8303cac3\\Infrastructure\\Security\\UserAccessor.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T13:46:51.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T13:46:51.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 47,
               "Title": "DeleteEnrollmentMember.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Members\\DeleteEnrollmentMember.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Members\\DeleteEnrollmentMember.cs",
               "RelativeDocumentMoniker": "Application\\Enrollments\\Members\\DeleteEnrollmentMember.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Members\\DeleteEnrollmentMember.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Members\\DeleteEnrollmentMember.cs",
               "RelativeToolTip": "Application\\Enrollments\\Members\\DeleteEnrollmentMember.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAAAkwDEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T13:15:12.422Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T13:15:12.422Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 42,
               "Title": "CreateSubmissionComment.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\Comments\\CreateSubmissionComment.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Comments\\CreateSubmissionComment.cs",
               "RelativeDocumentMoniker": "Application\\Enrollments\\Submissions\\Comments\\CreateSubmissionComment.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Application\\Enrollments\\Submissions\\Comments\\CreateSubmissionComment.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Application\\Enrollments\\Submissions\\Comments\\CreateSubmissionComment.cs",
               "RelativeToolTip": "Application\\Enrollments\\Submissions\\Comments\\CreateSubmissionComment.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAACcAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -244,54 +810,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\Comment\\Comment.cs",
-              "RelativeDocumentMoniker": "Domain\\Comment\\Comment.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\Comment\\Comment.cs",
-              "RelativeToolTip": "Domain\\Comment\\Comment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:04:42.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 44,
               "Title": "SubmissionComment.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\Comment\\SubmissionComment.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Comment\\SubmissionComment.cs",
               "RelativeDocumentMoniker": "Domain\\Comment\\SubmissionComment.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\Comment\\SubmissionComment.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Comment\\SubmissionComment.cs",
               "RelativeToolTip": "Domain\\Comment\\SubmissionComment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:04:23.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T10:04:23.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "Submission.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\Submission\\Submission.cs",
+              "DocumentMoniker": "D:\\Personal\\Portal\\Domain\\Submission\\Submission.cs",
               "RelativeDocumentMoniker": "Domain\\Submission\\Submission.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\Domain\\Submission\\Submission.cs",
+              "ToolTip": "D:\\Personal\\Portal\\Domain\\Submission\\Submission.cs",
               "RelativeToolTip": "Domain\\Submission\\Submission.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAARAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T10:04:17.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "EnrollmentsController.cs",
-              "DocumentMoniker": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\PMS\\EnrollmentsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\PMS\\EnrollmentsController.cs",
-              "ToolTip": "C:\\Users\\amin\\Documents\\Project_Portal_Backend\\API\\Controllers\\PMS\\EnrollmentsController.cs",
-              "RelativeToolTip": "API\\Controllers\\PMS\\EnrollmentsController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAjwFMAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:56:21.596Z",
               "EditorCaption": ""
             }
           ]

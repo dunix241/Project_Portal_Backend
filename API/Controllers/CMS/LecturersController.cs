@@ -23,7 +23,7 @@ public class LecturersController : CmsApiController
 
     [HttpDelete("{id}")]
     [SwaggerOperation(Summary = "Remove a lecturer")]
-    public async Task<IActionResult> DeleteLecturer(Guid id)
+    public async Task<IActionResult> DeleteLecturer(string id)
     {
         return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
     }

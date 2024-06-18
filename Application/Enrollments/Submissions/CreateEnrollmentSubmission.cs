@@ -44,6 +44,11 @@ namespace Application.Enrollments.Submissions
                     return Result<Submission>.Failure("Ouside the allowed time");
                 }
 
+                if (enrollment.IsPublished)
+                {
+                    return Result<Submission>.Failure("Ouside the allowed time. Can not put comment to published enrollment");
+                }
+
                 var acceptedSubmission = await _context.Submissions
                 .Where(x => (x.EnrollmentId == requestSubmission.EnrollmentId)
                 && (x.Status == SubmissionStatus.ACCEPTED)).FirstOrDefaultAsync();

@@ -1,8 +1,7 @@
 ﻿using Application.Core;
-using Application.Enrollments.DTOs;
+
 using Application.Enrollments.Submissions.DTOs;
 using AutoMapper;
-using Domain.Enrollment;
 using Domain.Submission;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -36,16 +35,6 @@ namespace Application.Enrollments.Submissions
                 {
                     return null;
                 }
-
-                var acceptedSubmission = await _context.Submissions
-                    .Where(x => (x.EnrollmentId == currentSubmission.EnrollmentId)
-                    && (x.Status == SubmissionStatus.ACCEPTED)).FirstOrDefaultAsync();
-
-                if (acceptedSubmission != null && (acceptedSubmission.Id != currentSubmission.Id))
-                {
-                    return Result<Submission>.Failure("You can only edit the accpeted submission when there is already one is aceepted");
-                }
-
 
                 var newStatus = request.Dto.Status;
                 var currentStatuss = currentSubmission.Status;

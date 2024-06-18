@@ -1,5 +1,4 @@
 ﻿using Application.Core;
-
 using Application.Lecturers.DTOs;
 using AutoMapper;
 using MediatR;

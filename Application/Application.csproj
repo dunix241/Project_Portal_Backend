@@ -29,6 +29,7 @@
 
     <ItemGroup>
       <Folder Include="Authorization\EnrollmentOwners\" />
+      <Folder Include="Enrollments\Submissions\Theses\DTOs\" />
       <Folder Include="Lecturers\Validation\" />
     </ItemGroup>
 

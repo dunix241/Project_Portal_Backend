@@ -7,6 +7,8 @@ using Application.Enrollments.Submissions;
 using Application.Enrollments.Submissions.Comments;
 using Application.Enrollments.Submissions.Comments.DTOs;
 using Application.Enrollments.Submissions.DTOs;
+using Application.Enrollments.Submissions.Theses;
+using Application.Minio.DTOs;
 using Domain.Enrollment;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -98,6 +100,18 @@ public class EnrollmentsController : PmsApiController
         return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.EditEnrollmentSubmission.Command { Id = id , Dto = dto}));
     }
 
+    [HttpPut("{id}/Submmisions/Thesis")]
+    [SwaggerOperation(Summary = "Edit a submission thesis")]
+    public async Task<IActionResult> EditSubmissionThesis(Guid id, IFormFile file)
+    {
+        var payload = new AddFileRequestDto
+        {
+            BucketName = "Theses",
+            FormFile = file,
+        };
+        return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.EditEnrollmentSubmissionThesis.Command { Id = id, Dto = payload }));
+    }
+
     [HttpGet("{enrollmentId}/Submissions/List")]
     [SwaggerOperation(Summary = "List submission ")]
     public async Task<ActionResult<ListEnrollmentSubmission>> ListEnrollmentSubmission(Guid enrollmentId, [FromQuery] PagingParams pagingParams)
@@ -118,5 +132,27 @@ public class EnrollmentsController : PmsApiController
     {
         return HandleResult(await Mediator.Send(new CreateSubmissionComment.Command { Payload = payload }));
     }
+
+    [HttpPut("Submission/Comments/{id}")]
+    [SwaggerOperation(Summary = "Edit a  submission comment")]
+    public async Task<IActionResult> EditSubmissionComment(Guid id, EditSubmissionCommentRequest payload)
+    {
+        return HandleResult(await Mediator.Send(new EditSubmissionComment.Command { Id = id, Dto = payload }));
+    }
+
+    [HttpPut("Submission/{id}/Publish")]
+    [SwaggerOperation(Summary = "Publish a thesis by submissionId")]
+    public async Task<IActionResult> PublishThesis(Guid id)
+    {
+        return HandleResult(await Mediator.Send(new PublishThesis.Command { Id = id }));
+    }
+
+    [HttpDelete("Submission/{id}/Publish")]
+    [SwaggerOperation(Summary = "Unpublish a thesis by submissionId")]
+    public async Task<IActionResult> UnPublishThesis(Guid id)
+    {
+        return HandleResult(await Mediator.Send(new UnPublishThesis.Command { Id = id }));
+    }
+
 
 }

@@ -10,7 +10,7 @@ namespace Application.Lecturers.DTOs
         public string? Title { get; set; }
         public bool IsActive { get; set; }
         [EmailAddress]
-        [IsEmailUnique]
+      //  [EmailExist]
         public string Email { get; set; }
         public string? PhoneNumber { get; set; }  
         public Guid SchoolId { get; set; }
