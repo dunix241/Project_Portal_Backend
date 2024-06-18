@@ -22,4 +22,7 @@ RUN dotnet publish "API.csproj" -c Release -o /app/publish /p:UseAppHost=false
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY Persistence/Seed/Data Persistence/Seed/Data
+COPY API/project-portal.db project-portal.db
+COPY API/Templates Templates
 ENTRYPOINT ["dotnet", "API.dll"]
