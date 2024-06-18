@@ -52,4 +52,10 @@ public class EnrollmentsController : PmsApiController
     {
         return HandleResult(await Mediator.Send(new DeleteEnrollmentMember.Command{Id = id}));
     }
+
+    [HttpGet("{id}/History")]
+    public async Task<ActionResult<GetEnrollmentHistoryResponseDto>> ListEnrollmentHistory(Guid id)
+    {
+        return HandleResult(await Mediator.Send(new GetHistory.Query { ProjectId = id }));
+    }
 }

@@ -1,22 +1,21 @@
 ﻿using Application.Core;
 using Application.EnrollmentPlans.DTOs;
+using Application.Enrollments.DTOs;
 using AutoMapper;
 using MediatR;
 using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Application.Enrollments
+namespace Application.Enrollments;
+
+public class List
 {
-    public class Query : IRequest<Result<ListEnrollmentPlansResponseDto>>
+    public class Query : IRequest<Result<ListEnrollmentResponseDto>>
     {
+        public Guid? SemesterId { get; set; }
         public PagingParams PagingParams { get; set; }
     }
 
-    public class Handler : IRequestHandler<Query, Result<ListEnrollmentPlansResponseDto>>
+    public class Handler : IRequestHandler<Query, Result<ListEnrollmentResponseDto>>
     {
         private readonly DataContext _dataContext;
         private readonly IMapper _mapper;
@@ -27,16 +26,14 @@ namespace Application.Enrollments
             _mapper = mapper;
         }
 
-        public async Task<Result<ListEnrollmentPlansResponseDto>> Handle(Query request, CancellationToken cancellationToken)
+        public async Task<Result<ListEnrollmentResponseDto>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var query = _dataContext.EnrollmentPlans
-                .Select(entity => _mapper.Map<EnrollmentPlanResponseDto>(entity))
-                .AsQueryable();
-
-            var enrollmentPlans = new ListEnrollmentPlansResponseDto();
+            var query = _dataContext.Enrollments.Where(x => ( request.SemesterId == null || x.SemesterId == request.SemesterId));
+            var enrollmentPlans = new ListEnrollmentResponseDto();
             await enrollmentPlans.GetItemsAsync(query, request.PagingParams.PageNumber, request.PagingParams.PageSize);
 
-            return Result<ListEnrollmentPlansResponseDto>.Success(enrollmentPlans);
+            return Result<ListEnrollmentResponseDto>.Success(enrollmentPlans);
         }
     }
 }
+

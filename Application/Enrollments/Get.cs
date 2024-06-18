@@ -1,6 +1,8 @@
 ﻿using Application.Core;
 using Application.Enrollments.DTOs;
 using AutoMapper;
+using DocumentFormat.OpenXml.InkML;
+using Domain.Enrollment;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -9,12 +11,12 @@ namespace Application.Enrollment;
 
 public class Get
 {
-    public class Query : IRequest<Result<GetEnrollmentResponseDto>>
+    public class Query : IRequest<Result<GetEnrollmentDetailResponseDto>>
     {
         public Guid Id { get; set; }
     }
 
-    public class Handler : IRequestHandler<Query, Result<GetEnrollmentResponseDto>>
+    public class Handler : IRequestHandler<Query, Result<GetEnrollmentDetailResponseDto>>
     {
         private readonly DataContext _dataContext;
         private readonly IMapper _mapper;
@@ -24,23 +26,68 @@ public class Get
             _dataContext = dataContext;
             _mapper = mapper;
         }
-        
-        public async Task<Result<GetEnrollmentResponseDto>> Handle(Query request, CancellationToken cancellationToken)
+
+        public async Task<Result<GetEnrollmentDetailResponseDto>> Handle(Query request, CancellationToken cancellationToken)
         {
+            var enrollmentId = request.Id;
             var enrollment = await _dataContext.Enrollments
-                    .Include(entity => entity.EnrollmentMembers)
-                    .Include(entity => entity.ProjectSemester)
-                    .Where(entity => entity.Id == request.Id)
-                    .FirstOrDefaultAsync()
-                ;
+           .Include(e => e.ProjectSemester)
+               .ThenInclude(ps => ps.Project)
+                   .ThenInclude(p => p.School)
+           .Include(e => e.ProjectSemester)
+               .ThenInclude(ps => ps.Semester)
+           .Include(e => e.EnrollmentMembers)
+               .ThenInclude(em => em.User)
+           .Where(e => e.Id == enrollmentId)
+           .Select(e => new GetEnrollmentDetailResponseDto
+           {
+               EnrollmentId = e.Id,
+               Title = e.Title,
+               Description = e.Description,
+               RegisterDate = e.RegisterDate,
+               Project = new ProjectDto
+               {
+                   Id = e.ProjectSemester.Project.Id,
+                   Name = e.ProjectSemester.Project.Name,
+                   SchoolName = e.ProjectSemester.Project.School.Name
+               },
+               Semester = new SemesterDto
+               {
+                   Id = e.ProjectSemester.Semester.Id,
+                   Name = e.ProjectSemester.Semester.Name,
+                   StartDate = e.ProjectSemester.Semester.StartDate,
+                   EndDate = e.ProjectSemester.Semester.EndDate
+               },
+               Members = e.EnrollmentMembers.Select(em => new EnrollmentMemberDto
+               {
+                   MemberId = em.Id,
+                   UserId = em.UserId,
+                   IsAccepted = em.IsAccepted,
+                   RejectReason = em.RejectReason,
+                   CreatedAt = em.CreatedAt,
+                   UpdatedAt = em.UpdatedAt,
+               }).ToList()
+           }).FirstOrDefaultAsync();
+            ;
             if (enrollment == null)
             {
                 return null;
             }
+            enrollment.Submissions = new List<SubmissionDto>();
+            var submissions = _dataContext.Submissions.Where(x => x.EnrollmentId == enrollment.EnrollmentId)
+                .Select(x => new SubmissionDto
+                {
+                    DueDate = x.DueDate,
+                    Id = x.Id,
+                    Status = x.Status,
+                    SubmittedDate = x.SubmittedDate,
+                    ThesisId = x.ThesisId
+                });
 
-            var payload = _mapper.Map<GetEnrollmentResponseDto>(enrollment);
+            enrollment.Submissions.AddRange(submissions);
+            var payload = _mapper.Map<GetEnrollmentDetailResponseDto>(enrollment);
 
-            return Result<GetEnrollmentResponseDto>.Success(payload);
+            return Result<GetEnrollmentDetailResponseDto>.Success(payload);
         }
     }
 }

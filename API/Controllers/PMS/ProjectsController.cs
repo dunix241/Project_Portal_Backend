@@ -3,6 +3,7 @@ using Application.Enrollments;
 using Application.Enrollments.DTOs;
 using Application.Projects;
 using Application.Projects.DTOs;
+using Domain.Project;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers.PMS;
@@ -12,7 +13,7 @@ public class ProjectsController : PmsApiController
     [HttpGet]
     public async Task<IActionResult> List([FromQuery] PagingParams pagingParams)
     {
-        return HandleResult(await Mediator.Send(new List.Query{QueryParams = pagingParams}));
+        return HandleResult(await Mediator.Send(new Application.Projects.List.Query{QueryParams = pagingParams}));
     }
 
     [HttpGet("{id}")]
