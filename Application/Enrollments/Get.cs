@@ -1,8 +1,6 @@
 ﻿using Application.Core;
 using Application.Enrollments.DTOs;
 using AutoMapper;
-using DocumentFormat.OpenXml.InkML;
-using Domain.Enrollment;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;

@@ -1,4 +1,5 @@
-﻿using Domain.Semester;
+﻿using Domain.File;
+using Domain.Semester;
 
 namespace Domain.Enrollment;
 
@@ -21,4 +22,6 @@ public class Enrollment
     public Guid? ForkedFromId { get; set; }
     public Enrollment? ForkFrom { get; set; }
     public List<EnrollmentMember> EnrollmentMembers { get; set; }
+    public Guid? ThesisId { get; set; }
+    public Domain.File.File? Thesis { get; set; }
 }

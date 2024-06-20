@@ -1,5 +1,4 @@
 ﻿using Application.Core;
-using Application.Lecturers.DTOs;
 using Application.Students.DTOs;
 using AutoMapper;
 using MediatR;
@@ -36,7 +35,7 @@ namespace Application.Students
 
                 if (student == null)
                 {
-                    return null;
+                    Result<GetStudentResponseDto>.Failure("Not found");
                 }
 
                 var responseDto = _mapper.Map<GetStudentResponseDto>(student);

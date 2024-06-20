@@ -33,13 +33,13 @@ namespace Application.Minio
                 
                 try
                 {
-                    var statArgs = new StatObjectArgs().WithBucket(file.BucketName).WithObject(file.FileNameWithExtension);
+                    var statArgs = new StatObjectArgs().WithBucket(file.BucketName).WithObject(file.Name.ToString());
                     await _minioClient.StatObjectAsync(statArgs);
 
                     var memoryStream = new MemoryStream();
                     var arg = new GetObjectArgs()
                                         .WithBucket(file.BucketName)
-                                        .WithObject(file.FileNameWithExtension)
+                                        .WithObject(file.Name.ToString())
                                         .WithCallbackStream((stream) => stream.CopyTo(memoryStream));
 
                     await _minioClient.GetObjectAsync(arg);

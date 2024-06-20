@@ -30,7 +30,6 @@
     <ItemGroup>
       <Folder Include="Authorization\EnrollmentOwners\" />
       <Folder Include="Lecturers\Validation\" />
-      <Folder Include="Semesters\NewFolder\" />
     </ItemGroup>
 
 </Project>

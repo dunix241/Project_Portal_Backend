@@ -55,7 +55,7 @@ namespace Application.Minio
 
                         var fileObj = new File
                         {
-                            Name = new Guid(),
+                            Name = Guid.NewGuid(),
                             DisplayName = fileName,
                             Extension = extension,
                             BucketName = bucketName
@@ -66,7 +66,7 @@ namespace Application.Minio
 
                         var putArgs = new PutObjectArgs()
                             .WithBucket(request.Payload.BucketName)
-                            .WithObject(fileObj.FileNameWithExtension)
+                            .WithObject(fileObj.Name.ToString())
                             .WithStreamData(memoryStream)
                             .WithObjectSize(memoryStream.Length)
                             .WithContentType("application/octet-stream")

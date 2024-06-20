@@ -2,6 +2,8 @@ using API.DTOs.Accounts;
 using Application.EnrollmentPlans.DTOs;
 using Application.EnrollmentPlans.EnrollmentPlanDetails.DTOs;
 using Application.Enrollments.DTOs;
+using Application.Enrollments.Submissions.Comments.DTOs;
+using Application.Enrollments.Submissions.DTOs;
 using Application.Lecturers.DTOs;
 using Application.Minio.DTOs;
 using Application.MockDomains.DTOs;
@@ -12,6 +14,7 @@ using Application.Semesters.DTOs.Projects;
 using Application.Students.DTOs;
 using AutoMapper;
 using Domain;
+using Domain.Comment;
 using Domain.Enrollment;
 using Domain.EnrollmentPlan;
 using Domain.Lecturer;
@@ -20,6 +23,7 @@ using Domain.Project;
 using Domain.School;
 using Domain.Semester;
 using Domain.Student;
+using Domain.Submission;
 using File = Domain.File.File;
 
 namespace Application.Core;
@@ -35,6 +39,8 @@ public class MappingProfiles : Profile
         CreateSemesterMaps();
         CreateFileMaps();
         CreateEnrollmentMaps();
+        CreateSubmissionMaps();
+        CreateSummsionComment();
     }
 
     private void CreateMockDomainMaps()
@@ -126,5 +132,16 @@ public class MappingProfiles : Profile
         CreateMap<EnrollmentPlan, EnrollmentPlanResponseDto>();
         CreateMap<CreateEnrollmentPlanDetailsRequestDto, EnrollmentPlanDetails>();
         CreateMap<EnrollmentPlanDetails, EnrollmentPlanDetailsResponseDto>();
+    }
+
+    private void CreateSubmissionMaps()
+    {
+        CreateMap<CreateSubmissionRequestDto, Submission>();
+        CreateMap<GetSubmissionResponseDto, Submission>();
+    }
+
+    public void CreateSummsionComment()
+    {
+        CreateMap<SubmissionCommentDto, SubmissionComment>().ForMember(dest => dest.UserId, opt => opt.Ignore());
     }
 }
