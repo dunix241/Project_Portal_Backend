@@ -105,10 +105,10 @@ public class CreateEnrollmentMember
                 mailData.BodyBuilder.HtmlBody = Smart.Format(mailData.BodyBuilder.HtmlBody, arg);
                 mailData.BodyBuilder.TextBody = Smart.Format(mailData.BodyBuilder.TextBody, arg);
 
-                succeeded &= (await _mediator.Send(new Send.Command
-                {
-                    MailData = mailData
-                })).IsSuccess;
+                // succeeded &= (await _mediator.Send(new Send.Command
+                // {
+                //     MailData = mailData
+                // })).IsSuccess;
             }
             
             var result = succeeded ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("").SetId(Errors.ERROR_ADDING_ENROLLMENT_MEMBER);
