@@ -2,6 +2,7 @@ using API.DTOs.Accounts;
 using Application.EnrollmentPlans.DTOs;
 using Application.EnrollmentPlans.EnrollmentPlanDetails.DTOs;
 using Application.Enrollments.DTOs;
+using Application.Enrollments.Submissions;
 using Application.Enrollments.Submissions.Comments.DTOs;
 using Application.Enrollments.Submissions.DTOs;
 using Application.Lecturers.DTOs;
@@ -140,7 +141,9 @@ public class MappingProfiles : Profile
     {
         CreateMap<CreateSubmissionRequestDto, Submission>();
         CreateMap<GetSubmissionResponseDto, Submission>();
+        CreateMap<EditSubmissionRequestDto, Submission>();
     }
+
 
     public void CreateSummsionComment()
     {

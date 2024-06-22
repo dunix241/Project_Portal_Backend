@@ -3,7 +3,7 @@ using Domain.Submission;
 
 namespace Application.Enrollments.Submissions.DTOs
 {
-    public class ListSubmissionResponseDto:PagedList<Submission>
+    public class ListSubmissionResponseDto:List<Submission>
     {
     }
 }

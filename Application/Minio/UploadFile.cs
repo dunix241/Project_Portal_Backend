@@ -45,7 +45,9 @@ namespace Application.Minio
                     var found = await _minioClient.BucketExistsAsync(existArgs).ConfigureAwait(false);
                     if (!found)
                     {
-                        return Result<AddFileResponseDto>.Failure($"Bucket {request.Payload.BucketName} does not exist.");
+                        var mkBktArgs = new MakeBucketArgs().WithBucket(bucketName);
+                        await _minioClient.MakeBucketAsync(mkBktArgs).ConfigureAwait(false);
+                        Console.WriteLine("Bucket +" + bucketName + " created automatically");
                     }
 
                     using (var memoryStream = new MemoryStream())

@@ -1,44 +1,46 @@
 ﻿using Application.Core;
 using Application.Enrollments.DTOs;
+using Application.Interfaces;
 using AutoMapper;
-using DocumentFormat.OpenXml.InkML;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Application.Enrollments
 {
     public class GetHistory
     {
-        public class Query : IRequest<Result<GetEnrollmentHistoryResponseDto>>
+        public class Query : IRequest<Result<List<GetEnrollmentHistoryResponseDto>>>
         {
             public Guid ProjectId { get; set; }
         }
 
-        public class Handler : IRequestHandler<Query, Result<GetEnrollmentHistoryResponseDto>>
+        public class Handler : IRequestHandler<Query, Result<List<GetEnrollmentHistoryResponseDto>>>
         {
             private readonly DataContext _dataContext;
             private readonly IMapper _mapper;
+            private readonly IUserAccessor _userAccessor;
 
-            public Handler(DataContext dataContext, IMapper mapper)
+            public Handler(DataContext dataContext, IMapper mapper, IUserAccessor userAccessor)
             {
                 _dataContext = dataContext;
                 _mapper = mapper;
+                _userAccessor = userAccessor;
             }
 
-            public async Task<Result<GetEnrollmentHistoryResponseDto>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<Result<List<GetEnrollmentHistoryResponseDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
+                var userId = _userAccessor.GetUser().Id;
+                if(userId == null) { 
+                }
                 var projectId = request.ProjectId;
-                var history = await _dataContext.ProjectSemesters
-                    .Include(ps => ps.Semester)
-                    .Include(ps => ps.Enrollments)
-                        .ThenInclude(e => e.EnrollmentMembers)
-                        .ThenInclude(em => em.User)
+
+                var histories = await _dataContext.ProjectSemesters
                     .Where(ps => ps.ProjectId == projectId)
                     .Select(ps => new GetEnrollmentHistoryResponseDto
                     {
@@ -46,32 +48,32 @@ namespace Application.Enrollments
                         Name = ps.Semester.Name,
                         StartDate = ps.Semester.StartDate,
                         EndDate = ps.Semester.EndDate,
-                        Enrollments = ps.Enrollments.Select(e => new EnrollmentDto
-                        {
-                            EnrollmentId = e.Id,
-                            Title = e.Title,
-                            Description = e.Description,
-                            RegisterDate = e.RegisterDate,
-                            Members = e.EnrollmentMembers.Select(em => new EnrollmentMemberDto
+                        Enrollments = ps.Enrollments
+                            .Where(e => e.OwnerId == userId)
+                            .Select(e => new EnrollmentDto
                             {
-                                MemberId = em.Id,
-                                UserId = em.UserId,
-                                IsAccepted = em.IsAccepted,
-                                RejectReason = em.RejectReason,
-                                CreatedAt = em.CreatedAt,
-                                UpdatedAt = em.UpdatedAt,
+                                EnrollmentId = e.Id,
+                                Title = e.Title,
+                                Description = e.Description,
+                                RegisterDate = e.RegisterDate,
+                                Submissions = _dataContext.Submissions
+                                    .Where(s => s.EnrollmentId == e.Id)
+                                    .Select(s => new SubmissionDto
+                                    {
+                                        Id = s.Id,
+                                        Status = s.Status,
+                                        SubmittedDate = s.SubmittedDate,
+                                        DueDate = s.DueDate
+                                    }).ToList()
                             }).ToList()
-                        }).ToList()
-                    }).FirstOrDefaultAsync();
+                    }).ToListAsync(cancellationToken);
 
-                if (history == null)
+                if (histories == null || !histories.Any())
                 {
-                    return null;
+                    return Result<List<GetEnrollmentHistoryResponseDto>>.Failure("No enrollment history found for the specified project.");
                 }
 
-                var payload = _mapper.Map<GetEnrollmentHistoryResponseDto>(history);
-
-                return Result<GetEnrollmentHistoryResponseDto>.Success(payload);
+                return Result<List<GetEnrollmentHistoryResponseDto>>.Success(histories);
             }
         }
     }

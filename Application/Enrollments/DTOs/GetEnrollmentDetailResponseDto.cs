@@ -8,8 +8,13 @@
         public DateTime RegisterDate { get; set; }
         public ProjectDto Project { get; set; }
         public SemesterDto Semester { get; set; }
-        public List<EnrollmentMemberDto> Members { get; set; }
-        public List<SubmissionDto> Submissions { get; set; }
+        public string? HeirFortunes { get; set; }
+        public Boolean IsPublished { get; set; }
+        public DateTime? PublishDate { get; set; }
+        public bool CanBeForked { get; set; }
+
+        // public List<EnrollmentMemberDto> Members { get; set; }
+        // public List<SubmissionDto> Submissions { get; set; }
     }
     public class SubmissionDto
     {

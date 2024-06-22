@@ -1,6 +1,8 @@
 ﻿using Application.Core;
-using Application.Enrollments.Submissions.DTOs;
+using Application.Minio;
+using Application.Minio.DTOs;
 using AutoMapper;
+using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -18,11 +20,13 @@ namespace Application.Enrollments.Submissions
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
+            private readonly IMediator _mediator;
 
-            public Handler(DataContext context, IMapper mapper)
+            public Handler(DataContext context, IMapper mapper, IMediator mediator)
             {
                 _context = context;
                 _mapper = mapper;
+                _mediator = mediator;
             }
 
             public async Task<Result<DTOs.GetSubmissionResponseDto>> Handle(Query request, CancellationToken cancellationToken)
@@ -40,7 +44,7 @@ namespace Application.Enrollments.Submissions
                         Id = x.Id,
                         Status = x.Status,
                         SubmittedDate = x.SubmittedDate,
-                        ThesisId = x.ThesisId,
+                        FileResponseDto = new Minio.DTOs.FileResponseDto { Id = x.ThesisId }
                     })
                     .FirstOrDefaultAsync(cancellationToken);
 
@@ -49,9 +53,25 @@ namespace Application.Enrollments.Submissions
                     return null;
                 }
 
-                var responseDto = _mapper.Map<DTOs.GetSubmissionResponseDto>(submission);
+                var fileDto = submission.FileResponseDto;
+                var fileId = fileDto?.Id;
+                if (fileId != null)
+                {
+                    var file = await _context.Files.Where(s => s.Id == fileId).FirstOrDefaultAsync();
+                    if (file != null)
+                    {
+                        var response = await _mediator.Send(new GetFile.Query { Id = file.Id });
+                        if (response != null)
+                        {
+                            fileDto = response.Value;
+                        }
+                    }
+                }
+                submission.FileResponseDto = fileDto;
 
-                return Result<DTOs.GetSubmissionResponseDto>.Success(responseDto);
+                //var responseDto = _mapper.Map<DTOs.GetSubmissionResponseDto>(submission);
+
+                return Result<DTOs.GetSubmissionResponseDto>.Success(submission);
             }
         }
     }

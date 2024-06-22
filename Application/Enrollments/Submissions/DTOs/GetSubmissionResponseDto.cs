@@ -1,5 +1,5 @@
-﻿using Domain.Comment;
-using Domain.Submission;
+﻿using Application.Minio.DTOs;
+
 namespace Application.Enrollments.Submissions.DTOs
 {
     public class GetSubmissionResponseDto
@@ -9,6 +9,7 @@ namespace Application.Enrollments.Submissions.DTOs
         public DateTime DueDate { get; set; }
         public string Status { get; set; }
         public DateTime? SubmittedDate { get; set; }
-        public Guid? ThesisId { get; set; }
+        public string? Description { get; set; }
+        public FileResponseDto? FileResponseDto { get; set; }
     }
 }

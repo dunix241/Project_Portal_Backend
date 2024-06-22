@@ -66,15 +66,15 @@ public class EnrollmentsController : PmsApiController
     }
 
     [HttpGet("{id}/History")]
-    [SwaggerOperation(Summary = "Get enrollment history")]
+    [SwaggerOperation(Summary = "Get enrollment history of current user")]
     public async Task<ActionResult<GetEnrollmentHistoryResponseDto>> ListEnrollmentHistory(Guid id)
     {
         return HandleResult(await Mediator.Send(new GetHistory.Query { ProjectId = id }));
     }
 
-    [HttpGet("{id}/Submissions")]
+    [HttpGet("Submissions/{id}")]
     [SwaggerOperation(Summary = "Get submission detail")]
-    public async Task<ActionResult<GetEnrollmentHistoryResponseDto>> ListEnrollmentSubmission(Guid id)
+    public async Task<ActionResult<DetailEnrollmentSubmission>> GetEnrollmentSubmission(Guid id)
     {
         return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.DetailEnrollmentSubmission.Query { Id = id }));
     }
@@ -101,53 +101,53 @@ public class EnrollmentsController : PmsApiController
     }
 
     [HttpPut("{id}/Submmisions/Thesis")]
-    [SwaggerOperation(Summary = "Edit a submission thesis")]
+    [SwaggerOperation(Summary = "Add thesis to submission")]
     public async Task<IActionResult> EditSubmissionThesis(Guid id, IFormFile file)
     {
         var payload = new AddFileRequestDto
         {
-            BucketName = "Theses",
+            BucketName = "theses",
             FormFile = file,
         };
         return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.EditEnrollmentSubmissionThesis.Command { Id = id, Dto = payload }));
     }
 
-    [HttpGet("{enrollmentId}/Submissions/List")]
+    [HttpGet("{enrollmentId}/Submissions")]
     [SwaggerOperation(Summary = "List submission ")]
-    public async Task<ActionResult<ListEnrollmentSubmission>> ListEnrollmentSubmission(Guid enrollmentId, [FromQuery] PagingParams pagingParams)
+    public async Task<ActionResult<ListEnrollmentSubmission>> ListAllEnrollmentSubmission(Guid enrollmentId)
     {
-        return HandleResult(await Mediator.Send(new ListEnrollmentSubmission.Query { EnrollmentId = enrollmentId, QueryParams = pagingParams }));
+        return HandleResult(await Mediator.Send(new ListEnrollmentSubmission.Query { EnrollmentId = enrollmentId, }));
     }
 
     [HttpGet("Submissions/{id}/Comments")]
     [SwaggerOperation(Summary = "List submission comment ")]
-    public async Task<ActionResult<ListEnrollmentSubmission>> ListSubmissionComment(Guid id, [FromQuery] PagingParams pagingParams)
+    public async Task<ActionResult<ListSubmissionComment>> ListSubmissionComment(Guid id, [FromQuery] PagingParams pagingParams)
     {
         return HandleResult(await Mediator.Send(new ListSubmissionComment.Query { SubmissionId = id, PagingParams = pagingParams }));
     }
 
-    [HttpPost("Submission/Comments")]
+    [HttpPost("Submissions/Comments")]
     [SwaggerOperation(Summary = "Add a  submission comment")]
     public async Task<IActionResult> CreateSubmissionComment(CreateSubmissionCommentRequest payload)
     {
         return HandleResult(await Mediator.Send(new CreateSubmissionComment.Command { Payload = payload }));
     }
 
-    [HttpPut("Submission/Comments/{id}")]
+    [HttpPut("Submissions/Comments/{id}")]
     [SwaggerOperation(Summary = "Edit a  submission comment")]
     public async Task<IActionResult> EditSubmissionComment(Guid id, EditSubmissionCommentRequest payload)
     {
         return HandleResult(await Mediator.Send(new EditSubmissionComment.Command { Id = id, Dto = payload }));
     }
 
-    [HttpPut("Submission/{id}/Publish")]
+    [HttpPut("Submissions/{id}/Publish")]
     [SwaggerOperation(Summary = "Publish a thesis by submissionId")]
     public async Task<IActionResult> PublishThesis(Guid id)
     {
         return HandleResult(await Mediator.Send(new PublishThesis.Command { Id = id }));
     }
 
-    [HttpDelete("Submission/{id}/Publish")]
+    [HttpDelete("Submissions/{id}/Publish")]
     [SwaggerOperation(Summary = "Unpublish a thesis by submissionId")]
     public async Task<IActionResult> UnPublishThesis(Guid id)
     {

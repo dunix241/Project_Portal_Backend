@@ -31,7 +31,7 @@ namespace Application.Enrollments.Submissions
                 var submission = new Submission();
                 var requestSubmission = request.Submission;
 
-                if (requestSubmission.DueDate <= DateTime.Now)
+                if (requestSubmission.DueDate.ToUniversalTime() < DateTime.UtcNow)
                 {
                     return Result<Submission>.Failure("Invalid duedate");
                 }
