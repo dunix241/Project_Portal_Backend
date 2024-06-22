@@ -8,7 +8,6 @@ namespace Domain.Student
         public string UserId { get; set; }
         public User User { get; set; }
         public long IRN { get; set; }
-        public bool IsActive { get; set; }
         public Guid SchoolId { get; set; }
         public School.School School { get; set; }
     }

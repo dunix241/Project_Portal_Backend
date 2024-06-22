@@ -27,10 +27,4 @@ public class ProjectsController : PmsApiController
     {
         return HandleResult(await Mediator.Send(new ListBasedOnEnrollmentPlan.Query()));
     }
-
-    [HttpGet("Joined")]
-    public async Task<ActionResult<ListProjectsJoinedResponseDto>> GetProjectJoined()
-    {
-        return HandleResult(await Mediator.Send(new ListProjectsJoined.Query()));
-    }
 }

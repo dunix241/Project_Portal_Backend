@@ -235,9 +235,6 @@ namespace Persistence.Migrations
                     b.Property<string>("Headline")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("TEXT");
 
@@ -419,10 +416,7 @@ namespace Persistence.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("AvatarId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("AvatarId1")
+                    b.Property<Guid?>("AvatarId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -439,6 +433,9 @@ namespace Persistence.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
@@ -478,7 +475,7 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AvatarId1");
+                    b.HasIndex("AvatarId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -830,7 +827,7 @@ namespace Persistence.Migrations
                 {
                     b.HasOne("Domain.File.File", "Avatar")
                         .WithMany()
-                        .HasForeignKey("AvatarId1");
+                        .HasForeignKey("AvatarId");
 
                     b.Navigation("Avatar");
                 });

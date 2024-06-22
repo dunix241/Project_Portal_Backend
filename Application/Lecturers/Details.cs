@@ -28,17 +28,30 @@ namespace Application.Lecturers
             public async Task<Result<GetLecturerResponseDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var lecturer = await _context.Lecturers
-                   .Where(s => s.IsActive)
                    .Where(s => s.UserId == request.Id)
-                   .FirstOrDefaultAsync();
-
+                   .Include(x => x.School)
+                   .FirstOrDefaultAsync();                   
 
                 if (lecturer == null)
                 {
                     return Result<GetLecturerResponseDto>.Failure("Lecturer not found.");
                 }
+                if(lecturer?.SchoolId != null)
+                {
+                    var school = _context.Schools.FindAsync(lecturer.SchoolId);
+                    if(school == null)
+                    {
+                        return Result<GetLecturerResponseDto>.Failure("School not found.");
+                    }
+                }
 
-                var responseDto = _mapper.Map<GetLecturerResponseDto>(lecturer);
+                var user = await _context.Users.FindAsync(lecturer.UserId);
+
+                var responseDto = _mapper.Map<GetLecturerResponseDto>(_context.Users.FirstOrDefault(entity => entity.Id == lecturer.UserId));
+                responseDto.SchoolId = lecturer?.SchoolId;
+                responseDto.SchoolName = lecturer?.School?.Name;
+                responseDto.Headline = lecturer?.Headline;
+                responseDto.Title = lecturer?.Title;
 
                 return Result<GetLecturerResponseDto>.Success(responseDto);
             }

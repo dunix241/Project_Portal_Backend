@@ -11,6 +11,7 @@
         public string LastName { get; set; }
         public bool IsActive { get; set; } 
         public Guid SchoolId { get; set; }
-        public string? SchoolName { get; set; }
+        public Guid? AvatarId { get; set; }
+        public string SchoolName { get; set; }
     }
 }

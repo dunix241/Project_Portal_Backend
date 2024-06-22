@@ -15,7 +15,7 @@ public class ListProjectsJoined
 {
     public class Query : IRequest<Result<ListProjectsJoinedResponseDto>>
     {
-        
+        public string userId { get; set; }
     }
 
     public class Handler : IRequestHandler<Query, Result<ListProjectsJoinedResponseDto>>
@@ -35,7 +35,8 @@ public class ListProjectsJoined
         
         public async Task<Result<ListProjectsJoinedResponseDto>> Handle(Query request, CancellationToken cancellationToken)
         {
-            var userId = _userAccessor.GetUser().Id;
+            //var userId = _userAccessor.GetUser().Id;
+            var userId = request.userId;
 
             var result = await _dataContext.EnrollmentMembers
                 .Include(entity => entity.Enrollment)

@@ -28,7 +28,6 @@ namespace Application.Students
             public async Task<Result<GetStudentResponseDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var student = await _context.Students
-                    .Where(s => s.IsActive)
                     .Include(s => s.School)
                     .Where(s => s.UserId == request.Id)
                     .FirstOrDefaultAsync();
@@ -39,6 +38,21 @@ namespace Application.Students
                 }
 
                 var responseDto = _mapper.Map<GetStudentResponseDto>(student);
+             
+                var user = await _context.Users.FindAsync(student?.UserId);
+                // responseDto = _mapper.Map<GetStudentResponseDto>(user);
+                if (user != null)
+                {
+                    responseDto.Email = user.Email;
+                    responseDto.IsActive = user.IsActive;
+                    responseDto.Id = user.Id;
+                    responseDto.FirstName = user.FirstName;
+                    responseDto.LastName = user.LastName;
+                    responseDto.FullName = user.FullName;
+                    responseDto.PhoneNumber = user.PhoneNumber;
+                    responseDto.AvatarId = user.AvatarId;
+                    
+                }
 
                 return Result<GetStudentResponseDto>.Success(responseDto);
             }

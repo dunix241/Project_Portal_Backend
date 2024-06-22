@@ -25,7 +25,7 @@ namespace Application.Lecturers
 
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var lecturer = await _context.Lecturers.FindAsync(request.Id);
+                var lecturer = await _context.Users.FindAsync(request.Id);
                 if (lecturer == null)
                 {
                     return null;

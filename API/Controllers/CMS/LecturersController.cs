@@ -16,7 +16,7 @@ public class LecturersController : CmsApiController
 
     [HttpPut("{id}")]
     [SwaggerOperation(Summary = "Update a lecturer's information")]
-    public async Task<IActionResult> EditLecturer(Guid id, EditLecturerRequestDto lecturer)
+    public async Task<IActionResult> EditLecturer(string id, EditLecturerRequestDto lecturer)
     {
         return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Lecturer = lecturer }));
     }

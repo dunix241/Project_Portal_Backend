@@ -28,7 +28,6 @@ namespace Application.Students
             public async Task<Result<ListStudentResponseDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var students =  _context.Students
-                    .Where(s => s.IsActive)
                     .Include(s => s.School)
                     .Where(s => s.School.IsActive)
                     .AsQueryable();
