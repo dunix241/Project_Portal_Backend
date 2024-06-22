@@ -43,6 +43,10 @@ public class Get
                Title = e.Title,
                Description = e.Description,
                RegisterDate = e.RegisterDate,
+               CanBeForked = e.CanBeForked,
+               HeirFortunes = e.HeirFortunes,
+               IsPublished = e.IsPublished,
+               PublishDate = e.PublishDate,              
                Project = new ProjectDto
                {
                    Id = e.ProjectSemester.Project.Id,
@@ -55,34 +59,14 @@ public class Get
                    Name = e.ProjectSemester.Semester.Name,
                    StartDate = e.ProjectSemester.Semester.StartDate,
                    EndDate = e.ProjectSemester.Semester.EndDate
-               },
-               Members = e.EnrollmentMembers.Select(em => new EnrollmentMemberDto
-               {
-                   MemberId = em.Id,
-                   UserId = em.UserId,
-                   IsAccepted = em.IsAccepted,
-                   RejectReason = em.RejectReason,
-                   CreatedAt = em.CreatedAt,
-                   UpdatedAt = em.UpdatedAt,
-               }).ToList()
+               },            
            }).FirstOrDefaultAsync();
             ;
             if (enrollment == null)
             {
                 return null;
             }
-            enrollment.Submissions = new List<SubmissionDto>();
-            var submissions = _dataContext.Submissions.Where(x => x.EnrollmentId == enrollment.EnrollmentId)
-                .Select(x => new SubmissionDto
-                {
-                    DueDate = x.DueDate,
-                    Id = x.Id,
-                    Status = x.Status,
-                    SubmittedDate = x.SubmittedDate,
-                    ThesisId = x.ThesisId
-                });
 
-            enrollment.Submissions.AddRange(submissions);
             var payload = _mapper.Map<GetEnrollmentDetailResponseDto>(enrollment);
 
             return Result<GetEnrollmentDetailResponseDto>.Success(payload);
