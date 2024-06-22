@@ -78,16 +78,10 @@ public class Create
                     messages.Add(result.Error);
                 }
             }
-
-            succeeded &= (await _dataContext.SaveChangesAsync()) != 0;
             
-            if (succeeded)
-            {
-                await transaction.CommitAsync(cancellationToken);
-                return Result<CreateEnrollmentResponseDto>.Success(new CreateEnrollmentResponseDto{Messages = messages});
-            }
-
-            return Result<CreateEnrollmentResponseDto>.Failure("A problem occurred while we trying to save your enrollment");
+            await transaction.CommitAsync(cancellationToken);
+            
+            return Result<CreateEnrollmentResponseDto>.Success(new CreateEnrollmentResponseDto{Messages = messages});
         }
     }
 }
