@@ -9,10 +9,10 @@ namespace API.Controllers.CMS
     public class EnrollmentsController : CmsApiController
     {
         [HttpGet("Semester")]
-        [SwaggerOperation(Summary = "List Enrollment by filter (inclue semesterId)")]
-        public async Task<ActionResult<ListEnrollmentResponseDto>> ListEnrollmentSemesters(Guid? semesterId, [FromQuery] PagingParams pagingParams)
+        [SwaggerOperation(Summary = "List Enrollment by filter (inclue semesterId,schoolId, userId,isPublished)")]
+        public async Task<ActionResult<ListEnrollmentResponseDto>> ListEnrollmentSemesters([FromQuery]ListEnrollmentRequestDto dto)
         {
-            return HandleResult(await Mediator.Send(new List.Query { SemesterId = semesterId, PagingParams = pagingParams }));
+            return HandleResult(await Mediator.Send(new List.Query { Payload=dto}));
         }
 
         [HttpGet("{id}/Members")]
