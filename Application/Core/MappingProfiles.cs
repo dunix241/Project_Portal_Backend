@@ -115,6 +115,9 @@ public class MappingProfiles : Profile
     private void CreateEnrollmentMaps()
     {
         CreateMap<Domain.Enrollment.Enrollment, ProjectJoinedResponseDto>();
+        CreateMap<Domain.Enrollment.EnrollmentMember, GetEnrollmentHistoryResponseDto>()
+            .ForMember(dest => dest.SemesterId, opt => opt.MapFrom(src => src.Enrollment.SemesterId))
+            .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Enrollment.ProjectSemester.Semester.Name));
         CreateMap<User, EnrollmentMemberResponseDto>();
 
         CreateMap<Domain.Enrollment.EnrollmentMember, EnrollmentMemberResponseDto>();

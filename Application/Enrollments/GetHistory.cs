@@ -36,44 +36,22 @@ namespace Application.Enrollments
             public async Task<Result<List<GetEnrollmentHistoryResponseDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var userId = _userAccessor.GetUser().Id;
-                if(userId == null) { 
-                }
-                var projectId = request.ProjectId;
-
-                var histories = await _dataContext.ProjectSemesters
-                    .Where(ps => ps.ProjectId == projectId)
-                    .Select(ps => new GetEnrollmentHistoryResponseDto
-                    {
-                        SemesterId = ps.SemesterId,
-                        Name = ps.Semester.Name,
-                        StartDate = ps.Semester.StartDate,
-                        EndDate = ps.Semester.EndDate,
-                        Enrollments = ps.Enrollments
-                            .Where(e => e.OwnerId == userId)
-                            .Select(e => new EnrollmentDto
-                            {
-                                EnrollmentId = e.Id,
-                                Title = e.Title,
-                                Description = e.Description,
-                                RegisterDate = e.RegisterDate,
-                                Submissions = _dataContext.Submissions
-                                    .Where(s => s.EnrollmentId == e.Id)
-                                    .Select(s => new SubmissionDto
-                                    {
-                                        Id = s.Id,
-                                        Status = s.Status,
-                                        SubmittedDate = s.SubmittedDate,
-                                        DueDate = s.DueDate
-                                    }).ToList()
-                            }).ToList()
-                    }).ToListAsync(cancellationToken);
-
-                if (histories == null || !histories.Any())
+                if(userId == null)
                 {
-                    return Result<List<GetEnrollmentHistoryResponseDto>>.Failure("No enrollment history found for the specified project.");
+                    return null;
                 }
 
-                return Result<List<GetEnrollmentHistoryResponseDto>>.Success(histories);
+                var enrollmentMembers = await _dataContext.EnrollmentMembers
+                    .Where(entity => entity.UserId == userId)
+                    .Include(entity => entity.Enrollment)
+                    .ThenInclude(entity => entity.ProjectSemester)
+                    .ThenInclude(entity => entity.Semester)
+                    .Where(entity => entity.Enrollment.ProjectId == request.ProjectId)
+                    .ToListAsync();
+
+                var results = enrollmentMembers.Select(member => _mapper.Map<GetEnrollmentHistoryResponseDto>(member)).ToList();
+
+                return Result<List<GetEnrollmentHistoryResponseDto>>.Success(results);
             }
         }
     }
