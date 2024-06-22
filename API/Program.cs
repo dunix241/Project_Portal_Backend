@@ -101,11 +101,8 @@ builder.Services.AddSwaggerGen(option =>
 
 builder.Services.AddDbContext<DataContext>(opt =>
 {
-    //opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"),
               b => b.MigrationsAssembly("Persistence"));
-               // b => b.MigrationsAssembly("API"));
-
 });
 
 builder.Services.AddCors(opt =>
@@ -141,7 +138,7 @@ builder.Services
         };
     });
 
-builder.Services.Configure<MinioSetting>(builder.Configuration.GetSection("Minio"));
+builder.Services.Configure<MinioSettings>(builder.Configuration.GetSection("Minio"));
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.AddScoped<TokenService>();
 
@@ -157,7 +154,7 @@ builder.Services.AddScoped<IAuthorizationHandler, EnrollmentOwnerAuthorizationHa
 //builder.Services.AddSingleton<IMinioClient, MinioClient>();
 builder.Services.AddSingleton<IMinioClient>(provider =>
 {
-    var config = provider.GetRequiredService<IOptions<MinioSetting>>().Value;
+    var config = provider.GetRequiredService<IOptions<MinioSettings>>().Value;
     var secure = false;
 
     return new MinioClient().WithEndpoint(config.Endpoint)
