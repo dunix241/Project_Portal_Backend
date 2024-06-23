@@ -88,7 +88,7 @@ namespace Application.Enrollments
                 var test = response.AsQueryable();
 
                 var enrollmentPlans = new ListEnrollmentWithThesisDto();
-                await enrollmentPlans.GetItemsAsync(test, payload.PageNumber, payload.PageSize);
+                await enrollmentPlans.GetItem(test, payload.PageNumber, payload.PageSize);
 
                 return Result<ListEnrollmentWithThesisDto>.Success(enrollmentPlans);
             }

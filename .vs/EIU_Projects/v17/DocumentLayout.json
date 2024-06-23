@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\showcase\\enrollmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\portal\\api\\controllers\\cms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\portal\\application\\core\\paging\\pagedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|solutionrelative:application\\core\\paging\\pagedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|c:\\myfolder-custome\\portal\\api\\controllers\\cms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{11D408BA-C060-44A6-80FC-7EA6DEC9022E}|API\\API.csproj|solutionrelative:api\\controllers\\cms\\enrollmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7CC20D7C-BDEB-480B-849B-1F69E4BCAF6F}|Application\\Application.csproj|c:\\myfolder-custome\\portal\\application\\minio\\getfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -583,15 +583,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 285,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1591845699:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
             },
             {
               "$type": "Document",
@@ -601,14 +597,14 @@
               "RelativeDocumentMoniker": "Application\\Enrollments\\ListEnrollmentWithThesis.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\portal\\Application\\Enrollments\\ListEnrollmentWithThesis.cs",
               "RelativeToolTip": "Application\\Enrollments\\ListEnrollmentWithThesis.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAuwDwAAAAlAAAA",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAuwGEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T20:19:16.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EnrollmentsController.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\portal\\API\\Controllers\\CMS\\EnrollmentsController.cs",
               "RelativeDocumentMoniker": "API\\Controllers\\CMS\\EnrollmentsController.cs",
@@ -634,13 +630,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PagedList.cs",
               "DocumentMoniker": "C:\\myFolder-CUSTOME\\portal\\Application\\Core\\Paging\\PagedList.cs",
               "RelativeDocumentMoniker": "Application\\Core\\Paging\\PagedList.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\portal\\Application\\Core\\Paging\\PagedList.cs",
               "RelativeToolTip": "Application\\Core\\Paging\\PagedList.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAiwBEAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAQwBQAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-22T16:11:03.535Z",
               "EditorCaption": ""
@@ -653,7 +649,7 @@
               "RelativeDocumentMoniker": "API\\Controllers\\Showcase\\EnrollmentController.cs",
               "ToolTip": "C:\\myFolder-CUSTOME\\portal\\API\\Controllers\\Showcase\\EnrollmentController.cs",
               "RelativeToolTip": "API\\Controllers\\Showcase\\EnrollmentController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAvwA4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T20:36:20.939Z",
               "EditorCaption": ""
@@ -668,8 +664,7 @@
               "RelativeToolTip": "Application\\Minio\\GetFile.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAAAB4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T10:26:44.74Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T10:26:44.74Z"
             },
             {
               "$type": "Document",
@@ -681,8 +676,7 @@
               "RelativeToolTip": "API\\Controllers\\Showcase\\ProjectController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T12:27:14.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T12:27:14.395Z"
             },
             {
               "$type": "Document",
@@ -694,8 +688,7 @@
               "RelativeToolTip": "Application\\Enrollments\\List.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAYwCgAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T08:02:36.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T08:02:36.004Z"
             },
             {
               "$type": "Document",
@@ -733,8 +726,7 @@
               "RelativeToolTip": "Application\\Enrollments\\DTOs\\ListEnrollmentWithThesisDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T20:18:33.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T20:18:33.505Z"
             },
             {
               "$type": "Document",
@@ -759,8 +751,7 @@
               "RelativeToolTip": "Application\\Core\\MappingProfiles.cs",
               "ViewState": "AQIAAHYAAAAAAAAAAADwv4MAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T01:33:48.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T01:33:48.177Z"
             },
             {
               "$type": "Document",
@@ -785,8 +776,7 @@
               "RelativeToolTip": "Application\\Enrollments\\DTOs\\EnrollmentWithThesis.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T20:16:39.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T20:16:39.215Z"
             },
             {
               "$type": "Document",
@@ -798,8 +788,7 @@
               "RelativeToolTip": "Domain\\Enrollment\\Enrollment.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAUwBkAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T12:24:24.354Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T12:24:24.354Z"
             },
             {
               "$type": "Document",
@@ -811,8 +800,7 @@
               "RelativeToolTip": "Domain\\File\\File.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T12:12:16.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-20T12:12:16.017Z"
             },
             {
               "$type": "Document",
@@ -824,8 +812,7 @@
               "RelativeToolTip": "API\\Controllers\\BaseApiController.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAAAABIAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T12:17:29.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T12:17:29.125Z"
             },
             {
               "$type": "Document",
@@ -850,8 +837,7 @@
               "RelativeToolTip": "Application\\Enrollments\\Submissions\\SubmissionStatus.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAmwA8AAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T03:40:37.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T03:40:37.47Z"
             },
             {
               "$type": "Document",
@@ -863,8 +849,7 @@
               "RelativeToolTip": "Domain\\Submission\\SubmissionStatus.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T06:15:27.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T06:15:27.8Z"
             },
             {
               "$type": "Document",
@@ -889,8 +874,7 @@
               "RelativeToolTip": "Application\\Enrollments\\Submissions\\DTOs\\CreateSubmissionRequestDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T12:04:24.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T12:04:24.556Z"
             },
             {
               "$type": "Document",
@@ -902,8 +886,7 @@
               "RelativeToolTip": "Domain\\Submission\\Submission.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAQAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T12:03:51.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T12:03:51.718Z"
             },
             {
               "$type": "Document",
@@ -915,8 +898,7 @@
               "RelativeToolTip": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\ffc53889e5fc3f8e8384f97d5c890800a1633a09064095ab1fd274a34801b5cc\\Application\\Enrollments\\Submissions\\SubmissionStatus.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T20:07:07.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T20:07:07.61Z"
             },
             {
               "$type": "Document",
@@ -928,8 +910,7 @@
               "RelativeToolTip": "API\\Controllers\\PMS\\SubmissionsApiController.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAowDQAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T03:33:17.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T03:33:17.995Z"
             },
             {
               "$type": "Document",
@@ -941,8 +922,7 @@
               "RelativeToolTip": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\2ca181d81a17e0e5c8bc834b9fb19deedec3b667c855becf323b94669d210a43\\Domain\\File\\File.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T14:36:49.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T14:36:49.131Z"
             },
             {
               "$type": "Document",
@@ -954,8 +934,7 @@
               "RelativeToolTip": "Application\\Minio\\StreamFile.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAkwCkAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T14:38:38.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T14:38:38.327Z"
             },
             {
               "$type": "Document",
@@ -967,8 +946,7 @@
               "RelativeToolTip": "Application\\Minio\\UploadFile.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAAmwEYAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T10:36:47.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-22T10:36:47.533Z"
             },
             {
               "$type": "Document",
@@ -993,8 +971,7 @@
               "RelativeToolTip": "..\\..\\Users\\amin\\AppData\\Local\\SourceServer\\7999e942e629996de609eadb466e1a53e7ff8b4958b1ce8730ad3c71a386e13b\\Application\\Minio\\GetFile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T14:36:41.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T14:36:41.246Z"
             },
             {
               "$type": "Document",
@@ -1006,8 +983,7 @@
               "RelativeToolTip": "Application\\Enrollments\\Submissions\\UnsubmitThesis.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAgwCUAAAB8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T03:39:01.243Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-23T03:39:01.243Z"
             },
             {
               "$type": "Document",
