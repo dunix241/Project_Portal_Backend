@@ -116,8 +116,14 @@ builder.Services.AddCors(opt =>
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials()
-            .WithOrigins("http://localhost:3000", "https://localhost:3000", "http://dunix.ddns.net:3000", "https://localhost:5002", "http://localhost:5001")
-            ;
+            .WithOrigins(
+                "http://localhost:3000",
+                "https://localhost:3000",
+                "http://dunix.ddns.net:3000",
+                "https://localhost:5002",
+                "http://localhost:5001",
+                "https://page.dunix.id.vn"
+            );
     });
 });
 
