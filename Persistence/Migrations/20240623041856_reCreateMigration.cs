@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class updateUserIsActive : Migration
+    public partial class reCreateMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -294,7 +294,6 @@ namespace Persistence.Migrations
                 {
                     UserId = table.Column<string>(type: "TEXT", nullable: false),
                     IRN = table.Column<long>(type: "INTEGER", nullable: false),
-                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
                     SchoolId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

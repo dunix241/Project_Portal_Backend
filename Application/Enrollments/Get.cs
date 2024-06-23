@@ -46,7 +46,8 @@ public class Get
                CanBeForked = e.CanBeForked,
                HeirFortunes = e.HeirFortunes,
                IsPublished = e.IsPublished,
-               PublishDate = e.PublishDate,              
+               PublishDate = e.PublishDate,    
+               ThesisId = e.ThesisId,
                Project = new ProjectDto
                {
                    Id = e.ProjectSemester.Project.Id,

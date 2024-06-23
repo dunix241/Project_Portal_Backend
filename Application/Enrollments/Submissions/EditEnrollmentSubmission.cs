@@ -38,7 +38,7 @@ namespace Application.Enrollments.Submissions
 
                 var newStatus = request.Dto.Status;
                 var currentStatuss = currentSubmission.Status;
-
+                var enrollment = await _context.Enrollments.FindAsync(currentSubmission.EnrollmentId);
 
                 if (newStatus != null && newStatus != currentStatuss)
                 {
@@ -47,16 +47,34 @@ namespace Application.Enrollments.Submissions
                         return Result<Submission>.Failure("Invalid status");
                     }
 
-                    if (newStatus == SubmissionStatus.ACCEPTED)
+                    if (newStatus == SubmissionStatus.ACCEPTED || newStatus == SubmissionStatus.COMPLETED)
                     {
-                        var enrollment = await _context.Enrollments.FindAsync(currentSubmission.EnrollmentId);
+                        enrollment = await _context.Enrollments.FindAsync(currentSubmission.EnrollmentId);
                         enrollment.SemesterId = (await _context.Semesters.FirstOrDefaultAsync
                                                 (entity => entity.StartRegistrationDate <= DateTime.Today && entity.EndRegistrationDate >= DateTime.Today))!.Id;
                         if (enrollment.SemesterId == null)
                         {
-                            return Result<Submission>.Failure("Ouside the allowed time");
+                            return Result<Submission>.Failure("Outside the allowed time");
+                        }
+
+                        if(currentSubmission.ThesisId == null)
+                        {
+                            return Result<Submission>.Failure("The target status require a submitted thesis");
                         }
                     }
+                }
+
+                if(newStatus == SubmissionStatus.UNSUBMITTED)
+                {
+
+                    currentSubmission.ThesisId = null;
+                    currentSubmission.SubmittedDate = null;
+                }
+                if(currentStatuss == SubmissionStatus.COMPLETED && enrollment.IsPublished && newStatus != currentStatuss)
+                {
+                    enrollment.ThesisId = null;
+                    enrollment.IsPublished = false;
+                    enrollment.PublishDate = null;
                 }
 
                 _mapper.Map(request.Dto, currentSubmission);

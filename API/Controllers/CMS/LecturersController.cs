@@ -1,4 +1,5 @@
-﻿using Application.Lecturers;
+﻿using Application.Core;
+using Application.Lecturers;
 using Application.Lecturers.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -27,4 +28,19 @@ public class LecturersController : CmsApiController
     {
         return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
     }
+
+    [HttpGet]
+    [SwaggerOperation(Summary = "List lecturers")]
+    public async Task<IActionResult> ListLectures([FromQuery] ListLecturerRequestDto pagingParams)
+    {
+        return HandleResult(await Mediator.Send(new List.Query { QueryParams = pagingParams }));
+    }
+
+    [HttpGet("{id}")]
+    [SwaggerOperation(Summary = "Get a lecturer")]
+    public async Task<IActionResult> GetLecturer(string id)
+    {
+        return HandleResult(await Mediator.Send(new Details.Query { Id = id }));
+    }
+
 }

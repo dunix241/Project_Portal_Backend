@@ -13,7 +13,7 @@
         public string? PhoneNumber { get; set; }
         public Guid? SchoolId { get; set; }
         public string SchoolName { get; set; }
-        public bool contactViaPhoneNumber { get; set; } = true;
-        public bool contactViaEmail { get; set; } = true;
+        public bool ContactViaPhoneNumber { get; set; } = true;
+        public bool ContactViaEmail { get; set; } = true;
     }
 }

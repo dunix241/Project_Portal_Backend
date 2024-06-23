@@ -36,12 +36,7 @@ namespace API.Controllers
             return HandleResult(result);
         }
 
-        [HttpPut("{id}")]
-        [SwaggerOperation(Summary = "Edit a student")]
-        public async Task<IActionResult> EditStudent(string id, EditStudentRequestDto student)
-        {
-            return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = student }));
-        }
+
 
         [HttpDelete("{id}")]
         [SwaggerOperation(Summary = "Delete a student")]

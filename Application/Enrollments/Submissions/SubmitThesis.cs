@@ -8,7 +8,7 @@ using Persistence;
 
 namespace Application.Enrollments.Submissions
 {
-    public class EditEnrollmentSubmissionThesis
+    public class SubmitThesis
     {
         public class Command : IRequest<Result<Submission>>
         {
@@ -47,16 +47,16 @@ namespace Application.Enrollments.Submissions
 
                 if(currentSubmission.Status == SubmissionStatus.COMPLETED || currentSubmission.Status == SubmissionStatus.ACCEPTED)
                 {
-                    return Result<Submission>.Failure("This submission status do not allow updating");
+                    return Result<Submission>.Failure("Complted and Accepted submission status do not allow updating");
                 }
 
-
-                if(currentSubmission.Status == SubmissionStatus.DEFAULT)
+                if(currentSubmission.Status == SubmissionStatus.UNSUBMITTED)
                 {
                     currentSubmission.Status = SubmissionStatus.SUBMITTED;
                 }
 
-                currentSubmission.ThesisId = thesisResponse.Value.Id;              
+                currentSubmission.ThesisId = thesisResponse.Value.Id;  
+                currentSubmission.SubmittedDate = DateTime.Now;
 
                 await _context.SaveChangesAsync();
 

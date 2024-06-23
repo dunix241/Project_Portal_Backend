@@ -49,9 +49,15 @@ public class SubmissionsController : PmsApiController
             BucketName = "theses",
             FormFile = file,
         };
-        return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.EditEnrollmentSubmissionThesis.Command { Id = id, Dto = payload }));
+        return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.SubmitThesis.Command { Id = id, Dto = payload }));
     }
 
+    [HttpPut("{id}/UnSubmit")]
+    [SwaggerOperation(Summary = "UnSubmit")]
+    public async Task<IActionResult> UnSubmissionThesis(Guid id)
+    {
+        return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.UnsubmitThesis.Command { Id = id }));
+    }
     [HttpGet]
     [SwaggerOperation(Summary = "List submissions")]
     public async Task<ActionResult<ListEnrollmentSubmission>> ListAllEnrollmentSubmission(Guid enrollmentId)
@@ -72,5 +78,6 @@ public class SubmissionsController : PmsApiController
     {
         return HandleResult(await Mediator.Send(new UnPublishThesis.Command { Id = id }));
     }
+
 
 }

@@ -12,5 +12,7 @@ namespace Domain.Lecturer
         public string? Description { get; set; }
         public Guid SchoolId { get; set; }
         public School.School School { get; set; }
+        public bool ContactViaPhoneNumber { get; set; } = true;
+        public bool ContactViaEmail { get; set; } = true;
     }
 }

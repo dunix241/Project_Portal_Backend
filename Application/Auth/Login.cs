@@ -31,7 +31,7 @@ public class Login
         {
             var user = await _userManager.FindByEmailAsync(request.LoginRequestDto.Email);
 
-            if (user == null) return null;
+            if (user == null || user.IsActive == false) return null;
 
             var result = await _signInManager.CheckPasswordSignInAsync(user, request.LoginRequestDto.Password, false);
 

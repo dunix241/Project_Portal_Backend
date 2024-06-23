@@ -15,11 +15,11 @@ public class PagingParams
     public string? SearchString { get; set; }
     public string? Order { get; set; }
     public string? OrderBy { get; set; }
-    public ICollection<Filter>? Filters { get; set; }
+    //public ICollection<Filter>? Filters { get; set; }
 }
 
-public class Filter
-{
-    public string Value { get; set; }
-    public string FilterBy { get; set; }
-}
+//public class Filter
+//{
+//    public string Value { get; set; }
+//    public string FilterBy { get; set; }
+//}

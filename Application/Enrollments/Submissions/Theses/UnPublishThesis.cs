@@ -45,6 +45,7 @@ namespace Application.Enrollments.Submissions.Theses
                 }
                 enrollment.IsPublished = false;
                 enrollment.ThesisId = null;
+                enrollment.PublishDate = null;               
 
                 await _context.SaveChangesAsync();
 

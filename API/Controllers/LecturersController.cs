@@ -1,5 +1,6 @@
 ﻿using Application.Core;
 using Application.Lecturers;
+using Application.Lecturers.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -9,7 +10,7 @@ namespace API.Controllers
     {
         [HttpGet]
         [SwaggerOperation(Summary = "List lecturers")]
-        public async Task<IActionResult> ListLectures([FromQuery] PagingParams pagingParams)
+        public async Task<IActionResult> ListLectures([FromQuery] ListLecturerRequestDto pagingParams)
         {
             return HandleResult(await Mediator.Send(new List.Query { QueryParams = pagingParams }));
         }

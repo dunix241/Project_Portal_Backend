@@ -12,6 +12,6 @@ namespace Application.Enrollments.DTOs
         public string? UserId { get; set; }
         public Guid? SchoolId { get; set; }
         public Guid? SemesterId { get; set; }
-        public bool IsPublished { get; set; }
+        public bool? IsPublished { get; set; }
     }
 }

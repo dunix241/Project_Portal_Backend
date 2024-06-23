@@ -61,7 +61,8 @@ public class Seeder
                     LastName = userData.LastName,
                     UserName = userData.UserName,
                     Email = userData.Email,
-                    PhoneNumber = userData.PhoneNumber
+                    PhoneNumber = userData.PhoneNumber,
+                    IsActive = userData.IsActive,
                 };
                 await _userManager.CreateAsync(user, userData.Password);
 

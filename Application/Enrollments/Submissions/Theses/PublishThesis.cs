@@ -35,14 +35,15 @@ namespace Application.Enrollments.Submissions.Theses
                 }
 
 
-                if (currentSubmission.Status != SubmissionStatus.ACCEPTED )
+                if (currentSubmission.Status != SubmissionStatus.COMPLETED )
                 {
-                    return Result<Domain.Enrollment.Enrollment>.Failure("You can only publish one thesis from  the accpeted submissions");
+                    return Result<Domain.Enrollment.Enrollment>.Failure("You can only publish one thesis from  a completed submission");
                 }           
 
                 var enrollment = await _context.Enrollments.FindAsync(currentSubmission.EnrollmentId);
                 enrollment.IsPublished = true;
                 enrollment.ThesisId = currentSubmission.ThesisId;
+                enrollment.PublishDate = DateTime.UtcNow;
 
                 await _context.SaveChangesAsync();
 

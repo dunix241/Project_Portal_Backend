@@ -1,4 +1,5 @@
-﻿using Application.Students;
+﻿using Application.Core;
+using Application.Students;
 using Application.Students.DTOs;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -7,38 +8,52 @@ namespace API.Controllers.CMS;
 
 public class StudentsController : CmsApiController
 {
-        [HttpPost]
-        [SwaggerOperation(Summary = "Add a student")]
-        public async Task<IActionResult> CreateStudent(CreateStudentRequestDto student)
+    [HttpPost]
+    [SwaggerOperation(Summary = "Add a student")]
+    public async Task<IActionResult> CreateStudent(CreateStudentRequestDto student)
+    {
+        try
         {
-            try
+            var result = await Mediator.Send(new Create.Command { Student = student });
+
+            if (result.IsSuccess)
             {
-                var result = await Mediator.Send(new Create.Command { Student = student });
-
-                if (result.IsSuccess)
-                {
-                    return Ok("Student created and assigned to school successfully.");
-                }
-
-                return BadRequest(result.Error);
+                return Ok("Student created and assigned to school successfully.");
             }
-            catch (Exception ex)
-            {
-                return StatusCode(400, "An error occurred while processing your request." + "\n" + ex.Message);
-            }
-        }
 
-        [HttpPut("{id}")]
-        [SwaggerOperation(Summary = "Update a student's information")]
-        public async Task<IActionResult> EditStudent(string id, EditStudentRequestDto school)
-        {
-            return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = school }));
+            return BadRequest(result.Error);
         }
+        catch (Exception ex)
+        {
+            return StatusCode(400, "An error occurred while processing your request." + "\n" + ex.Message);
+        }
+    }
 
-        [HttpDelete("{id}")]
-        [SwaggerOperation(Summary = "Remove a student")]
-        public async Task<IActionResult> DeleteStudent(string id)
-        {
-            return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
-        }
+    [HttpPut("{id}")]
+    [SwaggerOperation(Summary = "Update a student's information")]
+    public async Task<IActionResult> EditStudent(string id, EditStudentRequestDto school)
+    {
+        return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = school }));
+    }
+
+    [HttpDelete("{id}")]
+    [SwaggerOperation(Summary = "Remove a student")]
+    public async Task<IActionResult> DeleteStudent(string id)
+    {
+        return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
+    }
+
+    [HttpGet]
+    [SwaggerOperation(Summary = "List students")]
+    public async Task<IActionResult> ListStudents([FromQuery] PagingParams pagingParams)
+    {
+        return HandleResult(await Mediator.Send(new List.Query { QueryParams = pagingParams }));
+    }
+
+    [HttpGet("{id}")]
+    [SwaggerOperation(Summary = "Get a student")]
+    public async Task<IActionResult> GetStudent(string id)
+    {
+        return HandleResult(await Mediator.Send(new Details.Query { Id = id }));
+    }
 }

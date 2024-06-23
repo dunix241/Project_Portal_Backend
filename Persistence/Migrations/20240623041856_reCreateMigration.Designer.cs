@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240622205046_updateUserIsActive")]
-    partial class updateUserIsActive
+    [Migration("20240623041856_reCreateMigration")]
+    partial class reCreateMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -358,9 +358,6 @@ namespace Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<long>("IRN")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
 
                     b.Property<Guid>("SchoolId")

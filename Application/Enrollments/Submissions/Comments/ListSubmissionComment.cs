@@ -38,7 +38,7 @@ namespace Application.Enrollments.Submissions.Comments
                          Date = c.Date,
                          UserId = c.UserId,
                          UserName = c.User.UserName
-                     });
+                     }).OrderBy(x => x.Date);
 
                 var comments = new ListSubmissionCommentResponse();
                 await comments.GetItemsAsync(query, request.PagingParams.PageNumber, request.PagingParams.PageSize);

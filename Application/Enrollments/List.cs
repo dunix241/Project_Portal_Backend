@@ -29,11 +29,13 @@ public class List
         {
             var payload = request.Payload;
             var query = _dataContext.Enrollments
-                .Where(x => (payload.SemesterId == null || x.SemesterId == payload.SemesterId) &&
-                            (payload.UserId == null || x.OwnerId == payload.UserId) &&
-                            (payload.IsPublished == null || x.IsPublished == payload.IsPublished) &&
-                            (payload.SchoolId == null || payload.SchoolId == x.ProjectSemester.Project.SchoolId));
-                        
+      .Where(x =>
+          (payload.SemesterId == null || x.SemesterId == payload.SemesterId) &&
+          (payload.UserId == null || x.OwnerId == payload.UserId) &&
+          (payload.IsPublished == null || x.IsPublished == payload.IsPublished) &&
+          (payload.SchoolId == null || payload.SchoolId == x.ProjectSemester.Project.SchoolId)
+      );
+
 
             var enrollmentPlans = new ListEnrollmentResponseDto();
             await enrollmentPlans.GetItemsAsync(query, payload.PageNumber, payload.PageSize);

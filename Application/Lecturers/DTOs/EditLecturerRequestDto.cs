@@ -15,5 +15,7 @@ namespace Application.Lecturers.DTOs
         public Guid SchoolId { get; set; }
         public string? Headline { get; set; }
         public string? Description { get; set; }
+        public bool ContactViaPhoneNumber { get; set; } = true;
+        public bool ContactViaEmail { get; set; } = true;
     }
 }

@@ -13,7 +13,7 @@ namespace Application.Lecturers
     {
         public class Query : IRequest<Result<ListLecturerResponseDto>>
         {
-            public PagingParams QueryParams { get; set; }
+            public ListLecturerRequestDto QueryParams { get; set; }
         }
 
         public class Handler : IRequestHandler<Query, Result<ListLecturerResponseDto>>
@@ -33,7 +33,8 @@ namespace Application.Lecturers
             {
                 var lecturers = _context.Lecturers
                     .Include(s => s.School)
-                    .Where(s => s.School.IsActive)
+                    .Where(s => ((s.School.IsActive ) &&
+                    (s.SchoolId == request.QueryParams.SchoolId || request.QueryParams.SchoolId == null)))
                     .AsQueryable();
                
                 var responseDtoList = lecturers.Select(lecturer => _mapper.Map(

@@ -24,7 +24,7 @@ namespace Application.Schools
             public async Task<Result<ListSchoolResponseDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var query = _context.Schools
-                   .Where(s => s.IsActive)
+                  // .Where(s => s.IsActive)
                    .AsQueryable();
 
                 var schools = new ListSchoolResponseDto();

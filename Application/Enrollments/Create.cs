@@ -41,6 +41,7 @@ public class Create
             var enrollment = _mapper.Map<Domain.Enrollment.Enrollment>(request.Payload);
                 
             enrollment.OwnerId = _userAccessor.GetUser().Id;
+
             
             enrollment.SemesterId = (await _dataContext.Semesters.FirstOrDefaultAsync(entity => entity.StartRegistrationDate <= DateTime.Today && entity.EndRegistrationDate >= DateTime.Today))!.Id;
             if (enrollment.SemesterId == null)

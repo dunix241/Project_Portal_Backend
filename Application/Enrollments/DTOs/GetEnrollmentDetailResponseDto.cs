@@ -12,6 +12,7 @@
         public Boolean IsPublished { get; set; }
         public DateTime? PublishDate { get; set; }
         public bool CanBeForked { get; set; }
+        public Guid? ThesisId { get; set; }
 
         // public List<EnrollmentMemberDto> Members { get; set; }
         // public List<SubmissionDto> Submissions { get; set; }

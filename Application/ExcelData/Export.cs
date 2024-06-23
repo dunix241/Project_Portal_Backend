@@ -60,7 +60,7 @@ namespace Application.ExcelData
                     if (request.ExcelExportEnum == ExcelExportEnum.Lecturer)
                     {
                         type = "LECTURER";
-                        var query = await _mediator.Send(new Application.Lecturers.List.Query { QueryParams = request.QueryParams });
+                        var query = await _mediator.Send(new Application.Lecturers.List.Query { QueryParams = new Lecturers.DTOs.ListLecturerRequestDto() });
                         if (query.IsSuccess)
                         {
                             var dataList = query.Value.Items.ToList();

@@ -54,11 +54,11 @@ namespace Application.Lecturers
                 responseDto.Headline = lecturer?.Headline;
                 responseDto.Title = lecturer?.Title;
 
-                if(responseDto.contactViaEmail == false)
+                if(responseDto.ContactViaEmail == false)
                 {
                     responseDto.Email = null;
                 }
-                if(responseDto.contactViaPhoneNumber == false)
+                if(responseDto.ContactViaPhoneNumber == false)
                 {
                     responseDto.PhoneNumber = null;
                 }
