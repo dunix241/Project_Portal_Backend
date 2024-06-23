@@ -14,9 +14,9 @@ public class BaseApiController : ControllerBase
     {
        
 
-        if (result.Status == Status.BadRequest) return BadRequest(result.Error);
-        if (result.Status == Status.Unauthorized) return Unauthorized(result.Error);
-        if (result.Status == Status.Forbid) return Forbid();
+        if (result?.Status == Status.BadRequest) return BadRequest(result.Error);
+        if (result?.Status == Status.Unauthorized) return Unauthorized(result.Error);
+        if (result?.Status == Status.Forbid) return Forbid();
 
         if (result == null || result.Value == null) return NotFound();
 

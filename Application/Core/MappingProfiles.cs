@@ -129,6 +129,7 @@ public class MappingProfiles : Profile
         CreateMap<EditEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
         CreateMap<EditEnrollmentMemberRequestDto, EnrollmentMember>();
         CreateMap<Domain.Enrollment.Enrollment, GetEnrollmentResponseDto>();
+        CreateMap<Domain.Enrollment.Enrollment, EnrollmentWithThesis>();
 
         CreateEnrollmentPlanMaps();
     }

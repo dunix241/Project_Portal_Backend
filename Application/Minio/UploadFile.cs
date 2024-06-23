@@ -68,7 +68,7 @@ namespace Application.Minio
 
                         var putArgs = new PutObjectArgs()
                             .WithBucket(request.Payload.BucketName)
-                            .WithObject(fileObj.Name.ToString())
+                            .WithObject(fileObj.FileNameWithExtension)
                             .WithStreamData(memoryStream)
                             .WithObjectSize(memoryStream.Length)
                             .WithContentType("application/octet-stream")
