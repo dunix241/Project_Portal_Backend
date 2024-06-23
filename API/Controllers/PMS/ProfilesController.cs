@@ -10,17 +10,17 @@ using Application.Users;
 
 namespace API.Controllers.PMS
 {
-    public class ProfileController : PmsApiController
+    public class ProfilesController : PmsApiController
     {
 
-        [HttpGet("Profiles/{id}")]
-        [SwaggerOperation(Summary = "List submission comment ")]
-        public async Task<ActionResult<ListEnrollmentSubmission>> ListSubmissionComment(string id)
+        [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Get User Profile")]
+        public async Task<ActionResult<ListEnrollmentSubmission>> GetUserProfile(string id)
         {
             return HandleResult(await Mediator.Send(new Application.Users.Details.Query {Id = id }));
         }
 
-        [HttpPut("Profiles{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Edit(string id, EditUserRequest project)
         {
             return HandleResult(await Mediator.Send(new EditUser.Command { Id = id, request = project }));
