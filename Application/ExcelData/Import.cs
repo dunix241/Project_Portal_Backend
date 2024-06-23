@@ -114,7 +114,6 @@ namespace Application.ExcelData
                                 LastName = worksheet.Cells[row, 3].Text,
                                 Email = worksheet.Cells[row, 4].Text,
                                 PhoneNumber = worksheet.Cells[row, 5].Text,
-                                IsActive = true,
                                 SchoolId = school.Id,
                             };
 

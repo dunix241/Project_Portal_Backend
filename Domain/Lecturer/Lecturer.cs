@@ -10,7 +10,6 @@ namespace Domain.Lecturer
         public string? Title { get; set; }
         public string? Headline { get; set; }
         public string? Description { get; set; }
-        public bool IsActive { get; set; }
         public Guid SchoolId { get; set; }
         public School.School School { get; set; }
     }

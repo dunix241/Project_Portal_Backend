@@ -29,13 +29,13 @@ namespace Application.Lecturers
             public async Task<Result<ListLecturerResponseDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var lecturers = _context.Lecturers
-                   .Where(s => s.IsActive)
                    .Include(s => s.School)
                    .Where(s => s.School.IsActive && s.SchoolId == request.Id)
                    .AsQueryable();
 
 
                 var responseDtoList = lecturers.Select(lecturer => _mapper.Map<GetLecturerResponseDto>(lecturer));
+                responseDtoList = responseDtoList.Where(x => x.IsActive == true);
                 var lectureResponseDto = new ListLecturerResponseDto();
 
                 await lectureResponseDto.GetItemsAsync(responseDtoList.AsQueryable(), request.QueryParams.PageNumber, request.QueryParams.PageSize);

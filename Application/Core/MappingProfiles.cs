@@ -98,6 +98,8 @@ public class MappingProfiles : Profile
             .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
             .ReverseMap();
         CreateMap<User, GetLecturerResponseDto>();
+        CreateMap<User, CMGetLectureResponseDto>();
+        CreateMap<Student, GetLecturerResponseDto>();
         CreateMap<EditLecturerRequestDto, Lecturer>();
         CreateMap<EditLecturerRequestDto, User>();
     }

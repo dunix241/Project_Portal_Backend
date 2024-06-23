@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class updateUserIsActive : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -112,6 +112,7 @@ namespace Persistence.Migrations
                     PhoneNumber = table.Column<string>(type: "TEXT", nullable: true),
                     Address = table.Column<string>(type: "TEXT", nullable: true),
                     AvatarId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -268,7 +269,6 @@ namespace Persistence.Migrations
                     Title = table.Column<string>(type: "TEXT", nullable: true),
                     Headline = table.Column<string>(type: "TEXT", nullable: true),
                     Description = table.Column<string>(type: "TEXT", nullable: true),
-                    IsActive = table.Column<bool>(type: "INTEGER", nullable: false),
                     SchoolId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -389,7 +389,8 @@ namespace Persistence.Migrations
                     RegisterDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     CanBeForked = table.Column<bool>(type: "INTEGER", nullable: false),
                     ForkedFromId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    ForkFromId = table.Column<Guid>(type: "TEXT", nullable: true)
+                    ForkFromId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    ThesisId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -398,6 +399,11 @@ namespace Persistence.Migrations
                         name: "FK_Enrollments_Enrollments_ForkFromId",
                         column: x => x.ForkFromId,
                         principalTable: "Enrollments",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Enrollments_Files_ThesisId",
+                        column: x => x.ThesisId,
+                        principalTable: "Files",
                         principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Enrollments_ProjectSemesters_ProjectId_SemesterId",
@@ -450,6 +456,7 @@ namespace Persistence.Migrations
                     EnrollmentId = table.Column<Guid>(type: "TEXT", nullable: false),
                     DueDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Status = table.Column<string>(type: "TEXT", nullable: false),
+                    Description = table.Column<string>(type: "TEXT", nullable: true),
                     SubmittedDate = table.Column<DateTime>(type: "TEXT", nullable: true),
                     ThesisId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
@@ -606,6 +613,11 @@ namespace Persistence.Migrations
                 name: "IX_Enrollments_ProjectId_SemesterId",
                 table: "Enrollments",
                 columns: new[] { "ProjectId", "SemesterId" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Enrollments_ThesisId",
+                table: "Enrollments",
+                column: "ThesisId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Files_Name",

@@ -154,5 +154,9 @@ public class EnrollmentsController : PmsApiController
         return HandleResult(await Mediator.Send(new UnPublishThesis.Command { Id = id }));
     }
 
-
+    [HttpGet("Joined/{userId}")]
+    public async Task<ActionResult<ListProjectsJoinedResponseDto>> GetProjectJoined(string userId)
+    {
+        return HandleResult(await Mediator.Send(new ListProjectsJoined.Query()));
+    }
 }

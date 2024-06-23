@@ -15,6 +15,7 @@ public class User : IdentityUser
     }
     public string? PhoneNumber { get; set; }
     public string? Address { get; set; }
-    public string? AvatarId { get; set; }
-    public File.File? Avatar { get; set; }
+    public Guid? AvatarId { get; set; }
+    public File.File Avatar { get; set; }
+    public bool IsActive { get; set; } = true;
 }

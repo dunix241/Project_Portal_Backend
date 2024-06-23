@@ -2,6 +2,7 @@
 using Application.Lecturers.DTOs;
 using Application.Lecturers.Validation;
 using AutoMapper;
+using DocumentFormat.OpenXml.Office2010.Excel;
 using Domain;
 using FluentValidation;
 using MediatR;
@@ -12,23 +13,25 @@ namespace Application.Lecturers
 {
     public class Edit
     {
-        public class Command : IRequest<Result<Unit>>
+        public class Command : IRequest<Result<GetLecturerResponseDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public EditLecturerRequestDto Lecturer { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Command, Result<GetLecturerResponseDto>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
             private readonly UserManager<User> _userManager;
+            private readonly IMediator _mediator;
 
-            public Handler(DataContext context, IMapper mapper, UserManager<User> userManager)
+            public Handler(DataContext context, IMapper mapper, UserManager<User> userManager,IMediator mediator)
             {
                 _context = context;
                 _mapper = mapper;
                 _userManager = userManager;
+                _mediator = mediator;
             }
 
             public class CommandValidator : AbstractValidator<Command>
@@ -39,17 +42,17 @@ namespace Application.Lecturers
                 }
             }
 
-            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<GetLecturerResponseDto>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var validationResult = new CommandValidator().Validate(request);
                 if (!validationResult.IsValid)
                 {
-                    return Result<Unit>.Failure("Validation failed, Name cannot be empty or contain numbers nor special characters.");
+                    return Result<GetLecturerResponseDto>.Failure("Validation failed, Name cannot be empty or contain numbers nor special characters.");
                 }
                 var lecturer = await _context.Lecturers.FindAsync(request.Id);
                 if (lecturer == null)
                 {
-                    return Result<Unit>.Failure("Not found");
+                    return Result<GetLecturerResponseDto>.Failure("Not found");
                 }
 
                 var success = true;
@@ -66,12 +69,7 @@ namespace Application.Lecturers
                     _mapper.Map(request.Lecturer, user);
                     await _userManager.UpdateAsync(user);
                     
-                    success &= await _context.SaveChangesAsync() != 0;
-
-                    if (success)
-                    {
-                        transaction.Commit();
-                    }
+                   await transaction.CommitAsync(cancellationToken);
                 }
                 catch (Exception e)
                 {
@@ -79,7 +77,8 @@ namespace Application.Lecturers
                     throw e;
                 }
 
-                return success ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("Problem editing lecturer");
+                var response =await _mediator.Send(new Details.Query { Id = lecturer.UserId });
+                return success ? Result<GetLecturerResponseDto>.Success(response.Value) : Result<GetLecturerResponseDto>.Failure("Problem editing lecturer");
             }
         }
     }
