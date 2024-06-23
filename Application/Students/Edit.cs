@@ -17,7 +17,7 @@ namespace Application.Students
             public Guid Id { get; set; }
             public EditStudentRequestDto Student { get; set; }
         }
-        public class CommandValidator : AbstractValidator<Command>
+        public class CommandValidator : AbstractValidator<Edit.Command>
         {
             public CommandValidator()
             {

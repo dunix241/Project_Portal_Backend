@@ -12,7 +12,7 @@ namespace Application.Students
             public Guid Id { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Unit>>
+        public class Handler : IRequestHandler<Delete.Command, Result<Unit>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
