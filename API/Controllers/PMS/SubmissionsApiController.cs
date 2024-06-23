@@ -40,7 +40,7 @@ public class SubmissionsController : PmsApiController
         return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.EditEnrollmentSubmission.Command { Id = id , Dto = dto}));
     }
 
-    [HttpPut("{id}/Thesis")]
+    [HttpPut("{id}/Submit")]
     [SwaggerOperation(Summary = "Submit")]
     public async Task<IActionResult> EditSubmissionThesis(Guid id, IFormFile file)
     {
