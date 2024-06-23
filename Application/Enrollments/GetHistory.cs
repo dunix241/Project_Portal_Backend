@@ -5,19 +5,13 @@ using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace Application.Enrollments
 {
     public class GetHistory
     {
         public class Query : IRequest<Result<List<GetEnrollmentHistoryResponseDto>>>
         {
-            public Guid ProjectId { get; set; }
+            public Guid EnrollmentId { get; set; }
         }
 
         public class Handler : IRequestHandler<Query, Result<List<GetEnrollmentHistoryResponseDto>>>
@@ -41,12 +35,14 @@ namespace Application.Enrollments
                     return null;
                 }
 
+                var enrollment = await _dataContext.Enrollments.FindAsync(request.EnrollmentId);
+
                 var enrollmentMembers = await _dataContext.EnrollmentMembers
                     .Where(entity => entity.UserId == userId)
                     .Include(entity => entity.Enrollment)
                     .ThenInclude(entity => entity.ProjectSemester)
                     .ThenInclude(entity => entity.Semester)
-                    .Where(entity => entity.Enrollment.ProjectId == request.ProjectId)
+                    .Where(entity => entity.Enrollment.ProjectId == enrollment.ProjectId)
                     .ToListAsync();
 
                 var results = enrollmentMembers.Select(member => _mapper.Map<GetEnrollmentHistoryResponseDto>(member)).ToList();

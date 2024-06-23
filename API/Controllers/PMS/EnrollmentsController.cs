@@ -67,9 +67,9 @@ public class EnrollmentsController : PmsApiController
 
     [HttpGet("History")]
     [SwaggerOperation(Summary = "Get enrollment history of current user")]
-    public async Task<ActionResult<GetEnrollmentHistoryResponseDto>> ListEnrollmentHistory(Guid projectId)
+    public async Task<ActionResult<GetEnrollmentHistoryResponseDto>> ListEnrollmentHistory(Guid enrollmentId)
     {
-        return HandleResult(await Mediator.Send(new GetHistory.Query { ProjectId = projectId }));
+        return HandleResult(await Mediator.Send(new GetHistory.Query { EnrollmentId = enrollmentId }));
     }
 
     [HttpGet("Joined")]
