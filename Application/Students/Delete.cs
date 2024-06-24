@@ -1,5 +1,6 @@
 ﻿using Application.Core;
 using AutoMapper;
+using DocumentFormat.OpenXml.Vml.Spreadsheet;
 using MediatR;
 using Persistence;
 
@@ -9,7 +10,7 @@ namespace Application.Students
     {
         public class Command : IRequest<Result<Unit>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
         }
 
         public class Handler : IRequestHandler<Delete.Command, Result<Unit>>
@@ -26,11 +27,21 @@ namespace Application.Students
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var student = await _context.Students.FindAsync(request.Id);
+
                 if (student == null)
                 {
                     return null;
                 }
-                student.IsActive = false;
+                var user = await _context.Users.FindAsync(request.Id);
+                if (user != null)
+                {
+                    user.IsActive = false;
+                }
+                else
+                {
+                    return null;
+                }
+
 
                 await _context.SaveChangesAsync();
 

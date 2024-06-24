@@ -1,0 +1,10 @@
+﻿namespace Application.Enrollments.Submissions.DTOs
+{
+    public class EditSubmissionRequestDto
+    {
+        public DateTime? DueDate { get; set; }
+        public string? Status { get; set; }
+        public string ? Description { get; set; }
+        public string? ThesisId { get; set; } 
+    }
+}

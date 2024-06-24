@@ -1,6 +1,6 @@
 namespace Application.Core;
 
-public class Result<T> : Result<T, int>
+public class Result<T> : Result<T, int?>
 { }
 
 public class Result<T, K>

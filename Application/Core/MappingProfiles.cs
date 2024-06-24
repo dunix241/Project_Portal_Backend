@@ -2,6 +2,9 @@ using API.DTOs.Accounts;
 using Application.EnrollmentPlans.DTOs;
 using Application.EnrollmentPlans.EnrollmentPlanDetails.DTOs;
 using Application.Enrollments.DTOs;
+using Application.Enrollments.Submissions;
+using Application.Enrollments.Submissions.Comments.DTOs;
+using Application.Enrollments.Submissions.DTOs;
 using Application.Lecturers.DTOs;
 using Application.Minio.DTOs;
 using Application.MockDomains.DTOs;
@@ -10,8 +13,10 @@ using Application.Schools.DTOs;
 using Application.Semesters.DTOs;
 using Application.Semesters.DTOs.Projects;
 using Application.Students.DTOs;
+using Application.Users.DTOs;
 using AutoMapper;
 using Domain;
+using Domain.Comment;
 using Domain.Enrollment;
 using Domain.EnrollmentPlan;
 using Domain.Lecturer;
@@ -20,6 +25,7 @@ using Domain.Project;
 using Domain.School;
 using Domain.Semester;
 using Domain.Student;
+using Domain.Submission;
 using File = Domain.File.File;
 
 namespace Application.Core;
@@ -35,6 +41,9 @@ public class MappingProfiles : Profile
         CreateSemesterMaps();
         CreateFileMaps();
         CreateEnrollmentMaps();
+        CreateSubmissionMaps();
+        CreateSummsionComment();
+        CreateUserMapper();
     }
 
     private void CreateMockDomainMaps()
@@ -89,6 +98,8 @@ public class MappingProfiles : Profile
             .ForMember(dest => dest.SchoolName, opt => opt.MapFrom(src => src.School.Name))
             .ReverseMap();
         CreateMap<User, GetLecturerResponseDto>();
+        CreateMap<User, CMGetLectureResponseDto>();
+        CreateMap<Student, GetLecturerResponseDto>();
         CreateMap<EditLecturerRequestDto, Lecturer>();
         CreateMap<EditLecturerRequestDto, User>();
     }
@@ -106,8 +117,14 @@ public class MappingProfiles : Profile
     private void CreateEnrollmentMaps()
     {
         CreateMap<Domain.Enrollment.Enrollment, ProjectJoinedResponseDto>();
-        CreateMap<User, EnrollmentMemberResponseDto>();
-        CreateMap<Domain.Enrollment.Enrollment, EnrollmentMemberResponseDto>();
+        CreateMap<Domain.Enrollment.EnrollmentMember, GetEnrollmentHistoryResponseDto>()
+            .ForMember(dest => dest.SemesterId, opt => opt.MapFrom(src => src.Enrollment.SemesterId))
+            .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Enrollment.ProjectSemester.Semester.Name));
+        CreateMap<User, EnrollmentMemberResponseDto>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore())
+            ;
+
+        CreateMap<Domain.Enrollment.EnrollmentMember, EnrollmentMemberResponseDto>();
         CreateMap<CreateEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
         CreateMap<Project, ListBasedOnEnrollmentPlanResponseDto.RegistrableProjectResponseDto>();
         CreateMap<EditEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
@@ -124,5 +141,24 @@ public class MappingProfiles : Profile
         CreateMap<EnrollmentPlan, EnrollmentPlanResponseDto>();
         CreateMap<CreateEnrollmentPlanDetailsRequestDto, EnrollmentPlanDetails>();
         CreateMap<EnrollmentPlanDetails, EnrollmentPlanDetailsResponseDto>();
+    }
+
+    private void CreateSubmissionMaps()
+    {
+        CreateMap<CreateSubmissionRequestDto, Submission>();
+        CreateMap<GetSubmissionResponseDto, Submission>();
+        CreateMap<EditSubmissionRequestDto, Submission>();
+    }
+
+
+    public void CreateSummsionComment()
+    {
+        CreateMap<SubmissionCommentDto, SubmissionComment>().ForMember(dest => dest.UserId, opt => opt.Ignore());
+        CreateMap<EditSubmissionCommentRequest, SubmissionComment>();
+    }
+
+    public void CreateUserMapper()
+    {
+        CreateMap<EditUserRequest, User>();
     }
 }

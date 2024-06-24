@@ -45,7 +45,9 @@ namespace Application.Minio
                     var found = await _minioClient.BucketExistsAsync(existArgs).ConfigureAwait(false);
                     if (!found)
                     {
-                        return Result<AddFileResponseDto>.Failure($"Bucket {request.Payload.BucketName} does not exist.");
+                        var mkBktArgs = new MakeBucketArgs().WithBucket(bucketName);
+                        await _minioClient.MakeBucketAsync(mkBktArgs).ConfigureAwait(false);
+                        Console.WriteLine("Bucket +" + bucketName + " created automatically");
                     }
 
                     using (var memoryStream = new MemoryStream())
@@ -55,7 +57,7 @@ namespace Application.Minio
 
                         var fileObj = new File
                         {
-                            Name = new Guid(),
+                            Name = Guid.NewGuid(),
                             DisplayName = fileName,
                             Extension = extension,
                             BucketName = bucketName
@@ -66,7 +68,7 @@ namespace Application.Minio
 
                         var putArgs = new PutObjectArgs()
                             .WithBucket(request.Payload.BucketName)
-                            .WithObject(fileObj.FileNameWithExtension)
+                            .WithObject(fileObj.Name.ToString())
                             .WithStreamData(memoryStream)
                             .WithObjectSize(memoryStream.Length)
                             .WithContentType("application/octet-stream")

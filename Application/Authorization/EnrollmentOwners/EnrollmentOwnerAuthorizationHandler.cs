@@ -22,15 +22,6 @@ public class EnrollmentOwnerAuthorizationHandler : AuthorizationHandler<Operatio
             return Task.CompletedTask;
         }
 
-        if (requirement.Name != Constants.CreateOperationName
-            && requirement.Name != Constants.ReadOperationName
-            && requirement.Name != Constants.UpdateOperationName
-            && requirement.Name != Constants.DeleteOperationName
-           )
-        {
-            return Task.CompletedTask;
-        }
-
         if (resource.OwnerId == _userManager.GetUserId(context.User))
         {
             context.Succeed(requirement);

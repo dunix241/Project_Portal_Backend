@@ -38,7 +38,7 @@ public class ListEnrollmentMembers
             
             foreach (var member in members)
             {
-                _mapper.Map(await _userManager.FindByEmailAsync(member.Email), member);
+                _mapper.Map(await _userManager.FindByIdAsync(member.UserId), member);
             }
 
             return Result<ListEnrollmentMembersResponseDto>.Success(new ListEnrollmentMembersResponseDto

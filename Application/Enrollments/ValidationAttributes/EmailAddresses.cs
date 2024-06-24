@@ -12,7 +12,7 @@ public class EmailAddresses : ValidationAttribute
         var success = (list != null && list.All(email => emailAttribute.IsValid(email)));
         
         var propertyName = validationContext.MemberName;
-        if (success) return new ValidationResult($"Field `{propertyName}` contains some invalid email addresses");
+        if (!success) return new ValidationResult($"Field `{propertyName}` contains some invalid email addresses");
         
         return ValidationResult.Success;
     }

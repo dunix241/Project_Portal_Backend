@@ -61,9 +61,6 @@ namespace Persistence.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("ForkFromId")
-                        .HasColumnType("TEXT");
-
                     b.Property<Guid?>("ForkedFromId")
                         .HasColumnType("TEXT");
 
@@ -89,6 +86,9 @@ namespace Persistence.Migrations
                     b.Property<Guid>("SemesterId")
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid?>("ThesisId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -98,9 +98,11 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ForkFromId");
+                    b.HasIndex("ForkedFromId");
 
                     b.HasIndex("OwnerId");
+
+                    b.HasIndex("ThesisId");
 
                     b.HasIndex("ProjectId", "SemesterId");
 
@@ -230,9 +232,6 @@ namespace Persistence.Migrations
                     b.Property<string>("Headline")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("TEXT");
 
@@ -355,9 +354,6 @@ namespace Persistence.Migrations
                     b.Property<long>("IRN")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("INTEGER");
-
                     b.Property<Guid>("SchoolId")
                         .HasColumnType("TEXT");
 
@@ -374,6 +370,9 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("TEXT");
 
@@ -381,7 +380,6 @@ namespace Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Status")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("SubmittedDate")
@@ -428,6 +426,9 @@ namespace Persistence.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .HasColumnType("TEXT");
@@ -644,9 +645,9 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Enrollment.Enrollment", b =>
                 {
-                    b.HasOne("Domain.Enrollment.Enrollment", "ForkFrom")
+                    b.HasOne("Domain.Enrollment.Enrollment", "ForkedFrom")
                         .WithMany()
-                        .HasForeignKey("ForkFromId");
+                        .HasForeignKey("ForkedFromId");
 
                     b.HasOne("Domain.Student.Student", "Owner")
                         .WithMany()
@@ -654,17 +655,23 @@ namespace Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.File.File", "Thesis")
+                        .WithMany()
+                        .HasForeignKey("ThesisId");
+
                     b.HasOne("Domain.Semester.ProjectSemester", "ProjectSemester")
                         .WithMany("Enrollments")
                         .HasForeignKey("ProjectId", "SemesterId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ForkFrom");
+                    b.Navigation("ForkedFrom");
 
                     b.Navigation("Owner");
 
                     b.Navigation("ProjectSemester");
+
+                    b.Navigation("Thesis");
                 });
 
             modelBuilder.Entity("Domain.Enrollment.EnrollmentMember", b =>

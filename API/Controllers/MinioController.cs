@@ -2,10 +2,6 @@
 using Minio.DataModel.Args;
 using Minio;
 using Application.Minio;
-using System.IO;
-using System.Reflection;
-using DocumentFormat.OpenXml.Office2010.Excel;
-using Domain.Semester;
 using Application.Minio.DTOs;
 using Domain.File;
 using Swashbuckle.AspNetCore.Annotations;
@@ -23,7 +19,7 @@ namespace API.Controllers
         }
         [HttpPost("Upload")]
         [SwaggerOperation(Summary = "Upload file to Minio")]
-        public async Task<IActionResult> UploadFile(IFormFile file, string bucketName, Guid sourceOwnerId, SourceOwnerType sourceOwnerType)
+        public async Task<IActionResult> UploadFile(IFormFile file, string bucketName)
         {
             var payload = new AddFileRequestDto
             {

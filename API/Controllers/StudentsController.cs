@@ -38,14 +38,14 @@ namespace API.Controllers
 
         [HttpPut("{id}")]
         [SwaggerOperation(Summary = "Edit a student")]
-        public async Task<IActionResult> EditStudent(Guid id, EditStudentRequestDto school)
+        public async Task<IActionResult> EditStudent(string id, EditStudentRequestDto student)
         {
-            return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = school }));
+            return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = student }));
         }
 
         [HttpDelete("{id}")]
         [SwaggerOperation(Summary = "Delete a student")]
-        public async Task<IActionResult> DeleteStudent(Guid id)
+        public async Task<IActionResult> DeleteStudent(string id)
         {
             return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
         }

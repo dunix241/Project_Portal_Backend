@@ -13,7 +13,7 @@ public class BaseApiController : ControllerBase
     protected ActionResult HandleResult<T>(Result<T>? result)
     {
         if (result == null || result.Value == null) return NotFound();
-
+        
         if (result.Status == Status.BadRequest) return BadRequest(result.Error);
         if (result.Status == Status.Unauthorized) return Unauthorized(result.Error);
         if (result.Status == Status.Forbid) return Forbid();

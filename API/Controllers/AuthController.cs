@@ -83,6 +83,7 @@ public class AuthController : BaseApiController
     {
         var userDto = new LoginResponseDTO
         {
+            Id = user.Id,
             FirstName = user.FirstName,
             LastName = user.LastName,
             FullName = user.FullName,

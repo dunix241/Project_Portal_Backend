@@ -9,12 +9,12 @@ namespace Application.Projects;
 
 public class Create
 {
-   public class Command : IRequest<Result<Unit>>
+   public class Command : IRequest<Result<Project>>
    {
       public CreateProjectRequestDto Project { get; set; }
    }
 
-   public class Handler : IRequestHandler<Command, Result<Unit>>
+   public class Handler : IRequestHandler<Command, Result<Project>>
    {
       private readonly DataContext _context;
       private readonly IMapper _mapper;
@@ -25,14 +25,14 @@ public class Create
          _mapper = mapper;
       }
 
-      public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
+      public async Task<Result<Project>> Handle(Command request, CancellationToken cancellationToken)
       {
          var project = new Project();
          _mapper.Map(request.Project, project);
          _context.Projects.Add(project);
          await _context.SaveChangesAsync();
 
-         return Result<Unit>.Success(Unit.Value);
+         return Result<Project>.Success(project);
       }
    }
 }

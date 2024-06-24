@@ -3,6 +3,7 @@ using Application.Students.DTOs;
 using Application.Students.Validation;
 using AutoMapper;
 using Domain;
+using Domain.Lecturer;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -14,7 +15,7 @@ namespace Application.Students
     {
         public class Command : IRequest<Result<GetStudentResponseDto>>
         {
-            public Guid Id { get; set; }
+            public string Id { get; set; }
             public EditStudentRequestDto Student { get; set; }
         }
         public class CommandValidator : AbstractValidator<Edit.Command>
@@ -30,12 +31,15 @@ namespace Application.Students
             private readonly DataContext _context;
             private readonly IMapper _mapper;
             private readonly UserManager<User> _userManager;
+            private readonly IMediator _mediator;
 
-            public Handler(DataContext context, IMapper mapper, UserManager<User> userManager)
+            public Handler(DataContext context, IMapper mapper, UserManager<User> userManager, IMediator mediator)
             {
                 _context = context;
                 _mapper = mapper;
                 _userManager = userManager;
+                _mediator = mediator;
+
             }
 
             public async Task<Result<GetStudentResponseDto>> Handle(Command request, CancellationToken cancellationToken)
@@ -66,13 +70,8 @@ namespace Application.Students
                     _mapper.Map(request.Student, student);
                     _mapper.Map(request.Student, user);
                     await _userManager.UpdateAsync(user);
-                    
-                    success &= await _context.SaveChangesAsync() != 0;
 
-                    if (success)
-                    {
-                        transaction.Commit();
-                    }
+                    await transaction.CommitAsync(cancellationToken);
                 }
                 catch (Exception e)
                 {
@@ -80,7 +79,9 @@ namespace Application.Students
                     throw e;
                 }
 
-                return success ? Result<GetStudentResponseDto>.Success(_mapper.Map<GetStudentResponseDto>(student)) : Result<GetStudentResponseDto>.Failure("Problem editing student");
+                var response = await _mediator.Send(new Details.Query { Id = student.UserId });
+
+                return success ? Result<GetStudentResponseDto>.Success(_mapper.Map<GetStudentResponseDto>(response.Value)) : Result<GetStudentResponseDto>.Failure("Problem editing student");
             }
         }
     }

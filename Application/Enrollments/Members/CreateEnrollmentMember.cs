@@ -8,6 +8,7 @@ using Domain.Mail;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MimeKit;
 using Persistence;
 using SmartFormat;
@@ -27,12 +28,14 @@ public class CreateEnrollmentMember
         private readonly DataContext _dataContext;
         private readonly UserManager<User> _userManager;
         private readonly IMediator _mediator;
+        private readonly IConfiguration _configuration;
 
-        public Handler(DataContext dataContext, UserManager<User> userManager, IMediator mediator)
+        public Handler(DataContext dataContext, UserManager<User> userManager, IMediator mediator, IConfiguration configuration)
         {
             _dataContext = dataContext;
             _userManager = userManager;
             _mediator = mediator;
+            _configuration = configuration;
         }
 
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
@@ -87,13 +90,16 @@ public class CreateEnrollmentMember
                     ToName = user.FullName
                 };
 
+                string url = _configuration["ClientUrl"] ?? "https://project-portal.ddns.net:3000";
+                Console.WriteLine(url);
+                
                 var arg = new EmailInvitationDto
                 {
                     EnrollmentTitle = enrollment.Title,
                     ProjectName = (await _dataContext.Projects.FindAsync(enrollment.ProjectId)).Name,
                     InvitorEmail = request.Payload.Email,
                     InvitorName = (await _userManager.FindByEmailAsync(request.Payload.Email)).FullName,
-                    Url = $"https://project-portal.ddns.net:3000/invitations/{enrollmentMember.Id}"
+                    Url = $"{url}/{enrollmentMember.Id}"
                 };
                 
                 mailData.BodyBuilder.HtmlBody = Smart.Format(mailData.BodyBuilder.HtmlBody, arg);

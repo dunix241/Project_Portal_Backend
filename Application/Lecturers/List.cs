@@ -32,14 +32,14 @@ namespace Application.Lecturers
             public async Task<Result<ListLecturerResponseDto>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var lecturers = _context.Lecturers
-                    .Where(s => s.IsActive)
                     .Include(s => s.School)
                     .Where(s => s.School.IsActive)
                     .AsQueryable();
                
                 var responseDtoList = lecturers.Select(lecturer => _mapper.Map(
                     lecturer,
-                    _mapper.Map<GetLecturerResponseDto>(_context.Users.FirstOrDefault(entity => entity.Id == lecturer.UserId)))
+                      //_mapper.Map<GetLecturerResponseDto>(_context.Users.Where(entity => entity.Id == lecturer.UserId && entity.IsActive).FirstOrDefault()))
+                      _mapper.Map<GetLecturerResponseDto>(_context.Users.Where(entity => entity.Id == lecturer.UserId).FirstOrDefault()))
                 );
                 var lectureResponseDto = new ListLecturerResponseDto();
 

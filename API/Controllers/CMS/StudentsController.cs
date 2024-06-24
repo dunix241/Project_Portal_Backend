@@ -30,14 +30,14 @@ public class StudentsController : CmsApiController
 
         [HttpPut("{id}")]
         [SwaggerOperation(Summary = "Update a student's information")]
-        public async Task<IActionResult> EditStudent(Guid id, EditStudentRequestDto school)
+        public async Task<IActionResult> EditStudent(string id, EditStudentRequestDto school)
         {
             return HandleResult(await Mediator.Send(new Edit.Command { Id = id, Student = school }));
         }
 
         [HttpDelete("{id}")]
         [SwaggerOperation(Summary = "Remove a student")]
-        public async Task<IActionResult> DeleteStudent(Guid id)
+        public async Task<IActionResult> DeleteStudent(string id)
         {
             return HandleResult(await Mediator.Send((new Delete.Command { Id = id })));
         }

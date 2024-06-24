@@ -9,7 +9,7 @@ namespace API.Controllers.CMS;
 public class EnrollmentPlansController : CmsApiController
 {
     [HttpGet]
-    public async Task<ActionResult<ListEnrollmentPlansResponseDto>> ListEnrollmentPlans(PagingParams pagingParams)
+    public async Task<ActionResult<ListEnrollmentPlansResponseDto>> ListEnrollmentPlans([FromQuery]PagingParams pagingParams)
     {
         return HandleResult(await Mediator.Send(new List.Query{PagingParams = pagingParams}));
     }
@@ -30,9 +30,9 @@ public class EnrollmentPlansController : CmsApiController
     {
         return HandleResult(await Mediator.Send(new Delete.Command { Id = id }));
     }
-    
+
     [HttpGet("{id}/Details")]
-    public async Task<ActionResult<ListEnrollmentPlanDetailsResponseDto>> ListEnrollmentPlanDetails(Guid id, PagingParams pagingParams)
+    public async Task<ActionResult<ListEnrollmentPlanDetailsResponseDto>> ListEnrollmentPlanDetails(Guid id, [FromQuery] PagingParams pagingParams)
     {
         return HandleResult(await Mediator.Send(new Application.EnrollmentPlans.EnrollmentPlanDetails.List.Query{EnrollmentPlanId = id, PagingParams = pagingParams}));
     }
