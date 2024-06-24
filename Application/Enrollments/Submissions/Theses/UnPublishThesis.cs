@@ -1,6 +1,4 @@
-﻿
-
-using Application.Core;
+﻿using Application.Core;
 using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +8,12 @@ namespace Application.Enrollments.Submissions.Theses
 {
     public class UnPublishThesis
     {
-        public class Command : IRequest<Result<Domain.Enrollment.Enrollment>>
+        public class Command : IRequest<Result<Unit>>
         {
             public Guid Id { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Domain.Enrollment.Enrollment>>
+        public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
@@ -26,29 +24,26 @@ namespace Application.Enrollments.Submissions.Theses
                 _mapper = mapper;
             }
 
-            public async Task<Result<Domain.Enrollment.Enrollment>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var currentSubmission = await _context.Submissions.FindAsync(request.Id);
-                if (currentSubmission == null)
+                var submission = await _context.Submissions
+                    .Include(entity => entity.Enrollment)
+                    .Where(entity => entity.Id == request.Id && entity.Enrollment.IsPublished == true)
+                    .FirstOrDefaultAsync()
+                    ;
+
+                if (submission == null)
                 {
-                    return null;
+                    return Result<Unit>.Failure("This project is not published");
                 }
 
-                var enrollment = await _context.Enrollments.FindAsync(currentSubmission.EnrollmentId);
-                if (enrollment == null)
-                {
-                    return null;
-                }
-                if(enrollment.IsPublished == false)
-                {
-                    return Result<Domain.Enrollment.Enrollment>.Failure("Canot unpiblished a thesis that is not publish yet");
-                }
-                enrollment.IsPublished = false;
-                enrollment.ThesisId = null;
+                submission.Enrollment.IsPublished = false;
+                submission.Enrollment.ThesisId = null;
+                _context.Update(submission);
+                
+                var succeeded = (await _context.SaveChangesAsync()) != 0;
 
-                await _context.SaveChangesAsync();
-
-                return Result<Domain.Enrollment.Enrollment>.Success(enrollment);
+                return succeeded ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("Error saving your enrollment");
             }
         }
     }

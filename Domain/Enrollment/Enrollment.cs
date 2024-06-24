@@ -1,4 +1,5 @@
-﻿using Domain.File;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Domain.File;
 using Domain.Semester;
 
 namespace Domain.Enrollment;
@@ -15,12 +16,13 @@ public class Enrollment
     public string? Description { get; set; }
     public string? Vision { get; set; }
     public string? HeirFortunes { get; set; }
-    public Boolean IsPublished { get; set; }
+    public bool IsPublished { get; set; }
     public DateTime? PublishDate { get; set; }
     public DateTime RegisterDate { get; set; } = DateTime.Now;
     public bool CanBeForked { get; set; }
     public Guid? ForkedFromId { get; set; }
-    public Enrollment? ForkFrom { get; set; }
+    [ForeignKey("ForkedFromId")]
+    public Enrollment? ForkedFrom { get; set; }
     public List<EnrollmentMember> EnrollmentMembers { get; set; }
     public Guid? ThesisId { get; set; }
     public Domain.File.File? Thesis { get; set; }

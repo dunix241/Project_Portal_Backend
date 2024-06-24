@@ -10,7 +10,7 @@ namespace Application.Enrollments.Submissions.Comments.DTOs
     public  class CreateSubmissionCommentRequest
     {
         public string Content { get; set; }
-        public DateTime Date { get; private set; } = DateTime.UtcNow;
+        public DateTime Date { get; private set; } = DateTime.Now;
         public Guid SubmissionId { get; set; }
     }
 } 

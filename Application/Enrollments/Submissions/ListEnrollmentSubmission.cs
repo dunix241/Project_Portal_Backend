@@ -3,6 +3,7 @@ using Application.Enrollments.Submissions.DTOs;
 using AutoMapper;
 using Domain.Submission;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 namespace Application.Enrollments.Submissions
@@ -28,9 +29,10 @@ namespace Application.Enrollments.Submissions
             public async Task<Result<List<Submission>>> Handle(Query request, CancellationToken cancellationToken)
             {
                 var query = _context.Submissions
-                     .Where(x => x.EnrollmentId == request.EnrollmentId)
-                     .OrderByDescending(x => x.DueDate)
-                     .ToList();
+                    .Include(entity => entity.Thesis)
+                    .Where(x => x.EnrollmentId == request.EnrollmentId)
+                    .OrderByDescending(x => x.DueDate)
+                    .ToList();
 
                 //var submission = new ListSubmissionResponseDto();
 

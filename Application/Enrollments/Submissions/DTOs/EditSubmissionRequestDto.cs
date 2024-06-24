@@ -4,7 +4,7 @@
     {
         public DateTime? DueDate { get; set; }
         public string? Status { get; set; }
-        public string ? Descripstion { get; set; }
+        public string ? Description { get; set; }
         public string? ThesisId { get; set; } 
     }
 }

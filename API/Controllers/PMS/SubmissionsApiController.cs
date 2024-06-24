@@ -42,7 +42,7 @@ public class SubmissionsController : PmsApiController
 
     [HttpPut("{id}/Submit")]
     [SwaggerOperation(Summary = "Submit")]
-    public async Task<IActionResult> EditSubmissionThesis(Guid id, IFormFile file)
+    public async Task<IActionResult> EditSubmissionThesis([FromRoute] Guid id, [FromForm] IFormFile file)
     {
         var payload = new AddFileRequestDto
         {
@@ -50,6 +50,13 @@ public class SubmissionsController : PmsApiController
             FormFile = file,
         };
         return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.EditEnrollmentSubmissionThesis.Command { Id = id, Dto = payload }));
+    }
+
+    [HttpDelete("{id}/Submit")]
+    [SwaggerOperation(Summary = "UnSubmit")]
+    public async Task<IActionResult> UnSubmit(Guid id)
+    {
+        return HandleResult(await Mediator.Send(new Application.Enrollments.Submissions.UnSubmit.Command { Id = id }));
     }
 
     [HttpGet]

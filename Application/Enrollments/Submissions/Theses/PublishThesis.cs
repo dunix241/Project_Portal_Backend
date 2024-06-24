@@ -1,21 +1,19 @@
 ﻿using Application.Core;
 using AutoMapper;
-using Domain.Submission;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
-
 
 namespace Application.Enrollments.Submissions.Theses
 {
     public class PublishThesis
     {
-        public class Command : IRequest<Result<Domain.Enrollment.Enrollment>>
+        public class Command : IRequest<Result<Unit>>
         {
             public Guid Id { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command, Result<Domain.Enrollment.Enrollment>>
+        public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
             private readonly IMapper _mapper;
@@ -26,27 +24,25 @@ namespace Application.Enrollments.Submissions.Theses
                 _mapper = mapper;
             }
 
-            public async Task<Result<Domain.Enrollment.Enrollment>> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var currentSubmission = await _context.Submissions.FindAsync(request.Id);
-                if (currentSubmission == null)
+                var submission = await _context.Submissions
+                        .Include(entity => entity.Enrollment)
+                        .Where(entity => entity.Id == request.Id && entity.Status == SubmissionStatus.ACCEPTED)
+                        .FirstOrDefaultAsync()
+                    ;
+                if (submission == null)
                 {
-                    return null;
+                    return Result<Unit>.Failure("This project cannot be published");
                 }
 
+                submission.Enrollment.IsPublished = true;
+                submission.Enrollment.ThesisId = submission.ThesisId;
+                _context.Update(submission);
+                
+                var succeeded = (await _context.SaveChangesAsync()) != 0;
 
-                if (currentSubmission.Status != SubmissionStatus.ACCEPTED )
-                {
-                    return Result<Domain.Enrollment.Enrollment>.Failure("You can only publish one thesis from  the accpeted submissions");
-                }           
-
-                var enrollment = await _context.Enrollments.FindAsync(currentSubmission.EnrollmentId);
-                enrollment.IsPublished = true;
-                enrollment.ThesisId = currentSubmission.ThesisId;
-
-                await _context.SaveChangesAsync();
-
-                return Result<Domain.Enrollment.Enrollment>.Success(enrollment);
+                return succeeded ? Result<Unit>.Success(Unit.Value) : Result<Unit>.Failure("Error saving your changes");
             }
         }
     }

@@ -4,6 +4,7 @@
     {
         public Guid EnrollmentId { get; set; }
         public string Title { get; set; }
+        public string OwnerId { get; set; }
         public string? Description { get; set; }
         public DateTime RegisterDate { get; set; }
         public ProjectDto Project { get; set; }
@@ -12,7 +13,9 @@
         public Boolean IsPublished { get; set; }
         public DateTime? PublishDate { get; set; }
         public bool CanBeForked { get; set; }
-
+        public Guid? ForkedFromId { get; set; }
+        public Domain.Enrollment.Enrollment? ForkedFrom { get; set; }
+            
         // public List<EnrollmentMemberDto> Members { get; set; }
         // public List<SubmissionDto> Submissions { get; set; }
     }
