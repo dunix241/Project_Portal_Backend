@@ -64,7 +64,7 @@ public class ListBasedOnEnrollmentPlan
                     var enrollmentMember = _dataContext.EnrollmentMembers
                         .Include(entity => entity.Enrollment)
                         .FirstOrDefault(entity =>
-                            entity.UserId == _userAccessor.GetUser().Id && entity.Enrollment.ProjectId == id
+                            entity.UserId == _userAccessor.GetUser().Id && entity.Enrollment.ProjectId == id && entity.IsAccepted == true
                         );
                     registrableProject.Enrollment = enrollmentMember?.Enrollment;
                     

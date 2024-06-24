@@ -27,7 +27,6 @@ namespace Application.Enrollments.Submissions
                 _context = context;
                 _mapper = mapper;
                 _mediator = mediator;
-
             }
 
             public async Task<Result<Submission>> Handle(Command request, CancellationToken cancellationToken)
@@ -39,24 +38,20 @@ namespace Application.Enrollments.Submissions
                 }
 
                 var payload = request.Dto;
-                var thesisResponse  = await _mediator.Send(new UploadFile.Command { Payload = payload });
+                var thesisResponse = await _mediator.Send(new UploadFile.Command { Payload = payload });
                 if (thesisResponse == null)
                 {
                     return Result<Submission>.Failure("Error uploading file");
                 }
 
-                if(currentSubmission.Status == SubmissionStatus.COMPLETED || currentSubmission.Status == SubmissionStatus.ACCEPTED)
+                if (currentSubmission.Status == SubmissionStatus.COMPLETED || currentSubmission.Status == SubmissionStatus.ACCEPTED)
                 {
                     return Result<Submission>.Failure("This submission status do not allow updating");
                 }
 
-
-                if(currentSubmission.Status == SubmissionStatus.DEFAULT)
-                {
-                    currentSubmission.Status = SubmissionStatus.SUBMITTED;
-                }
-
-                currentSubmission.ThesisId = thesisResponse.Value.Id;              
+                currentSubmission.Status ??= SubmissionStatus.SUBMITTED;
+                currentSubmission.ThesisId = thesisResponse.Value.Id;
+                currentSubmission.SubmittedDate = DateTime.Now;
 
                 await _context.SaveChangesAsync();
 

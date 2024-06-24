@@ -32,8 +32,8 @@ public class DeleteEnrollmentMember
         public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
         {
             var enrollmentMember = await _dataContext.EnrollmentMembers
-                .Include(entity => entity.Enrollment)
                 .Where(entity => entity.Id == request.Id)
+                .Include(entity => entity.Enrollment)
                 .FirstOrDefaultAsync()
                 ;
 

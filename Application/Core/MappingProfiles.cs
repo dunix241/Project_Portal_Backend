@@ -120,10 +120,11 @@ public class MappingProfiles : Profile
         CreateMap<Domain.Enrollment.EnrollmentMember, GetEnrollmentHistoryResponseDto>()
             .ForMember(dest => dest.SemesterId, opt => opt.MapFrom(src => src.Enrollment.SemesterId))
             .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Enrollment.ProjectSemester.Semester.Name));
-        CreateMap<User, EnrollmentMemberResponseDto>();
+        CreateMap<User, EnrollmentMemberResponseDto>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore())
+            ;
 
         CreateMap<Domain.Enrollment.EnrollmentMember, EnrollmentMemberResponseDto>();
-            ;
         CreateMap<CreateEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
         CreateMap<Project, ListBasedOnEnrollmentPlanResponseDto.RegistrableProjectResponseDto>();
         CreateMap<EditEnrollmentRequestDto, Domain.Enrollment.Enrollment>();
